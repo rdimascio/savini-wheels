@@ -16,20 +16,24 @@ get_header();
 ?>
 
 <div id="lightgallery">
-  <a href="https://picsum.photos/200/300?image=11">
-      <img src="https://picsum.photos/200/300?image=11" />
-  </a>
-  <a href="https://picsum.photos/200/300?image=12">
-      <img src="https://picsum.photos/200/300?image=12" />
-  </a>
+  <li data-src="https://picsum.photos/200/300?image=11">
+    <a>
+        <img src="https://picsum.photos/200/300?image=11" />
+    </a>
+  </li>
+  <li data-src="https://picsum.photos/200/300?image=12">
+    <a>
+        <img src="https://picsum.photos/200/300?image=12" />
+    </a>
+  </li>
 </div>
 
 <script type="text/javascript">
     jQuery(function($) {
         $("#lightgallery").lightGallery({
             mode: 'lg-fade',
-            cssEasing : 'cubic-bezier(0.25, 0, 0.25, 1)'
-        }); 
+            cssEasing : 'cubic-bezier(0.25, 0, 0.25, 1)',
+        });
     });
 </script>
 
