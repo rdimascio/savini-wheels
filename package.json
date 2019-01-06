@@ -46,5 +46,8 @@
     "images": "gulp images",
     "clearCache": "gulp clearCache",
     "translate": "gulp translate"
+  },
+  "dependencies": {
+    "lazysizes": "^4.1.5"
   }
 }
