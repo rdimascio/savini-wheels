@@ -1,0 +1,28 @@
+/*--------------------------------------------------------------
+## Typography
+--------------------------------------------------------------*/
+
+.light {
+  font-weight: 300;
+}
+
+.medium {
+  font-weight: 500;
+}
+
+.heavy {
+  font-weight: 600;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.x-bold {
+  font-weight: 800;
+}
+
+.smooth {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
