@@ -120,12 +120,18 @@ add_action( 'widgets_init', 'wp_starter_theme_widgets_init' );
  * Enqueue scripts and styles.
  */
 function wp_starter_theme_scripts() {
-	wp_enqueue_style( 'wp-starter-theme-style', get_template_directory_uri() . '/assets/css/main.min.css' );
+	wp_enqueue_style( 'savini-style', get_template_directory_uri() . '/assets/css/main.min.css' );
 	// wp_register_script( 'wp-starter-theme-vendor', get_template_directory_uri() . '/assets/js/vendor.min.js', array( 'jquery' ), NULL, true );
+
+	wp_enqueue_script( 'savini-custom-script', get_template_directory_uri() . '/assets/js/custom.min.js', array( 'jquery' ), NULL, true );
 
 	wp_register_style( 'lightgallery', '//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.11/css/lightgallery.min.css', false, NULL, 'all' );
 	wp_register_script( 'lightgallery', '//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.11/js/lightgallery.min.js', array( 'jquery' ), NULL, true );
 	
+	wp_register_script( 'slick-carousel', '//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js', array( 'jquery' ), NULL, true );
+	wp_register_style( 'slick-carousel', '//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css', false, NULL, 'all' );
+	wp_register_style( 'slick-carousel-theme', '//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css', false, NULL, 'all' );
+
 	wp_register_style( 'plyr', '//cdn.plyr.io/3.4.6/plyr.css', false, NULL, 'all' );
 	wp_register_script( 'plyr', '//cdn.plyr.io/3.4.6/plyr.js', array(), NULL, true );
 
@@ -143,11 +149,16 @@ function wp_starter_theme_scripts() {
 
 	wp_register_script( 'swup', '//cdn.jsdelivr.net/npm/swup@1.7.17/dist/swup.min.js', array(), NULL, true );
 
-	wp_enqueue_style( 'wp-starter-theme-style' );
+	wp_enqueue_style( 'savini-style' );
+	wp_enqueue_script( 'savini-custom-script' );
 	// wp_enqueue_script( 'wp-starter-theme-vendor' );
 
 	wp_enqueue_style( 'lightgallery' );
 	wp_enqueue_script( 'lightgallery' );
+
+	wp_enqueue_style( 'slick-carousel' );
+	wp_enqueue_style( 'slick-carousel-theme' );
+	wp_enqueue_script( 'slick-carousel' );
 
 	wp_enqueue_style( 'plyr' );
 	wp_enqueue_script( 'plyr' );

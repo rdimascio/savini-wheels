@@ -15,16 +15,25 @@
 get_header();
 ?>
 
-<div class="carousel-wrapper">
-    <h1 class="carousel-caption"><small>Fullscreen</small> Ken Burns effect <small>without javascript</small></h1>
-
+<div class="carousel-wrapper" id="hero-carousel">
     <div class="carousel-inner">
-        <div class="item" style="background-image: url('https://source.unsplash.com/category/nature/1600x1400')"></div>
-        <div class="item" style="background-image: url('https://source.unsplash.com/category/buildings/1600x1400')"></div>
-        <div class="item" style="background-image: url('https://source.unsplash.com/category/food/1600x1400')"></div>
-        <div class="item" style="background-image: url('https://source.unsplash.com/category/technology/1600x1400')"></div>
+        <div class="item">
+            <img src="https://picsum.photos/1600/800?image=1069" />
+        </div>
+        <div class="item">
+            <img src="https://picsum.photos/1600/800?image=1074" />
+        </div>
+        <div class="item">
+            <img src="https://picsum.photos/1600/800?image=1012" />
+        </div>
+        <div class="item">
+            <img src="https://picsum.photos/1600/800?image=1001" />
+        </div>
     </div>
 
+    <div class="slider-progress">
+        <div class="progress"></div>
+    </div>
 </div>
 
 <!-- <div id="lightgallery">
