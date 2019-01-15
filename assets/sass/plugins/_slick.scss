@@ -1,6 +1,12 @@
 #hero-carousel {
   position: relative;
 
+  .item {
+    height: 700px;
+    background-position: center;
+    background-size: cover;
+  }
+
   .slick-dots  {
     bottom: 10px;
     

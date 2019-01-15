@@ -1,0 +1,18 @@
+.site-header {
+	background: #FFFFFF;
+	box-shadow: 0 4px 12px 0 rgba(0,0,0,.05);
+	height: 65px;
+	position: fixed;
+	z-index: 99;
+	top: 0;
+	transition: top .3s ease-in-out;
+	width: 100%;
+
+	.site-branding {
+		height: 65px;
+	}
+
+	&.nav-up {
+		top: -65px;
+	}
+}

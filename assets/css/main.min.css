@@ -64,7 +64,9 @@ mark,ins{background:#fff9c0;text-decoration:none}
 big{font-size:125%}
 html{-webkit-box-sizing:border-box;box-sizing:border-box}
 *,*:before,*:after{-webkit-box-sizing:inherit;box-sizing:inherit}
-body{background:#f8f8f8}
+.site-header{background:#fff;-webkit-box-shadow:0 4px 12px 0 rgba(0,0,0,0.05);box-shadow:0 4px 12px 0 rgba(0,0,0,0.05);height:65px;position:fixed;z-index:99;top:0;-webkit-transition:top .3s ease-in-out;transition:top .3s ease-in-out;width:100%}
+.site-header .site-branding{height:65px}
+.site-header.nav-up{top:-65px}
 hr{background-color:#ccc;border:0;height:1px;margin-bottom:1.5em}
 ul,ol{margin:0 0 1.5em 3em}
 ul{list-style:disc}
@@ -137,7 +139,10 @@ embed,iframe,object{max-width:100%}
 .gallery-columns-8 .gallery-item{max-width:12.5%}
 .gallery-columns-9 .gallery-item{max-width:11.11%}
 .gallery-caption{display:block}
+body{padding-top:65px;margin:0}
+main{background:#fff;height:2000px}
 #hero-carousel{position:relative}
+#hero-carousel .item{height:700px;background-position:center;background-size:cover}
 #hero-carousel .slick-dots{bottom:10px}
 #hero-carousel .slick-dots li{width:40px;height:5px;background:#ccc}
 #hero-carousel .slick-dots li button{width:40px;height:5px}

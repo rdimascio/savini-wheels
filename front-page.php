@@ -15,26 +15,13 @@
 get_header();
 ?>
 
-<div class="carousel-wrapper" id="hero-carousel">
-    <div class="carousel-inner">
-        <div class="item">
-            <img src="https://picsum.photos/1600/800?image=1069" />
-        </div>
-        <div class="item">
-            <img src="https://picsum.photos/1600/800?image=1074" />
-        </div>
-        <div class="item">
-            <img src="https://picsum.photos/1600/800?image=1012" />
-        </div>
-        <div class="item">
-            <img src="https://picsum.photos/1600/800?image=1001" />
-        </div>
-    </div>
+<main>
 
-    <div class="slider-progress">
-        <div class="progress"></div>
-    </div>
-</div>
+    <?php get_template_part( 'template-parts/front', 'hero-carousel' ); ?>
+
+</main>
+
+
 
 <!-- <div id="lightgallery">
   <li data-src="https://picsum.photos/200/300?image=11">

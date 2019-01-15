@@ -405,3 +405,34 @@ add_action( 'init', 'insert_the_parent_categories' );
 // 	);
 // }
 // add_action( 'init', 'insert_the_children_categories' );
+
+
+// function savini_customizer_sections( $wp_customize ) {
+// 	$wp_customize->add_panel( 'frontpage_panel', array(
+// 		'title'			=> __( 'Front Page', 'savini' ),
+// 		'priority'	=> 30,
+// 		)
+// 	);
+
+// 	$wp_customize->add_section( 'frontpage_slider_section', array(
+// 		'title'			=> __( 'Slider', 'savini' ),
+// 		'priority'	=> 30,
+// 		'panel'			=> 'frontpage_panel'
+// 		)
+// 	);
+
+// 	$wp_customize->add_setting( 'slider_setting', array(
+// 		'default'			=> 'a'
+// 		)
+// 	);
+
+// 	$wp_customize->add_control( 'slider_control', array(
+// 		'label'			=> 'Text',
+// 		'type'			=> 'image',
+// 		'section'		=> 'frontpage_slider_section',
+// 		'settings'	=> 'slider_setting'
+// 		)
+// 	);
+// }
+
+// add_action( 'customize_register', 'savini_customizer_sections' );
