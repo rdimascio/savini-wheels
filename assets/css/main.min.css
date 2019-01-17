@@ -141,10 +141,14 @@ embed,iframe,object{max-width:100%}
 .gallery-caption{display:block}
 body{padding-top:65px;margin:0}
 main{background:#fff;height:2000px}
+.slidecaption{position:absolute;bottom:0;left:4rem;background:rgba(25,25,25,0.8);padding:3rem 1.5rem;width:200px;text-transform:uppercase}
+.slidecaption h4{color:#fff;font-weight:400;font-size:24px;line-height:24px;margin-bottom:1rem}
+.slidecaption p{margin-bottom:2.5em;color:rgba(255,255,255,0.5);font-weight:300;font-size:12px;line-height:13px;width:50%}
+.slidecaption a{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;background:#ff0200;padding:.5rem 0;color:#fff;font-size:8px;font-weight:300}
 #hero-carousel{position:relative}
-#hero-carousel .item{height:700px;background-position:center;background-size:cover}
+#hero-carousel .item{position:relative;height:700px;background-position:center;background-size:cover}
 #hero-carousel .slick-dots{bottom:10px}
-#hero-carousel .slick-dots li{width:40px;height:5px;background:#ccc}
+#hero-carousel .slick-dots li{width:80px;height:4px;background:#ccc}
 #hero-carousel .slick-dots li button{width:40px;height:5px}
 #hero-carousel .slick-dots li button:before{color:transparent;opacity:0}
 #hero-carousel .slick-dots li.slick-active,#hero-carousel .slick-dots li:hover{background:#777}

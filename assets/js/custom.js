@@ -1,6 +1,33 @@
 "use strict";
 
 jQuery(function ($) {
+  // Hide Header on on scroll down
+  var prev = 0;
+  var delta = 5;
+  var $window = $(window);
+  var nav = $('.site-header');
+  var navbarHeight = 65;
+  $window.on('scroll', function () {
+    var st = $(this).scrollTop();
+
+    if (Math.abs(prev - st) <= delta) {
+      return;
+    }
+
+    if (st > navbarHeight) {
+      var scrollTop = $window.scrollTop();
+      nav.toggleClass('nav-up', scrollTop > prev);
+      prev = scrollTop;
+    }
+
+    if (0 === $window.scrollTop()) {
+      nav.removeClass('nav-up');
+    }
+  });
+});
+"use strict";
+
+jQuery(function ($) {
   var time = 2;
   var $bar,
       slick = $('.carousel-inner'),
@@ -74,34 +101,7 @@ jQuery(function ($) {
     var slideCaption = $(this).data('caption');
 
     if (slideTitle || slideCaption) {
-      $(this).append('<div class="slidecaption"><h4>' + slideTitle + '</h4><p>' + slideCaption + '</p></div>');
-    }
-  });
-});
-"use strict";
-
-jQuery(function ($) {
-  // Hide Header on on scroll down
-  var prev = 0;
-  var delta = 5;
-  var $window = $(window);
-  var nav = $('.site-header');
-  var navbarHeight = 65;
-  $window.on('scroll', function () {
-    var st = $(this).scrollTop();
-
-    if (Math.abs(prev - st) <= delta) {
-      return;
-    }
-
-    if (st > navbarHeight) {
-      var scrollTop = $window.scrollTop();
-      nav.toggleClass('nav-up', scrollTop > prev);
-      prev = scrollTop;
-    }
-
-    if (0 === $window.scrollTop()) {
-      nav.removeClass('nav-up');
+      $(this).append('<div class="slidecaption"><h4>' + slideTitle + '.</h4><p>' + slideCaption + '</p><a>Learn More</a></div>');
     }
   });
 });

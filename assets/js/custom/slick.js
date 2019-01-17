@@ -81,7 +81,7 @@ jQuery( function( $ ) {
 		var slideCaption = $( this ).data( 'caption' );
 
 		if ( slideTitle || slideCaption ) {
-			$( this ).append( '<div class="slidecaption"><h4>' + slideTitle + '</h4><p>' + slideCaption + '</p></div>' );
+			$( this ).append( '<div class="slidecaption"><h4>' + slideTitle + '.</h4><p>' + slideCaption + '</p><a>Learn More</a></div>' );
 		}
 
 	});
