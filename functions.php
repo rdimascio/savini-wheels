@@ -127,6 +127,10 @@ function wp_starter_theme_scripts() {
 
 	wp_register_style( 'lightgallery', '//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.11/css/lightgallery.min.css', false, NULL, 'all' );
 	wp_register_script( 'lightgallery', '//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.11/js/lightgallery.min.js', array( 'jquery' ), NULL, true );
+	wp_register_script( 'lightgallery-video', '//cdn.jsdelivr.net/npm/lightgallery@1.6.11/modules/lg-video.min.js', array(), NULL, true );
+	wp_register_script( 'lightgallery-thumbnail', '//cdn.jsdelivr.net/npm/lightgallery@1.6.11/modules/lg-thumbnail.min.js', array(), NULL, true );
+	// wp_register_script( 'lightgallery-fullscreen', '//cdn.jsdelivr.net/npm/lightgallery@1.6.11/modules/lg-fullscreen.js', array(), NULL, true );
+	// wp_register_script( 'lightgallery-zoom', '//cdn.jsdelivr.net/npm/lightgallery@1.6.11/modules/lg-zoom.min.js', array(), NULL, true );
 	
 	wp_register_script( 'slick-carousel', '//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js', array( 'jquery' ), NULL, true );
 	wp_register_style( 'slick-carousel', '//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css', false, NULL, 'all' );
@@ -142,10 +146,6 @@ function wp_starter_theme_scripts() {
 	wp_register_script( 'wow', '//cdn.jsdelivr.net/npm/wowjs@1.1.3/dist/wow.min.js', array(), NULL, true );
 
 	wp_register_script( 'lazy-sizes', '//cdn.jsdelivr.net/npm/lazysizes@4.1.5/lazysizes.min.js', array(), NULL, true );
-	wp_register_script( 'lazy-sizes-thumbnail', '//cdn.jsdelivr.net/npm/lightgallery@1.6.11/modules/lg-thumbnail.min.js', array(), NULL, true );
-	// wp_register_script( 'lazy-sizes-fullscreen', '//cdn.jsdelivr.net/npm/lightgallery@1.6.11/modules/lg-fullscreen.js', array(), NULL, true );
-	// wp_register_script( 'lazy-sizes-zoom', '//cdn.jsdelivr.net/npm/lightgallery@1.6.11/modules/lg-zoom.min.js', array(), NULL, true );
-	wp_register_script( 'lazy-sizes-video', '//cdn.jsdelivr.net/npm/lightgallery@1.6.11/modules/lg-video.min.js', array(), NULL, true );
 
 	wp_register_script( 'swup', '//cdn.jsdelivr.net/npm/swup@1.7.17/dist/swup.min.js', array(), NULL, true );
 
@@ -155,6 +155,10 @@ function wp_starter_theme_scripts() {
 
 	wp_enqueue_style( 'lightgallery' );
 	wp_enqueue_script( 'lightgallery' );
+	wp_enqueue_script( 'lightgallery-thumbnail' );
+	// wp_enqueue_script( 'lightgallery-fullscreen' );
+	// wp_enqueue_script( 'lightgallery-zoom' );
+	wp_enqueue_script( 'lightgallery-video' );
 
 	wp_enqueue_style( 'slick-carousel' );
 	wp_enqueue_style( 'slick-carousel-theme' );
@@ -170,11 +174,6 @@ function wp_starter_theme_scripts() {
 	wp_enqueue_script( 'micro-modal' );
 
 	wp_enqueue_script( 'lazy-sizes' );
-	wp_enqueue_script( 'lazy-sizes-thumbnail' );
-	// wp_enqueue_script( 'lazy-sizes-fullscreen' );
-	// wp_enqueue_script( 'lazy-sizes-zoom' );
-	wp_enqueue_script( 'lazy-sizes-video' );
-
 
 	wp_enqueue_script( 'swup' );
 
@@ -260,24 +259,24 @@ add_filter( 'enter_title_here', 'wheel_title_text' );
 // Create Wheel Post Type Categories
 function create_wheel_categories() {
     $labels = array(
-        'name'              => _x( 'Wheel Categories', 'taxonomy general name' ),
-        'singular_name'     => _x( 'Wheel Category', 'taxonomy singular name' ),
-        'search_items'      => __( 'Search Wheel Categories' ),
-        'all_items'         => __( 'All Wheel Categories' ),
-        'parent_item'       => __( 'Parent Wheel Category' ),
-        'parent_item_colon' => __( 'Parent Wheel Category:' ),
-        'edit_item'         => __( 'Edit Wheel Category' ),
-        'update_item'       => __( 'Update Wheel Category' ),
-        'add_new_item'      => __( 'Add New Wheel Category' ),
-        'new_item_name'     => __( 'New Wheel Category' ),
-        'menu_name'         => __( 'Wheel Categories' ),
+        'name'              => _x( 'Wheel Collections', 'taxonomy general name' ),
+        'singular_name'     => _x( 'Wheel Collection', 'taxonomy singular name' ),
+        'search_items'      => __( 'Search Wheel Collections' ),
+        'all_items'         => __( 'All Wheel Collections' ),
+        'parent_item'       => __( 'Parent Wheel Collection' ),
+        'parent_item_colon' => __( 'Parent Wheel Collection:' ),
+        'edit_item'         => __( 'Edit Wheel Collection' ),
+        'update_item'       => __( 'Update Wheel Collection' ),
+        'add_new_item'      => __( 'Add New Wheel Collection' ),
+        'new_item_name'     => __( 'New Wheel Collection' ),
+        'menu_name'         => __( 'Wheel Collections' ),
     );
     $args = array(
         'labels' => $labels,
-		'hierarchical' => true,
-		'show_in_rest'	=>	true
+				'hierarchical' => true,
+				'show_in_rest'	=>	true
     );
-    register_taxonomy( 'wheel_category', 'wheel', $args );
+    register_taxonomy( 'wheel_collections', 'wheel', $args );
 }
 add_action( 'init', 'create_wheel_categories', 0 );
 
@@ -360,34 +359,34 @@ add_action('admin_head', 'wheel_help' );
 function insert_the_parent_categories() {
 	wp_insert_term(
 		'Savini Forged',
-		'wheel_category',
+		'wheel_collections',
 		array(
 		  'description'	=> 'The Savini Forged line is our most refined and meticulously designed products cut from only the best aluminums in a multi-piece construction with (7) different profile configurations and a wide variety of custom finishes.',
 		  'slug' 		=> 'savini-forged'
 		)
 	);
 	wp_insert_term(
-		'Savini Diamond',
-		'wheel_category',
+		'Black di Forza - Super Concave',
+		'wheel_collections',
 		array(
-		  'description'	=> 'The Savini Diamond line is our urban-inspired wheel line with each wheel being an art canvas influenced by where we\'re from and where we\'ve been. They\'re built from the highest quality aluminum and feature (4) different profile configurations and a wide variety of custom finishes.',
-		  'slug' 		=> 'savini-diamond'
+		  'description'	=> 'The Black di Forza lines are one of our simplest and more essential products for everyday use. Now available in Super Concave profiles and an array of fitments.',
+		  'slug' 		=> 'black-di-forza'
 		)
 	);
 	wp_insert_term(
 		'SV-F Flow Form',
-		'wheel_category',
+		'wheel_collections',
 		array(
 		  'description'	=> 'Savini Wheels is excited to introduce our all-new SV-F collection, which utilizes advanced flow form technology. These wheels are our strongest and lightest wheels to date, thanks to a combination of enhanced engineering and state-of-the-art technology that’s used to create each wheel.',
 		  'slug' 		=> 'sv-f'
 		)
 	);
 	wp_insert_term(
-		'Black di Forza - Super Concave',
-		'wheel_category',
+		'Savini Diamond',
+		'wheel_collections',
 		array(
-		  'description'	=> 'The Black di Forza lines are one of our simplest and more essential products for everyday use. Now available in Super Concave profiles and an array of fitments.',
-		  'slug' 		=> 'black-di-forza'
+		  'description'	=> 'The Savini Diamond line is our urban-inspired wheel line with each wheel being an art canvas influenced by where we\'re from and where we\'ve been. They\'re built from the highest quality aluminum and feature (4) different profile configurations and a wide variety of custom finishes.',
+		  'slug' 		=> 'savini-diamond'
 		)
 	);
 }

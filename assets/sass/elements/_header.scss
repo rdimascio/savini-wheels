@@ -1,7 +1,7 @@
 .site-header {
-	background: #FFFFFF;
+	background: rgba(255,255,255,0.7);
 	box-shadow: 0 4px 12px 0 rgba(0,0,0,.05);
-	height: 65px;
+	height: 85px;
 	position: fixed;
 	z-index: 99;
 	top: 0;
@@ -9,10 +9,60 @@
 	width: 100%;
 
 	.site-branding {
-		height: 65px;
+		height: 100%;
 	}
 
 	&.nav-up {
-		top: -65px;
+		top: -85px;
+	}
+}
+
+.box-shadow-menu {
+  position: relative;
+	padding: .5rem 1rem;
+	cursor: pointer;
+}
+.box-shadow-menu:before {
+	cursor: pointer;
+  content: "";
+  position: absolute;
+	left: 0;
+	font-size: 35px;
+  width: 1em;
+  height: 0.15em;
+  background: #111;
+  box-shadow: 
+    0 0.25em 0 0 #111,
+    0 0.5em 0 0 #111;
+}
+
+#site-navigation-wrapper {
+	position: fixed;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 99;
+	background: rgba(25,25,25,0.9);
+	overflow: hidden;
+
+	.close {
+		position: absolute;
+    top: 2rem;
+		right: 2rem;
+		cursor: pointer;
+		
+		&:hover, :focus, :active {
+			color: #fff;
+		}
+	}
+
+	#primary-menu {
+		height: 100%;
+
+		ul li a {
+			color: #fff;
+			text-transform: uppercase;
+		}
 	}
 }

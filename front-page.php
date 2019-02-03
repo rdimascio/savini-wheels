@@ -16,34 +16,28 @@ get_header();
 ?>
 
 <main>
+    <section id="hero" class="hero">
+        <?php get_template_part( 'template-parts/front', 'hero-carousel' ); ?>
+    </section>
 
-    <?php get_template_part( 'template-parts/front', 'hero-carousel' ); ?>
+    <section id="wheelCollections" class="wheel-collections">
+        <?php get_template_part( 'template-parts/front', 'wheel-collections' ); ?>
+    </section>
+
+    <!-- <div id="lightgallery">
+        <li data-src="https://picsum.photos/200/300?image=11">
+            <a>
+                <img src="https://picsum.photos/200/300?image=11" />
+            </a>
+        </li>
+        <li data-src="https://picsum.photos/200/300?image=12">
+            <a>
+                <img src="https://picsum.photos/200/300?image=12" />
+            </a>
+        </li>
+    </div> -->
 
 </main>
-
-
-
-<!-- <div id="lightgallery">
-  <li data-src="https://picsum.photos/200/300?image=11">
-    <a>
-        <img src="https://picsum.photos/200/300?image=11" />
-    </a>
-  </li>
-  <li data-src="https://picsum.photos/200/300?image=12">
-    <a>
-        <img src="https://picsum.photos/200/300?image=12" />
-    </a>
-  </li>
-</div>
-
-<script type="text/javascript">
-    jQuery(function($) {
-        $("#lightgallery").lightGallery({
-            mode: 'lg-fade',
-            cssEasing : 'cubic-bezier(0.25, 0, 0.25, 1)',
-        });
-    });
-</script> -->
 
 <?php
 get_footer();

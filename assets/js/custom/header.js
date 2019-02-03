@@ -13,6 +13,8 @@ jQuery( function( $ ) {
 
 		if ( Math.abs( prev - st ) <= delta ) {
 			return;
+		} else {
+			$( '.slider-progress' ).hide();
 		}
 
 		if ( st > navbarHeight ) {
@@ -23,8 +25,21 @@ jQuery( function( $ ) {
 
 		if ( 0 === $window.scrollTop() ) {
 			nav.removeClass( 'nav-up' );
+			$( '.slider-progress' ).show();
 		}
 
+	});
+
+	const siteNav = $( '#site-navigation-wrapper' );
+
+	$( '#main-menu' ).click( function( e ) {
+		e.preventDefault();
+		siteNav.fadeIn();
+	});
+
+	siteNav.find( 'a[data-target="site-nav-close"]' ).click( function( e ) {
+		e.preventDefault();
+		siteNav.fadeOut();
 	});
 
 });

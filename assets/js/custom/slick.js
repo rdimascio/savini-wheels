@@ -13,7 +13,7 @@ jQuery( function( $ ) {
 		draggable: true,
 		adaptiveHeight: false,
 		dots: true,
-		arrows: true,
+		arrows: false,
 		mobileFirst: true,
 		pauseOnDotsHover: true,
 		infinite: true,

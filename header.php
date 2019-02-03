@@ -24,25 +24,32 @@
 <div id="page" class="site">
 
 	<header id="masthead" class="site-header">
-		<div class="site-branding flex align-center justify-between">
-			<div>
-				<?php if ( has_custom_logo() ) : the_custom_logo();
-						else : bloginfo( 'name' );
-					endif; ?>
-			</div>
+		<div class="site-branding flex align-center justify-between m-l-4 m-r-4">
+				<div class="siteLogo">
+					<?php if ( has_custom_logo() ) : the_custom_logo();
+							else : bloginfo( 'name' );
+						endif; ?>
+				</div>
 
-			<div>
-				<nav id="site-navigation" class="main-navigation">
-					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'wp-starter-theme' ); ?></button>
-					<?php
-						wp_nav_menu( array(
-							'theme_location' => 'menu-1',
-							'menu_id'        => 'primary-menu',
-						) );
-					?>
-				</nav><!-- #site-navigation -->
-			</div>
+				<div class="siteNavigation">
+					<a id="main-menu" class="box-shadow-menu"></a>
+				</div>
 		</div><!-- .site-branding -->
+		<div class="slider-progress">
+				<div class="progress"></div>
+		</div>
 	</header><!-- #masthead -->
+
+	<div id="site-navigation-wrapper" class="flex justify-center align-center" style="display:none">
+		<a class="close white text uppercase" data-target="site-nav-close">&times; Close</a>
+		<nav id="site-navigation" class="main-navigation flex align-center justify-center">
+			<?php
+				wp_nav_menu( array(
+					'theme_location' => 'menu-1',
+					'menu_id'        => 'primary-menu',
+				) );
+			?>
+		</nav><!-- #site-navigation -->
+	</div>
 
 	<div id="content" class="site-content">
