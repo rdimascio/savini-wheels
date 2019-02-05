@@ -24,6 +24,7 @@ $collection_query = new WP_Term_Query( $collection_args ) ?>
 
 		$name = $collection->name;
 		$description = $collection->description;
+		$image = get_field( 'collection_image', 'wheel_collections_' . $collection->term_id );
 
 		$id =  strtolower($name);
 		//Make alphanumeric (removes all other characters)
@@ -36,10 +37,10 @@ $collection_query = new WP_Term_Query( $collection_args ) ?>
 		if ( $counter %2 === 1 ) : ?>
 
 			<div id="<?= $id ?>" class="collection-item">
-				<div class="collection-image">
-					<img src="/" />
+				<div class="collection-image column">
+				<?= wp_get_attachment_image($image, 'large'); ?>
 				</div>
-				<div class="collection-content">
+				<div class="collection-content column">
 					<h1 class="collection-title text-center"><?= $name ?></h1>
 					<p class="collection-description"><?= $description ?></p>
 				</div>
@@ -48,12 +49,12 @@ $collection_query = new WP_Term_Query( $collection_args ) ?>
 		<?php else : ?>
 
 		<div id="<?= $id ?>" class="collection-item">
-			<div class="collection-content">
+			<div class="collection-content column">
 				<h1 class="collection-title text-center"><?= $name ?></h1>
 				<p class="collection-description"><?= $description ?></p>
 			</div>
-			<div class="collection-image">
-				<img src="/" />
+			<div class="collection-image column">
+			<?= wp_get_attachment_image($image, 'large'); ?>
 			</div>
 		</div>
 

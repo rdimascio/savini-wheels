@@ -40,9 +40,19 @@ jQuery(function ($) {
 "use strict";
 
 jQuery(function ($) {
-  $('#lightgallery').lightGallery({
+  $('#wheelGallery').lightGallery({
     mode: 'lg-fade',
     cssEasing: 'cubic-bezier(0.25, 0, 0.25, 1)'
+  });
+  $('#videoGallery').lightGallery({
+    mode: 'lg-fade',
+    cssEasing: 'cubic-bezier(0.25, 0, 0.25, 1)',
+    youtubePlayerParams: {
+      modestbranding: 1,
+      showinfo: 0,
+      rel: 0,
+      controls: 0
+    }
   });
 });
 "use strict";
@@ -121,7 +131,7 @@ jQuery(function ($) {
     var slideCaption = $(this).data('caption');
 
     if (slideTitle || slideCaption) {
-      $(this).append('<div class="slidecaption"><h4>' + slideTitle + '.</h4><p>' + slideCaption + '</p><a>Learn More</a></div>');
+      $(this).append('<div class="slider-caption"><h4>' + slideTitle + '.</h4><p>' + slideCaption + '</p><a>Learn More</a></div>');
     }
   });
 });

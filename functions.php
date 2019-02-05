@@ -366,7 +366,7 @@ function insert_the_parent_categories() {
 		)
 	);
 	wp_insert_term(
-		'Black di Forza - Super Concave',
+		'Black di Forza',
 		'wheel_collections',
 		array(
 		  'description'	=> 'The Black di Forza lines are one of our simplest and more essential products for everyday use. Now available in Super Concave profiles and an array of fitments.',

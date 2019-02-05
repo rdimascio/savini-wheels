@@ -1,0 +1,113 @@
+#social {
+	position: relative;
+	background-color: #e0e0e0;
+	background-image: url(http://savini.local/app/uploads/2019/02/savini__social-bg-og.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	&::before {
+		content: '';
+    position: absolute;
+    height: 100%;
+		width: 100%;
+		background: linear-gradient(to right, rgba(255,255,255,.6) 0%,rgba(224,224,224,1) 30%, rgba(224,224,224,1) 70%, rgba(255,255,255,.6) 100%);
+	}
+
+	.social--wrapper {
+		padding: 3rem;
+    margin: 2rem 4rem;
+
+		.social--column {
+
+			justify-content: center;
+			align-items: center;
+			position: relative;
+
+			&.blog--column {
+				flex: 0 1 40%;
+			}
+			
+			.social--title {
+				color: #111;
+				font-size: 16px;
+				letter-spacing: 3px;
+				text-transform: uppercase;
+				position: relative;
+				
+				h4 {
+					font-weight: 700;
+
+					span {
+						font-weight: 100;
+					}
+					
+				}
+			}
+
+			.social-feed {
+
+				.social--content__gallery {
+					display: flex;
+					flex-wrap: wrap;
+					justify-content: center;
+					margin: 0 2rem;
+
+					.social--content__gallery-item {
+						display: flex;
+						justify-content: flex-start;
+						flex-direction: column;
+						align-items: center;
+						flex: 1;
+						flex-basis: 45%;
+						margin: 5px;
+					}
+				}
+			}
+
+			.social--view_more {
+
+				a {
+					color: #fff;
+					position: relative;
+					text-decoration: none;
+					text-transform: uppercase;
+					font-size: 12px;
+					font-weight: 100;
+					padding: .5rem 2rem;
+					background: red;
+					border-radius: 2px;
+				}
+			}
+
+			.blog {
+				margin: 0 2rem;
+
+				img {
+					border-radius: 2px;
+					min-width: 385px;
+					margin-top: 5px;
+				}
+
+				p {
+					text-transform: uppercase;
+					font-size: 10px;
+					line-height: 20px;
+				}
+
+				a {
+					color: #fff;
+					position: relative;
+					text-decoration: none;
+					text-transform: uppercase;
+					font-size: 12px;
+					font-weight: 100;
+					padding: .5rem 2rem;
+					background: red;
+					border-radius: 2px;
+				}
+			}
+		}
+	}
+}
+

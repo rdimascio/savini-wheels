@@ -16,26 +16,38 @@ get_header();
 ?>
 
 <main>
-    <section id="hero" class="hero">
-        <?php get_template_part( 'template-parts/front', 'hero-carousel' ); ?>
+
+    <section id="hero" class="w-100 hero">
+        <?php get_template_part( 'template-parts/front', 'hero' ); ?>
     </section>
 
-    <section id="wheelCollections" class="wheel-collections">
-        <?php get_template_part( 'template-parts/front', 'wheel-collections' ); ?>
+    <section id="cllections" class="w-100 bg-white">
+        <?php get_template_part( 'template-parts/front', 'collections' ); ?>
     </section>
 
-    <!-- <div id="lightgallery">
-        <li data-src="https://picsum.photos/200/300?image=11">
-            <a>
-                <img src="https://picsum.photos/200/300?image=11" />
-            </a>
-        </li>
-        <li data-src="https://picsum.photos/200/300?image=12">
-            <a>
-                <img src="https://picsum.photos/200/300?image=12" />
-            </a>
-        </li>
-    </div> -->
+    <section id="configurations" class="w-100 bg-gradient">
+        <?php get_template_part( 'template-parts/front', 'configurations' ); ?>
+    </section>
+
+    <section id="images" class="w-100 img-bg">
+        <?php get_template_part( 'template-parts/front', 'images' ); ?>
+    </section>
+
+    <section id="videos" class="w-100 bg-white">
+        <?php get_template_part( 'template-parts/front', 'videos' ); ?>
+    </section>
+
+    <section id="social" class="w-100 img-bg">
+        <?php get_template_part( 'template-parts/front', 'social' ); ?>
+    </section>
+
+    <section id="customize" class="w-100 bg-white">
+        <?php get_template_part( 'template-parts/front', 'customize' ); ?>
+    </section>
+
+    <section id="mission" class="w-100 img-bg">
+        <?php get_template_part( 'template-parts/front', 'mission' ); ?>
+    </section>
 
 </main>
 

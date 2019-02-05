@@ -4,4 +4,4 @@
 	</div>
 </div>
 
-<?php get_template_part( 'template-parts/front', 'wheel-collections-loop' ); ?>
+<?php get_template_part( 'template-parts/front', 'collections-loop' ); ?>

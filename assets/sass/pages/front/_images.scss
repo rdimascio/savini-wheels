@@ -1,0 +1,97 @@
+
+#images {
+	
+	position: relative;
+	background-image: url(http://savini.local/app/uploads/2019/02/wd-nsx.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	&::before {
+		content: '';
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		background: linear-gradient(to left, rgba(255,255,255,0.50) 0%, rgba(0,0,0,0.50) 100%), radial-gradient(at 50% 0%, rgba(255,255,255,0.10) 0%, rgba(0,0,0,0.50) 50%);
+	}
+
+	.image-gallery--wrapper {
+
+		padding: 3rem;
+		margin: 2rem 0;
+
+		.image-gallery--container {
+			@media (max-width: 1200px) {
+				width: 75%;
+			}
+
+			@media (max-width: 666px) {
+				width: 100%;
+			}
+		}
+
+		.image-gallery--title {
+
+			color: #fff;
+			font-size: 16px;
+			letter-spacing: 3px;
+			text-transform: uppercase;
+			position: relative;
+
+			h4 {
+				font-weight: 100;
+
+				span {
+					font-weight: 700;
+				}
+			}
+	
+		}
+
+		.image-gallery {
+
+			position: relative;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			max-width: 560px;
+			margin: auto;
+
+			.image-gallery--item {
+				display: flex;
+				justify-content: center;
+				flex: 1;
+				flex-basis: 45%;
+				margin: 5px;
+				cursor: pointer;
+
+				@media (max-width: 666px) {
+					flex-basis: 100%;
+					margin: 1rem;
+				}
+
+				a {
+					display: flex;
+				}
+			}
+	
+		}
+
+		.image-gallery--view_more {
+			
+			a {
+				color: #fff;
+				position: relative;
+				text-decoration: none;
+				text-transform: uppercase;
+				font-size: 12px;
+				font-weight: 100;
+				padding: 1rem 2rem;
+				background: red;
+				border-radius: 2px;
+			}
+		}
+
+	}
+
+}

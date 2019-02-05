@@ -1,0 +1,47 @@
+#mission {
+	background-image: url(http://savini.local/app/uploads/2019/02/savini__mission-bg-x2.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+
+	&::before {
+		content: '';
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		background: rgba(25, 25, 25, 0.7);
+	}
+
+	.mission--wrapper {
+		padding: 6rem 8rem;
+	}
+
+	.mission--logo {
+		position: relative;
+
+		img {
+			margin-bottom: 3rem;
+		}
+	}
+
+	.mission--content {
+		position: relative;
+		color: #fff;
+		text-transform: uppercase;
+
+		h4 {
+			letter-spacing: 3px;
+		}
+
+		p {
+			font-weight: 100;
+			font-size: 12px;
+			line-height: 24px;
+			letter-spacing: 1px;
+			word-spacing: 3px;
+		}
+	}
+
+
+}

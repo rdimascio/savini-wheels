@@ -13,20 +13,24 @@
 
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'wp-starter-theme' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'wp-starter-theme' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'wp-starter-theme' ), 'wp-starter-theme', '<a href="https://ryan.dimasc.io/">Ryan DiMascio</a>' );
-				?>
-		</div><!-- .site-info -->
+	<footer id="footer">
+
+		<div class="footer--wrapper w-100 p-t-5 p-b-5">
+
+			<div class="footer--info text-center">
+				<img src="http://savini.local/app/uploads/2019/02/savini__white-logo.png" alt="">
+				
+				<p>Anaheim, California</p>
+				<a href="tel:866-779-4646">tel: 866.779.4646</a>
+				<br>
+				<a href="mailto:info@saviniwheels.com">email: info@<span>savini</span>wheels.com</a>
+			</div>
+			<div class="footer--menu">
+
+			</div>
+
+		</div>
+
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
