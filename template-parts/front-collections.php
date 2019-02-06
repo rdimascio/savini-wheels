@@ -1,7 +1,3 @@
-<div class="m-t-5">
-	<div class="line">
-		<span>Wheel <b>Collections</b></span>
-	</div>
-</div>
+<h2 data-bottom-top="top: 0;" data-top-bottom="top: 0;" class="for__title lined_title title js-appearing-content">Wheel Collections</h2>
 
 <?php get_template_part( 'template-parts/front', 'collections-loop' ); ?>

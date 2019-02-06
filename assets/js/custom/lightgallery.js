@@ -5,7 +5,7 @@ jQuery( function( $ ) {
 	});
 
 	$( '#videoGallery' ).lightGallery({
-		mode: 'lg-fade',
+		mode: 'lg-tube',
 		cssEasing: 'cubic-bezier(0.25, 0, 0.25, 1)',
 		youtubePlayerParams: {
 			modestbranding: 1,

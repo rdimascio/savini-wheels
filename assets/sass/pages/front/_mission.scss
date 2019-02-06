@@ -3,14 +3,16 @@
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
+	background-attachment: fixed;
 	position: relative;
+	padding-bottom: 10rem;
 
 	&::before {
 		content: '';
 		position: absolute;
 		height: 100%;
 		width: 100%;
-		background: rgba(25, 25, 25, 0.7);
+		background: rgba(25, 25, 25, 0.9);
 	}
 
 	.mission--wrapper {
@@ -19,6 +21,14 @@
 
 	.mission--logo {
 		position: relative;
+
+		h2 {
+			height: 200px;
+			background-position: center;
+			width: 500px;
+			background-repeat: no-repeat;
+			background-size: contain;
+		}
 
 		img {
 			margin-bottom: 3rem;

@@ -45,7 +45,7 @@ jQuery(function ($) {
     cssEasing: 'cubic-bezier(0.25, 0, 0.25, 1)'
   });
   $('#videoGallery').lightGallery({
-    mode: 'lg-fade',
+    mode: 'lg-tube',
     cssEasing: 'cubic-bezier(0.25, 0, 0.25, 1)',
     youtubePlayerParams: {
       modestbranding: 1,
@@ -126,12 +126,108 @@ jQuery(function ($) {
     isPause = true;
   });
   startProgressbar();
+});
+"use strict";
+
+jQuery(function ($) {
   $('#hero-carousel .slick-slide .item').each(function () {
     var slideTitle = $(this).data('title');
     var slideCaption = $(this).data('caption');
 
     if (slideTitle || slideCaption) {
-      $(this).append('<div class="slider-caption"><h4>' + slideTitle + '.</h4><p>' + slideCaption + '</p><a>Learn More</a></div>');
+      $(this).append('<div class="slider-caption"><div class="slider-content"><h4>' + slideTitle + '.</h4><p>' + slideCaption + '</p><a>Learn More</a></div></div>');
     }
+  });
+});
+"use strict";
+
+jQuery(function ($) {
+  // START OF: is mobile =====
+  function isMobile() {
+    return /Android|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent || navigator.vendor || window.opera);
+  } // ===== END OF: is mobile
+  // START OF: mark is mobile =====
+
+
+  (function () {
+    if (isMobile()) {
+      $('body').addClass('body--mobile');
+    } else {
+      $('body').addClass('body--desktop');
+    }
+  })(); // ===== END OF: mark is mobile
+  // START OF: content appearing =====
+
+
+  var contentAppearing = function () {
+    var bind = function bind() {
+      var $content = $('.js-appearing-content');
+      $content.appear();
+
+      var setOffset = function setOffset() {
+        var coefficient = -0.7; //manual
+
+        var offsetValue = $content.eq(0).innerHeight();
+        $content.attr('data-appear-top-offset', offsetValue * coefficient);
+      };
+
+      setOffset();
+      $(document.body).on('appear', '.js-appearing-content', function (e, $affected) {
+        // this code is executed for each appeared element
+        $(this).addClass('skrollable-between');
+      }).on('disappear', '.js-appearing-content', function (e, $affected) {
+        // this code is executed for each appeared element
+        $(this).removeClass('skrollable-between');
+      });
+    };
+
+    return {
+      bind: bind
+    };
+  }();
+
+  contentAppearing.bind(); // ===== END OF: content appearing
+  // START OF: on scroll section =====
+
+  var onScroll = function () {
+    var bind = function bind() {
+      var scrollr = skrollr.init({
+        'smoothScrolling': true,
+        'smoothScrollingDuration': 2000,
+        'easing': 'linear',
+        'forceHeight': false
+      });
+    };
+
+    return {
+      bind: bind
+    };
+  }();
+
+  if (!isMobile()) {
+    //Skrollr imitates scroll on mobile devices and it performs awfully. That is why we turned off the skrollr plugin on mobiles and created another set of animations: special for mobile devices.
+    window.onload = function () {
+      onScroll.bind();
+    };
+  } // ===== END OF: on scroll section
+
+});
+"use strict";
+"use strict";
+
+jQuery(function ($) {
+  $('.tilt').tilt({
+    glare: true,
+    maxGlare: .15,
+    scale: 1.05,
+    perspective: 100,
+    maxTilt: 5
+  });
+  $('.transparent-tilt').tilt({
+    glare: true,
+    maxGlare: .15,
+    scale: 1.05,
+    perspective: 100,
+    maxTilt: 5
   });
 });

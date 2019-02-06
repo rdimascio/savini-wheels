@@ -1,0 +1,89 @@
+.tilt {
+	transform-style: preserve-3d;
+	box-shadow:0 5px 30px rgba(0,0,0,.1);
+	transform: translateZ(0);
+}
+
+.transparent-tilt {
+	transform-style: preserve-3d;
+	// box-shadow:0 5px 30px rgba(0,0,0,.1);
+	transform: translateZ(0);
+}
+
+// body {
+//   width: 1200px;
+// }
+
+// .frame {
+//   background: white;
+//   color: red;
+//   border: 15px double  lightgrey;
+//   text-transform: uppercase;
+//   box-shadow: black 3px 2px 3px;
+//   border-radius: 30px;
+//   padding-top: 3px;
+//   font-family: helvetica;
+//   font-weight: 900;
+//   height: auto;
+//   width: auto;
+//   margin: 40px auto;
+// }
+// .frame header {
+// 	display: flex;
+// 	justify-content: space-between;
+// 	align-items: center;
+// 	width: 100%;
+// 	text-align: center;
+//   height: 130px;
+//   background: white;
+//   border-radius: 10px 10px 0 0;
+//   padding-top: 5px;
+//   margin-top: -4px;
+// }
+// .frame .sticker {
+//   width: auto;
+//   padding: 13px;
+//   background: white;
+// 	display: inline-block;
+// 	color: red;
+//   border: 1px solid red;
+//   font-size: 36px;
+//   vertical-align: top;
+// }
+// .frame .s1 {
+//   margin-left: 20px;
+// }
+// .frame .s2 {
+//   margin-right: 20px;
+// }
+// .frame .state {
+//   font-family: 'Alex Brush';
+//   text-transform: none;
+//   text-align: center;
+//   display: inline-block;
+//   width: auto;
+//   margin: auto;
+//   font-size: 96px;
+//   /*    position: absolute;*/
+// }
+// .frame .number {
+//   font-size: 52px;
+// 	text-align: center;
+// 	color: darkblue;
+//   text-shadow: black 1px 1px 1px;
+//   // -webkit-transform: scale(1.2, 2.5);
+//   //         transform: scale(1.2, 2.5);
+//   margin-top: 80px;
+//   -webkit-filter: invert(12%);
+// }
+
+
+#testimonials {
+	margin-bottom: 4rem;
+	margin-top: -10rem;
+
+	img {
+		transform: scale(1.5);
+		margin-left: -10rem;
+	}
+}

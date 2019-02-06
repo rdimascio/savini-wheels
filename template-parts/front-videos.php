@@ -1,4 +1,4 @@
-<div class="video-gallery--wrapper">
+<!-- <div class="video-gallery--wrapper">
 	<div class="m-t-2 m-b-2 w-100">
 
 		<div class="video-gallery--title text-center">
@@ -37,4 +37,21 @@
 		</div>
 
 	</div>
-</div>
+</div> -->
+
+<section class="for">
+	<h2 data-bottom-top="top: 0;" data-top-bottom="top: 0;" class="for__title lined_title title js-appearing-content">Latest Videos</h2>
+	<div class="for__container" id="videoGallery">
+		<a href="https://www.youtube.com/watch?v=jGzD-r6dQeg"><div style="background-image: url(http://savini.local/app/uploads/2019/02/savini__latest-videos-karma.png)" data-bottom-top="transform: translateZ(0) translateY(0%); opacity: 0;" data-top-bottom="transform: translateZ(0) translateY(-35%);" data--100-bottom="opacity:1;" class="for__item for__item--1 greyscale js-appearing-content"></div></a>
+		<a href="https://www.youtube.com/watch?v=jGzD-r6dQeg"><div style="background-image: url(http://savini.local/app/uploads/2019/02/savini__latest-videos-gtr.png)" data-bottom-top="transform: translateZ(0) translateY(-30%); opacity: 0;" data-top-bottom="transform: translateZ(0) translateY(-0%);" data--100-bottom="opacity:1;" class="for__item for__item--2 greyscale js-appearing-content"></div></a>
+		<a href="https://www.youtube.com/watch?v=jGzD-r6dQeg"><div style="background-image: url(http://savini.local/app/uploads/2019/02/savini__latest-videos-lambo.png)" data-bottom-top="transform: translateZ(0) translateY(0%); opacity: 0;" data-top-bottom="transform: translateZ(0) translateY(-35%);" data--100-bottom="opacity:1;" class="for__item for__item--3 greyscale js-appearing-content"></div></a>
+		<a href="https://www.youtube.com/watch?v=jGzD-r6dQeg"><div style="background-image: url(http://savini.local/app/uploads/2019/02/savini__latest-videos-ferrari.png)" data-bottom-top="transform: translateZ(0) translateY(5%); opacity: 0;" data-top-bottom="transform: translateZ(0) translateY(-35%);" data--100-bottom="opacity:1;" class="for__item for__item--4 greyscale js-appearing-content"></div></a>
+		<a href="https://www.youtube.com/watch?v=jGzD-r6dQeg"><div style="background-image: url(http://savini.local/app/uploads/2019/02/savini__latest-videos-nsx.png)" data-bottom-top="transform: translateZ(0) translateY(-25%); opacity: 0;" data-top-bottom="transform: translateZ(0) translateY(5%);" data--100-bottom="opacity:1;" class="for__item for__item--5 greyscale js-appearing-content"></div></a>
+		<a href="https://www.youtube.com/watch?v=jGzD-r6dQeg"><div style="background-image: url(http://savini.local/app/uploads/2019/02/savini__latest-videos-sv-wheels.png)" data-bottom-top="transform: translateZ(0) translateY(5%); opacity: 0;" data-top-bottom="transform: translateZ(0) translateY(-35%);" data--100-bottom="opacity:1;" class="for__item for__item--6 greyscale js-appearing-content"></div></a>
+		<a href="https://www.youtube.com/watch?v=jGzD-r6dQeg"><div style="background-image: url(http://savini.local/app/uploads/2019/02/savini__latest-videos-sv-wheels.png)" data-bottom-top="transform: translateZ(0) translateY(10%); opacity: 0;" data-top-bottom="transform: translateZ(0) translateY(-35%);" data--100-bottom="opacity:1;" class="for__item for__item--7 greyscale js-appearing-content"></div></a>
+		<a href="https://www.youtube.com/watch?v=jGzD-r6dQeg"><div style="background-image: url(http://savini.local/app/uploads/2019/02/savini__latest-videos-sv-wheels.png)" data-bottom-top="transform: translateZ(0) translateY(-20%); opacity: 0;" data-top-bottom="transform: translateZ(0) translateY(10%);" data--100-bottom="opacity:1;" class="for__item for__item--8 greyscale js-appearing-content"></div></a>
+		<!--extra invisible element to align the siblings-->
+		<div class="for__item for__item--9"></div>
+		<div class="for__overlay"></div>
+	</div>
+</section>

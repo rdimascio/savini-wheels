@@ -75,15 +75,4 @@ jQuery( function( $ ) {
 
 	startProgressbar();
 
-	$( '#hero-carousel .slick-slide .item' ).each( function() {
-
-		var slideTitle = $( this ).data( 'title' );
-		var slideCaption = $( this ).data( 'caption' );
-
-		if ( slideTitle || slideCaption ) {
-			$( this ).append( '<div class="slider-caption"><h4>' + slideTitle + '.</h4><p>' + slideCaption + '</p><a>Learn More</a></div>' );
-		}
-
-	});
-
 });
