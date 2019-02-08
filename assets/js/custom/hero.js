@@ -1,6 +1,8 @@
 jQuery( function( $ ) {
 	$( '#hero-carousel .slick-slide .item' ).each( function() {
 
+		console.log('fuck');
+
 		var slideTitle = $( this ).data( 'title' );
 		var slideCaption = $( this ).data( 'caption' );
 
