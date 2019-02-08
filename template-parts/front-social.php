@@ -4,6 +4,8 @@
 			<h4>Social <span>Feed</span></h4>
 		</div>
 
+		<?//= do_shortcode('[instagram-feed num=4 cols=2]') ?>
+
 		<div class="social--content social-feed">
 			<div class="social--content__gallery">
 				<div class="social--content__gallery-item">
@@ -30,7 +32,7 @@
 			<h4>Blog</h4>
 		</div>
 
-		<div class="social--content blog">
+		<div class="social--content blog js-appearing-content" data-bottom-top="transform: translateZ(0) translateY(0%); opacity: 0;" data-top-bottom="transform: translateZ(0) translateY(-20%);" data--100-bottom="opacity:1;">
 			<?php if ( have_posts() ) : while( have_posts() ) : the_post(); ?>
 				<?php get_template_part( 'template-parts/front', 'blog-post' ); ?>
 			<?php endwhile; else :

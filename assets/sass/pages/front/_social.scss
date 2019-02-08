@@ -25,6 +25,10 @@
 			align-items: center;
 			position: relative;
 
+			#sb_instagram {
+				margin-top: -10px;
+			}
+
 			&.blog--column {
 				flex: 0 1 40%;
 			}
@@ -82,7 +86,10 @@
 			}
 
 			.blog {
-				margin: 0 2rem;
+				padding: 2rem;
+				background: rgba(255,255,255,0.7);
+				border-radius: 3px;
+				box-shadow: 0 2px 30px rgba(25,25,25,0.3);
 
 				img {
 					border-radius: 2px;
