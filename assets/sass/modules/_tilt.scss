@@ -10,6 +10,12 @@
 	transform: translateZ(0);
 }
 
+.wheel-tilt {
+	transform-style: preserve-3d;
+	// box-shadow:0 5px 30px rgba(0,0,0,.1);
+	transform: translateZ(0);
+}
+
 // body {
 //   width: 1200px;
 // }

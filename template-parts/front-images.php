@@ -2,7 +2,7 @@
 	<div class="image-gallery--container m-t-2 m-b-2 w-50">
 
 		<div class="image-gallery--title text-center m-b-3" data-bottom-top="transform: translateZ(0) translateY(0%); opacity: 0;" data-top-bottom="transform: translateZ(0) translateY(-35%);" data--100-bottom="opacity:1;">
-		<h2 data-bottom-top="top: 0;" data-top-bottom="top: 0;" class="for__title lined_title title js-appearing-content">latest creation</h2>
+		<h2 data-bottom-top="top: 0;" data-top-bottom="top: 0;" class="for__title lined_title title js-appearing-content">Latest <span>Creation</span> </h2>
 		</div>
 
 		<div id="wheelGallery" class="image-gallery">

@@ -1,41 +1,19 @@
-.line {
-	display: block;
-	text-align: center;
-	overflow: hidden;
-	white-space: nowrap; 
-}
+#collections {
 
-.line > span {
-	position: relative;
-	display: inline-block;
-	text-transform: uppercase;
-	letter-spacing: 3px;
-	font-size: 20px;
-	font-weight: 300;
-}
+	.for__title:before,
+	.for__title:after {
+		background-color: black;
+	}
 
-.line > span b {
-	font-weight: 700;
-}
+	.lined_title:before, .lined_title:after {
+		height: 2px;
+		width: 100%;
+	}
 
-.line > span:before,
-.line > span:after {
-	content: "";
-	position: absolute;
-	top: 45%;
-	width: 9999px;
-	height: 2px;
-	background: #404040;
-}
-
-.line > span:before {
-	right: 100%;
-	margin-right: 15px;
-}
-
-.line > span:after {
-	left: 100%;
-	margin-left: 15px;
+	.title {
+		color: #404040;
+		
+	}
 }
 
 .collection-container {

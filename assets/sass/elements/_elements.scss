@@ -27,3 +27,45 @@ figure {
 }
 
 @import "tables";
+
+.line {
+	display: block;
+	text-align: center;
+	overflow: hidden;
+	white-space: nowrap; 
+}
+
+.line > span {
+	position: relative;
+	display: inline-block;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	font-size: 20px;
+	font-weight: 300;
+}
+
+.line > span b {
+	font-weight: 700;
+}
+
+.line > span:before,
+.line > span:after {
+	content: "";
+	position: absolute;
+	top: 45%;
+	width: 9999px;
+	height: 2px;
+	background: #404040;
+}
+
+.line > span:before {
+	right: 100%;
+	margin-right: 15px;
+}
+
+.line > span:after {
+	left: 100%;
+	margin-left: 15px;
+}
+
+@import "titles";

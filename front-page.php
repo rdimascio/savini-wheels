@@ -49,21 +49,9 @@ get_header();
         <?php get_template_part( 'template-parts/front', 'mission' ); ?>
     </section>
 
-    <section id="testimonials">
+    <!-- <section id="testimonials">
         <img class="lambo js-appearing-content" src="http://savini.local/app/uploads/2019/02/lambo.png" alt="" data-bottom-top="transform: translateX(-35%) translateY(0%); opacity: .7;" data-top-bottom="transform: translateX(35%) translateY(-35%);" data--100-bottom="opacity:1;">
-
-        <!-- <body>
-  <div class='frame'>
-    <header>
-      <div class='sticker s1'>May</div>
-      <div class='state'>California</div>
-      <div class='sticker s2'>2016</div>
-    </header>
-    <div class='number'>h82jd29</div>
-  </div>
-</body> -->
-
-    </section>
+    </section> -->
 
 </main>
 

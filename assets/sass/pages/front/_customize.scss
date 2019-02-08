@@ -1,5 +1,20 @@
 #customize {
 
+		.for__title:before,
+		.for__title:after {
+			background-color: black;
+		}
+	
+		.lined_title:before, .lined_title:after {
+			height: 2px;
+			width: 100%;
+		}
+	
+		.title {
+			color: #404040;
+			
+		}
+
 	.customize--content {
 		margin: 4rem 6rem 2rem 6rem;
 

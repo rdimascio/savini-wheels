@@ -37,7 +37,7 @@ $collection_query = new WP_Term_Query( $collection_args ) ?>
 		if ( $counter %2 === 1 ) : ?>
 
 			<div id="<?= $id ?>" data-bottom-top="transform: translateZ(0) translateY(0%); opacity: 0;" data-top-bottom="transform: translateZ(0) translateY(-35%);" data--100-bottom="opacity:1;" class="collection-item collection-item__<?= $counter ?> js-appearing-content">
-				<div data-tilt class="collection-image transparent-tilt column">
+				<div data-tilt class="collection-image wheel-tilt column">
 					<?= wp_get_attachment_image($image, 'large'); ?>
 				</div>
 				<div class="collection-content column" data-bottom-top="transform: translateZ(0) translateY(0%); opacity: 0;" data-top-bottom="transform: translateZ(0) translateY(-35%);" data--100-bottom="opacity:1;">
@@ -53,7 +53,7 @@ $collection_query = new WP_Term_Query( $collection_args ) ?>
 					<h1 class="collection-title text-center"><?= $name ?></h1>
 					<p class="collection-description"><?= $description ?></p>
 				</div>
-				<div data-tilt class="collection-image transparent-tilt column">
+				<div data-tilt class="collection-image wheel-tilt column">
 					<?= wp_get_attachment_image($image, 'large'); ?>
 				</div>
 			</div>

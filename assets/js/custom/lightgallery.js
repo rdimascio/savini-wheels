@@ -5,8 +5,9 @@ jQuery( function( $ ) {
 	});
 
 	$( '#videoGallery' ).lightGallery({
-		mode: 'lg-tube',
+		mode: 'lg-fade',
 		cssEasing: 'cubic-bezier(0.25, 0, 0.25, 1)',
+		selector: '.video',
 		youtubePlayerParams: {
 			modestbranding: 1,
 			showinfo: 0,

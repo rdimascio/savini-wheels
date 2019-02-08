@@ -113,14 +113,15 @@ jQuery(function ($) {
 "use strict";
 
 jQuery(function ($) {
-  $('#hero-carousel .slick-slide .item').each(function () {
-    console.log('fuck');
-    var slideTitle = $(this).data('title');
-    var slideCaption = $(this).data('caption');
+  $('#hero-carousel').on('init', function () {
+    $('.slick-slide .item', this).each(function () {
+      var slideTitle = $(this).data('title');
+      var slideCaption = $(this).data('caption');
 
-    if (slideTitle || slideCaption) {
-      $(this).append('<div class="slider-caption"><div class="slider-content"><h4>' + slideTitle + '.</h4><p>' + slideCaption + '</p><a>Learn More</a></div></div>');
-    }
+      if (slideTitle || slideCaption) {
+        $(this).append('<div class="slider-caption"><div class="slider-content"><h4>' + slideTitle + '.</h4><p>' + slideCaption + '</p><a>Learn More</a></div></div>');
+      }
+    });
   });
 });
 "use strict";
@@ -132,8 +133,9 @@ jQuery(function ($) {
     cssEasing: 'cubic-bezier(0.25, 0, 0.25, 1)'
   });
   $('#videoGallery').lightGallery({
-    mode: 'lg-tube',
+    mode: 'lg-fade',
     cssEasing: 'cubic-bezier(0.25, 0, 0.25, 1)',
+    selector: '.video',
     youtubePlayerParams: {
       modestbranding: 1,
       showinfo: 0,
@@ -220,6 +222,13 @@ jQuery(function ($) {
   $('.tilt').tilt({
     glare: true,
     maxGlare: .15,
+    scale: 1.05,
+    perspective: 100,
+    maxTilt: 5
+  });
+  $('.wheel-tilt').tilt({
+    glare: true,
+    maxGlare: .5,
     scale: 1.05,
     perspective: 100,
     maxTilt: 5
