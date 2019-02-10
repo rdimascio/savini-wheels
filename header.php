@@ -50,6 +50,13 @@
 				) );
 			?>
 		</nav><!-- #site-navigation -->
+
+		<div class="social--row row justify-center align-center p-t-1 p-b-1">
+			<a class="social--img" href="https://www.facebook.com/SaviniWheels" target="_blank"><img src="https://brandicons.org/light/facebook" width="20" /></a>
+			<a class="social--img" href="https://www.twitter.com/SaviniWheels" target="_blank"><img src="https://brandicons.org/light/twitter" width="20" /></a>
+			<a class="social--img" href="https://www.instagram.com/SaviniWheels" target="_blank"><img src="https://brandicons.org/light/instagram" width="20" /></a>
+			<a class="social--img" href="https://www.youtube.com/SaviniWheels" target="_blank"><img src="https://brandicons.org/light/youtube" width="20" /></a>
+		</div>
 	</div>
 
 	<div id="content" class="site-content">

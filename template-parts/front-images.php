@@ -15,7 +15,7 @@
 		</div>
 
 		<div class="image-gallery--view_more text-center m-t-3">
-			<a href="#">Photo Gallery</a>
+			<a href="#" id="launchImageGallery">Photo Gallery</a>
 		</div>
 
 	</div>

@@ -1,13 +1,15 @@
 #collections {
+	overflow: hidden;
 
 	.for__title:before,
 	.for__title:after {
-		background-color: black;
+		background-color: #404040;
 	}
 
 	.lined_title:before, .lined_title:after {
 		height: 2px;
 		width: 100%;
+		max-width: 250px;
 	}
 
 	.title {
@@ -36,12 +38,26 @@
 			text-transform: uppercase;
 			letter-spacing: 1px;
 
+			.collection-link {
+				color: #404040;
+				text-decoration: none;
+
+				&:hover .collection-title {
+					background: red;
+					color: #fff;
+					transition: background 1s;
+				}
+			}
+
 			.collection-title {
 				font-size: 16px;
+				padding-top: 2px;
 				border-bottom: 2px solid red;
+				transition: background .3s;
 			}
 
 			.collection-description {
+				text-align: left;
 				font-size: 10px;
 				line-height: 16px;
 				width: calc(100% + 8px);

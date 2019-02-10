@@ -54,4 +54,8 @@
 		<div class="for__item for__item--9"></div>
 		<div class="for__overlay"></div>
 	</div>
+
+	<div class="video-gallery--view_more text-center m-t-3 m-b-3">
+		<a href="#" id="launchVideoGallery">More Videos</a>
+	</div>
 </section>

@@ -72,13 +72,18 @@
 				}
 
 				a {
+					height: 160px;
+					width: 250px;
+					overflow: hidden;
 					display: flex;
 					position: relative;
+					border-radius: 3px;
 					box-shadow: 0 5px 30px rgba(255,255,255,0.3);
 
 					&::before {
 						content: '';
 						position: absolute;
+						z-index: 9;
 						width: 100%;
 						height: 100%;
 						top: 0;
@@ -88,18 +93,15 @@
 
 					&:hover {
 
-						&:before {
-							background: transparent;
-						}
-
 						img {
-							transform: scale(1.05);
+							transform: scale(1.2);
 						}
 					}
 
 					img {
-						border-radius: 3px;
-						transition: transform .3s;
+						height: 100%;
+						width: 100%;
+						transition: transform 1s;
 					}
 				}
 			}
@@ -117,6 +119,14 @@
 				padding: 1rem 2rem;
 				background: red;
 				border-radius: 2px;
+				border: 2px solid red;
+				transition: background .5s, color .5s;
+
+				&:hover {
+					background: transparent;
+					border: 2px solid red;
+					color: red;
+				}
 			}
 		}
 

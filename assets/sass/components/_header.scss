@@ -10,6 +10,12 @@
 
 	.site-branding {
 		height: 100%;
+
+		.custom-logo {
+			@media (max-width: 400px) {
+				max-width: 150px;
+			}
+		}
 	}
 
 	&.nav-up {
@@ -43,8 +49,48 @@
 	bottom: 0;
 	left: 0;
 	z-index: 99;
-	background: rgba(25,25,25,0.9);
+	background: rgba(25,25,25,0.98);
 	overflow: hidden;
+
+	#site-navigation ul {
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+
+		li {
+			text-transform: uppercase;
+			padding: 1rem;
+			letter-spacing: 3px;
+			font-weight: 700;
+
+			a {
+				color: #fff;
+			}
+		}
+	}
+
+	.social--row {
+		position: absolute;
+    bottom: 5px;
+    left: 10px;
+	}
+
+	.social--img {
+		display: flex;
+		background: #747374;
+		height: 30px;
+		padding: 8px;
+		border-radius: 5px;
+		transform: skew(-20deg);
+
+		img {
+			transform: skew(20deg);
+		}
+
+		&:not(:first-of-type) {
+			margin-left: .5rem;
+		}
+	}
 
 	.close {
 		position: absolute;

@@ -103,7 +103,7 @@ add_action( 'after_setup_theme', 'wp_starter_theme_content_width', 0 );
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function wp_starter_theme_widgets_init() {
+function savini_widgets_init() {
 	register_sidebar( array(
 		'name'          => esc_html__( 'Sidebar', 'wp-starter-theme' ),
 		'id'            => 'sidebar-1',
@@ -114,12 +114,26 @@ function wp_starter_theme_widgets_init() {
 		'after_title'   => '</h2>',
 	) );
 }
-add_action( 'widgets_init', 'wp_starter_theme_widgets_init' );
+add_action( 'widgets_init', 'savini_widgets_init' );
+
+/**
+ * Register menu location.
+ *
+ * @link https://developer.wordpress.org/themes/functionality/navigation-menus/#register-menus
+ */
+function savini_menus() {
+  register_nav_menus(
+    array(
+      'footer' => __( 'Footer Menu' )
+    )
+  );
+}
+add_action( 'init', 'savini_menus' );
 
 /**
  * Enqueue scripts and styles.
  */
-function wp_starter_theme_scripts() {
+function savini_scripts() {
 	wp_enqueue_style( 'savini-style', get_template_directory_uri() . '/assets/css/main.min.css' );
 	wp_enqueue_script( 'wp-starter-theme-vendor', get_template_directory_uri() . '/assets/js/vendor.min.js', array( 'jquery' ), NULL, true );
 
@@ -136,18 +150,18 @@ function wp_starter_theme_scripts() {
 	wp_register_style( 'slick-carousel', '//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css', false, NULL, 'all' );
 	wp_register_style( 'slick-carousel-theme', '//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css', false, NULL, 'all' );
 
-	wp_register_style( 'plyr', '//cdn.plyr.io/3.4.6/plyr.css', false, NULL, 'all' );
-	wp_register_script( 'plyr', '//cdn.plyr.io/3.4.6/plyr.js', array(), NULL, true );
+	// wp_register_style( 'plyr', '//cdn.plyr.io/3.4.6/plyr.css', false, NULL, 'all' );
+	// wp_register_script( 'plyr', '//cdn.plyr.io/3.4.6/plyr.js', array(), NULL, true );
 
-	wp_register_style( 'animate', '//cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css', false, NULL, 'all' );
+	// wp_register_style( 'animate', '//cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css', false, NULL, 'all' );
 
-	wp_register_script( 'micro-modal', '//cdn.jsdelivr.net/npm/micromodal@0.3.2/dist/micromodal.min.js', array(), NULL, true );
+	// wp_register_script( 'micro-modal', '//cdn.jsdelivr.net/npm/micromodal@0.3.2/dist/micromodal.min.js', array(), NULL, true );
 
-	wp_register_script( 'wow', '//cdn.jsdelivr.net/npm/wowjs@1.1.3/dist/wow.min.js', array(), NULL, true );
+	// wp_register_script( 'wow', '//cdn.jsdelivr.net/npm/wowjs@1.1.3/dist/wow.min.js', array(), NULL, true );
 
-	wp_register_script( 'lazy-sizes', '//cdn.jsdelivr.net/npm/lazysizes@4.1.5/lazysizes.min.js', array(), NULL, true );
+	// wp_register_script( 'lazy-sizes', '//cdn.jsdelivr.net/npm/lazysizes@4.1.5/lazysizes.min.js', array(), NULL, true );
 
-	wp_register_script( 'swup', '//cdn.jsdelivr.net/npm/swup@1.7.17/dist/swup.min.js', array(), NULL, true );
+	// wp_register_script( 'swup', '//cdn.jsdelivr.net/npm/swup@1.7.17/dist/swup.min.js', array(), NULL, true );
 
 	wp_register_style('font', 'https://fonts.googleapis.com/css?family=Alex+Brush', false, NULL, 'all');
 
@@ -166,18 +180,18 @@ function wp_starter_theme_scripts() {
 	wp_enqueue_style( 'slick-carousel-theme' );
 	wp_enqueue_script( 'slick-carousel' );
 
-	wp_enqueue_style( 'plyr' );
-	wp_enqueue_script( 'plyr' );
+	// wp_enqueue_style( 'plyr' );
+	// wp_enqueue_script( 'plyr' );
 
-	wp_enqueue_style( 'animate' );
+	// wp_enqueue_style( 'animate' );
 
-	wp_enqueue_script( 'wow' );
+	// wp_enqueue_script( 'wow' );
 
-	wp_enqueue_script( 'micro-modal' );
+	// wp_enqueue_script( 'micro-modal' );
 
-	wp_enqueue_script( 'lazy-sizes' );
+	// wp_enqueue_script( 'lazy-sizes' );
 
-	wp_enqueue_script( 'swup' );
+	// wp_enqueue_script( 'swup' );
 
 	wp_enqueue_style('font');
 
@@ -185,7 +199,7 @@ function wp_starter_theme_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'wp_starter_theme_scripts' );
+add_action( 'wp_enqueue_scripts', 'savini_scripts' );
 
 /**
  * Implement the Custom Header feature.

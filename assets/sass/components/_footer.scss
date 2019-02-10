@@ -26,5 +26,59 @@
 				}
 			}
 		}
+
+		.footer--menu {
+			flex: 1;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			ul {
+				list-style: none;
+				margin: 0;
+				padding: 0;
+				display: flex;
+
+				@media (max-width: 960px) {
+					flex-direction: column;
+				}
+
+				.menu-item {
+					text-transform: uppercase;
+					padding: 1rem;
+					font-weight: 700;
+
+					a {
+						color: #3e3e3e;
+						text-decoration: none;
+					}
+
+				}
+			}
+		}
+
+		.social--img {
+			display: flex;
+			background: #747374;
+			height: 30px;
+			padding: 8px;
+			border-radius: 5px;
+			transform: skew(-20deg);
+
+			img {
+				transform: skew(20deg);
+			}
+
+			&:not(:first-of-type) {
+				margin-left: .5rem;
+			}
+		}
+	}
+
+	.copyright--wrapper {
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		font-size: 10px;
+		color: #BBB;
 	}
 }
