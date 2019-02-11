@@ -72,7 +72,7 @@
 	.social--row {
 		position: absolute;
     bottom: 5px;
-    left: 10px;
+    left: 15px;
 	}
 
 	.social--img {
@@ -97,10 +97,8 @@
     top: 2rem;
 		right: 2rem;
 		cursor: pointer;
-		
-		&:hover, :focus, :active {
-			color: #fff;
-		}
+		color: #fff;
+		text-decoration: none;
 	}
 
 	#primary-menu {

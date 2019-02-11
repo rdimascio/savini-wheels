@@ -34,17 +34,24 @@
 			}
 			
 			.social--title {
-				color: #111;
 				font-size: 16px;
 				letter-spacing: 3px;
 				text-transform: uppercase;
 				position: relative;
+
+				.for__title {
+					color: #404040;
+
+					&::before, &::after {
+						background-color: #404040
+					}
+				}
 				
-				h4 {
-					font-weight: 700;
+				h2 {
+					font-weight: 100;
 
 					span {
-						font-weight: 100;
+						font-weight: 700;
 					}
 					
 				}

@@ -1,6 +1,6 @@
 
 #images {
-	
+	margin-top: -3rem;
 	position: relative;
 	background-image: url(http://savini.local/app/uploads/2019/02/wd-nsx.jpg);
 	background-position: center;
@@ -22,11 +22,19 @@
 		margin: 2rem 0;
 
 		.image-gallery--container {
-			@media (max-width: 1200px) {
+			@media (max-width: 1224px) {
+				width: 60%;
+			}
+
+			@media (max-width: 1064px) {
+				width: 65%;
+			}
+
+			@media (max-width: 969px) {
 				width: 75%;
 			}
 
-			@media (max-width: 666px) {
+			@media (max-width: 876px) {
 				width: 100%;
 			}
 		}

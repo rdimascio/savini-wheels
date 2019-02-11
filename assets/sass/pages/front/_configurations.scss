@@ -1,0 +1,130 @@
+#configurations {
+	background: linear-gradient(to left top, rgb(74, 74, 74) 0%, rgb(224, 224, 224) 50%, rgb(74, 74, 74) 100%),
+							linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 1));
+
+	
+	.configurations--content {
+
+		.lined_title:before, .lined_title:after {
+			height: 2px;
+			width: 100%;
+			max-width: 250px;
+		}
+		
+		p {
+			text-transform: uppercase;
+			padding: 0 11vw;
+			color: #fff;
+			font-size: 12px;
+			text-shadow: 2px 2px rgba(25,25,25,0.3);
+		}
+	}
+
+	.configurations--gallery {
+		padding: 2.3vw 5px 8.9vw 5px;
+
+
+		.configurations--main {
+			flex: 1;
+			margin: 5px;
+			background-size: cover;
+
+			&.change {
+				animation: fadein 2s linear 1 normal forwards;
+			}
+
+			.configuration--item {
+				display: flex;
+				align-items: center;
+				flex-direction: row;
+				justify-content: center;
+				padding: 1rem;
+				cursor: pointer;
+				background: rgba(40, 40, 40, 0.7);
+				transition: background 1s;
+
+				&:hover {
+					background: rgba(40, 40, 40, 0.9);
+				}
+
+				.configuration--item__image {
+					width: 100%;
+					max-height: 150px;
+				}
+
+				.configuration--item__title {
+					display: none;
+				}
+
+				.configuration--item__content {
+					padding-left: 15px;
+				}
+
+				.configuration--item__description {
+					font-size: 10px;
+					color: #fff;
+					margin: 0;
+				}
+
+				.configuration--item__availability {
+					text-align: right;
+					color: #fff;
+					font-size: 10px;
+					margin-bottom: 0;
+				}
+			}
+		}
+
+		.configurations--options {
+			width: 60%;
+			display: flex;
+			flex-wrap: wrap;
+
+			.configuration--item {
+				flex: 1 0 30%;
+				flex-direction: column;
+				justify-content: center;
+				display: flex;
+				align-items: center;
+				background: #282828;
+				margin: 5px;
+				padding: 1rem;
+				cursor: pointer;
+				transition: background 1s;
+
+				&:hover {
+					background: rgba(40, 40, 40, 0.7);
+				}
+
+				&:hover .configuration--item__title {
+					color: #fff;
+				}
+
+				.configuration--item__title {
+					margin: 0;
+					text-transform: uppercase;
+					font-size: 10px;
+					color: #8c8c8c;
+					margin-top: 1rem;
+					letter-spacing: 1px;
+					font-weight: 100;
+					transition: color 1s;
+				}
+
+				.configuration--item__content {
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+@keyframes fadein {
+	from {
+		opacity: .25
+	}
+
+	to {
+		opacity: 1;
+	}
+}

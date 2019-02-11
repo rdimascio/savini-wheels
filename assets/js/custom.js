@@ -74,6 +74,39 @@ jQuery(function ($) {
 "use strict";
 
 jQuery(function ($) {
+  var mainContainer = $('.configurations--main');
+  var optionsContainer = $('.configurations--options');
+  var configurationOption = $('.configurations--options .configuration--item');
+  var activeItem = $('.configuration--item.active');
+  var activeBGImage = $(activeItem).attr('data-bg');
+  activeItem.appendTo(mainContainer);
+  mainContainer.css('background-image', 'url(' + activeBGImage + ')');
+  configurationOption.on('click', function (e) {
+    e.preventDefault();
+    var index = $(this).index();
+    var currentActiveItem = mainContainer.find('.active');
+    currentActiveItem.removeClass('active').detach();
+
+    if (0 === index) {
+      optionsContainer.prepend(currentActiveItem);
+    } else {
+      $('.configurations--options .configuration--item:nth-child(' + index + ')').after(currentActiveItem);
+    }
+
+    $(this).addClass('active').detach().appendTo(mainContainer);
+    mainContainer.addClass('change');
+    setTimeout(function () {
+      mainContainer.removeClass('change');
+    }, 2000);
+  });
+  $('.configurations--main .configuration--item.active').on('click', function (e) {
+    e.preventDefault();
+    window.location.href = '/wheel-collections/savini-forged?' + $(this).attr('data-target');
+  });
+});
+"use strict";
+
+jQuery(function ($) {
   // Hide Header on on scroll down
   var prev = 0;
   var delta = 5;
@@ -113,6 +146,24 @@ jQuery(function ($) {
 "use strict";
 
 jQuery(function ($) {
+  var body = $('body');
+
+  var loader = function loader() {
+    // Let the loading animation run for 2 seconds
+    setTimeout(function () {
+      $('.loading').addClass('loaded');
+      body.removeClass('is--loading');
+    }, 2000); // Give enough time for the CSS transitions to take place
+
+    setTimeout(function () {
+      $('.loading').css('display', 'none');
+    }, 6000);
+  };
+
+  if (body.hasClass('home')) {
+    body.addClass('is--loading');
+  }
+
   $('#hero-carousel').on('init', function () {
     // Build the Slider Captions
     $('.slick-slide .item', this).each(function () {
@@ -123,18 +174,10 @@ jQuery(function ($) {
       if (slideTitle || slideCaption) {
         $(this).append('<div class="slider-caption"><div class="slider-content"><h4>' + slideTitle + '.</h4><p>' + slideCaption + '</p><a href="/' + slideLink + '">Learn More</a></div></div>');
       }
-    }); // Let the loading animation run for 2 seconds
-
-    setTimeout(function () {
-      $('.loading').addClass('loaded');
-    }, 2000); // Give enough time for the CSS transitions to take place
-
-    setTimeout(function () {
-      $('.loading').css('display', 'none');
-    }, 6000);
+    });
+    loader();
   });
 });
-"use strict";
 "use strict";
 
 jQuery(function ($) {
@@ -169,30 +212,6 @@ jQuery(function ($) {
   isPause,
       tick,
       percentTime;
-  slick.slick({
-    draggable: true,
-    adaptiveHeight: false,
-    dots: true,
-    arrows: false,
-    mobileFirst: true,
-    pauseOnDotsHover: true,
-    infinite: true,
-    speed: 1000,
-    fade: true,
-    cssEase: 'linear'
-  });
-  $bar = $('.slider-progress .progress');
-  $('.carousel-wrapper').on({
-    mouseenter: function mouseenter() {
-      isPause = true;
-    },
-    mouseover: function mouseover() {
-      isPause = true;
-    },
-    mouseleave: function mouseleave() {
-      isPause = false;
-    }
-  });
 
   function startProgressbar() {
     resetProgressbar();
@@ -222,14 +241,40 @@ jQuery(function ($) {
     clearTimeout(tick);
   }
 
-  slick.on('beforeChange', function () {
+  if ($('body').hasClass('home')) {
+    slick.slick({
+      draggable: true,
+      adaptiveHeight: false,
+      dots: true,
+      arrows: false,
+      mobileFirst: true,
+      pauseOnDotsHover: true,
+      infinite: true,
+      speed: 1000,
+      fade: true,
+      cssEase: 'linear'
+    });
+    $bar = $('.slider-progress .progress');
+    $('.carousel-wrapper').on({
+      mouseenter: function mouseenter() {
+        isPause = true;
+      },
+      mouseover: function mouseover() {
+        isPause = true;
+      },
+      mouseleave: function mouseleave() {
+        isPause = false;
+      }
+    });
+    slick.on('beforeChange', function () {
+      startProgressbar();
+    });
+    slick.on('swipe', function () {
+      startProgressbar();
+      isPause = true;
+    });
     startProgressbar();
-  });
-  slick.on('swipe', function () {
-    startProgressbar();
-    isPause = true;
-  });
-  startProgressbar();
+  }
 });
 "use strict";
 
@@ -257,3 +302,8 @@ jQuery(function ($) {
   });
 });
 "use strict";
+"use strict";
+
+jQuery(function ($) {
+  $('.entry-title a').lettering();
+});

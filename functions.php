@@ -83,6 +83,20 @@ if ( ! function_exists( 'wp_starter_theme_setup' ) ) :
 endif;
 add_action( 'after_setup_theme', 'wp_starter_theme_setup' );
 
+// Add mobile logo to Customizr
+function savini_mobile_logo($wp_customize) {
+	// add a setting for the site logo
+			$wp_customize->add_setting('light_logo');
+	// Add a control to upload the logo
+			$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'light_logo',
+					array(
+							'label' => 'Light Logo',
+							'section' => 'title_tagline',
+							'settings' => 'light_logo',
+					) ) );
+	}
+	add_action('customize_register', 'savini_mobile_logo');
+
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
  *
@@ -150,6 +164,8 @@ function savini_scripts() {
 	wp_register_style( 'slick-carousel', '//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css', false, NULL, 'all' );
 	wp_register_style( 'slick-carousel-theme', '//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css', false, NULL, 'all' );
 
+	wp_register_script( 'lettering', '//cdnjs.cloudflare.com/ajax/libs/lettering.js/0.7.0/jquery.lettering.min.js', array( 'jquery' ), NULL, true );
+
 	// wp_register_style( 'plyr', '//cdn.plyr.io/3.4.6/plyr.css', false, NULL, 'all' );
 	// wp_register_script( 'plyr', '//cdn.plyr.io/3.4.6/plyr.js', array(), NULL, true );
 
@@ -179,6 +195,8 @@ function savini_scripts() {
 	wp_enqueue_style( 'slick-carousel' );
 	wp_enqueue_style( 'slick-carousel-theme' );
 	wp_enqueue_script( 'slick-carousel' );
+
+	wp_enqueue_script( 'lettering' );
 
 	// wp_enqueue_style( 'plyr' );
 	// wp_enqueue_script( 'plyr' );
@@ -248,11 +266,11 @@ function create_wheel_post_type() {
             'show_ui'             => true,
             'show_in_menu'        => true,
             'show_in_nav_menus'   => true,
-			'show_in_admin_bar'   => true,
-			'show_in_rest'		  => true,
+						'show_in_admin_bar'   => true,
+						'show_in_rest'		  => true,
             'can_export'          => true,
             'publicly_queryable'  => true,
-            'menu_icon'           => 'dashicons-tickets',
+            'menu_icon'           => 'dashicons-admin-generic',
             'menu_position'       => 5,
             'supports'            => array( 'title', 'editor', 'excerpt', 'custom-fields', 'thumbnail','page-attributes' ),
             'taxonomies'          => array( 'wheel_tag', 'wheel_category' ),
@@ -263,6 +281,48 @@ function create_wheel_post_type() {
     );
 }
 add_action( 'init', 'create_wheel_post_type' );
+
+// Create Vehicle Post Type
+function create_vehicle_post_type() {
+	$labels = array(
+			'name'               => 'Vehicles',
+			'singular_name'      => 'Vehicle',
+			'add_new'            => 'Add New Vehicle',
+			'add_new_item'       => 'Add New Vehicle',
+			'edit_item'          => 'Edit Vehicle',
+			'new_item'           => 'New Vehicle',
+			'all_items'          => 'All Vehicles',
+			'view_item'          => 'View Vehicle',
+			'search_items'       => 'Search Vehicles',
+			'not_found'          =>  'No Vehicles Found',
+			'not_found_in_trash' => 'No Vehicles found in Trash',
+			'parent_item_colon'  => '',
+			'menu_name'          => 'Vehicles',
+	);
+	// Register Wheel Post Type
+	register_post_type( 'vehicle', array(
+					'labels'              => $labels,
+					'has_archive'         => true,
+					'has_rest'            => true,
+					'public'              => true,
+					'show_ui'             => true,
+					'show_in_menu'        => true,
+					'show_in_nav_menus'   => true,
+					'show_in_admin_bar'   => true,
+					'show_in_rest'		  => true,
+					'can_export'          => true,
+					'publicly_queryable'  => true,
+					'menu_icon'           => 'dashicons-admin-generic',
+					'menu_position'       => 5,
+					'supports'            => array( 'title', 'editor', 'excerpt', 'custom-fields', 'thumbnail','page-attributes' ),
+					'taxonomies'          => array( 'vehicle_tag', 'vehicle_category' ),
+					'exclude_from_search' => false,
+					'capability_type'     => 'post',
+					'rewrite'             => array( 'slug' => 'vehicles' )
+			)
+	);
+}
+add_action( 'init', 'create_vehicle_post_type' );
 
 // Edit Wheel Post Type Title Text
 function wheel_title_text( $title ) {
@@ -276,43 +336,97 @@ add_filter( 'enter_title_here', 'wheel_title_text' );
 
 // Create Wheel Post Type Categories
 function create_wheel_categories() {
-    $labels = array(
-        'name'              => _x( 'Wheel Collections', 'taxonomy general name' ),
-        'singular_name'     => _x( 'Wheel Collection', 'taxonomy singular name' ),
-        'search_items'      => __( 'Search Wheel Collections' ),
-        'all_items'         => __( 'All Wheel Collections' ),
-        'parent_item'       => __( 'Parent Wheel Collection' ),
-        'parent_item_colon' => __( 'Parent Wheel Collection:' ),
-        'edit_item'         => __( 'Edit Wheel Collection' ),
-        'update_item'       => __( 'Update Wheel Collection' ),
-        'add_new_item'      => __( 'Add New Wheel Collection' ),
-        'new_item_name'     => __( 'New Wheel Collection' ),
-        'menu_name'         => __( 'Wheel Collections' ),
+    $collections_labels = array(
+        'name'              => _x( 'Collections', 'taxonomy general name' ),
+        'singular_name'     => _x( 'Collection', 'taxonomy singular name' ),
+        'search_items'      => __( 'Search Collections' ),
+        'all_items'         => __( 'All Collections' ),
+        'parent_item'       => __( 'Parent Collection' ),
+        'parent_item_colon' => __( 'Parent Collection:' ),
+        'edit_item'         => __( 'Edit Collection' ),
+        'update_item'       => __( 'Update Collection' ),
+        'add_new_item'      => __( 'Add New Collection' ),
+        'new_item_name'     => __( 'New Collection' ),
+        'menu_name'         => __( 'Collections' ),
     );
-    $args = array(
-        'labels' => $labels,
+    $collections_args = array(
+        'labels' => $collections_labels,
 				'hierarchical' => true,
-				'show_in_rest'	=>	true
+				'show_in_rest'	=>	true,
+				'has_archive' => true,
+				'rewrite' => array( 
+					'slug' => 'wheel-collections',
+					'with_front' => false
+				)
     );
-    register_taxonomy( 'wheel_collections', 'wheel', $args );
+		register_taxonomy( 'wheel_collections', 'wheel', $collections_args );
+		
+		$configurations_labels = array(
+			'name'              => _x( 'Configurations', 'taxonomy general name' ),
+			'singular_name'     => _x( 'Configuration', 'taxonomy singular name' ),
+			'search_items'      => __( 'Search Configurations' ),
+			'all_items'         => __( 'All Configurations' ),
+			'parent_item'       => __( 'Parent Configuration' ),
+			'parent_item_colon' => __( 'Parent Configuration:' ),
+			'edit_item'         => __( 'Edit Configuration' ),
+			'update_item'       => __( 'Update Configuration' ),
+			'add_new_item'      => __( 'Add New Configuration' ),
+			'new_item_name'     => __( 'New Configuration' ),
+			'menu_name'         => __( 'Configurations' ),
+	);
+	$configurations_args = array(
+			'labels' => $configurations_labels,
+			'hierarchical' => true,
+			'show_in_rest'	=>	true
+	);
+	register_taxonomy( 'wheel_configurations', 'wheel', $configurations_args );
 }
 add_action( 'init', 'create_wheel_categories', 0 );
+
+// Create Vehicle Post Type Categories
+function create_vehicle_categories() {
+	$vehicles_labels = array(
+			'name'              => _x( 'Vehicle Categories', 'taxonomy general name' ),
+			'singular_name'     => _x( 'Vehicle Category', 'taxonomy singular name' ),
+			'search_items'      => __( 'Search Vehicle Categories' ),
+			'all_items'         => __( 'All Vehicle Categories' ),
+			'parent_item'       => __( 'Parent Vehicle Category' ),
+			'parent_item_colon' => __( 'Parent Vehicle Category:' ),
+			'edit_item'         => __( 'Edit Vehicle Category' ),
+			'update_item'       => __( 'Update Vehicle Category' ),
+			'add_new_item'      => __( 'Add New Vehicle Category' ),
+			'new_item_name'     => __( 'New Vehicle Category' ),
+			'menu_name'         => __( 'Vehicle Categories' ),
+	);
+	$vehicles_args = array(
+			'labels' => $vehicles_labels,
+			'hierarchical' => true,
+			'show_in_rest'	=>	true,
+			'has_archive' => true,
+			'rewrite' => array( 
+				'slug' => 'vehicle-categories',
+				'with_front' => false
+			)
+	);
+	register_taxonomy( 'vehicle_categories', 'vehicle', $vehicles_args );
+}
+add_action( 'init', 'create_vehicle_categories', 0 );
 
 // Create Wheel Post Type Tags
 function create_wheel_tags() {
 
     $labels = array(
-        'name'              => _x( 'Wheel Tags', 'taxonomy general name' ),
-        'singular_name'     => _x( 'Wheel Tag', 'taxonomy singular name' ),
-        'search_items'      => __( 'Search Wheel Tags' ),
-        'all_items'         => __( 'All Wheel Tags' ),
-        'parent_item'       => __( 'Parent Wheel Tag' ),
-        'parent_item_colon' => __( 'Parent Wheel Tag:' ),
-        'edit_item'         => __( 'Edit Wheel Tag' ),
-        'update_item'       => __( 'Update Wheel Tag' ),
-        'add_new_item'      => __( 'Add New Wheel Tag' ),
-        'new_item_name'     => __( 'New Wheel Tag' ),
-        'menu_name'         => __( 'Wheel Tags' ),
+        'name'              => _x( 'Tags', 'taxonomy general name' ),
+        'singular_name'     => _x( 'Tag', 'taxonomy singular name' ),
+        'search_items'      => __( 'Search Tags' ),
+        'all_items'         => __( 'All Tags' ),
+        'parent_item'       => __( 'Parent Tag' ),
+        'parent_item_colon' => __( 'Parent Tag:' ),
+        'edit_item'         => __( 'Edit Tag' ),
+        'update_item'       => __( 'Update Tag' ),
+        'add_new_item'      => __( 'Add New Tag' ),
+        'new_item_name'     => __( 'New Tag' ),
+        'menu_name'         => __( 'Tags' ),
     );
     $args = array(
         'labels' => $labels,
@@ -453,3 +567,17 @@ add_action( 'init', 'insert_the_parent_categories' );
 // }
 
 // add_action( 'customize_register', 'savini_customizer_sections' );
+
+
+function collection_archive_order ( $query ) {
+	if ( ( $query->is_main_query() ) && ( is_tax( 'wheel_collections' ) ) )
+
+	$query->set( 'post_type', 'wheel' );                 
+	$query->set( 'posts_per_page', '200' );          
+	$query->set( 'orderby', 'menu_order' );
+	$query->set( 'order', 'ASC' );
+
+}
+
+add_action( 'pre_get_posts', 'collection_archive_order' );
+

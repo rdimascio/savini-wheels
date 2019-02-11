@@ -1,4 +1,27 @@
 jQuery( function( $ ) {
+
+	const body = $( 'body' );
+
+	const loader = function() {
+
+		// Let the loading animation run for 2 seconds
+		setTimeout( function() {
+			$( '.loading' ).addClass( 'loaded' );
+			body.removeClass( 'is--loading' );
+		}, 2000 );
+
+		// Give enough time for the CSS transitions to take place
+		setTimeout( function() {
+			$( '.loading' ).css( 'display', 'none' );
+		}, 6000 );
+	};
+
+	if ( body.hasClass( 'home' ) ) {
+
+		body.addClass( 'is--loading' );
+
+	}
+
 	$( '#hero-carousel' ).on( 'init', function() {
 
 		// Build the Slider Captions
@@ -14,15 +37,7 @@ jQuery( function( $ ) {
 
 		});
 
-		// Let the loading animation run for 2 seconds
-		setTimeout( function() {
-			$( '.loading' ).addClass( 'loaded' );
-		}, 2000 );
-
-		// Give enough time for the CSS transitions to take place
-		setTimeout( function() {
-			$( '.loading' ).css( 'display', 'none' );
-		}, 6000 );
+		loader();
 
 	});
 

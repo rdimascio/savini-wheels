@@ -9,33 +9,6 @@ jQuery( function( $ ) {
 		tick,
 		percentTime;
 
-	slick.slick({
-		draggable: true,
-		adaptiveHeight: false,
-		dots: true,
-		arrows: false,
-		mobileFirst: true,
-		pauseOnDotsHover: true,
-		infinite: true,
-		speed: 1000,
-		fade: true,
-		cssEase: 'linear'
-	});
-
-	$bar = $( '.slider-progress .progress' );
-
-	$( '.carousel-wrapper' ).on({
-		mouseenter: function() {
-			isPause = true;
-		},
-		mouseover: function() {
-			isPause = true;
-		},
-		mouseleave: function() {
-			isPause = false;
-		}
-	});
-
 	function startProgressbar() {
 		resetProgressbar();
 		percentTime = 0;
@@ -64,15 +37,46 @@ jQuery( function( $ ) {
 		clearTimeout( tick );
 	}
 
-	slick.on( 'beforeChange', function() {
-		startProgressbar();
-	});
+	if ( $( 'body' ).hasClass( 'home' ) ) {
 
-	slick.on( 'swipe', function() {
-		startProgressbar();
-		isPause = true;
-	});
+		slick.slick({
+			draggable: true,
+			adaptiveHeight: false,
+			dots: true,
+			arrows: false,
+			mobileFirst: true,
+			pauseOnDotsHover: true,
+			infinite: true,
+			speed: 1000,
+			fade: true,
+			cssEase: 'linear'
+		});
 
-	startProgressbar();
+		$bar = $( '.slider-progress .progress' );
+
+		$( '.carousel-wrapper' ).on({
+			mouseenter: function() {
+				isPause = true;
+			},
+			mouseover: function() {
+				isPause = true;
+			},
+			mouseleave: function() {
+				isPause = false;
+			}
+		});
+
+		slick.on( 'beforeChange', function() {
+			startProgressbar();
+		});
+
+		slick.on( 'swipe', function() {
+			startProgressbar();
+			isPause = true;
+		});
+
+		startProgressbar();
+
+	}
 
 });

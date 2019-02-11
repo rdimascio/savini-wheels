@@ -1,7 +1,7 @@
 <div class="customize--wrapper m-b-5">
 
 	<div class="customize--content text-center" data-bottom-top="transform: translateZ(0) translateY(0%); opacity: 0;" data-top-bottom="transform: translateZ(0) translateY(-35%);" data--100-bottom="opacity:1;">
-		<h2 data-bottom-top="top: 0;" data-top-bottom="top: 0;" class="for__title lined_title title js-appearing-content">customization</h2>
+		<h2 data-bottom-top="top: 0;" data-top-bottom="top: 0;" class="for__title lined_title title js-appearing-content"><span>customization</span></h2>
 	</div>
 
 	<div class="customize--wheels__row align-center m-t-5">
