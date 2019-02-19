@@ -6,7 +6,7 @@ $collection_args = array(
 		'parent' => 0,
 		'orderby' => 'meta_value_num',
 		'order' => 'ASC',
-		'meta_key' => 'order',
+		'meta_key' => 'collection_order',
 		'meta_compare' => 'NUMERIC'
 ); 
 
