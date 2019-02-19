@@ -328,4 +328,10 @@ jQuery(function ($) {
     infinite: true,
     arrows: true
   });
+  $('body.archive.term-sv-f .sv-f-slider').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    infinite: true,
+    arrows: true
+  });
 });

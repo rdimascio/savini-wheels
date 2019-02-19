@@ -391,20 +391,29 @@ body.archive .vehicles-slider .slick-slide{margin:5px}
 body.archive .vehicle-slider--item{height:350px;background-repeat:no-repeat;background-size:cover;background-position:center;-webkit-box-shadow:0 15px 10px rgba(25,25,25,0.7);box-shadow:0 15px 10px rgba(25,25,25,0.7)}
 body.archive .archive-header.slider-header{padding:5vw 0 0}
 body.archive.term-sv-f main{background-image:url(https://saviniwheels.dimascio.design/wp-content/uploads/2019/02/savini__sv-f-bg.png);background-repeat:no-repeat;background-size:contain;background-position:top}
+body.archive.term-sv-f .info--header{padding:0 8vw}
+body.archive.term-sv-f .info--header h4{text-transform:uppercase;font-style:italic;letter-spacing:10px;font-size:14px;margin-left:15px;-webkit-box-flex:1;-ms-flex:1;flex:1;border-bottom:2px solid red}
+body.archive.term-sv-f .info--header p{text-transform:uppercase;color:#999;letter-spacing:1px;font-size:14px;padding:2rem 2rem 0}
 body.archive.term-sv-f .info{padding:5vw 8vw}
 body.archive.term-sv-f .info .info-column{-webkit-box-flex:0;-ms-flex:0 0 25%;flex:0 0 25%}
 body.archive.term-sv-f .info .info-column .image{height:110px;background-repeat:no-repeat;background-position:center;background-size:contain}
 body.archive.term-sv-f .info .info-column h2{text-transform:uppercase;color:#999}
 body.archive.term-sv-f .info .info-column p{text-align:left;color:#999;text-transform:uppercase;letter-spacing:2px;font-size:12px}
-body.archive.term-sv-f .image-cover{height:100vh;background-color:#000;background-size:contain;background-position:bottom right;background-repeat:no-repeat;background-attachment:fixed}
+body.archive.term-sv-f .image-cover{height:100vh;background-color:#000;background-size:contain;background-position:bottom right;background-repeat:no-repeat}
 body.archive.term-sv-f .image-cover .row{height:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;padding:0 10vw}
 body.archive.term-sv-f .image-cover h1{margin:0;color:#fff;font-size:46px;text-transform:uppercase;font-style:italic;letter-spacing:1px}
 body.archive.term-sv-f .image-cover h2{margin-top:1rem;margin-bottom:0;text-transform:uppercase;letter-spacing:3px;color:#e0e0e0;font-style:italic;font-weight:100}
 body.archive.term-sv-f .image-cover h2 span{color:red}
 body.archive.term-sv-f .image-cover p{margin-top:-.5rem;margin-bottom:0;text-transform:uppercase;letter-spacing:1px;color:#a9a9a9;font-weight:100}
 body.archive.term-sv-f .image-cover p:first-of-type{margin-bottom:.5rem}
-body.archive.term-sv-f .image-cover hr{left:0;right:50%;position:absolute;background-color:red;margin:0}
+body.archive.term-sv-f .image-cover hr{left:0;right:46.3%;position:absolute;background-color:red;margin:0}
 body.archive.term-sv-f .image-cover img{margin-top:2rem}
+body.archive.term-sv-f .sv-f-slider .slick-list{padding:0 0 3vw}
+body.archive.term-sv-f .sv-f-slider .slick-prev{left:25px;z-index:9}
+body.archive.term-sv-f .sv-f-slider .slick-next{right:25px;z-index:9}
+body.archive.term-sv-f .sv-f-slider .sv-f-slider--item{height:650px;background-repeat:no-repeat;background-size:cover;background-position:center}
+body.archive.term-sv-f .sv-f__slider-cta{color:#fff;position:relative;text-decoration:none;text-transform:uppercase;font-size:12px;font-weight:100;padding:1rem 2rem;background:red;border-radius:2px;border:2px solid red;-webkit-transition:background .5s,color .5s;transition:background .5s,color .5s;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;width:20%;margin:auto}
+body.archive.term-sv-f .sv-f__slider-cta:hover{background:transparent;border:2px solid red;color:red}
 .flex{display:flex;display:-webkit-box;display:-ms-flexbox}
 .flex-wrap{-ms-flex-wrap:wrap;flex-wrap:wrap}
 .justify-center{justify-content:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center}

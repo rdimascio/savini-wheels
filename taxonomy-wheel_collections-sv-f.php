@@ -50,6 +50,17 @@ $class = get_queried_object()->slug . '_grid';
 
 		</div>
 
+		<header class="info--header">
+
+			<div class="row">
+				<img src="https://saviniwheels.dimascio.design/wp-content/uploads/2019/02/savini__sv-f-mft-copy.png" alt="">
+				<h4>Mono Form Technology</h4>
+			</div>
+
+			<p>Flow Form technology is a process that applies pressure to the inner wheel after casting, stretching and forming the material, causing the aluminum to flow while imparting tensile strength – similar to how forged wheels are made. Thanks to this state-of-the-art technology, the result is greater strength and shock-resistance over conventional cast wheels, which translates to overall better vehicle performance.</p>
+
+		</header>
+
 		<div class="info row justify-between">
 				<div class="info-column text-center p-l-1 p-r-1">
 				<div class="image" style="background-image:url(https://saviniwheels.dimascio.design/wp-content/uploads/2019/02/savini__info-step_1.png)"></div>
@@ -96,16 +107,15 @@ $class = get_queried_object()->slug . '_grid';
 			</div>
 		</div>
 
-		<header class="archive-header slider-header text-center"><h2><span>Step Lip</span> Vehicles Gallery</h2></header>
+		<header class="archive-header slider-header text-center"><h2><span>SV-F</span> Vehicles</h2></header>
 
-		<div class="vehicles-slider">
-			<div class="vehicle-slider--item" style="background-image:url(https://saviniwheels.dimascio.design/wp-content/uploads/2019/02/savini__vehicle_slider-image-1.png)"></div>
-			<div class="vehicle-slider--item" style="background-image:url(https://saviniwheels.dimascio.design/wp-content/uploads/2019/02/savini__vehicle_slider-image-2.png)"></div>
-			<div class="vehicle-slider--item" style="background-image:url(https://saviniwheels.dimascio.design/wp-content/uploads/2019/02/savini__vehicle_slider-image-3.png)"></div>
-			<div class="vehicle-slider--item" style="background-image:url(https://saviniwheels.dimascio.design/wp-content/uploads/2019/02/savini__vehicle_slider-image-1.png)"></div>
-			<div class="vehicle-slider--item" style="background-image:url(https://saviniwheels.dimascio.design/wp-content/uploads/2019/02/savini__vehicle_slider-image-2.png)"></div>
-			<div class="vehicle-slider--item" style="background-image:url(https://saviniwheels.dimascio.design/wp-content/uploads/2019/02/savini__vehicle_slider-image-3.png)"></div>
+		<div class="sv-f-slider">
+			<div class="sv-f-slider--item" style="background-image:url(https://saviniwheels.dimascio.design/wp-content/uploads/2019/02/savini__sv-f-vehicle-slider.jpg)"></div>
+			<div class="sv-f-slider--item" style="background-image:url(https://saviniwheels.dimascio.design/wp-content/uploads/2019/02/savini__sv-f-vehicle-slider.jpg)"></div>
+			<div class="sv-f-slider--item" style="background-image:url(https://saviniwheels.dimascio.design/wp-content/uploads/2019/02/savini__sv-f-vehicle-slider.jpg)"></div>
 		</div>
+
+		<a class="sv-f__slider-cta" href="#">Full Site Experience</a>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
