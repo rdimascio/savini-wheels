@@ -67,7 +67,7 @@ $class = get_queried_object()->slug . '_grid';
 				'meta_query' => array(
 					array(
 						'key'       => 'wheel_collection',
-						'value'     => 14,
+						'value'     => get_queried_object()->term_id,
 						'compare'   => '='
 					)
 				)
