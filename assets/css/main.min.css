@@ -239,7 +239,7 @@ main{background:#fff}
 #configurations .configurations--gallery .configurations--options .configuration--item:hover .configuration--item__title{color:#fff}
 #configurations .configurations--gallery .configurations--options .configuration--item .configuration--item__title{margin:0;text-transform:uppercase;font-size:10px;color:#8c8c8c;margin-top:1rem;letter-spacing:1px;font-weight:100;-webkit-transition:color 1s;transition:color 1s}
 #configurations .configurations--gallery .configurations--options .configuration--item .configuration--item__content{display:none}
-#images{margin-top:-3rem;position:relative;background-image:url(http://savini.local/app/uploads/2019/02/wd-nsx.jpg);background-position:center;background-repeat:no-repeat;background-size:cover;background-attachment:fixed}
+#images{margin-top:-3rem;position:relative;background-image:url(https://saviniwheels.dimascio.design/wp-content/uploads/2019/02/wd-nsx.jpg);background-position:center;background-repeat:no-repeat;background-size:cover;background-attachment:fixed}
 #images::before{content:'';position:absolute;height:100%;width:100%;background:-webkit-gradient(linear,right top,left top,from(rgba(255,255,255,0.5)),to(rgba(0,0,0,0.5))),radial-gradient(at 50% 0,rgba(255,255,255,0.1) 0,rgba(0,0,0,0.5) 50%);background:linear-gradient(to left,rgba(255,255,255,0.5) 0,rgba(0,0,0,0.5) 100%),radial-gradient(at 50% 0,rgba(255,255,255,0.1) 0,rgba(0,0,0,0.5) 50%)}
 #images .image-gallery--wrapper{padding:3rem;margin:2rem 0}
 #images .image-gallery--wrapper .image-gallery--title{color:#fff;font-size:16px;letter-spacing:3px;text-transform:uppercase;position:relative}
@@ -296,7 +296,7 @@ main{background:#fff}
 .for__img{position:absolute;left:0;right:0;top:50%;-webkit-transform:translateY(-50%);transform:translateY(-50%);margin:auto;width:85%;background-color:#1a1a1e}
 .for__img::before{content:"";display:block;padding-bottom:64.5%}
 .greyscale{-moz-filter:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0'/></filter></svg>#grayscale");-o-filter:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0'/></filter></svg>#grayscale");-webkit-filter:grayscale(100%);filter:gray;filter:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0'/></filter></svg>#grayscale")}
-#social{position:relative;background-color:#e0e0e0;background-image:url(http://savini.local/app/uploads/2019/02/savini__social-bg-og.jpg);background-position:center;background-repeat:no-repeat;background-size:cover;background-attachment:fixed}
+#social{position:relative;background-color:#e0e0e0;background-image:url(https://saviniwheels.dimascio.design/wp-content/uploads/2019/02/savini__social-bg-og.jpg);background-position:center;background-repeat:no-repeat;background-size:cover;background-attachment:fixed}
 #social::before{content:'';position:absolute;height:100%;width:100%;background:-webkit-gradient(linear,left top,right top,from(rgba(255,255,255,0.6)),color-stop(30%,#e0e0e0),color-stop(70%,#e0e0e0),to(rgba(255,255,255,0.6)));background:linear-gradient(to right,rgba(255,255,255,0.6) 0,#e0e0e0 30%,#e0e0e0 70%,rgba(255,255,255,0.6) 100%)}
 #social .social--wrapper{padding:3rem;margin:2rem 0}
 #social .social--wrapper .social--column{-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;position:relative}
@@ -309,8 +309,6 @@ main{background:#fff}
 #social .social--wrapper .social--column .social--title h2 span{font-weight:700}
 #social .social--wrapper .social--column .social-feed .social--content__gallery{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;margin:0 2rem}
 #social .social--wrapper .social--column .social-feed .social--content__gallery .social--content__gallery-item{position:relative;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-flex:1;-ms-flex:1;flex:1;-ms-flex-preferred-size:45%;flex-basis:45%;margin:5px;border-radius:3px;overflow:hidden}
-#social .social--wrapper .social--column .social-feed .social--content__gallery .social--content__gallery-item::before{content:'';position:absolute;z-index:9;width:100%;height:100%;top:0;left:0;background:rgba(255,255,255,0.3)}
-#social .social--wrapper .social--column .social-feed .social--content__gallery .social--content__gallery-item:hover img{-webkit-transform:scale(1.2);transform:scale(1.2)}
 #social .social--wrapper .social--column .social-feed .social--content__gallery .social--content__gallery-item img{-webkit-transition:-webkit-transform 1s;transition:-webkit-transform 1s;transition:transform 1s;transition:transform 1s,-webkit-transform 1s}
 #social .social--wrapper .social--column .social--view_more a{color:#fff;position:relative;text-decoration:none;text-transform:uppercase;font-size:12px;font-weight:100;padding:.5rem 2rem;background:red;border:2px solid red;border-radius:2px;-webkit-transition:background .5s,color .5s;transition:background .5s,color .5s}
 #social .social--wrapper .social--column .social--view_more a:hover{background:transparent;border:2px solid red;color:red}
@@ -354,7 +352,7 @@ main{background:#fff}
 #customize .customize--cars__row .customize--content-column p{padding-left:3.3rem;margin-bottom:2rem}
 #customize .customize--cars__row .customize--content-column a{color:#fff;position:relative;text-decoration:none;text-transform:uppercase;font-size:12px;font-weight:100;padding:.5rem 2rem;background:red;border-radius:2px;margin-left:4.1vw;border:2px solid red;-webkit-transition:background .5s,color .5s;transition:background .5s,color .5s}
 #customize .customize--cars__row .customize--content-column a:hover{background:transparent;border:2px solid red;color:red}
-#mission{background-image:url(http://savini.local/app/uploads/2019/02/savini__mission-bg-x2.png);background-position:center;background-repeat:no-repeat;background-size:cover;background-attachment:fixed;position:relative}
+#mission{background-image:url(https://saviniwheels.dimascio.design/wp-content/uploads/2019/02/savini__mission-bg-x2.png);background-position:center;background-repeat:no-repeat;background-size:cover;background-attachment:fixed;position:relative}
 #mission::before{content:'';position:absolute;height:100%;width:100%;background:rgba(25,25,25,0.9)}
 #mission .mission--wrapper{padding:6rem 8rem}
 #mission .mission--logo{position:relative}
@@ -370,6 +368,7 @@ body.archive .site-header .box-shadow-menu::before{background:#fff;-webkit-box-s
 body.archive .archive-header{padding:5vw;text-transform:uppercase}
 body.archive .archive-header h2{letter-spacing:3px;font-weight:400}
 body.archive .archive-header p{font-size:12px;padding:0 5vw}
+body.archive .archive-header span{color:red}
 body.archive .grid{padding:0 5vw;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap}
 body.archive .grid .wheel{padding:1rem;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-flex:0;-ms-flex:0 1 20%;flex:0 1 20%;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
 body.archive .grid .wheel .entry-title{margin:0}
@@ -378,6 +377,26 @@ body.archive .grid .wheel .entry-title .char1,body.archive .grid .wheel .entry-t
 body.archive .grid .wheel .entry-title .char3,body.archive .grid .wheel .entry-title .char4{color:#333;font-weight:100;margin-top:6px}
 body.archive .configurations.grid{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap}
 body.archive .configurations.grid .configuration--item{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-flex:0;-ms-flex:0 1 25%;flex:0 1 25%;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
+body.archive .configurations.grid .configuration--item img{width:340px}
+body.archive .configurations.grid .configuration--item .configuration--item__title{text-transform:uppercase;letter-spacing:2px;font-weight:100}
+body.archive .info{padding:5vw 8vw}
+body.archive .info .info-column{-webkit-box-flex:0;-ms-flex:0 0 33%;flex:0 0 33%}
+body.archive .info .info-column .info-inner-column{-webkit-box-flex:0;-ms-flex:0 0 50%;flex:0 0 50%}
+body.archive .info img{border-radius:5px}
+body.archive .image-slider--item{height:100vh;background-size:cover;background-position:center;background-repeat:no-repeat}
+body.archive .vehicles-slider .slick-list{padding:0 0 3vw}
+body.archive .vehicles-slider .slick-prev{left:25px;z-index:9}
+body.archive .vehicles-slider .slick-next{right:25px;z-index:9}
+body.archive .vehicles-slider .slick-slide{margin:5px}
+body.archive .vehicle-slider--item{height:350px;background-repeat:no-repeat;background-size:cover;background-position:center;-webkit-box-shadow:0 15px 10px rgba(25,25,25,0.7);box-shadow:0 15px 10px rgba(25,25,25,0.7)}
+body.archive .archive-header.slider-header{padding:5vw 0 0}
+body.archive.term-sv-f main{background-image:url(https://saviniwheels.dimascio.design/wp-content/uploads/2019/02/savini__sv-f-bg.png);background-repeat:no-repeat;background-size:contain;background-position:top}
+body.archive.term-sv-f .info{padding:5vw 8vw}
+body.archive.term-sv-f .info .info-column{-webkit-box-flex:0;-ms-flex:0 0 25%;flex:0 0 25%}
+body.archive.term-sv-f .info .info-column .image{height:110px;background-repeat:no-repeat;background-position:center;background-size:contain}
+body.archive.term-sv-f .info .info-column h2{text-transform:uppercase;color:#999}
+body.archive.term-sv-f .info .info-column p{text-align:left;color:#999;text-transform:uppercase;letter-spacing:2px;font-size:12px}
+body.archive.term-sv-f .image-cover{height:100vh;background-color:#000;background-size:contain;background-position:bottom right;background-repeat:no-repeat;background-attachment:fixed}
 .flex{display:flex;display:-webkit-box;display:-ms-flexbox}
 .flex-wrap{-ms-flex-wrap:wrap;flex-wrap:wrap}
 .justify-center{justify-content:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center}

@@ -82,13 +82,50 @@ $class = get_queried_object()->slug . '_grid';
 
 			?>
 
-			<div class="configuration--item" data-target="">
-				<img class="configuration--item__image" src="<?= $image ?>" />
-				<h4 class="configuration--item__title"><?= $title ?></h4>
-			</div>
+				<div class="configuration--item" data-target="">
+					<img class="configuration--item__image" src="<?= $image ?>" />
+					<h4 class="configuration--item__title"><?= $title ?></h4>
+				</div>
 
-		<?php endforeach; ?>
+			<?php endforeach; ?>
 
+		</div>
+
+		<div class="info row justify-between">
+				<div class="info-column row p-l-1 p-r-1">
+					<div class="info-inner-column">
+						<img src="https://saviniwheels.dimascio.design/wp-content/uploads/2019/02/steplip.png" alt="">
+						<p>The SL (Step Lip Concave) configuration utilizes a center disk that is 1" smaller in diameter to reduce weight, 
+							unsprung mass, and improve return on inertia. The configuration also features a unique concave spoke profile and a signature undercut for improved aerodynamics.</p>
+					</div>
+					<div class="info-inner-column">
+						<img src="https://saviniwheels.dimascio.design/wp-content/uploads/2019/02/savini__wheel_collections-half-wheel.png" alt="">
+					</div>
+				</div>
+				<div class="info-column p-l-1 p-r-1">
+					<img src="https://saviniwheels.dimascio.design/wp-content/uploads/2019/02/savini__wheel_collections-wheel-1.png" alt="">
+				</div>
+				<div class="info-column p-l-1 p-r-1">
+					<img src="https://saviniwheels.dimascio.design/wp-content/uploads/2019/02/savini__wheel_collections-wheel-2.png" alt="">
+				</div>
+		</div>
+
+		<div class="image-slider">
+			<div class="image-slider--item" style="background-image:url(https://saviniwheels.dimascio.design/wp-content/uploads/2019/02/savini__wheel_collections-wheel-image.png)"></div>
+			<div class="image-slider--item" style="background-image:url(https://saviniwheels.dimascio.design/wp-content/uploads/2019/02/savini__wheel_collections-wheel-image.png)"></div>
+			<div class="image-slider--item" style="background-image:url(https://saviniwheels.dimascio.design/wp-content/uploads/2019/02/savini__wheel_collections-wheel-image.png)"></div>
+			<div class="image-slider--item" style="background-image:url(https://saviniwheels.dimascio.design/wp-content/uploads/2019/02/savini__wheel_collections-wheel-image.png)"></div>
+		</div>
+
+		<header class="archive-header slider-header text-center"><h2><span>Step Lip</span> Vehicles Gallery</h2></header>
+
+		<div class="vehicles-slider">
+			<div class="vehicle-slider--item" style="background-image:url(https://saviniwheels.dimascio.design/wp-content/uploads/2019/02/savini__vehicle_slider-image-1.png)"></div>
+			<div class="vehicle-slider--item" style="background-image:url(https://saviniwheels.dimascio.design/wp-content/uploads/2019/02/savini__vehicle_slider-image-2.png)"></div>
+			<div class="vehicle-slider--item" style="background-image:url(https://saviniwheels.dimascio.design/wp-content/uploads/2019/02/savini__vehicle_slider-image-3.png)"></div>
+			<div class="vehicle-slider--item" style="background-image:url(https://saviniwheels.dimascio.design/wp-content/uploads/2019/02/savini__vehicle_slider-image-1.png)"></div>
+			<div class="vehicle-slider--item" style="background-image:url(https://saviniwheels.dimascio.design/wp-content/uploads/2019/02/savini__vehicle_slider-image-2.png)"></div>
+			<div class="vehicle-slider--item" style="background-image:url(https://saviniwheels.dimascio.design/wp-content/uploads/2019/02/savini__vehicle_slider-image-3.png)"></div>
 		</div>
 
 		</main><!-- #main -->

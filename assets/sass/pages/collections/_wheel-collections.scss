@@ -23,6 +23,10 @@ body.archive {
 			font-size: 12px;
 			padding: 0 5vw;
 		}
+
+		span {
+			color: red;
+		}
 	}
 
 	.grid {
@@ -71,6 +75,76 @@ body.archive {
 			flex-direction: column;
 			justify-content: center;
 			align-items: center;
+
+			img { 
+				width: 340px;
+			}
+
+			.configuration--item__title {
+				text-transform: uppercase;
+				letter-spacing: 2px;
+				font-weight: 100;
+			}
 		}
 	}
+
+	.info {
+		padding: 5vw 8vw;
+
+		.info-column {
+			flex: 0 0 33%;
+
+			.info-inner-column {
+				flex: 0 0 50%;
+			}
+		}
+
+		img {
+			border-radius: 5px;
+		}
+	}
+
+	.image-slider--item {
+		height: 100vh;
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+
+	.vehicles-slider {
+
+		.slick-list {
+			padding: 0 0 3vw;
+		}
+
+		.slick-prev {
+			left: 25px;
+    	z-index: 9;
+		}
+
+		.slick-next {
+			right: 25px;
+    	z-index: 9;
+		}
+
+		.slick-slide {
+			margin: 5px;
+		}
+	}
+
+	.vehicle-slider--item {
+		height: 350px;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+
+		box-shadow: 0 15px 10px rgba(25, 25, 25, 0.7);
+	}
+
+	.archive-header.slider-header {
+		padding: 5vw 0 0;
+	}
+
 }
+
+@import "sv-f";

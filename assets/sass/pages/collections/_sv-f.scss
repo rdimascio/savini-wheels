@@ -1,0 +1,46 @@
+body.archive.term-sv-f {
+
+	main {
+		background-image: url(https://saviniwheels.dimascio.design/wp-content/uploads/2019/02/savini__sv-f-bg.png);
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: top;
+	}
+
+	.info {
+		padding: 5vw 8vw;
+
+		.info-column {
+			flex: 0 0 25%;
+
+			.image {
+				height: 110px;
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: contain;
+			}
+
+			h2 {
+				text-transform: uppercase;
+				color: #999;
+			}
+
+			p {
+				text-align: left;
+				color: #999;
+				text-transform: uppercase;
+				letter-spacing: 2px;
+				font-size: 12px;
+			}
+		}
+	}
+
+	.image-cover {
+		height: 100vh;
+		background-color: #000;
+		background-size: contain;
+		background-position: bottom right;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+	}
+}
