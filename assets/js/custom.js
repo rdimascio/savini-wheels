@@ -181,6 +181,11 @@ jQuery(function ($) {
 "use strict";
 
 jQuery(function ($) {
+  $('.entry-title a').lettering();
+});
+"use strict";
+
+jQuery(function ($) {
   $('#wheelGallery').lightGallery({
     mode: 'lg-fade',
     cssEasing: 'cubic-bezier(0.25, 0, 0.25, 1)'
@@ -202,6 +207,7 @@ jQuery(function ($) {
     }
   });
 });
+"use strict";
 "use strict";
 
 jQuery(function ($) {
@@ -300,10 +306,4 @@ jQuery(function ($) {
     perspective: 100,
     maxTilt: 5
   });
-});
-"use strict";
-"use strict";
-
-jQuery(function ($) {
-  $('.entry-title a').lettering();
 });

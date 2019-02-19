@@ -83,7 +83,7 @@ $class = get_queried_object()->slug . '_grid';
 			?>
 
 			<div class="configuration--item" data-target="">
-				<img width="187" height="187" class="configuration--item__image" src="<?= $image ?>" />
+				<img class="configuration--item__image" src="<?= $image ?>" />
 				<h4 class="configuration--item__title"><?= $title ?></h4>
 			</div>
 
