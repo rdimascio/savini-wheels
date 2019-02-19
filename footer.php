@@ -18,7 +18,18 @@
 		<div class="footer--wrapper w-100 p-t-5 p-b-3">
 
 			<div class="footer--info text-center">
-				<img src="http://savini.local/app/uploads/2019/02/savini__white-logo.png" alt="">
+				<?php
+				// check to see if the logo exists and add it to the page
+				if ( get_theme_mod( 'light_logo' ) ) : ?>
+
+					<img src="<?php echo get_theme_mod( 'light_logo' ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" />
+
+				<?php // add a fallback if the logo doesn't exist
+				else : ?>
+
+						<h1 class="site-title"><?php bloginfo( 'name' ); ?></h1>
+
+				<?php endif; ?>
 
 				<div class="social--row row justify-center align-center p-t-1 p-b-1">
 					<a class="social--img" href="https://www.facebook.com/SaviniWheels" target="_blank" data-no-instant><img src="https://brandicons.org/light/facebook" width="20" /></a>
