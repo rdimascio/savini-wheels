@@ -397,6 +397,14 @@ body.archive.term-sv-f .info .info-column .image{height:110px;background-repeat:
 body.archive.term-sv-f .info .info-column h2{text-transform:uppercase;color:#999}
 body.archive.term-sv-f .info .info-column p{text-align:left;color:#999;text-transform:uppercase;letter-spacing:2px;font-size:12px}
 body.archive.term-sv-f .image-cover{height:100vh;background-color:#000;background-size:contain;background-position:bottom right;background-repeat:no-repeat;background-attachment:fixed}
+body.archive.term-sv-f .image-cover .row{height:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;padding:0 10vw}
+body.archive.term-sv-f .image-cover h1{margin:0;color:#fff;font-size:46px;text-transform:uppercase;font-style:italic;letter-spacing:1px}
+body.archive.term-sv-f .image-cover h2{margin-top:1rem;margin-bottom:0;text-transform:uppercase;letter-spacing:3px;color:#e0e0e0;font-style:italic;font-weight:100}
+body.archive.term-sv-f .image-cover h2 span{color:red}
+body.archive.term-sv-f .image-cover p{margin-top:-.5rem;margin-bottom:0;text-transform:uppercase;letter-spacing:1px;color:#a9a9a9;font-weight:100}
+body.archive.term-sv-f .image-cover p:first-of-type{margin-bottom:.5rem}
+body.archive.term-sv-f .image-cover hr{left:0;right:50%;position:absolute;background-color:red;margin:0}
+body.archive.term-sv-f .image-cover img{margin-top:2rem}
 .flex{display:flex;display:-webkit-box;display:-ms-flexbox}
 .flex-wrap{-ms-flex-wrap:wrap;flex-wrap:wrap}
 .justify-center{justify-content:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center}

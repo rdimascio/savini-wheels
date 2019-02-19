@@ -42,5 +42,61 @@ body.archive.term-sv-f {
 		background-position: bottom right;
 		background-repeat: no-repeat;
 		background-attachment: fixed;
+
+		.row {
+			height: 100%;
+			display: flex;
+			align-items: center;
+			padding: 0 10vw;
+		}
+
+		h1 {
+			margin: 0;
+			color: #fff;
+			font-size: 46px;
+			text-transform: uppercase;
+			font-style: italic;
+			letter-spacing: 1px;
+		}
+
+		h2 {
+			margin-top: 1rem;
+			margin-bottom: 0;
+			text-transform: uppercase;
+			letter-spacing: 3px;
+			color: #e0e0e0;
+			font-style: italic;
+			font-weight: 100;
+
+			span {
+				color: red;
+				// font-weight: 400;
+			}
+		}
+
+		p {
+			margin-top: -.5rem;
+			margin-bottom: 0;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			color: #a9a9a9;
+			font-weight: 100;
+
+			&:first-of-type {
+				margin-bottom: .5rem;
+			}
+		}
+
+		hr {
+			left: 0;
+			right: 50%;
+			position: absolute;
+			background-color: red;
+			margin: 0;
+		}
+
+		img {
+			margin-top: 2rem;
+		}
 	}
 }

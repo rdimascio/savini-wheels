@@ -74,7 +74,26 @@ $class = get_queried_object()->slug . '_grid';
 		</div>
 
 		<div class="image-cover" style="background-image:url(https://saviniwheels.dimascio.design/wp-content/uploads/2019/02/savini__sv-f-info_bg.png)">
-	
+			<div class="row align-center">
+				<div class="column justify-center">
+					<h1>Precision Engineered</h1>
+					<p>Stronger, lighter wheels for optimal performance and looks!</p>
+
+					<hr>
+
+					<h2>Lightweight & Track Ready</h2>
+					<p>Performance proven</p>
+
+					<h2><span>Two-Piece Center Cap Detail</span></h2>
+					<p>Another level of customization</p>
+
+					<h2>Mono Form Technology</h2>
+					<p>Precision engineered</p>
+
+					<img src="https://saviniwheels.dimascio.design/wp-content/uploads/2019/02/savini__sv-f-info_image.png" alt="">
+				</div>
+				<div class="column"></div>
+			</div>
 		</div>
 
 		<header class="archive-header slider-header text-center"><h2><span>Step Lip</span> Vehicles Gallery</h2></header>
