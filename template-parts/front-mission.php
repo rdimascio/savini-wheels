@@ -1,6 +1,6 @@
 <div class="mission--wrapper">
 	<div class="mission--logo text-center" data-bottom-top="transform: translateZ(0) translateY(0%); opacity: 0;" data-top-bottom="transform: translateZ(0) translateY(-35%);" data--100-bottom="opacity:1;">
-		<h2 data-bottom-top="top: 0;" data-top-bottom="top: 0;" style="background-image: url(http://savini.local/app/uploads/2019/02/savini__white-logo.png)" alt="" class="for__title lined_title title js-appearing-content skrollable skrollable-between"></h2>
+		<h2 data-bottom-top="top: 0;" data-top-bottom="top: 0;" style="background-image: url(https://saviniwheels.dimascio.design/wp-content/uploads/2019/02/savini__white-logo.png)" alt="" class="for__title lined_title title js-appearing-content skrollable skrollable-between"></h2>
 	</div>
 
 	<div class="mission--content" data-bottom-top="transform: translateZ(0) translateY(0%); opacity: 0;" data-top-bottom="transform: translateZ(0) translateY(-35%);" data--100-bottom="opacity:1;">
