@@ -415,7 +415,7 @@ body.archive.term-sv-f .info .info-column{-webkit-box-flex:0;-ms-flex:0 0 25%;fl
 body.archive.term-sv-f .info .info-column .image{height:110px;background-repeat:no-repeat;background-position:center;background-size:contain}
 body.archive.term-sv-f .info .info-column h2{text-transform:uppercase;color:#999}
 body.archive.term-sv-f .info .info-column p{text-align:left;color:#999;text-transform:uppercase;letter-spacing:2px;font-size:12px}
-body.archive.term-sv-f .image-cover{height:100vh;background-color:#000;background-size:contain;background-position:bottom right;background-repeat:no-repeat}
+body.archive.term-sv-f .image-cover{height:100vh;background-color:#000;background-size:contain;background-position:bottom right;background-repeat:no-repeat;background-attachment:fixed}
 body.archive.term-sv-f .image-cover .row{height:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;padding:0 10vw}
 body.archive.term-sv-f .image-cover .row .column:first-of-type{-ms-flex-preferred-size:500px;flex-basis:500px}
 body.archive.term-sv-f .image-cover h1{margin:0;color:#fff;font-size:46px;text-transform:uppercase;font-style:italic;letter-spacing:1px}
