@@ -29,7 +29,7 @@
 			<?php the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' ); ?>
 		</header>
 		<div class="sizes">
-			<h4>Available Sizes</h4>
+			<h4>Available Sizes:</h4>
 			<?php
 				// vars	
 				$sizes = get_field('available_sizes');

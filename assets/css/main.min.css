@@ -391,15 +391,15 @@ body.archive .vehicles-slider .slick-slide{margin:5px}
 body.archive .vehicle-slider--item{height:350px;background-repeat:no-repeat;background-size:cover;background-position:center;-webkit-box-shadow:0 15px 10px rgba(25,25,25,0.7);box-shadow:0 15px 10px rgba(25,25,25,0.7)}
 body.archive .archive-header.slider-header{padding:5vw 0 0}
 body.archive.term-sv-f main{background-image:url(https://saviniwheels.dimascio.design/wp-content/uploads/2019/02/savini__sv-f-bg.png);background-repeat:no-repeat;background-size:contain;background-position:top}
-body.archive.term-sv-f .grid{padding:0 5vw;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}
+body.archive.term-sv-f .grid{margin:0 0 10vw;padding:0 5vw;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}
 body.archive.term-sv-f .grid .wheel{padding:1rem;display:-webkit-box;display:-ms-flexbox;display:flex;width:100%;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
-body.archive.term-sv-f .grid .wheel .wheel-gallery{width:60%}
+body.archive.term-sv-f .grid .wheel .wheel-gallery{width:75%;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
 body.archive.term-sv-f .grid .wheel .wheel-gallery .gallery-image{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start;-webkit-box-align:center;-ms-flex-align:center;align-items:center;text-align:center;-webkit-box-flex:0;-ms-flex:0 1 33%;flex:0 1 33%}
 body.archive.term-sv-f .grid .wheel .wheel-gallery .gallery-image p{text-transform:uppercase;font-weight:700;letter-spacing:0;font-size:12px;width:70%}
 body.archive.term-sv-f .grid .wheel .sizes{margin-top:10px;margin-left:10px;padding-left:10px;border-left:2px solid}
-body.archive.term-sv-f .grid .wheel .sizes h4{margin:0}
+body.archive.term-sv-f .grid .wheel .sizes h4{margin:0;padding:0 5px;text-transform:uppercase;color:red}
 body.archive.term-sv-f .grid .wheel .sizes ul{display:-webkit-box;display:-ms-flexbox;display:flex;list-style:none;margin:0;-webkit-padding-start:0;padding-inline-start:0}
-body.archive.term-sv-f .grid .wheel .sizes ul li{padding:0 5px}
+body.archive.term-sv-f .grid .wheel .sizes ul li{padding:0 5px;font-size:12px}
 body.archive.term-sv-f .grid .wheel .sizes ul li:not(:last-of-type){border-right:1px solid}
 body.archive.term-sv-f .grid .wheel .entry-title{margin:0}
 body.archive.term-sv-f .grid .wheel .entry-title a{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start;text-decoration:none}
@@ -417,6 +417,7 @@ body.archive.term-sv-f .info .info-column h2{text-transform:uppercase;color:#999
 body.archive.term-sv-f .info .info-column p{text-align:left;color:#999;text-transform:uppercase;letter-spacing:2px;font-size:12px}
 body.archive.term-sv-f .image-cover{height:100vh;background-color:#000;background-size:contain;background-position:bottom right;background-repeat:no-repeat}
 body.archive.term-sv-f .image-cover .row{height:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;padding:0 10vw}
+body.archive.term-sv-f .image-cover .row .column:first-of-type{-ms-flex-preferred-size:500px;flex-basis:500px}
 body.archive.term-sv-f .image-cover h1{margin:0;color:#fff;font-size:46px;text-transform:uppercase;font-style:italic;letter-spacing:1px}
 body.archive.term-sv-f .image-cover h2{margin-top:1rem;margin-bottom:0;text-transform:uppercase;letter-spacing:3px;color:#e0e0e0;font-style:italic;font-weight:100}
 body.archive.term-sv-f .image-cover h2 span{color:red}

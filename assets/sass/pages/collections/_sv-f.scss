@@ -8,6 +8,7 @@ body.archive.term-sv-f {
 	}
 
 	.grid {
+		margin: 0 0 10vw;
 		padding: 0 5vw;
 		display: flex;
 		flex-wrap: wrap;
@@ -22,7 +23,8 @@ body.archive.term-sv-f {
 			align-items: center;
 
 			.wheel-gallery {
-				width: 60%;
+				width: 75%;
+				justify-content:  center;
 
 				.gallery-image {
 					display: flex;
@@ -51,6 +53,9 @@ body.archive.term-sv-f {
 
 				h4 {
 					margin: 0;
+					padding: 0 5px;
+					text-transform: uppercase;
+					color: red;
 				}
 
 				ul {
@@ -61,6 +66,7 @@ body.archive.term-sv-f {
 
 					li {
 						padding: 0 5px;
+						font-size: 12px;
 
 						&:not(:last-of-type) {
 							border-right: 1px solid;
@@ -172,6 +178,10 @@ body.archive.term-sv-f {
 			display: flex;
 			align-items: center;
 			padding: 0 10vw;
+
+			.column:first-of-type {
+				flex-basis: 500px;
+			}
 		}
 
 		h1 {
