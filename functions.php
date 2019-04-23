@@ -385,58 +385,84 @@ add_action( 'init', 'create_wheel_categories', 0 );
 
 // Create Vehicle Post Type Categories
 function create_vehicle_categories() {
-	$vehicles_labels = array(
-			'name'              => _x( 'Vehicle Categories', 'taxonomy general name' ),
+	$make_labels = array(
+			'name'              => _x( 'Make', 'taxonomy general name' ),
 			'singular_name'     => _x( 'Vehicle Category', 'taxonomy singular name' ),
-			'search_items'      => __( 'Search Vehicle Categories' ),
-			'all_items'         => __( 'All Vehicle Categories' ),
-			'parent_item'       => __( 'Parent Vehicle Category' ),
-			'parent_item_colon' => __( 'Parent Vehicle Category:' ),
-			'edit_item'         => __( 'Edit Vehicle Category' ),
-			'update_item'       => __( 'Update Vehicle Category' ),
-			'add_new_item'      => __( 'Add New Vehicle Category' ),
-			'new_item_name'     => __( 'New Vehicle Category' ),
-			'menu_name'         => __( 'Vehicle Categories' ),
+			'search_items'      => __( 'Search Makes' ),
+			'all_items'         => __( 'All Makes' ),
+			'parent_item'       => __( 'Parent Make' ),
+			'parent_item_colon' => __( 'Parent Make' ),
+			'edit_item'         => __( 'Edit Make' ),
+			'update_item'       => __( 'Update Make' ),
+			'add_new_item'      => __( 'Add New Make' ),
+			'new_item_name'     => __( 'New Make' ),
+			'menu_name'         => __( 'Makes' ),
 	);
-	$vehicles_args = array(
-			'labels' => $vehicles_labels,
+	$make_args = array(
+			'labels' => $make_labels,
+			'hierarchical' => true,
+			'show_in_rest'	=>	true,
+			'has_archive' => true,
+			'rewrite' => array(
+				'slug' => 'vehicle-make',
+				'with_front' => false
+			)
+	);
+	register_taxonomy( 'vehicle_make', 'vehicle', $make_args );
+
+	$model_labels = array(
+		'name'              => _x( 'Model', 'taxonomy general name' ),
+		'singular_name'     => _x( 'Model', 'taxonomy singular name' ),
+		'search_items'      => __( 'Search Models' ),
+		'all_items'         => __( 'All Models' ),
+		'parent_item'       => __( 'Parent Model' ),
+		'parent_item_colon' => __( 'Parent Model:' ),
+		'edit_item'         => __( 'Edit Model' ),
+		'update_item'       => __( 'Update Model' ),
+		'add_new_item'      => __( 'Add New Model' ),
+		'new_item_name'     => __( 'New Model' ),
+		'menu_name'         => __( 'Models' ),
+	);
+	$model_args = array(
+			'labels' => $model_labels,
 			'hierarchical' => true,
 			'show_in_rest'	=>	true,
 			'has_archive' => true,
 			'rewrite' => array( 
-				'slug' => 'vehicle-categories',
-				'with_front' => false
+					'slug' => 'vehicle-model',
+					'with_front' => false
 			)
 	);
-	register_taxonomy( 'vehicle_categories', 'vehicle', $vehicles_args );
+	register_taxonomy( 'vehicle_model', 'vehicle', $model_args );
 }
 add_action( 'init', 'create_vehicle_categories', 0 );
 
 // Create Wheel Post Type Tags
 function create_wheel_tags() {
-
     $labels = array(
-        'name'              => _x( 'Tags', 'taxonomy general name' ),
-        'singular_name'     => _x( 'Tag', 'taxonomy singular name' ),
-        'search_items'      => __( 'Search Tags' ),
-        'all_items'         => __( 'All Tags' ),
-        'parent_item'       => __( 'Parent Tag' ),
-        'parent_item_colon' => __( 'Parent Tag:' ),
-        'edit_item'         => __( 'Edit Tag' ),
-        'update_item'       => __( 'Update Tag' ),
-        'add_new_item'      => __( 'Add New Tag' ),
-        'new_item_name'     => __( 'New Tag' ),
-        'menu_name'         => __( 'Tags' ),
+        'name'              => _x( 'Finishes', 'taxonomy general name' ),
+        'singular_name'     => _x( 'Finish', 'taxonomy singular name' ),
+        'search_items'      => __( 'Search Finishes' ),
+        'all_items'         => __( 'All Finishes' ),
+        'parent_item'       => __( 'Parent Finish' ),
+        'parent_item_colon' => __( 'Parent Finish:' ),
+        'edit_item'         => __( 'Edit Finish' ),
+        'update_item'       => __( 'Update Finish' ),
+        'add_new_item'      => __( 'Add New Finish' ),
+        'new_item_name'     => __( 'New Finish' ),
+        'menu_name'         => __( 'Finishes' ),
     );
     $args = array(
         'labels' => $labels,
-		'hierarchical' => true,
-		'show_in_rest'	=>	true
+				'hierarchical' => true,
+				'show_in_rest'	=>	true,
+				'has_archive' => true,
+				'rewrite' => array( 
+						'slug' => 'finishes'
+				)
     );
-
-    register_taxonomy( 'wheel_tag', 'wheel', $args );
+    register_taxonomy( 'finishes', 'wheel', $args );
 }
-
 add_action( 'init', 'create_wheel_tags', 0 );
 
 // Edit Wheel Post Type Messages

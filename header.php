@@ -26,7 +26,7 @@
 	<header id="masthead" class="site-header">
 		<div class="site-branding flex align-center justify-between m-l-4 m-r-4">
 				<div class="siteLogo">
-					<?php if ( is_front_page() && has_custom_logo() ) : the_custom_logo();
+					<?php if ( is_page() && has_custom_logo() ) : the_custom_logo();
 							else : 
 								if ( is_archive() || is_single() && get_theme_mod( 'light_logo' ) ) : ?>
 

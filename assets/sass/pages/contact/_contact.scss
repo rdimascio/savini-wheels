@@ -1,0 +1,83 @@
+.contact {
+	min-height: 120vh;
+	background-image: url(http://savini.local/app/uploads/2019/04/savini__contact-bg.jpg);
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-size: cover;
+
+	&-form {
+		position: absolute;
+		right: 0;
+		top: 15%;
+		left: 50%;
+		display: flex;
+    justify-content: center;
+		align-items: center;
+		flex-direction: column;
+
+		background: rgba(25,25,25,0.9);
+		padding: 2rem 4rem;
+		color: #9E9E9E;
+
+		&__header {
+			width: 100%;
+			border-bottom: 1px solid #4a4a4a;
+			padding-bottom: 1.5rem;
+		}
+
+		&__title {
+			margin: 0;
+			color: #fff;
+			text-transform: uppercase;
+			letter-spacing: 2.3px;;
+		}
+
+		&__info	{
+
+			p {
+				margin: 0;
+			}
+
+			a {
+				color: #787878;
+				text-decoration: none;
+			}
+		}
+		
+		&__body {
+			width: 100%;
+			padding-top: 1rem;
+
+			.wpcf7 {
+	
+				input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"], input[type="number"], input[type="tel"], input[type="range"], input[type="date"], input[type="month"], input[type="week"], input[type="time"], input[type="datetime"], input[type="datetime-local"], input[type="color"], textarea {
+					background: rgba(25,25,25,0.9);
+					border: 1px solid #4a4a4a;
+					color: #9E9E9E;
+					padding: .5rem;
+				}
+	
+				button, input[type="button"], input[type="reset"], input[type="submit"] {
+					border: 1px solid;
+					border-color: #4a4a4a;
+					border-radius: 3px;
+					background: rgba(0,0,0,0.1);
+					color: #9E9E9E;
+					font-size: 12px;
+					font-size: 1rem;
+					line-height: 1;
+					padding: 1em;
+				}
+			}
+		}
+
+		&__footer {
+			width: 100%;
+
+			a {
+				color: #787878;
+				text-decoration: none;
+			}
+		}
+	}
+}
