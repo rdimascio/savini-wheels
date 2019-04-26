@@ -54,13 +54,12 @@ $class = get_queried_object()->slug . '_grid';
 
 		$vehicle_args = array(
 				'post_type' => 'vehicle',
-				// 'meta_key' => 'wheel_collection',
-				// 'meta_compare' => '=',
-				// 'meta_value_num' => get_queried_object()->term_id
 				'tax_query' => array(
 					array(
 						'taxonomy' => 'wheel_collections',
-						'terms' => array($id),
+						'terms' => get_queried_object()->term_id,
+						'field' => 'id',
+						'operator' => 'IN'
 					)
 				)
 		);

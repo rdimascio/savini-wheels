@@ -324,6 +324,48 @@ function create_vehicle_post_type() {
 }
 add_action( 'init', 'create_vehicle_post_type' );
 
+// Create Finish Post Type
+function create_finish_post_type() {
+	$labels = array(
+			'name'               => 'Finish',
+			'singular_name'      => 'Finish',
+			'add_new'            => 'Add New Finish',
+			'add_new_item'       => 'Add New Finish',
+			'edit_item'          => 'Edit Finish',
+			'new_item'           => 'New Finish',
+			'all_items'          => 'All Finishes',
+			'view_item'          => 'View Finish',
+			'search_items'       => 'Search Finishes',
+			'not_found'          =>  'No Finishes Found',
+			'not_found_in_trash' => 'No Finishes found in Trash',
+			'parent_item_colon'  => '',
+			'menu_name'          => 'Finishes',
+	);
+	// Register Finish Post Type
+	register_post_type( 'finish', array(
+					'labels'              => $labels,
+					'has_archive'         => true,
+					'has_rest'            => true,
+					'public'              => true,
+					'show_ui'             => true,
+					'show_in_menu'        => true,
+					'show_in_nav_menus'   => true,
+					'show_in_admin_bar'   => true,
+					'show_in_rest'		  => true,
+					'can_export'          => true,
+					'publicly_queryable'  => true,
+					'menu_icon'           => 'dashicons-admin-generic',
+					'menu_position'       => 5,
+					'supports'            => array( 'title', 'editor', 'excerpt', 'custom-fields', 'thumbnail','page-attributes' ),
+					'taxonomies'          => array( 'finish_tag', 'finish_category' ),
+					'exclude_from_search' => false,
+					'capability_type'     => 'post',
+					'rewrite'             => array( 'slug' => 'finishes' )
+			)
+	);
+}
+add_action( 'init', 'create_finish_post_type' );
+
 // Edit Wheel Post Type Title Text
 function wheel_title_text( $title ) {
     $screen = get_current_screen();
@@ -438,32 +480,32 @@ function create_vehicle_categories() {
 add_action( 'init', 'create_vehicle_categories', 0 );
 
 // Create Wheel Post Type Tags
-function create_wheel_tags() {
-    $labels = array(
-        'name'              => _x( 'Finishes', 'taxonomy general name' ),
-        'singular_name'     => _x( 'Finish', 'taxonomy singular name' ),
-        'search_items'      => __( 'Search Finishes' ),
-        'all_items'         => __( 'All Finishes' ),
-        'parent_item'       => __( 'Parent Finish' ),
-        'parent_item_colon' => __( 'Parent Finish:' ),
-        'edit_item'         => __( 'Edit Finish' ),
-        'update_item'       => __( 'Update Finish' ),
-        'add_new_item'      => __( 'Add New Finish' ),
-        'new_item_name'     => __( 'New Finish' ),
-        'menu_name'         => __( 'Finishes' ),
-    );
-    $args = array(
-        'labels' => $labels,
-				'hierarchical' => true,
-				'show_in_rest'	=>	true,
-				'has_archive' => true,
-				'rewrite' => array( 
-						'slug' => 'finishes'
-				)
-    );
-    register_taxonomy( 'finishes', 'wheel', $args );
-}
-add_action( 'init', 'create_wheel_tags', 0 );
+// function create_wheel_tags() {
+//     $labels = array(
+//         'name'              => _x( 'Finishes', 'taxonomy general name' ),
+//         'singular_name'     => _x( 'Finish', 'taxonomy singular name' ),
+//         'search_items'      => __( 'Search Finishes' ),
+//         'all_items'         => __( 'All Finishes' ),
+//         'parent_item'       => __( 'Parent Finish' ),
+//         'parent_item_colon' => __( 'Parent Finish:' ),
+//         'edit_item'         => __( 'Edit Finish' ),
+//         'update_item'       => __( 'Update Finish' ),
+//         'add_new_item'      => __( 'Add New Finish' ),
+//         'new_item_name'     => __( 'New Finish' ),
+//         'menu_name'         => __( 'Finishes' ),
+//     );
+//     $args = array(
+//         'labels' => $labels,
+// 				'hierarchical' => true,
+// 				'show_in_rest'	=>	true,
+// 				'has_archive' => true,
+// 				'rewrite' => array( 
+// 						'slug' => 'finishes'
+// 				)
+//     );
+//     register_taxonomy( 'finishes', 'wheel', $args );
+// }
+// add_action( 'init', 'create_wheel_tags', 0 );
 
 // Edit Wheel Post Type Messages
 function wheel_messages( $messages ) {
@@ -594,16 +636,136 @@ add_action( 'init', 'insert_the_parent_categories' );
 
 // add_action( 'customize_register', 'savini_customizer_sections' );
 
+function custom_query_vars_filter($vars) {
+  $vars[] .= 'collection';
+	$vars[] .= 'make';
+	$vars[] .= 'model';
+	$vars[] .= 'wheel';
+	$vars[] .= 'finish';
+	$vars[] .= 'color';
+  return $vars;
+}
+add_filter( 'query_vars', 'custom_query_vars_filter' );
+
 
 function collection_archive_order ( $query ) {
-	if ( ( $query->is_main_query() ) && ( is_tax( 'wheel_collections' ) ) )
 
-	$query->set( 'post_type', 'wheel' );                 
-	$query->set( 'posts_per_page', '200' );          
-	$query->set( 'orderby', 'menu_order' );
-	$query->set( 'order', 'ASC' );
+	if ( is_admin() || ! $query->is_main_query() ){
+		return;
+	}
+
+	if ( ( $query->is_main_query() ) && ( is_tax( 'wheel_collections' ) ) ) {
+		$query->set( 'post_type', 'wheel' );                 
+		$query->set( 'posts_per_page', '200' );          
+		$query->set( 'orderby', 'menu_order' );
+		$query->set( 'order', 'ASC' );
+	}
 
 }
-
 add_action( 'pre_get_posts', 'collection_archive_order' );
 
+
+function vehicle_gallery_filters($query) {
+
+	if ( is_admin() || ! $query->is_main_query() || ! is_archive( 'vehicle' ) ) {
+		return;
+	}
+	
+	$meta_query = array();
+	$tax_query = array();
+
+	$collection = get_query_var( 'collection' );
+
+	if( !empty( $collection ) ){
+		$tax_query[] = array(
+			'taxonomy' => 'wheel_collections',
+			'terms' => $collection,
+			'field' => 'slug',
+			'operator' => 'IN'
+		);
+		// $query->set( 'meta_key', 'vehicle_collection' );
+		// $query->set( 'meta_value', 13 );
+		// $query->set( 'meta_compare', '=' );
+		// $query->set( 'order', 'DESC' );
+	}
+
+	$make = get_query_var( 'make' );
+
+	if( !empty( $make ) ){
+		$tax_query[] = array(
+			'taxonomy' => 'make',
+			'terms' => $make,
+			'field' => 'slug',
+			'operator' => 'IN'
+		);
+	}
+
+	$model = get_query_var( 'model' );
+
+	if( !empty( $model ) ){
+		$tax_query[] = array(
+			'taxonomy' => 'model',
+			'terms' => $model,
+			'field' => 'slug',
+			'operator' => 'IN'
+		);
+	}
+
+	if ( count( $meta_query ) > 0 ) {
+		$query->set( 'meta_query', $meta_query );
+	}
+
+	if ( count( $tax_query ) > 0 ) {
+		$query->set( 'tax_query', $tax_query );
+	}
+
+}
+add_action( 'pre_get_posts', 'vehicle_gallery_filters' );
+
+
+function finish_gallery_filters($query) {
+
+	if ( is_admin() || ! $query->is_main_query() || ! is_archive( 'finish' ) ){
+		return;
+	}
+
+	$meta_query = array();
+	$tax_query = array();
+
+	// $collection = get_query_var( 'collection' );
+
+	// if( !empty( $collection ) ){
+	// 	$tax_query[] = array(
+	// 		'taxonomy' => 'wheel_collection',
+	// 		'terms' => $collection,
+	// 		'field' => 'slug',
+	// 		'operator' => 'IN'
+	// 	);
+	// }
+
+	$finish = get_query_var( 'finish' );
+
+	if( !empty( $finish ) ){
+		$query->set( 'meta_key', 'vehicle_finish' );
+		$query->set( 'meta_value', $finish );
+		$query->set( 'meta_compare', '=' );
+	}
+
+	$color = get_query_var( 'color' );
+
+	if( !empty( $color ) ){
+		$query->set( 'meta_key', 'finish_color' );
+		$query->set( 'meta_value', $color );
+		$query->set( 'meta_compare', '=' );
+	}
+
+	if ( count( $meta_query ) > 0 ) {
+		$query->set( 'meta_query', $meta_query );
+	}
+
+	if ( count( $tax_query ) > 0 ) {
+		$query->set( 'tax_query', $tax_query );
+	}
+
+}
+add_action( 'pre_get_posts', 'finish_gallery_filters' );

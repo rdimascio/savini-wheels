@@ -40,10 +40,10 @@ jQuery( function( $ ) {
 
 	});
 
-	$( '.configurations--main .configuration--item.active' ).on( 'click', function( e ) {
+	$( '.configurations--main' ).on( 'click', '.configuration--item.active', function( e ) {
 		e.preventDefault();
 
-		window.location.href = '/wheel-collections/savini-forged?' + $( this ).attr( 'data-target' );
+		window.location.href = '/wheel-collections/savini-forged?configuration=' + $( this ).attr( 'data-target' );
 
 	});
 
