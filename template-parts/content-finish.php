@@ -9,17 +9,14 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-
-	<?php wp_starter_theme_post_thumbnail(); ?>
-
-	<header class="entry-header">
-		<?php
-		if ( is_singular() ) :
-			the_title( '<h1 class="entry-title">', '</h1>' );
-		else :
-			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		endif; ?>
-	</header><!-- .entry-header -->
-
-</article><!-- #post-<?php the_ID(); ?> -->
+<div class="gallery-wrapper">
+	<div class="gallery-item" data-finish-id="<?php the_ID(); ?>" style="background-image:url(<?= get_the_post_thumbnail_url(); ?>)">
+		<div class="overlay">
+			<div class="content">
+				<h4><?= the_title(); ?></h4>
+				<p class="see-more">See More</p>
+			</div>
+		</div>
+		<a href="<?= get_the_permalink(); ?>" class="link"></a>
+	</div>
+</div>

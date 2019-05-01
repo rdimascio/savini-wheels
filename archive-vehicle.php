@@ -18,7 +18,79 @@ get_header();
 		</header><!-- .page-header -->
 
 		<div class="filters finish-filters">
-			
+			<div class="filter-group">
+				<label for="brand_options">Brand options</label>
+				<select class="select" id="collection" name="brand_options" id="brand_options" data-filter="collection">
+					<option value="all">All Collections</option>
+					<?php 
+							$_terms = get_terms( 'wheel_collections', array( 'hide_empty' => false ) );
+
+							foreach ($_terms as $term) : 
+							
+								$slug = $term->slug;
+								$name = $term->name;
+								
+							?>
+
+								<option value="<?= $slug ?>"><?= $name ?></option>
+
+							<?php endforeach;
+						?>
+				</select>
+			</div>
+			<div class="filter-group">
+				<label for="make_options">Vehicle options</label>
+				<div class="filter-row">
+					<select class="select" id="make" name="make_options" id="make_options" data-filter="make">
+						<option value="all">All Makes</option>
+						<?php 
+							$_terms = get_terms( 'vehicle_make', array( 'hide_empty' => false ) );
+
+							foreach ($_terms as $term) : 
+							
+								$slug = $term->slug;
+								$name = $term->name;
+								
+							?>
+
+								<option value="<?= $slug ?>"><?= $name ?></option>
+
+							<?php endforeach;
+						?>
+					</select>
+					<select class="select" id="model" name="model_options" id="model_options" data-filter="model">
+						<option value="all">All Models</option>
+						<?php 
+							$_terms = get_terms( 'vehicle_model', array( 'hide_empty' => false ) );
+
+							foreach ($_terms as $term) : 
+							
+								$slug = $term->slug;
+								$name = $term->name;
+								
+							?>
+
+								<option value="<?= $slug ?>"><?= $name ?></option>
+
+							<?php endforeach;
+						?>
+					</select>
+				</div>
+			</div>
+			<div class="filter-group">
+				<label for="make_options">Filter options</label>
+				<div class="filter-row">
+					<select class="select" name="photo_options" id="photo_options">
+						<option value="all">Photos</option>
+					</select>
+					<select class="select" name="wheel_options" id="wheel_options">
+						<option value="all">Wheel</option>
+					</select>
+					<select class="select" name="finish_options" id="finish_options">
+						<option value="all">Finish</option>
+					</select>
+				</div>
+			</div>
 		</div>
 
 		<?php if ( have_posts() ) : ?>

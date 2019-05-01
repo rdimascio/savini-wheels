@@ -683,10 +683,6 @@ function vehicle_gallery_filters($query) {
 			'field' => 'slug',
 			'operator' => 'IN'
 		);
-		// $query->set( 'meta_key', 'vehicle_collection' );
-		// $query->set( 'meta_value', 13 );
-		// $query->set( 'meta_compare', '=' );
-		// $query->set( 'order', 'DESC' );
 	}
 
 	$make = get_query_var( 'make' );
@@ -718,6 +714,8 @@ function vehicle_gallery_filters($query) {
 	if ( count( $tax_query ) > 0 ) {
 		$query->set( 'tax_query', $tax_query );
 	}
+
+	$query->set( 'posts_per_page', 6 );
 
 }
 add_action( 'pre_get_posts', 'vehicle_gallery_filters' );
@@ -766,6 +764,8 @@ function finish_gallery_filters($query) {
 	if ( count( $tax_query ) > 0 ) {
 		$query->set( 'tax_query', $tax_query );
 	}
+
+	$query->set( 'posts_per_page', 6 );
 
 }
 add_action( 'pre_get_posts', 'finish_gallery_filters' );

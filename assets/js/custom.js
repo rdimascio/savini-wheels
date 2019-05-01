@@ -335,3 +335,32 @@ jQuery(function ($) {
     maxTilt: 5
   });
 });
+"use strict";
+
+jQuery(function ($) {
+  var url = new URL(window.location.href),
+      params = new URLSearchParams(url.search.slice(1));
+
+  function setQueryVars() {
+    var key = $(this).data('filter'),
+        value = this.value;
+
+    if ('all' === value && params.has(key)) {
+      url.searchParams.delete(key);
+    } else {
+      url.searchParams.set(key, value);
+    }
+
+    window.location.href = url;
+  }
+
+  function updateSelectValues() {
+    params.forEach(function (value, key) {
+      var filter = $('select#' + key);
+      filter.val(value);
+    });
+  }
+
+  $('select').on('change', setQueryVars);
+  updateSelectValues();
+});
