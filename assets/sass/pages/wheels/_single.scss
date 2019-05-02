@@ -1,0 +1,96 @@
+body.single-wheel {
+	margin-top: 85px;
+
+	.site-header {
+		background: #000;
+
+		.box-shadow-menu::before {
+			background: #fff;
+			-webkit-box-shadow: 0 0.25em 0 0 #fff, 0 0.5em 0 0 #fff;
+			box-shadow: 0 0.25em 0 0 #fff, 0 0.5em 0 0 #fff;
+		}
+	}
+
+	main {
+		padding: 4rem 0 0;
+	}
+
+	.wheel-content {
+
+		section {
+			width: 50%;
+		}
+	}
+
+	.single-header {
+		padding: 5vw;
+		text-transform: uppercase;
+
+		h2 {
+			letter-spacing: 3px;
+			font-weight: 400;
+		}
+
+		p {
+			font-size: 12px;
+			padding: 0 5vw;
+		}
+
+		span {
+			color: red;
+		}
+
+		&.slider-header {
+			padding: 5vw 0 0;
+		}
+	}
+
+	.vehicles-slider__wrapper {
+		text-align: center;
+	}
+
+	.vehicles-slider {
+
+		.slick-list {
+			padding: 0 0 3vw;
+		}
+
+		.slick-prev {
+			left: 25px;
+    	z-index: 9;
+		}
+
+		.slick-next {
+			right: 25px;
+    	z-index: 9;
+		}
+
+		.slick-slide {
+			margin: 5px;
+		}
+	}
+
+	.vehicle-slider--item {
+		height: 350px;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+
+		// box-shadow: 0 15px 10px rgba(25, 25, 25, 0.7);
+	}
+
+	.see-more {
+		color: #fff;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 100;
+    padding: .5rem 2rem;
+    background: red;
+    border: 2px solid red;
+    border-radius: 2px;
+    -webkit-transition: background .5s,color .5s;
+    transition: background .5s,color .5s;
+	}
+}

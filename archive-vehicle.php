@@ -17,7 +17,7 @@ get_header();
 			<h1>Vehicle Gallery</h1>
 		</header><!-- .page-header -->
 
-		<div class="filters finish-filters">
+		<div class="filters vehicle-filters">
 			<div class="filter-group">
 				<label for="brand_options">Brand options</label>
 				<select class="select" id="collection" name="brand_options" id="brand_options" data-filter="collection">
@@ -95,7 +95,7 @@ get_header();
 
 		<?php if ( have_posts() ) : ?>
 
-			<div class="vehicle-grid grid flex justify-center align-center">
+			<div class="vehicle-grid grid flex justify-start align-center">
 
 				<?php
 				/* Start the Loop */
@@ -119,6 +119,16 @@ get_header();
 			?>
 
 		</div>
+
+		<?php
+
+		global $wp_query;
+						
+		if (  $wp_query->max_num_pages > 1 ) : ?>
+			<div class="load-more-wrapper">
+				<div class="load-more">More posts</div>
+			</div>
+		<?php endif; ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

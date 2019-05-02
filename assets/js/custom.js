@@ -92,6 +92,12 @@ jQuery(function ($) {
     infinite: true,
     arrows: true
   });
+  $('body.single-wheel .vehicles-slider').slick({
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    infinite: true,
+    arrows: true
+  });
   $('body.archive.term-sv-f .sv-f-slider').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -131,6 +137,35 @@ jQuery(function ($) {
     e.preventDefault();
     window.location.href = '/wheel-collections/savini-forged?configuration=' + $(this).attr('data-target');
   });
+});
+"use strict";
+
+jQuery(function ($) {
+  var url = new URL(window.location.href),
+      params = new URLSearchParams(url.search.slice(1));
+
+  function setQueryVars() {
+    var key = $(this).data('filter'),
+        value = this.value;
+
+    if ('all' === value && params.has(key)) {
+      url.searchParams.delete(key);
+    } else {
+      url.searchParams.set(key, value);
+    }
+
+    window.location.href = url;
+  }
+
+  function updateSelectValues() {
+    params.forEach(function (value, key) {
+      var filter = $('select#' + key);
+      filter.val(value);
+    });
+  }
+
+  $('select').on('change', setQueryVars);
+  updateSelectValues();
 });
 "use strict";
 
@@ -334,33 +369,4 @@ jQuery(function ($) {
     perspective: 100,
     maxTilt: 5
   });
-});
-"use strict";
-
-jQuery(function ($) {
-  var url = new URL(window.location.href),
-      params = new URLSearchParams(url.search.slice(1));
-
-  function setQueryVars() {
-    var key = $(this).data('filter'),
-        value = this.value;
-
-    if ('all' === value && params.has(key)) {
-      url.searchParams.delete(key);
-    } else {
-      url.searchParams.set(key, value);
-    }
-
-    window.location.href = url;
-  }
-
-  function updateSelectValues() {
-    params.forEach(function (value, key) {
-      var filter = $('select#' + key);
-      filter.val(value);
-    });
-  }
-
-  $('select').on('change', setQueryVars);
-  updateSelectValues();
 });
