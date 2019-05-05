@@ -25,7 +25,7 @@ endwhile;
 
 			<div class="vehicles-slider__wrapper">
 				<header class="single-header slider-header text-center"><h2><?= get_the_title( $wheel_id ) ?> Vehicles Gallery</h2></header>
-				<div class="vehicles-slider">
+			<div class="vehicles-slider">
 
 <?php
 $vehicle_args = array(

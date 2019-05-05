@@ -17,12 +17,12 @@ $class = get_queried_object()->slug . '_grid';
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 
-		<header class="archive-header text-center">
+		<!-- <header class="archive-header text-center">
 
-			<h2><?= single_term_title(); ?> | <span>Configurations</span></h2>
-			<p><?= get_field( 'collection_description', 'wheel_collections_' . get_queried_object()->term_id ); ?></p>
+			<h2><//?= single_term_title(); ?> | <span>Configurations</span></h2>
+			<p><//?= get_field( 'collection_description', 'wheel_collections_' . get_queried_object()->term_id ); ?></p>
 
-		</header>
+		</header> -->
 
 		<div class="configurations grid flex justify-center align-center">
 
