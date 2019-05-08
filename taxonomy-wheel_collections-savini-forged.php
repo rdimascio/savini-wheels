@@ -45,34 +45,57 @@ $class = get_queried_object()->slug . '_grid';
 				$config_id = $configuration->term_id;
 				$object = $taxonomy . '_' . $config_id;
 				$title = $configuration->name;
+				$abbreviation = get_field( 'configuration_abbreviation', $object );
 				$image = get_field( 'configuration_image', $object );
 
 			?>
 
 				<div class="configuration--item" data-target="">
 					<img class="configuration--item__image" src="<?= $image ?>" />
-					<h4 class="configuration--item__title"><?= $title ?></h4>
+					<h4 class="configuration--item__title"><?= $abbreviation ?></h4>
 				</div>
 
 			<?php endforeach; ?>
 
 		</div>
 
-		<header class="archive-header text-center">
+		<!-- <header class="archive-header text-center">
 
-			<h2><?= single_term_title(); ?></h2>
-			<p><?= get_field( 'collection_description', 'wheel_collections_' . $id ); ?></p>
+			<h2><//?= single_term_title(); ?></h2>
+			<p><//?= get_field( 'collection_description', 'wheel_collections_' . $id ); ?></p>
 
-		</header>
+		</header> -->
 
 		<div class="<?= $class ?> grid flex justify-center align-center">
 
-			<?php if ( have_posts() ) : ?>
+			<?php
+
+			$forged_args = array(
+				'post_type' => 'wheel',
+				'meta_key' => 'wheel_parent',
+				'meta_value' => false,
+				'meta_compare' => '=',
+				'posts_per_page' => 10,
+				'orderby' => 'menu_order',
+				'order' => 'ASC',
+				'tax_query' => array(
+					array(
+						'taxonomy' => 'wheel_collections',
+						'terms' => 'savini-forged',
+						'field' => 'slug',
+						'operator' => 'IN'
+					)
+				)
+			);
+
+			$forged_loop = new WP_Query( $forged_args );
+			
+			if ( $forged_loop->have_posts() ) : ?>
 
 				<?php
 				/* Start the Loop */
-				while ( have_posts() ) :
-					the_post();
+				while ( $forged_loop->have_posts() ) :
+					$forged_loop->the_post();
 
 					/*
 					* Include the Post-Type-specific template for the content.
@@ -91,7 +114,7 @@ $class = get_queried_object()->slug . '_grid';
 
 		</div>
 
-		<div class="info row justify-between">
+		<!-- <div class="info row justify-between">
 				<div class="info-column row p-l-1 p-r-1">
 					<div class="info-inner-column">
 						<img src="https://saviniwheels.dimascio.design/wp-content/uploads/2019/02/steplip.png" alt="">
@@ -115,7 +138,7 @@ $class = get_queried_object()->slug . '_grid';
 			<div class="image-slider--item" style="background-image:url(https://saviniwheels.dimascio.design/wp-content/uploads/2019/02/savini__wheel_collections-wheel-image.png)"></div>
 			<div class="image-slider--item" style="background-image:url(https://saviniwheels.dimascio.design/wp-content/uploads/2019/02/savini__wheel_collections-wheel-image.png)"></div>
 			<div class="image-slider--item" style="background-image:url(https://saviniwheels.dimascio.design/wp-content/uploads/2019/02/savini__wheel_collections-wheel-image.png)"></div>
-		</div>
+		</div> -->
 
 		<header class="archive-header slider-header text-center"><h2><span>Step Lip</span> Vehicles Gallery</h2></header>
 

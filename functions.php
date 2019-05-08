@@ -429,7 +429,7 @@ add_action( 'init', 'create_wheel_categories', 0 );
 function create_vehicle_categories() {
 	$make_labels = array(
 			'name'              => _x( 'Make', 'taxonomy general name' ),
-			'singular_name'     => _x( 'Vehicle Category', 'taxonomy singular name' ),
+			'singular_name'     => _x( 'Make', 'taxonomy singular name' ),
 			'search_items'      => __( 'Search Makes' ),
 			'all_items'         => __( 'All Makes' ),
 			'parent_item'       => __( 'Parent Make' ),
@@ -483,7 +483,7 @@ add_action( 'init', 'create_vehicle_categories', 0 );
 function create_finish_categories() {
 	$option_labels = array(
 			'name'              => _x( 'Option', 'taxonomy general name' ),
-			'singular_name'     => _x( 'Vehicle Category', 'taxonomy singular name' ),
+			'singular_name'     => _x( 'Option', 'taxonomy singular name' ),
 			'search_items'      => __( 'Search Options' ),
 			'all_items'         => __( 'All Options' ),
 			'parent_item'       => __( 'Parent Option' ),
@@ -691,40 +691,81 @@ add_action( 'init', 'insert_the_parent_categories' );
 // add_action( 'customize_register', 'savini_customizer_sections' );
 
 function custom_query_vars_filter($vars) {
-  $vars[] .= 'collection';
+	$vars[] .= 'collection';
+	$vars[] .= 'config';
 	$vars[] .= 'make';
 	$vars[] .= 'model';
-	$vars[] .= 'wheel';
-	$vars[] .= 'finish';
+	$vars[] .= 'wheels';
+	$vars[] .= 'finishes';
+	$vars[] .= 'display';
 	$vars[] .= 'color';
+	$vars[] .= 'options';
+
   return $vars;
 }
 add_filter( 'query_vars', 'custom_query_vars_filter' );
 
 
+
 function collection_archive_order ( $query ) {
 
-	if ( is_admin() || ! $query->is_main_query() ){
+	if ( is_admin() || ! $query->is_main_query() || ! $query->is_tax('wheel_collections') || ! $query->has_term('wheel_collections') ){
 		return;
 	}
 
-	if ( ( $query->is_main_query() ) && ( is_tax( 'wheel_collections' ) ) ) {
-		$query->set( 'post_type', 'wheel' );                 
-		$query->set( 'posts_per_page', '200' );          
-		$query->set( 'orderby', 'menu_order' );
-		$query->set( 'order', 'ASC' );
-	}
+	$query->set( 'post_type', 'wheel' );                 
+	$query->set( 'posts_per_page', '10' );  
+	$query->set( 'orderby', 'menu_order' );
+	$query->set( 'order', 'ASC' );
 
 }
 add_action( 'pre_get_posts', 'collection_archive_order' );
 
 
+
+// function savini_forged_config_filters() {
+
+// 	if ( is_admin() || ! $query->is_main_query() || ! $query->is_tax('wheel_collections') || ! $query->has_term('wheel_collections') ) {
+// 		return;
+// 	}
+
+// 	$tax_query = array();
+
+// 	$config = get_query_var( 'config' );
+
+// 	if( !empty( $config ) ) {
+// 		$tax_query[] = array(
+// 			'relation' => 'AND',
+// 			array(
+// 				'taxonomy' => 'wheel_collections',
+// 				'terms' => $collection,
+// 				'field' => 'slug',
+// 				'operator' => 'IN'
+// 			),
+// 			array(
+// 				'taxonomy' => 'wheel_configurations',
+// 				'terms' => $collection,
+// 				'field' => 'slug',
+// 				'operator' => 'IN'
+// 			)
+// 		);
+// 	}
+
+// 	if ( count( $tax_query ) > 0 ) {
+// 		$query->set( 'tax_query', $tax_query );
+// 	}
+
+// }
+// add_action( 'pre_get_posts', 'savini_forged_config_filters' );
+
+
+
 function vehicle_gallery_filters($query) {
 
-	if ( is_admin() || ! $query->is_main_query() || ! is_archive( 'vehicle' ) ) {
+	if ( is_admin() || ! $query->is_main_query() || ! is_post_type_archive( 'vehicle' ) ) {
 		return;
 	}
-	
+
 	$meta_query = array();
 	$tax_query = array();
 
@@ -761,8 +802,63 @@ function vehicle_gallery_filters($query) {
 		);
 	}
 
+	$wheel = get_query_var( 'wheels' );
+
+	if( !empty( $wheel ) ) {
+
+		$wheel_object = get_page_by_title( $wheel, 'OBJECT', 'wheel' );
+		$wheel_id = $wheel_object->ID;
+
+		$meta_query[] = array(
+			'key' => 'vehicle_wheel',
+			'value_num' => $wheel_id,
+			'compare' => 'IN'
+		);
+
+		// $query->set( 'meta_key', 'vehicle_wheel' );
+		// $query->set( 'meta_value_num', $wheel_id );
+		// $query->set( 'meta_compare', 'IN' );
+	}
+
+	$finish = get_query_var( 'finishes' );
+
+	if( !empty( $finish ) ) {
+
+		$finish_object = get_page_by_title( $finish, 'OBJECT', 'finish' );
+		$finish_id = $finish_object->ID;
+
+		$meta_query[] = array(
+			'key' => 'vehicle_finish',
+			'value_num' => $finish_id,
+			'compare' => 'IN'
+		);
+
+		// $query->set( 'meta_key', 'vehicle_finish' );
+		// $query->set( 'meta_value_num', $finish_id );
+		// $query->set( 'meta_compare', 'IN' );
+	}
+
+	$display = get_query_var( 'display' );
+
+	if( !empty( $display ) && $display == 'videos' ) {
+
+		$meta_query[] = array(
+			'key' => 'vehicle_video',
+			'value' => '',
+			'compare' => '>'
+		);
+
+		// $query->set( 'meta_key', 'vehicle_finish' );
+		// $query->set( 'meta_value_num', $finish_id );
+		// $query->set( 'meta_compare', 'IN' );
+	}
+
 	if ( count( $meta_query ) > 0 ) {
-		$query->set( 'meta_query', $meta_query );
+			$query->set( 'meta_query', $meta_query );
+	}
+
+	if ( count( $meta_query ) > 1 ) {
+		$query->set( 'relation', 'AND' );
 	}
 
 	if ( count( $tax_query ) > 0 ) {
@@ -777,53 +873,58 @@ add_action( 'pre_get_posts', 'vehicle_gallery_filters' );
 
 function finish_gallery_filters($query) {
 
-	if ( is_admin() || ! $query->is_main_query() || ! is_archive( 'finish' ) ){
+	if ( is_admin() || ! $query->is_main_query() || ! is_post_type_archive( 'finish' ) ){
 		return;
 	}
 
 	$meta_query = array();
 	$tax_query = array();
 
-	// $collection = get_query_var( 'collection' );
+	$collection = get_query_var( 'collection' );
 
-	// if( !empty( $collection ) ){
-	// 	$tax_query[] = array(
-	// 		'taxonomy' => 'wheel_collection',
-	// 		'terms' => $collection,
-	// 		'field' => 'slug',
-	// 		'operator' => 'IN'
-	// 	);
-	// }
+	if( !empty( $collection ) ){
+		$tax_query[] = array(
+			'taxonomy' => 'wheel_collections',
+			'terms' => $collection,
+			'field' => 'slug',
+			'operator' => 'IN'
+		);
+	}
 
-	$finish = get_query_var( 'finish' );
+	$options = get_query_var( 'options' );
 
 	if( !empty( $finish ) ){
-		$query->set( 'meta_key', 'vehicle_finish' );
-		$query->set( 'meta_value', $finish );
-		$query->set( 'meta_compare', '=' );
+		$tax_query[] = array(
+			'taxonomy' => 'finish_options',
+			'terms' => $options,
+			'field' => 'slug',
+			'operator' => 'IN'
+		);
 	}
 
 	$color = get_query_var( 'color' );
 
 	if( !empty( $color ) ){
-		$query->set( 'meta_key', 'finish_color' );
-		$query->set( 'meta_value', $color );
-		$query->set( 'meta_compare', '=' );
-	}
-
-	if ( count( $meta_query ) > 0 ) {
-		$query->set( 'meta_query', $meta_query );
+		$tax_query[] = array(
+			'taxonomy' => 'finish_colors',
+			'terms' => $color,
+			'field' => 'slug',
+			'operator' => 'IN'
+		);
 	}
 
 	if ( count( $tax_query ) > 0 ) {
 		$query->set( 'tax_query', $tax_query );
 	}
 
+	if ( count( $tax_query ) > 1 ) {
+		$query->set( 'relation', 'AND' );
+	}
+
 	$query->set( 'posts_per_page', 6 );
 
 }
 add_action( 'pre_get_posts', 'finish_gallery_filters' );
-
 
 
 function load_more_scripts() {

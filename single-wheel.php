@@ -11,7 +11,7 @@ $wheel_id = get_queried_object_id();
 $parent_wheel_id = get_field( 'wheel_parent', $wheel_id );
 $wheel_id = ( $parent_wheel_id ) ? $parent_wheel_id : $wheel_id;
 
-get_header();
+get_header( 'wheel' );
 ?>
 
 	<div id="primary" class="content-area">
@@ -24,8 +24,11 @@ endwhile;
 ?>
 
 			<div class="vehicles-slider__wrapper">
-				<header class="single-header slider-header text-center"><h2><?= get_the_title( $wheel_id ) ?> Vehicles Gallery</h2></header>
-			<div class="vehicles-slider">
+				<header class="single-header slider-header text-center">
+					<h2><span><?= get_the_title( $wheel_id ) ?></span> Vehicles Gallery</h2>
+				</header>
+
+				<div class="vehicles-slider">
 
 <?php
 $vehicle_args = array(
@@ -36,7 +39,7 @@ $vehicle_args = array(
 	'meta_query' => array(
 		array(
 			'key' => 'vehicle_wheel',
-			'value_num' => ( $parent_wheel_id ) ? $parent_wheel_id : $wheel_id,
+			'value_num' => $wheel_id,
 			'compare' => 'IN'
 		)
 	)

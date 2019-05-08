@@ -80,14 +80,53 @@ get_header();
 			<div class="filter-group">
 				<label for="make_options">Filter options</label>
 				<div class="filter-row">
-					<select class="select" name="photo_options" id="photo_options">
+					<select class="select" name="display_options" id="display" data-filter="display">
 						<option value="all">Photos</option>
+						<option value="videos">Videos</option>
 					</select>
-					<select class="select" name="wheel_options" id="wheel_options">
-						<option value="all">Wheel</option>
+					<select class="select" name="wheel_options" id="wheels" data-filter="wheels">
+						<option value="all">All Wheels</option>
+						<?php
+
+						$wheel_args = array(
+							'post_type' => 'wheel',
+							'post_status' =>'publish',
+							'posts_per_page' => -1
+						);
+
+						$wheel_query = new WP_Query( $wheel_args );
+
+						if ( $wheel_query->have_posts() ) :
+							while ( $wheel_query->have_posts() ) : $wheel_query->the_post(); ?>
+
+								<option value="<?= $post->post_name ?>"><?= the_title() ?></option>
+
+							<?php endwhile;
+						endif; wp_reset_postdata();
+
+						?>
 					</select>
 					<select class="select" name="finish_options" id="finish_options">
-						<option value="all">Finish</option>
+						<option value="all">All Finishes</option>
+						<?php
+
+						$finish_args = array(
+							'post_type' => 'finish',
+							'post_status' =>'publish',
+							'posts_per_page' => -1
+						);
+
+						$finish_query = new WP_Query( $finish_args );
+
+						if ( $finish_query->have_posts() ) :
+							while ( $finish_query->have_posts() ) : $finish_query->the_post(); ?>
+
+								<option value="<?= $post->post_name ?>"><?= the_title() ?></option>
+
+							<?php endwhile;
+						endif; wp_reset_postdata();
+
+						?>
 					</select>
 				</div>
 			</div>
@@ -126,7 +165,7 @@ get_header();
 						
 		if (  $wp_query->max_num_pages > 1 ) : ?>
 			<div class="load-more-wrapper">
-				<div class="load-more">More posts</div>
+				<div class="load-more">Load More</div>
 			</div>
 		<?php endif; ?>
 

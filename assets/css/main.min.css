@@ -375,9 +375,9 @@ body.archive .grid .wheel .entry-title{margin:0}
 body.archive .grid .wheel .entry-title a{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start;text-decoration:none}
 body.archive .grid .wheel .entry-title .char1,body.archive .grid .wheel .entry-title .char2{color:red;font-size:42px}
 body.archive .grid .wheel .entry-title .char3,body.archive .grid .wheel .entry-title .char4,body.archive .grid .wheel .entry-title .char5{color:#333;font-weight:100;margin-top:6px}
-body.archive .configurations.grid{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap}
-body.archive .configurations.grid .configuration--item{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-flex:1;-ms-flex:1;flex:1;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;text-align:center}
-body.archive .configurations.grid .configuration--item img{width:340px}
+body.archive .configurations.grid{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;padding:20px 0 0}
+body.archive .configurations.grid .configuration--item{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-flex:0;-ms-flex:0 1 100px;flex:0 1 100px;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;text-align:center;padding:10px}
+body.archive .configurations.grid .configuration--item img{width:80px}
 body.archive .configurations.grid .configuration--item .configuration--item__title{text-transform:uppercase;letter-spacing:2px;font-weight:100;font-size:10px}
 body.archive .info{padding:5vw 8vw}
 body.archive .info .info-column{-webkit-box-flex:0;-ms-flex:0 0 33%;flex:0 0 33%}
@@ -465,7 +465,7 @@ body.archive.post-type-archive .filters{margin:25px 0;display:-webkit-box;displa
 body.archive.post-type-archive .filters .filter-group:not(:first-of-type){margin:0 0 0 60px}
 body.archive.post-type-archive .filters .filter-row{display:-webkit-box;display:-ms-flexbox;display:flex}
 body.archive.post-type-archive .filters .filter-row select:not(:first-child){margin:10px 0 0 20px}
-body.archive.post-type-archive .filters .select{display:block;font-size:16px;font-family:sans-serif;font-weight:700;color:#444;line-height:1.3;padding:.2em 1.4em .2em .8em;width:180px;max-width:100%;-webkit-box-sizing:border-box;box-sizing:border-box;margin:10px 0 0;border:1px solid #aaa;-webkit-box-shadow:0 1px 0 1px rgba(0,0,0,0.04);box-shadow:0 1px 0 1px rgba(0,0,0,0.04);border-radius:0;-moz-appearance:none;-webkit-appearance:none;appearance:none;background-color:#fff;background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAGCAYAAAAL+1RLAAAAWUlEQVQYVzXLIQqEUABF0fOxTHELYjWbXYTZNlEwG92DyTbFfbgBo+AebANGg3zEF8/jBuzIceKDLWBF6dmFJWKLEQkOdBELTKgwo4+YosGA75vHI0ONH/43iSMN/xdqa7YAAAAASUVORK5CYII="),-webkit-gradient(linear,left top,left bottom,from(#fff),to(#e5e5e5));background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAGCAYAAAAL+1RLAAAAWUlEQVQYVzXLIQqEUABF0fOxTHELYjWbXYTZNlEwG92DyTbFfbgBo+AebANGg3zEF8/jBuzIceKDLWBF6dmFJWKLEQkOdBELTKgwo4+YosGA75vHI0ONH/43iSMN/xdqa7YAAAAASUVORK5CYII="),linear-gradient(to bottom,#fff 0,#e5e5e5 100%);background-repeat:no-repeat,repeat;background-position:right .7em top 50%,0 0;background-size:.3em auto,100%;font-weight:400}
+body.archive.post-type-archive .filters .select{display:block;font-size:16px;font-family:sans-serif;font-weight:700;color:#444;line-height:1.3;padding:.2em 1.4em .2em .8em;max-width:100%;-webkit-box-sizing:border-box;box-sizing:border-box;margin:10px 0 0;border:1px solid #aaa;-webkit-box-shadow:0 1px 0 1px rgba(0,0,0,0.04);box-shadow:0 1px 0 1px rgba(0,0,0,0.04);border-radius:0;-moz-appearance:none;-webkit-appearance:none;appearance:none;background-color:#fff;background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAGCAYAAAAL+1RLAAAAWUlEQVQYVzXLIQqEUABF0fOxTHELYjWbXYTZNlEwG92DyTbFfbgBo+AebANGg3zEF8/jBuzIceKDLWBF6dmFJWKLEQkOdBELTKgwo4+YosGA75vHI0ONH/43iSMN/xdqa7YAAAAASUVORK5CYII="),-webkit-gradient(linear,left top,left bottom,from(#fff),to(#e5e5e5));background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAGCAYAAAAL+1RLAAAAWUlEQVQYVzXLIQqEUABF0fOxTHELYjWbXYTZNlEwG92DyTbFfbgBo+AebANGg3zEF8/jBuzIceKDLWBF6dmFJWKLEQkOdBELTKgwo4+YosGA75vHI0ONH/43iSMN/xdqa7YAAAAASUVORK5CYII="),linear-gradient(to bottom,#fff 0,#e5e5e5 100%);background-repeat:no-repeat,repeat;background-position:right .7em top 50%,0 0;background-size:.3em auto,100%;font-weight:400}
 body.archive.post-type-archive .filters .select::-ms-expand{display:none}
 body.archive.post-type-archive .filters .select:hover{border-color:#888}
 body.archive.post-type-archive .filters .select-s:focus{border-color:#aaa;-webkit-box-shadow:0 0 1px 3px rgba(59,153,252,0.7);box-shadow:0 0 1px 3px rgba(59,153,252,0.7);box-shadow:0 0 0 3px -moz-mac-focusring;color:#222;outline:0}
@@ -490,8 +490,16 @@ body.single-wheel .wheel-content .entry-header .new{position:absolute;top:-8px;f
 body.single-wheel .wheel-content .entry-header h1{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start;margin:0}
 body.single-wheel .wheel-content .entry-header h1 .char1,body.single-wheel .wheel-content .entry-header h1 .char2{color:red;font-size:42px}
 body.single-wheel .wheel-content .entry-header h1 .char3,body.single-wheel .wheel-content .entry-header h1 .char4,body.single-wheel .wheel-content .entry-header h1 .char5{color:#333;font-weight:400}
-body.single-wheel .wheel-content .available{text-transform:uppercase;font-size:12px}
+body.single-wheel .wheel-content .available{text-transform:uppercase;font-size:12px;margin-bottom:1.5em}
 body.single-wheel .wheel-content .available p{margin:0}
+body.single-wheel .wheel-content .profiles{font-size:12px}
+body.single-wheel .wheel-content .profiles .title{margin:0}
+body.single-wheel .wheel-content .profiles .title strong{text-transform:uppercase;padding-right:6px}
+body.single-wheel .wheel-content .profiles .profile-row{margin-left:-6px;padding:6px 0}
+body.single-wheel .wheel-content .profiles .profile{position:relative;-webkit-box-flex:1;-ms-flex:1;flex:1;margin-right:10px;padding:2px 6px;text-decoration:none;color:#333}
+body.single-wheel .wheel-content .profiles .profile:hover{background:#fb0007;color:#fff}
+body.single-wheel .wheel-content .profiles .profile:not(:first-of-type){padding-left:10px}
+body.single-wheel .wheel-content .profiles .profile:not(:first-of-type):before{content:'';position:absolute;left:0;top:0;height:100%;border-left:1px solid #333}
 body.single-wheel .single-header{padding:5vw;text-transform:uppercase}
 body.single-wheel .single-header h2{letter-spacing:3px;font-weight:400}
 body.single-wheel .single-header p{font-size:12px;padding:0 5vw}
@@ -504,6 +512,12 @@ body.single-wheel .vehicles-slider .slick-next{right:25px;z-index:9}
 body.single-wheel .vehicles-slider .slick-slide{margin:5px}
 body.single-wheel .vehicle-slider--item{height:350px;background-repeat:no-repeat;background-size:cover;background-position:center}
 body.single-wheel .see-more{color:#fff;position:relative;text-decoration:none;text-transform:uppercase;font-size:12px;font-weight:100;padding:.5rem 2rem;background:red;border:2px solid red;border-radius:2px;-webkit-transition:background .5s,color .5s;transition:background .5s,color .5s}
+body.single-wheel.black-di-forza,body.single-wheel.savini-diamond{background:#000;color:#fff}
+body.single-wheel.black-di-forza .site-header,body.single-wheel.savini-diamond .site-header{background:white}
+body.single-wheel.black-di-forza .site-header .custom-logo,body.single-wheel.savini-diamond .site-header .custom-logo{-webkit-filter:brightness(0);filter:brightness(0)}
+body.single-wheel.black-di-forza .site-header .box-shadow-menu:before,body.single-wheel.savini-diamond .site-header .box-shadow-menu:before{background:#111;-webkit-box-shadow:0 .25em 0 0 #111,0 .5em 0 0 #111;box-shadow:0 .25em 0 0 #111,0 .5em 0 0 #111}
+body.single-wheel.black-di-forza main,body.single-wheel.savini-diamond main{background:#000}
+body.single-wheel.black-di-forza #footer .footer--wrapper .footer--menu ul .menu-item a,body.single-wheel.savini-diamond #footer .footer--wrapper .footer--menu ul .menu-item a{color:#fff}
 .flex{display:flex;display:-webkit-box;display:-ms-flexbox}
 .column{-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}
 .flex-wrap{-ms-flex-wrap:wrap;flex-wrap:wrap}
