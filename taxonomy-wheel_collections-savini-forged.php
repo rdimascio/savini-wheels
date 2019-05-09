@@ -50,10 +50,10 @@ $class = get_queried_object()->slug . '_grid';
 
 			?>
 
-				<div class="configuration--item" data-target="">
+				<a class="configuration--item" href="<?= home_url() . '/wheel-collections/savini-forged?config=' . $configuration->slug ?>">
 					<img class="configuration--item__image" src="<?= $image ?>" />
 					<h4 class="configuration--item__title"><?= $abbreviation ?></h4>
-				</div>
+				</a>
 
 			<?php endforeach; ?>
 
@@ -70,23 +70,49 @@ $class = get_queried_object()->slug . '_grid';
 
 			<?php
 
-			$forged_args = array(
-				'post_type' => 'wheel',
-				'meta_key' => 'wheel_parent',
-				'meta_value' => false,
-				'meta_compare' => '=',
-				'posts_per_page' => 10,
-				'orderby' => 'menu_order',
-				'order' => 'ASC',
-				'tax_query' => array(
-					array(
-						'taxonomy' => 'wheel_collections',
-						'terms' => 'savini-forged',
-						'field' => 'slug',
-						'operator' => 'IN'
+			if ( isset( $_GET['config'] ) ) {
+				$forged_args = array(
+					'post_type' => 'wheel',
+					'posts_per_page' => 10,
+					'orderby' => 'menu_order',
+					'order' => 'ASC',
+					'tax_query' => array(
+						'relation' => 'AND',
+						array(
+							'taxonomy' => 'wheel_collections',
+							'terms' => 'savini-forged',
+							'field' => 'slug',
+							'operator' => 'IN'
+						),
+						array(
+							'taxonomy' => 'wheel_configurations',
+							'terms' => $_GET['config'],
+							'field' => 'slug',
+							'operator' => 'IN'
+						)
 					)
-				)
-			);
+				);
+			}
+
+			else {
+				$forged_args = array(
+					'post_type' => 'wheel',
+					'meta_key' => 'wheel_parent',
+					'meta_value' => false,
+					'meta_compare' => '=',
+					'posts_per_page' => 10,
+					'orderby' => 'menu_order',
+					'order' => 'ASC',
+					'tax_query' => array(
+						array(
+							'taxonomy' => 'wheel_collections',
+							'terms' => 'savini-forged',
+							'field' => 'slug',
+							'operator' => 'IN'
+						)
+					)
+				);
+			}
 
 			$forged_loop = new WP_Query( $forged_args );
 			
@@ -140,16 +166,52 @@ $class = get_queried_object()->slug . '_grid';
 			<div class="image-slider--item" style="background-image:url(https://saviniwheels.dimascio.design/wp-content/uploads/2019/02/savini__wheel_collections-wheel-image.png)"></div>
 		</div> -->
 
-		<header class="archive-header slider-header text-center"><h2><span>Step Lip</span> Vehicles Gallery</h2></header>
+		<?php
 
-		<div class="vehicles-slider">
-			<div class="vehicle-slider--item" style="background-image:url(https://saviniwheels.dimascio.design/wp-content/uploads/2019/02/savini__vehicle_slider-image-1.png)"></div>
-			<div class="vehicle-slider--item" style="background-image:url(https://saviniwheels.dimascio.design/wp-content/uploads/2019/02/savini__vehicle_slider-image-2.png)"></div>
-			<div class="vehicle-slider--item" style="background-image:url(https://saviniwheels.dimascio.design/wp-content/uploads/2019/02/savini__vehicle_slider-image-3.png)"></div>
-			<div class="vehicle-slider--item" style="background-image:url(https://saviniwheels.dimascio.design/wp-content/uploads/2019/02/savini__vehicle_slider-image-1.png)"></div>
-			<div class="vehicle-slider--item" style="background-image:url(https://saviniwheels.dimascio.design/wp-content/uploads/2019/02/savini__vehicle_slider-image-2.png)"></div>
-			<div class="vehicle-slider--item" style="background-image:url(https://saviniwheels.dimascio.design/wp-content/uploads/2019/02/savini__vehicle_slider-image-3.png)"></div>
-		</div>
+		$forged_object = get_term_by( 'slug', 'savini-forged', 'wheel_collections', 'OBJECT' );
+		$forged_id = $forged_object->term_id;
+
+		$forged_vehicle_args = array(
+			'post_type' => 'vehicle',
+			'post_status' => 'publish',
+		);
+
+		$forged_vehicle_query = new WP_Query( $forged_vehicle_args );
+
+		if ( $forged_vehicle_query->have_posts() ) : ?>
+			<header class="archive-header slider-header text-center"><h2><span><?= ( isset( $_GET['config'] ) ) ? ucwords( str_replace( "-", " ", $_GET['config'] ) ) : 'Savini Forged' ?></span> Vehicles Gallery</h2></header>
+
+			<div class="vehicles-slider">
+				<?php while ( $forged_vehicle_query->have_posts() ) : $forged_vehicle_query->the_post();
+				
+				$collections = get_field( 'vehicle_collection' );
+				$configurations = get_field( 'vehicle_configuration' );
+
+				if ( isset( $_GET['config'] ) ) :
+
+					$config_object = get_term_by( 'slug', $_GET['config'], 'wheel_configurations', 'OBJECT' );
+					$config_id = $config_object->term_id;
+
+					if ( $configurations && in_array( $config_id, $configurations ) ) : ?>
+
+							<div class="vehicle-slider--item" style="background-image:url(<?= get_the_post_thumbnail_url(); ?>)"></div>
+
+						<?php endif;
+				
+				else :
+
+					if ( $collections && in_array( $forged_id, $collections ) ) : ?>
+						
+						<div class="vehicle-slider--item" style="background-image:url(<?= get_the_post_thumbnail_url(); ?>)"></div>
+
+					<?php endif;
+
+				endif;
+					
+				endwhile; ?>
+			</div>
+
+		<?php endif; wp_reset_postdata(); ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

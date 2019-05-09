@@ -725,7 +725,9 @@ add_action( 'pre_get_posts', 'collection_archive_order' );
 
 // function savini_forged_config_filters() {
 
-// 	if ( is_admin() || ! $query->is_main_query() || ! $query->is_tax('wheel_collections') || ! $query->has_term('wheel_collections') ) {
+// 	global $wp_query;
+
+// 	if ( is_admin() || ! $query->is_main_query() || ! $query->is_tax('wheel_collections') ) {
 // 		return;
 // 	}
 
@@ -735,19 +737,10 @@ add_action( 'pre_get_posts', 'collection_archive_order' );
 
 // 	if( !empty( $config ) ) {
 // 		$tax_query[] = array(
-// 			'relation' => 'AND',
-// 			array(
-// 				'taxonomy' => 'wheel_collections',
-// 				'terms' => $collection,
-// 				'field' => 'slug',
-// 				'operator' => 'IN'
-// 			),
-// 			array(
-// 				'taxonomy' => 'wheel_configurations',
-// 				'terms' => $collection,
-// 				'field' => 'slug',
-// 				'operator' => 'IN'
-// 			)
+// 			'taxonomy' => 'wheel_configurations',
+// 			'terms' => $config,
+// 			'field' => 'slug',
+// 			'operator' => 'IN'
 // 		);
 // 	}
 
@@ -853,12 +846,18 @@ function vehicle_gallery_filters($query) {
 		// $query->set( 'meta_compare', 'IN' );
 	}
 
+	if ( count( $meta_query ) > 1 ) {
+		$meta_query['relation'] = 'AND';
+		$query->set( 'meta_query', $meta_query );
+	}
+
 	if ( count( $meta_query ) > 0 ) {
 			$query->set( 'meta_query', $meta_query );
 	}
 
-	if ( count( $meta_query ) > 1 ) {
-		$query->set( 'relation', 'AND' );
+	if ( count( $tax_query ) > 1 ) {
+		$tax_query['relation'] = 'AND';
+		$query->set( 'tax_query', $tax_query );
 	}
 
 	if ( count( $tax_query ) > 0 ) {
@@ -913,12 +912,13 @@ function finish_gallery_filters($query) {
 		);
 	}
 
-	if ( count( $tax_query ) > 0 ) {
+	if ( count( $tax_query ) > 1 ) {
+		$tax_query['relation'] = 'AND';
 		$query->set( 'tax_query', $tax_query );
 	}
 
-	if ( count( $tax_query ) > 1 ) {
-		$query->set( 'relation', 'AND' );
+	if ( count( $tax_query ) > 0 ) {
+		$query->set( 'tax_query', $tax_query );
 	}
 
 	$query->set( 'posts_per_page', 6 );
