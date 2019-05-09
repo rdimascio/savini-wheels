@@ -723,6 +723,19 @@ add_action( 'pre_get_posts', 'collection_archive_order' );
 
 
 
+function blog_archive_order ( $query ) {
+
+	if ( is_admin() || ! $query->is_main_query() || $query->is_tax('wheel_collections') || $query->is_archive('wheel') || $query->is_archive('vehicle') || $query->is_archive('finish') ){
+		return;
+	}
+
+	$query->set( 'order', 'ASC' );
+
+}
+add_action( 'pre_get_posts', 'blog_archive_order' );
+
+
+
 // function savini_forged_config_filters() {
 
 // 	global $wp_query;

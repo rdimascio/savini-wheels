@@ -26,20 +26,25 @@
 	<header id="masthead" class="site-header">
 		<div class="site-branding flex align-center justify-between m-l-4 m-r-4">
 				<div class="siteLogo">
-					<?php if ( is_page() && has_custom_logo() ) : the_custom_logo();
-							else : 
-								if ( is_archive() || is_single() && get_theme_mod( 'light_logo' ) ) : ?>
+					<?php
+					//if ( is_archive() || is_page('blog') || ( is_page() && has_custom_logo() ) ) :
 
-                    <a href="<?= home_url(); ?>" class="custom-logo-link" rel="home" itemprop="url">
-                        <img width="225" height="38" src="<?= get_theme_mod( 'light_logo' ); ?>" class="custom-logo" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="logo" />
-                    </a>
+						the_custom_logo();
 
-                <?php // add a fallback if the logo doesn't exist
-                else : ?>
+					//else : 
+						//if ( is_archive() || is_single() && get_theme_mod( 'light_logo' ) ) : ?>
 
-										<h1 class="site-title"><?php bloginfo( 'name' ); ?></h1>
+							<!-- <a href="<?//= home_url(); ?>" class="custom-logo-link" rel="home" itemprop="url">
+									<img width="225" height="38" src="<?//= get_theme_mod( 'light_logo' ); ?>" class="custom-logo" alt="<?//php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="logo" />
+							</a> -->
 
-						<?php endif; endif; ?>
+						<?//php // add a fallback if the logo doesn't exist
+						//else : ?>
+
+							<!-- <h1 class="site-title"><?//php bloginfo( 'name' ); ?></h1> -->
+
+						<?//php endif;
+					//endif; ?>
 				</div>
 
 				<div class="siteNavigation">

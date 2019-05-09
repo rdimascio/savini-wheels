@@ -168,12 +168,17 @@ $class = get_queried_object()->slug . '_grid';
 
 		<?php
 
-		$forged_object = get_term_by( 'slug', 'savini-forged', 'wheel_collections', 'OBJECT' );
-		$forged_id = $forged_object->term_id;
-
 		$forged_vehicle_args = array(
 			'post_type' => 'vehicle',
 			'post_status' => 'publish',
+			'tax_query' => array(
+				array(
+					'taxonomy' => 'wheel_collections',
+					'terms' => get_queried_object()->term_id,
+					'field' => 'id',
+					'operator' => 'IN'
+				)
+			)
 		);
 
 		$forged_vehicle_query = new WP_Query( $forged_vehicle_args );
@@ -183,8 +188,7 @@ $class = get_queried_object()->slug . '_grid';
 
 			<div class="vehicles-slider">
 				<?php while ( $forged_vehicle_query->have_posts() ) : $forged_vehicle_query->the_post();
-				
-				$collections = get_field( 'vehicle_collection' );
+
 				$configurations = get_field( 'vehicle_configuration' );
 
 				if ( isset( $_GET['config'] ) ) :
@@ -196,17 +200,13 @@ $class = get_queried_object()->slug . '_grid';
 
 							<div class="vehicle-slider--item" style="background-image:url(<?= get_the_post_thumbnail_url(); ?>)"></div>
 
-						<?php endif;
+					<?php endif;
 				
-				else :
-
-					if ( $collections && in_array( $forged_id, $collections ) ) : ?>
+				else : ?>
 						
 						<div class="vehicle-slider--item" style="background-image:url(<?= get_the_post_thumbnail_url(); ?>)"></div>
 
-					<?php endif;
-
-				endif;
+				<?php endif;
 					
 				endwhile; ?>
 			</div>

@@ -518,6 +518,17 @@ body.single-wheel.black-di-forza .site-header .custom-logo,body.single-wheel.sav
 body.single-wheel.black-di-forza .site-header .box-shadow-menu:before,body.single-wheel.savini-diamond .site-header .box-shadow-menu:before{background:#111;-webkit-box-shadow:0 .25em 0 0 #111,0 .5em 0 0 #111;box-shadow:0 .25em 0 0 #111,0 .5em 0 0 #111}
 body.single-wheel.black-di-forza main,body.single-wheel.savini-diamond main{background:#000}
 body.single-wheel.black-di-forza #footer .footer--wrapper .footer--menu ul .menu-item a,body.single-wheel.savini-diamond #footer .footer--wrapper .footer--menu ul .menu-item a{color:#fff}
+body.blog{background:#000;color:#fff}
+body.blog #main{background:#000}
+body.blog .post-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(100px,1fr));grid-gap:10px;grid-auto-rows:minmax(100px,auto);grid-auto-flow:dense;padding:10px;width:75%}
+body.blog .post-grid .article-wrapper{padding:5px}
+body.blog .post-grid .article-wrapper:nth-of-type(1),body.blog .post-grid .article-wrapper:nth-of-type(8){grid-column-end:span 5;grid-row-end:span 3}
+body.blog .post-grid .article-wrapper:nth-of-type(2),body.blog .post-grid .article-wrapper:nth-of-type(9){grid-row-end:span 3;grid-column-end:span 3}
+body.blog .post-grid .article-wrapper:nth-of-type(3){grid-row-end:span 3;grid-column-end:span 3}
+body.blog .post-grid .article-wrapper:nth-of-type(4){grid-column-end:span 5;grid-row-end:span 3}
+body.blog .post-grid .article-wrapper:nth-of-type(5){grid-column-end:span 4;grid-row-end:span 4}
+body.blog .post-grid .article-wrapper:nth-of-type(6),body.blog .post-grid .article-wrapper:nth-of-type(7){grid-column-end:span 4;grid-row-end:span 2}
+body.blog .post-grid .article-wrapper .article{background-position:center;background-size:cover;height:100%;width:100%}
 .flex{display:flex;display:-webkit-box;display:-ms-flexbox}
 .column{-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}
 .flex-wrap{-ms-flex-wrap:wrap;flex-wrap:wrap}
@@ -580,6 +591,8 @@ body.single-wheel.black-di-forza #footer .footer--wrapper .footer--menu ul .menu
 .m-b-5{margin-bottom:5vw}
 @media screen and (min-width:37.5em){.menu-toggle{display:none}
 .main-navigation ul{display:block}
+}@media(min-width:1627px){body.blog .post-grid .article-wrapper:nth-of-type(1),body.blog .post-grid .article-wrapper:nth-of-type(8){grid-row-end:span 4;grid-column-end:span 7}
+body.blog .post-grid .article-wrapper:nth-of-type(2),body.blog .post-grid .article-wrapper:nth-of-type(9){grid-row-end:span 4;grid-column-end:span 4}
 }@media(max-width:1224px){#images .image-gallery--wrapper .image-gallery--container{width:60%}
 }@media(max-width:1108px){#customize .customize--content-column h4{top:-11.4324vw}
 }@media(max-width:1064px){#images .image-gallery--wrapper .image-gallery--container{width:65%}
