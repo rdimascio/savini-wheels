@@ -1,3 +1,25 @@
+body.archive.tax-wheel_collections {
+
+	.vehicles-slider__wrapper {
+		text-align: center;
+	}
+	
+	.see-more {
+		color: #fff;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 100;
+    padding: .5rem 2rem;
+    background: red;
+    border: 2px solid red;
+    border-radius: 2px;
+    -webkit-transition: background .5s,color .5s;
+    transition: background .5s,color .5s;
+	}
+}
+
 @import "savini-forged";
 @import "sv-f";
 @import "savini-diamond";

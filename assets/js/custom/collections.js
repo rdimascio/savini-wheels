@@ -27,6 +27,13 @@ jQuery( function( $ ) {
 		arrows: true
 	});
 
+	$( 'body.single-wheel .finish-slider' ).slick({
+		slidesToShow: 4,
+		slidesToScroll: 4,
+		infinite: true,
+		arrows: true
+	});
+
 	$( 'body.archive.term-sv-f .sv-f-slider' ).slick({
 		slidesToShow: 1,
 		slidesToScroll: 1,

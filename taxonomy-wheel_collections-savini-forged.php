@@ -184,31 +184,34 @@ $class = get_queried_object()->slug . '_grid';
 		$forged_vehicle_query = new WP_Query( $forged_vehicle_args );
 
 		if ( $forged_vehicle_query->have_posts() ) : ?>
-			<header class="archive-header slider-header text-center"><h2><span><?= ( isset( $_GET['config'] ) ) ? ucwords( str_replace( "-", " ", $_GET['config'] ) ) : 'Savini Forged' ?></span> Vehicles Gallery</h2></header>
+			<div class="vehicles-slider__wrapper">
+				<header class="archive-header slider-header text-center"><h2><span><?= ( isset( $_GET['config'] ) ) ? ucwords( str_replace( "-", " ", $_GET['config'] ) ) : 'Savini Forged' ?></span> Vehicles Gallery</h2></header>
 
-			<div class="vehicles-slider">
-				<?php while ( $forged_vehicle_query->have_posts() ) : $forged_vehicle_query->the_post();
+				<div class="vehicles-slider">
+					<?php while ( $forged_vehicle_query->have_posts() ) : $forged_vehicle_query->the_post();
 
-				$configurations = get_field( 'vehicle_configuration' );
+					$configurations = get_field( 'vehicle_configuration' );
 
-				if ( isset( $_GET['config'] ) ) :
+					if ( isset( $_GET['config'] ) ) :
 
-					$config_object = get_term_by( 'slug', $_GET['config'], 'wheel_configurations', 'OBJECT' );
-					$config_id = $config_object->term_id;
+						$config_object = get_term_by( 'slug', $_GET['config'], 'wheel_configurations', 'OBJECT' );
+						$config_id = $config_object->term_id;
 
-					if ( $configurations && in_array( $config_id, $configurations ) ) : ?>
+						if ( $configurations && in_array( $config_id, $configurations ) ) : ?>
 
+								<div class="vehicle-slider--item" style="background-image:url(<?= get_the_post_thumbnail_url(); ?>)"></div>
+
+						<?php endif;
+					
+					else : ?>
+							
 							<div class="vehicle-slider--item" style="background-image:url(<?= get_the_post_thumbnail_url(); ?>)"></div>
 
 					<?php endif;
-				
-				else : ?>
 						
-						<div class="vehicle-slider--item" style="background-image:url(<?= get_the_post_thumbnail_url(); ?>)"></div>
-
-				<?php endif;
-					
-				endwhile; ?>
+					endwhile; ?>
+				</div>
+				<a class="see-more" href="/vehicles?collection=<?= get_queried_object()->slug; ?>">See More</a>
 			</div>
 
 		<?php endif; wp_reset_postdata(); ?>

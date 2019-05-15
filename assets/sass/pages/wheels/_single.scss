@@ -27,7 +27,8 @@ body.single-wheel {
 			.new {
 				position: absolute;
 				top: -8px;
-				font-weight: 700;
+				font-weight: 400;
+				font-size: 12px;
 			}
 
 			h1 {
@@ -45,6 +46,10 @@ body.single-wheel {
 					font-weight: 400;
 				}
 			}
+		}
+
+		.configuration-logo img {
+			max-width: 250px;
 		}
 
 		.available {
@@ -126,11 +131,13 @@ body.single-wheel {
 		}
 	}
 
-	.vehicles-slider__wrapper {
+	.vehicles-slider__wrapper,
+	.finish-slider__wrapper {
 		text-align: center;
 	}
 
-	.vehicles-slider {
+	.vehicles-slider,
+	.finish-slider {
 
 		.slick-list {
 			padding: 0 0 3vw;
@@ -193,13 +200,37 @@ body.single-wheel {
 			}
 		}
 
-
 		main {
 			background: #000;
 		}
 
 		#footer .footer--wrapper .footer--menu ul .menu-item a {
 			color: #fff;
+		}
+	}
+
+	&.savini-diamond {
+		.wheel-content .entry-header h1 {
+			.char1,
+			.char2,
+			.char3,
+			.char4,
+			.char5 {
+				color: #fff !important;
+				font-size: 42px;
+				font-style: italic;
+			}
+		}
+	}
+
+	&.black-di-forza {
+		.wheel-content .entry-header h1 {
+			.char3,
+			.char4,
+			.char5 {
+				color: #fff !important;
+				font-size: 42px;
+			}
 		}
 	}
 }

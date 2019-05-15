@@ -107,15 +107,42 @@ $class = get_queried_object()->slug . '_grid';
 			</div>
 		</div>
 
-		<header class="archive-header slider-header text-center"><h2><span>SV-F</span> Vehicles</h2></header>
+		<?php
 
-		<div class="sv-f-slider">
-			<div class="sv-f-slider--item" style="background-image:url(https://saviniwheels.dimascio.design/wp-content/uploads/2019/02/savini__sv-f-vehicle-slider.jpg)"></div>
-			<div class="sv-f-slider--item" style="background-image:url(https://saviniwheels.dimascio.design/wp-content/uploads/2019/02/savini__sv-f-vehicle-slider.jpg)"></div>
-			<div class="sv-f-slider--item" style="background-image:url(https://saviniwheels.dimascio.design/wp-content/uploads/2019/02/savini__sv-f-vehicle-slider.jpg)"></div>
-		</div>
+		$vehicle_args = array(
+				'post_type' => 'vehicle',
+				'tax_query' => array(
+					array(
+						'taxonomy' => 'wheel_collections',
+						'terms' => get_queried_object()->term_id,
+						'field' => 'id',
+						'operator' => 'IN'
+					)
+				)
+		);
 
-		<a class="sv-f__slider-cta" href="#">Full Site Experience</a>
+		$vehicle_loop = new WP_Query( $vehicle_args );
+
+		if ( $vehicle_loop->have_posts() ) : ?>
+
+			<div class="vehicles-slider__wrapper">
+				<header class="archive-header slider-header text-center">
+					<h2><span>SV-F</span> Vehicles</h2>
+				</header>
+
+				<div class="vehicles-slider">
+				
+					<?php while ( $vehicle_loop->have_posts() ) : $vehicle_loop->the_post(); ?>
+
+						<div class="vehicle-slider--item" style="background-image:url(<?= the_post_thumbnail_url(); ?>)"></div>
+
+					<?php endwhile; ?>
+
+				</div>
+				<a class="see-more" href="/vehicles?collection=<?= get_queried_object()->slug; ?>">See More</a>
+			</div>
+
+		<?php endif; wp_reset_postdata(); ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

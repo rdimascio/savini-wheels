@@ -8,57 +8,104 @@ body.blog {
 
 	.post-grid {
 		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+		grid-template-columns: repeat(auto-fill, minmax(10%, 1fr));
 		grid-gap: 10px;
 		grid-auto-rows: minmax(100px, auto);
 		grid-auto-flow: dense;
 		padding: 10px;
 		width: 75%;
 
+		@media (max-width: 819px) {
+			width: 100%;
+		}
+
 		.article-wrapper {
 			padding: 5px;
 
 			&:nth-of-type(1),
 			&:nth-of-type(8) {
-				grid-column-end: span 5;
-				grid-row-end: span 3;
+				grid-column: span 6;
+				grid-row: span 5;
 
-				@media (min-width: 1627px) {
-					grid-row-end: span 4;
-					grid-column-end: span 7;
+				@media (max-width: 1304px) {
+					grid-row: span 4;
+				}
+
+				@media (max-width: 1092px) {
+					grid-column: span 5;
 				}
 			}
 
 			&:nth-of-type(2),
 			&:nth-of-type(9) {
-				grid-row-end: span 3;
-				grid-column-end: span 3;
+				grid-column: span 3;
+				grid-row: span 5;
 
-				@media (min-width: 1627px) {
-					grid-row-end: span 4;
-					grid-column-end: span 4;
+				@media (max-width: 1304px) {
+					grid-row: span 4;
+				}
+
+				@media (max-width: 1092px) {
+					grid-column: span 3;
 				}
 			}
 
 			&:nth-of-type(3) {
-				grid-row-end: span 3;
-				grid-column-end: span 3;
+				grid-column: span 4;
+				grid-row: span 4;
+
+				@media (max-width: 1304px) {
+					grid-row: span 3;
+				}
+
+				@media (max-width: 1092px) {
+					grid-column: span 3;
+				}
 			}
 			
 			&:nth-of-type(4) {
-				grid-column-end: span 5;
-				grid-row-end: span 3;
+				grid-column: span 5;
+				grid-row: span 4;
+
+				@media (max-width: 1304px) {
+					grid-row: span 3;
+				}
+
+				@media (max-width: 1092px) {
+					grid-column: span 5;
+				}
 			}
 
 			&:nth-of-type(5) {
-				grid-column-end: span 4;
-  			grid-row-end: span 4;
+				grid-column: span 5;
+				grid-row: span 6;
+
+				@media (max-width: 1304px) {
+					grid-row: span 4;
+				}
+				
+				@media (max-width: 1092px) {
+					grid-column: span 5;
+				}
 			}
 
 			&:nth-of-type(6),
 			&:nth-of-type(7) {
-				grid-column-end: span 4;
-  			grid-row-end: span 2;
+				grid-column: span 4;
+				grid-row: span 3;
+
+				@media (max-width: 1304px) {
+					grid-row: span 2;
+				}
+				
+				@media (max-width: 1092px) {
+					grid-column: span 3;
+				}
+			}
+
+			@media (max-width: 642px) {
+				grid-column: span 8 !important;
+				grid-row: span 4 !important;
 			}
 
 			.article {
@@ -67,6 +114,15 @@ body.blog {
 				height: 100%;
 				width: 100%;
 			}
+		}
+	}
+
+	.sidebar-wrapper {
+		width: 25%;
+		padding: 10px;
+		
+		@media (max-width: 819px) {
+			display: none;
 		}
 	}
 }

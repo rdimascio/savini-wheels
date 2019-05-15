@@ -68,16 +68,19 @@ $class = get_queried_object()->slug . '_grid';
 
 		if ( $vehicle_loop->have_posts() ) : ?>
 
-			<header class="archive-header slider-header text-center"><h2>Vehicles Gallery</h2></header>
+			<div class="vehicles-slider__wrapper">
+				<header class="archive-header slider-header text-center"><h2>Vehicles Gallery</h2></header>
 
-			<div class="vehicles-slider">
+				<div class="vehicles-slider">
 
-				<?php while ( $vehicle_loop->have_posts() ) : $vehicle_loop->the_post(); ?>
+					<?php while ( $vehicle_loop->have_posts() ) : $vehicle_loop->the_post(); ?>
 
-					<div class="vehicle-slider--item" style="background-image:url(<?= the_post_thumbnail_url(); ?>)"></div>
+						<div class="vehicle-slider--item" style="background-image:url(<?= the_post_thumbnail_url(); ?>)"></div>
 
-				<?php endwhile; ?>
+					<?php endwhile; ?>
 
+				</div>
+				<a class="see-more" href="/vehicles?collection=<?= get_queried_object()->slug; ?>">See More</a>
 			</div>
 
 		<?php endif; wp_reset_postdata(); ?>

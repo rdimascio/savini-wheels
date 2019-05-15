@@ -34,7 +34,7 @@ $construction = get_field( 'wheel_construction' );
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 	<div class="wheel-wrapper">
-		<div class="wheel-content flex justify-center align-center">
+		<div class="wheel-content flex justify-center align-start">
 			<section class="image flex align-center justify-center">
 				<?php wp_starter_theme_post_thumbnail(); ?>
 			</section>
