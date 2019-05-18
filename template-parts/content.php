@@ -11,6 +11,8 @@
 
 <div class="article-wrapper">
 
-	<div class="article" style="background-image:url(<?= get_the_post_thumbnail_url(); ?>)"></div>
+	<div class="article" style="background-image:url(<?= get_the_post_thumbnail_url(); ?>)">
+		<a class="article-link" href="<?= the_permalink() ?>"></a>
+	</div>
 
 </div>

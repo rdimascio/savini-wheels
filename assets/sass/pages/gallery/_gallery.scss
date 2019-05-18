@@ -3,10 +3,19 @@
 
 body.archive.post-type-archive {
 
+	.custom-logo {
+		filter: brightness(0) invert(1);
+	}
+
 	.page-header {
-		padding: 6rem 0 0rem;
+		margin: 3rem 3rem 0;
     text-align: center;
-    text-transform: uppercase;
+		text-transform: uppercase;
+		border-bottom: 1px solid;
+
+		h1 {
+			font-weight: 100;
+		}
 	}
 
 	.filters {

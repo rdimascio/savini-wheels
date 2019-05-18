@@ -709,13 +709,14 @@ add_filter( 'query_vars', 'custom_query_vars_filter' );
 
 function collection_archive_order ( $query ) {
 
-	if ( is_admin() || ! $query->is_main_query() || ! $query->is_tax('wheel_collections') || ! $query->has_term('wheel_collections') ){
+	if ( is_admin() || !$query->is_main_query() || !$query->is_tax('wheel_collections') || !$query->has_term('wheel_collections') ) {
 		return;
 	}
 
 	$query->set( 'post_type', 'wheel' );                 
 	$query->set( 'posts_per_page', '10' );  
 	$query->set( 'orderby', 'menu_order' );
+	$query->set( 'post_parent', 0 );
 	$query->set( 'order', 'ASC' );
 
 }
@@ -730,6 +731,8 @@ function blog_archive_order ( $query ) {
 	}
 
 	$query->set( 'order', 'ASC' );
+	$query->set( 'posts_per_page', '9' );
+
 
 }
 add_action( 'pre_get_posts', 'blog_archive_order' );
@@ -790,7 +793,7 @@ function vehicle_gallery_filters($query) {
 
 	if( !empty( $make ) ){
 		$tax_query[] = array(
-			'taxonomy' => 'make',
+			'taxonomy' => 'vehicle_make',
 			'terms' => $make,
 			'field' => 'slug',
 			'operator' => 'IN'
@@ -801,7 +804,7 @@ function vehicle_gallery_filters($query) {
 
 	if( !empty( $model ) ){
 		$tax_query[] = array(
-			'taxonomy' => 'model',
+			'taxonomy' => 'vehicle_model',
 			'terms' => $model,
 			'field' => 'slug',
 			'operator' => 'IN'
@@ -817,8 +820,8 @@ function vehicle_gallery_filters($query) {
 
 		$meta_query[] = array(
 			'key' => 'vehicle_wheel',
-			'value_num' => $wheel_id,
-			'compare' => 'IN'
+			'value' => $wheel_id,
+			'compare' => '='
 		);
 
 		// $query->set( 'meta_key', 'vehicle_wheel' );
@@ -835,8 +838,8 @@ function vehicle_gallery_filters($query) {
 
 		$meta_query[] = array(
 			'key' => 'vehicle_finish',
-			'value_num' => $finish_id,
-			'compare' => 'IN'
+			'value' => $finish_id,
+			'compare' => '='
 		);
 
 		// $query->set( 'meta_key', 'vehicle_finish' );
@@ -982,8 +985,8 @@ function loadmore_vehicle_ajax_handler() {
 	endif;
 	die;
 }
-add_action('wp_ajax_loadmore', 'loadmore_vehicle_ajax_handler');
-add_action('wp_ajax_nopriv_loadmore', 'loadmore_vehicle_ajax_handler');
+add_action('wp_ajax_vehicle_load_more', 'loadmore_vehicle_ajax_handler');
+add_action('wp_ajax_nopriv_vehicle_load_more', 'loadmore_vehicle_ajax_handler');
 
 
 function loadmore_finish_ajax_handler() {
@@ -1009,5 +1012,29 @@ function loadmore_finish_ajax_handler() {
 	endif;
 	die;
 }
-add_action('wp_ajax_loadmore', 'loadmore_finish_ajax_handler');
-add_action('wp_ajax_nopriv_loadmore', 'loadmore_finish_ajax_handler');
+add_action('wp_ajax_finish_load_more', 'loadmore_finish_ajax_handler');
+add_action('wp_ajax_nopriv_finish_load_more', 'loadmore_finish_ajax_handler');
+
+
+function loadmore_blog_ajax_handler() {
+
+	$args = json_decode( stripslashes( $_POST['query'] ), true );
+	$args['paged'] = $_POST['page'] + 1;
+	$args['post_status'] = 'publish';
+
+	query_posts( $args );
+ 
+	if( have_posts() ) :
+ 
+		// run the loop
+		while( have_posts() ): the_post();
+ 
+			get_template_part( 'template-parts/content' );
+
+		endwhile;
+ 
+	endif;
+	die;
+}
+add_action('wp_ajax_blog_load_more', 'loadmore_blog_ajax_handler');
+add_action('wp_ajax_nopriv_blog_load_more', 'loadmore_blog_ajax_handler');

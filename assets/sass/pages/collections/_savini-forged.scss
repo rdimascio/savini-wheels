@@ -1,6 +1,10 @@
 body.archive {
 	margin-top: 85px;
 
+	.custom-logo {
+		filter: brightness(0) invert(1);
+	}
+
 	.site-header {
 		background: rgba(0,0,0,1);
 

@@ -114,7 +114,7 @@ get_header();
 						
 		if (  $wp_query->max_num_pages > 1 ) : ?>
 			<div class="load-more-wrapper">
-				<div class="load-more">More posts</div>
+				<div id="finish_load_more" class="load-more">Load More</div>
 			</div>
 		<?php endif; ?>
 

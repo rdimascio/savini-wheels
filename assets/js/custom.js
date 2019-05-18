@@ -276,6 +276,17 @@ jQuery(function ($) {
       controls: 0
     }
   });
+  $('#bmVideo').lightGallery({
+    mode: 'lg-fade',
+    cssEasing: 'cubic-bezier(0.25, 0, 0.25, 1)',
+    selector: '.bm-video',
+    youtubePlayerParams: {
+      modestbranding: 1,
+      showinfo: 0,
+      rel: 0,
+      controls: 0
+    }
+  });
 });
 "use strict";
 "use strict";

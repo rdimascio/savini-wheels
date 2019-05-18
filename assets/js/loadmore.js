@@ -2,8 +2,9 @@ jQuery( function( $ ) {
 	$( '.load-more' ).click( function() {
 
 		let button = $( this ),
+			action = button.attr( 'id' ),
 			data = {
-				'action': 'loadmore',
+				'action': action,
 				'query': loadMoreParams.posts,
 				'page': loadMoreParams.current_page
 			};
@@ -17,7 +18,13 @@ jQuery( function( $ ) {
 			},
 			success: function( data ) {
 				if ( data ) {
-					$( '#main' ).find( '.gallery-wrapper:last-of-type' ).after( data );
+
+					if ( 'blog_load_more' === action ) {
+						$( '#main' ).find( '.article-wrapper:last-of-type' ).after( data );
+					} else {
+						$( '#main' ).find( '.gallery-wrapper:last-of-type' ).after( data );
+					}
+
 
 					loadMoreParams.current_page++;
 

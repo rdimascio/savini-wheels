@@ -18,31 +18,34 @@ get_header();
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 
+		<header class="header archive-header">
+			<h1>Latest Blog</h1>
+		</header>
+
 		<div class="post-wrapper flex">
-			<div class="post-grid">
-				<?php
-				if ( have_posts() ) :
+			<div class="post-container">
+				<div class="post-grid">
+					<?php
+					if ( have_posts() ) :
 
-					/* Start the Loop */
-					while ( have_posts() ) :
-						the_post();
+						while ( have_posts() ) :
+							the_post();
 
-						/*
-						* Include the Post-Type-specific template for the content.
-						* If you want to override this in a child theme, then include a file
-						* called content-___.php (where ___ is the Post Type name) and that will be used instead.
-						*/
-						get_template_part( 'template-parts/content', get_post_type() );
+							get_template_part( 'template-parts/content' );
 
-					endwhile;
+						endwhile;
 
-				else :
+					else :
 
-					get_template_part( 'template-parts/content', 'none' );
+						get_template_part( 'template-parts/content', 'none' );
 
-				endif;
+					endif;
 
-				?>
+					?>
+				</div>
+				<div class="load-more-wrapper">
+					<div id="blog_load_more" class="load-more">Load More</div>
+				</div>
 			</div>
 
 			<div class="sidebar-wrapper">
@@ -52,8 +55,8 @@ get_header();
 
 
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+		</main>
+	</div>
 
 <?php
 get_footer();

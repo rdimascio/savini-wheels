@@ -99,14 +99,14 @@ get_header();
 						if ( $wheel_query->have_posts() ) :
 							while ( $wheel_query->have_posts() ) : $wheel_query->the_post(); ?>
 
-								<option value="<?= $post->post_name ?>"><?= the_title() ?></option>
+								<option value="<?= the_title() ?>"><?= the_title() ?></option>
 
 							<?php endwhile;
 						endif; wp_reset_postdata();
 
 						?>
 					</select>
-					<select class="select" name="finish_options" id="finish_options">
+					<select class="select" name="finish_options" id="finishes" data-filter="finishes">
 						<option value="all">All Finishes</option>
 						<?php
 
@@ -121,7 +121,7 @@ get_header();
 						if ( $finish_query->have_posts() ) :
 							while ( $finish_query->have_posts() ) : $finish_query->the_post(); ?>
 
-								<option value="<?= $post->post_name ?>"><?= the_title() ?></option>
+								<option value="<?= the_title() ?>"><?= the_title() ?></option>
 
 							<?php endwhile;
 						endif; wp_reset_postdata();
@@ -165,7 +165,7 @@ get_header();
 						
 		if (  $wp_query->max_num_pages > 1 ) : ?>
 			<div class="load-more-wrapper">
-				<div class="load-more">Load More</div>
+				<div id="vehicle_load_more" class="load-more">Load More</div>
 			</div>
 		<?php endif; ?>
 
