@@ -96,9 +96,8 @@ $construction = get_field( 'wheel_construction' );
 
 				$forged_profile_loop = new WP_Query( $forged_profile_args );
 
-				$posts = $forged_profile_loop->posts;
-
-				if ( $forged_profile_loop->have_posts() ) : ?>
+				if ( $forged_profile_loop->have_posts() ) : 
+					$posts = $forged_profile_loop->posts; ?>
 
 				<div class="profiles">
 					<p class="title"><strong>Profiles Available:</strong>(Click each profile to see more)</p>

@@ -54,7 +54,7 @@ foreach ( $vehicles as $vehicle ) :
 		<div class="vehicle-slider--item" style="background-image:url(<?= get_the_post_thumbnail_url( $vehicle->ID ); ?>)"></div>
 
 	<?php endif;
-endforeach; ?>
+endforeach; wp_reset_postdata(); ?>
 
 				</div>
 				<a class="see-more" href="">See More</a>
@@ -88,7 +88,7 @@ foreach ( $finishes as $finish ) :
 		<div class="finish-slider--item" style="background-image:url(<?= the_post_thumbnail_url(); ?>)"></div>
 
 	<?php endif;
-endforeach; ?>
+endforeach; wp_reset_postdata(); ?>
 
 					</div>
 					<a class="see-more" href="">See More</a>
