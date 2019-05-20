@@ -12,7 +12,7 @@
  * @package WP_Starter_Theme
  */
 
-get_header();
+get_header( 'dark' );
 ?>
 
 	<div id="primary" class="content-area contact">

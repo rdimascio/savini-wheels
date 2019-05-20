@@ -462,14 +462,19 @@ body.term-black-di-forza .archive-header h2{color:#fff}
 body.term-black-di-forza .archive-header span{color:#ed2327}
 body.term-black-di-forza .vehicle-slider--item{-webkit-box-shadow:none;box-shadow:none}
 body.term-black-di-forza #footer .footer--wrapper .footer--menu ul .menu-item a{color:#fff}
-.contact{min-height:120vh;background-image:url(http://savini.local/app/uploads/2019/04/savini__contact-bg.jpg);background-repeat:no-repeat;background-position:left center;background-size:cover}
-.contact-form{position:absolute;right:0;top:15%;left:50%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;background:rgba(25,25,25,0.9);padding:2rem 4rem;color:#9e9e9e}
+body.dark .custom-logo{-webkit-filter:brightness(0) invert(1);filter:brightness(0) invert(1)}
+body.dark .site-header{background:black}
+body.dark .site-header .box-shadow-menu::before{background:#fff;-webkit-box-shadow:0 .25em 0 0 #fff,0 .5em 0 0 #fff;box-shadow:0 .25em 0 0 #fff,0 .5em 0 0 #fff}
+.contact{background-image:url(http://savini.local/app/uploads/2019/04/savini__contact-bg.jpg);background-repeat:no-repeat;background-position:left center;background-size:cover}
+.contact main{background:transparent}
+.contact-form{position:relative;width:50%;margin-left:auto;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;background:rgba(0,0,0,0.85);padding:2rem 4rem;color:#9e9e9e}
+.contact-form__wrapper{padding:8rem 0 5rem}
 .contact-form__header{width:100%;border-bottom:1px solid #4a4a4a;padding-bottom:1.5rem}
 .contact-form__title{margin:0;color:#fff;text-transform:uppercase;letter-spacing:2.3px}
 .contact-form__info p{margin:0}
 .contact-form__info a{color:#787878;text-decoration:none}
 .contact-form__body{width:100%;padding-top:1rem}
-.contact-form__body .wpcf7 input[type="text"],.contact-form__body .wpcf7 input[type="email"],.contact-form__body .wpcf7 input[type="url"],.contact-form__body .wpcf7 input[type="password"],.contact-form__body .wpcf7 input[type="search"],.contact-form__body .wpcf7 input[type="number"],.contact-form__body .wpcf7 input[type="tel"],.contact-form__body .wpcf7 input[type="range"],.contact-form__body .wpcf7 input[type="date"],.contact-form__body .wpcf7 input[type="month"],.contact-form__body .wpcf7 input[type="week"],.contact-form__body .wpcf7 input[type="time"],.contact-form__body .wpcf7 input[type="datetime"],.contact-form__body .wpcf7 input[type="datetime-local"],.contact-form__body .wpcf7 input[type="color"],.contact-form__body .wpcf7 textarea{background:rgba(25,25,25,0.9);border:1px solid #4a4a4a;color:#9e9e9e;padding:.5rem}
+.contact-form__body .wpcf7 input[type="text"],.contact-form__body .wpcf7 input[type="email"],.contact-form__body .wpcf7 input[type="url"],.contact-form__body .wpcf7 input[type="password"],.contact-form__body .wpcf7 input[type="search"],.contact-form__body .wpcf7 input[type="number"],.contact-form__body .wpcf7 input[type="tel"],.contact-form__body .wpcf7 input[type="range"],.contact-form__body .wpcf7 input[type="date"],.contact-form__body .wpcf7 input[type="month"],.contact-form__body .wpcf7 input[type="week"],.contact-form__body .wpcf7 input[type="time"],.contact-form__body .wpcf7 input[type="datetime"],.contact-form__body .wpcf7 input[type="datetime-local"],.contact-form__body .wpcf7 input[type="color"],.contact-form__body .wpcf7 textarea{background:rgba(25,25,25,0.9);border:1px solid #4a4a4a;color:#9e9e9e;width:100%;padding:.5rem}
 .contact-form__body .wpcf7 button,.contact-form__body .wpcf7 input[type="button"],.contact-form__body .wpcf7 input[type="reset"],.contact-form__body .wpcf7 input[type="submit"]{border:1px solid;border-color:#4a4a4a;border-radius:3px;background:rgba(0,0,0,0.1);color:#9e9e9e;font-size:12px;font-size:1rem;line-height:1;padding:1em}
 .contact-form__footer{width:100%}
 .contact-form__footer a{color:#787878;text-decoration:none}
@@ -626,6 +631,7 @@ body.blog .sidebar-wrapper section:not(:first-of-type){padding-top:16px}
 .m-b-5{margin-bottom:5vw}
 @media screen and (min-width:37.5em){.menu-toggle{display:none}
 .main-navigation ul{display:block}
+}@media(min-width:1500px){.contact-form{width:40%}
 }@media(max-width:1304px){body.blog .post-grid .article-wrapper:nth-of-type(7n+1){grid-row:span 4}
 body.blog .post-grid .article-wrapper:nth-of-type(7n+2){grid-row:span 4}
 body.blog .post-grid .article-wrapper:nth-of-type(7n+3){grid-row:span 3}
@@ -641,6 +647,7 @@ body.blog .post-grid .article-wrapper:nth-of-type(7n+4){grid-column:span 5}
 body.blog .post-grid .article-wrapper:nth-of-type(7n+5){grid-column:span 5}
 body.blog .post-grid .article-wrapper:nth-of-type(7n+6),body.blog .post-grid .article-wrapper:nth-of-type(7n+7){grid-column:span 3}
 }@media(max-width:1064px){#images .image-gallery--wrapper .image-gallery--container{width:65%}
+}@media(max-width:1024px){.contact-form{width:100%}
 }@media(max-width:1023px){.for{padding-top:54px}
 .for__container{margin-top:15.9vw}
 .for__item{width:35%;margin:auto 4.4% 9.2vw !important}

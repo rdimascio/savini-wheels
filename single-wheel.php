@@ -57,7 +57,7 @@ foreach ( $vehicles as $vehicle ) :
 endforeach; wp_reset_postdata(); ?>
 
 				</div>
-				<a class="see-more" href="">See More</a>
+				<a class="see-more" href="/vehicles?wheels=<?= get_the_title( $wheel_id ); ?>">See More</a>
 			</div>
 
 			<div class="finish-slider__wrapper">
@@ -91,7 +91,7 @@ foreach ( $finishes as $finish ) :
 endforeach; wp_reset_postdata(); ?>
 
 					</div>
-					<a class="see-more" href="">See More</a>
+					<a class="see-more" href="/finishes?wheels=<?= get_the_title( $wheel_id ); ?>">See More</a>
 				</div>
 
 		</main>
