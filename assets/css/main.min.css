@@ -66,6 +66,7 @@ big{font-size:125%}
 html{-webkit-box-sizing:border-box;box-sizing:border-box}
 *,*:before,*:after{-webkit-box-sizing:inherit;box-sizing:inherit}
 hr{background-color:#ccc;border:0;height:1px;margin-bottom:1.5em}
+a{outline:0}
 ul,ol{margin:0 0 1.5em 3em}
 ul{list-style:disc}
 ol{list-style:decimal}
