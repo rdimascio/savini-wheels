@@ -379,7 +379,7 @@ body.archive .grid .wheel .entry-title a{display:-webkit-box;display:-ms-flexbox
 body.archive .grid .wheel .entry-title .char1,body.archive .grid .wheel .entry-title .char2{color:red;font-size:42px}
 body.archive .grid .wheel .entry-title .char3,body.archive .grid .wheel .entry-title .char4,body.archive .grid .wheel .entry-title .char5{color:#333;font-weight:100;margin-top:6px}
 body.archive .configurations.grid{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;padding:20px 0 0}
-body.archive .configurations.grid .configuration--item{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-flex:0;-ms-flex:0 1 100px;flex:0 1 100px;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;text-align:center;padding:10px}
+body.archive .configurations.grid .configuration--item{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-flex:0;-ms-flex:0 1 100px;flex:0 1 100px;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;text-align:center;padding:10px;text-decoration:none;color:#777}
 body.archive .configurations.grid .configuration--item img{width:80px}
 body.archive .configurations.grid .configuration--item .configuration--item__title{text-transform:uppercase;letter-spacing:2px;font-weight:100;font-size:10px}
 body.archive .info{padding:5vw 8vw}
@@ -440,7 +440,7 @@ body.term-savini-diamond .site-header .custom-logo{-webkit-filter:brightness(0);
 body.term-savini-diamond .site-header .box-shadow-menu:before{background:#111;-webkit-box-shadow:0 .25em 0 0 #111,0 .5em 0 0 #111;box-shadow:0 .25em 0 0 #111,0 .5em 0 0 #111}
 body.term-savini-diamond .site,body.term-savini-diamond main{background:black}
 body.term-savini-diamond .archive-header{color:#9a9a9a;font-style:italic}
-body.term-savini-diamond .archive-header p{font-size:18px;letter-spacing:2px}
+body.term-savini-diamond .archive-header p{font-size:14px;letter-spacing:2px}
 body.term-savini-diamond .archive-header:not(.slider-header){background-image:url(https://saviniwheels.dimascio.design/wp-content/uploads/2019/05/savini__savini-diamond-bg.png);background-position:top right;background-repeat:no-repeat;background-size:contain}
 body.term-savini-diamond .grid .wheel{-webkit-box-flex:0;-ms-flex:0 1 33%;flex:0 1 33%}
 body.term-savini-diamond .grid .wheel .entry-header{margin-top:-4rem}
@@ -582,8 +582,10 @@ body.blog .post-grid .article-wrapper .article:before{position:absolute;bottom:0
 body.blog .post-grid .article-wrapper .article a{position:absolute;top:0;left:0;width:100%;height:100%;z-index:3}
 body.blog .sidebar-wrapper{width:25%;height:100%;padding:10px 40px 10px 10px}
 body.blog .sidebar-wrapper .widget-title{font-size:14px;font-weight:400;color:#ccc;padding-bottom:16px;letter-spacing:2px;border-bottom:1px solid #525252}
-body.blog .sidebar-wrapper form{padding-top:16px}
-body.blog .sidebar-wrapper .search-field{background:#000;border:1px solid #525252}
+body.blog .sidebar-wrapper form{padding-top:16px;display:-webkit-box;display:-ms-flexbox;display:flex}
+body.blog .sidebar-wrapper form label{-webkit-box-flex:1;-ms-flex:1;flex:1}
+body.blog .sidebar-wrapper form .search-field{background:#000;border:1px solid #525252;padding:5px 8px;width:100%;border-radius:3px 0 0 3px}
+body.blog .sidebar-wrapper form input[type="submit"]{border:1px solid;border-color:#525252;border-radius:0 3px 3px 0;background:#525252;color:#fff;font-size:14px;line-height:1;padding:.6em 1em .4em}
 body.blog .sidebar-wrapper .widget_archive ul{margin:0;list-style:none;-webkit-padding-start:0;padding-inline-start:0;padding-top:16px}
 body.blog .sidebar-wrapper .widget_archive ul a{text-decoration:none;color:#ccc}
 body.blog .sidebar-wrapper .custom-html-widget{padding-top:16px}
