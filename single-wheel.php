@@ -40,19 +40,21 @@ $vehicle_args = array(
 		array(
 			'key' => 'vehicle_wheel',
 			'value_num' => $wheel_id,
-			'compare' => '='
+			'compare' => 'IN'
 		)
 	)
 );
-$vehicle_query = new WP_Query( $vehicle_args );
+$vehicles = get_posts( $vehicle_args );
 
-	if ( $vehicle_query->have_posts() ) :
-		while ( $vehicle_query->have_posts() ) : $vehicle_query->the_post(); ?>
+foreach ( $vehicles as $vehicle ) :
+	$vehicle_wheel = get_field( 'vehicle_wheel', $vehicle->ID );
 
-			<div class="vehicle-slider--item" style="background-image:url(<?= get_the_post_thumbnail_url(); ?>)"></div>
+	if ( $vehicle_wheel && $vehicle_wheel == $wheel_id ) : ?>
 
-		<?php endwhile;
-	endif; wp_reset_postdata(); ?>
+		<div class="vehicle-slider--item" style="background-image:url(<?= get_the_post_thumbnail_url( $vehicle->ID ); ?>)"></div>
+
+	<?php endif;
+endforeach; ?>
 
 				</div>
 				<a class="see-more" href="">See More</a>
@@ -72,19 +74,21 @@ $finish_args = array(
 		array(
 			'key' => 'finish_wheel',
 			'value_num' => $wheel_id,
-			'compare' => '='
+			'compare' => 'IN'
 		)
 	)
 );
-$finish_query = new WP_Query( $finish_args );
+$finishes = get_posts( $finish_args );
 
-	if ( $finish_query->have_posts() ) : 
-		while ( $finish_query->have_posts() ) : $finish_query->the_post(); ?>
+foreach ( $finishes as $finish ) :
+	$finish_wheel = get_field( 'finish_wheel', $finish->ID );
 
-			<div class="finish-slider--item" style="background-image:url(<?= the_post_thumbnail_url(); ?>)"></div>
+	if ( $finish_wheel && $finish_wheel == $wheel_id ) : ?>
 
-		<?php endwhile;
-	endif; wp_reset_postdata(); ?>
+		<div class="finish-slider--item" style="background-image:url(<?= the_post_thumbnail_url(); ?>)"></div>
+
+	<?php endif;
+endforeach; ?>
 
 					</div>
 					<a class="see-more" href="">See More</a>
