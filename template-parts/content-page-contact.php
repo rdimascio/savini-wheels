@@ -28,7 +28,7 @@
 	</div>
 
 	<div class="contact-form__body">
-		<?= do_shortcode( '[contact-form-7 id="145" title="Contact form"]' ); ?>
+		<?= do_shortcode( '[contact-form-7 id="189" title="Contact form"]' ); ?>
 	</div>
 
 	<div class="contact-form__footer">
