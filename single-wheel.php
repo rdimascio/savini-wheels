@@ -52,7 +52,7 @@ $vehicle_query = new WP_Query( $vehicle_args );
 			<div class="vehicle-slider--item" style="background-image:url(<?= get_the_post_thumbnail_url(); ?>)"></div>
 
 		<?php endwhile;
-	endif; ?>
+	endif; wp_reset_postdata(); ?>
 
 				</div>
 				<a class="see-more" href="">See More</a>
@@ -84,7 +84,7 @@ $finish_query = new WP_Query( $finish_args );
 			<div class="finish-slider--item" style="background-image:url(<?= the_post_thumbnail_url(); ?>)"></div>
 
 		<?php endwhile;
-	endif; ?>
+	endif; wp_reset_postdata(); ?>
 
 					</div>
 					<a class="see-more" href="">See More</a>
