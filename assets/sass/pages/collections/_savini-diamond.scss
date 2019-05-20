@@ -17,12 +17,34 @@ body.term-savini-diamond {
 		background: rgba(0,0,0,1);
 	}
 
+	.archive-header {
+		color: #9a9a9a;
+		font-style: italic;
+
+		p {
+			font-size: 18px;
+			letter-spacing: 2px;
+		}
+
+		&:not(.slider-header) {
+			background-image: url(https://saviniwheels.dimascio.design/wp-content/uploads/2019/05/savini__savini-diamond-bg.png);
+			background-position: top right;
+			background-repeat: no-repeat;
+			background-size: contain;
+		}
+	}
+
 	.grid {
 		.wheel {
 			flex: 0 1 33%;
 
+			.entry-header {
+				margin-top: -4rem;
+			}
+
 			.entry-title {
 				margin: 0;
+				font-style: italic;
 
 				a {
 					color: #fff;

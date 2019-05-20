@@ -439,8 +439,12 @@ body.term-savini-diamond .site-header{background:white}
 body.term-savini-diamond .site-header .custom-logo{-webkit-filter:brightness(0);filter:brightness(0)}
 body.term-savini-diamond .site-header .box-shadow-menu:before{background:#111;-webkit-box-shadow:0 .25em 0 0 #111,0 .5em 0 0 #111;box-shadow:0 .25em 0 0 #111,0 .5em 0 0 #111}
 body.term-savini-diamond .site,body.term-savini-diamond main{background:black}
+body.term-savini-diamond .archive-header{color:#9a9a9a;font-style:italic}
+body.term-savini-diamond .archive-header p{font-size:18px;letter-spacing:2px}
+body.term-savini-diamond .archive-header:not(.slider-header){background-image:url(https://saviniwheels.dimascio.design/wp-content/uploads/2019/05/savini__savini-diamond-bg.png);background-position:top right;background-repeat:no-repeat;background-size:contain}
 body.term-savini-diamond .grid .wheel{-webkit-box-flex:0;-ms-flex:0 1 33%;flex:0 1 33%}
-body.term-savini-diamond .grid .wheel .entry-title{margin:0}
+body.term-savini-diamond .grid .wheel .entry-header{margin-top:-4rem}
+body.term-savini-diamond .grid .wheel .entry-title{margin:0;font-style:italic}
 body.term-savini-diamond .grid .wheel .entry-title a{color:#fff;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start;text-decoration:none}
 body.term-savini-diamond .grid .wheel .entry-title .char1,body.term-savini-diamond .grid .wheel .entry-title .char2,body.term-savini-diamond .grid .wheel .entry-title .char3,body.term-savini-diamond .grid .wheel .entry-title .char4{margin-top:0;color:#fff;font-size:24px;font-weight:100}
 body.term-savini-diamond .vehicle-slider--item{-webkit-box-shadow:none;box-shadow:none}
@@ -454,12 +458,27 @@ body.term-black-di-forza .grid .wheel .entry-title{margin:0}
 body.term-black-di-forza .grid .wheel .entry-title a{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start;text-decoration:none}
 body.term-black-di-forza .grid .wheel .entry-title .char1,body.term-black-di-forza .grid .wheel .entry-title .char2{color:#ed2327;font-size:24px;margin-top:6px}
 body.term-black-di-forza .grid .wheel .entry-title .char3,body.term-black-di-forza .grid .wheel .entry-title .char4,body.term-black-di-forza .grid .wheel .entry-title .char5{color:#fff;font-weight:100}
-body.term-black-di-forza .bm-video{height:100%;width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;margin:5vw 0}
+body.term-black-di-forza .bm-concave{padding:8vw 5vw 10vw;min-height:500px;background-image:url(https://saviniwheels.dimascio.design/wp-content/uploads/2019/05/bm-concave__bg-1.png);background-repeat:no-repeat;background-size:auto;background-position:top 0 left -150%}
+body.term-black-di-forza .bm-concave h2,body.term-black-di-forza .bm-concave h4,body.term-black-di-forza .bm-concave p{margin:0}
+body.term-black-di-forza .bm-concave .concave-header{width:30%}
+body.term-black-di-forza .bm-concave .concave-header h2{text-transform:uppercase;letter-spacing:5px;font-size:40px;text-align:right;font-weight:100}
+body.term-black-di-forza .bm-concave .concave-header h2 span{font-weight:700;color:#e6001e}
+body.term-black-di-forza .bm-concave .concave-header p{letter-spacing:22px;text-align:right;margin:0;font-size:16px;text-transform:uppercase;line-height:1px}
+body.term-black-di-forza .bm-concave .concave-items{width:70%}
+body.term-black-di-forza .bm-concave .concave-item{padding:0 1rem;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-align:center;-ms-flex-align:center;align-items:center;position:relative}
+body.term-black-di-forza .bm-concave .concave-item .caption{position:absolute;bottom:-55px;text-transform:uppercase}
+body.term-black-di-forza .bm-concave .concave-item .caption h4{font-weight:700}
+body.term-black-di-forza .bm-concave .concave-item .caption h4 span{color:#e6001e}
+body.term-black-di-forza .bm-concave .concave-item .caption p{font-weight:100;line-height:10px;font-size:10px}
+body.term-black-di-forza .bm-video{height:100%;width:100%;display:-webkit-box;display:-ms-flexbox;display:flex}
 body.term-black-di-forza .bm-video div{height:420px;width:100%;background-repeat:no-repeat;background-size:cover;background-position:center;background-attachment:fixed;position:relative}
 body.term-black-di-forza .bm-video div:before{position:absolute;content:'';top:0;left:0;width:100%;height:100%;background:-webkit-gradient(linear,left top,left bottom,from(rgba(0,0,0,0.9)),color-stop(rgba(0,0,0,0.3)),to(rgba(0,0,0,0.9)));background:linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.3),rgba(0,0,0,0.9))}
 body.term-black-di-forza .bm-video div:after{content:'';position:absolute;top:45%;left:45%;-webkit-box-sizing:border-box;box-sizing:border-box;width:35px;height:35px;border-width:25px 0 25px 45px;border-style:solid;border-color:transparent transparent transparent rgba(247,247,247,0.72)}
 body.term-black-di-forza .archive-header h2{color:#fff}
 body.term-black-di-forza .archive-header span{color:#ed2327}
+body.term-black-di-forza .bm-forged-header img{border-bottom:1px solid #fff;padding:0 0 10px}
+body.term-black-di-forza .bm-forged-header h2{margin:0;letter-spacing:10px;font-weight:100}
+body.term-black-di-forza .bm-forged-header h2 span{font-weight:700}
 body.term-black-di-forza .vehicle-slider--item{-webkit-box-shadow:none;box-shadow:none}
 body.term-black-di-forza #footer .footer--wrapper .footer--menu ul .menu-item a{color:#fff}
 body.dark .custom-logo{-webkit-filter:brightness(0) invert(1);filter:brightness(0) invert(1)}

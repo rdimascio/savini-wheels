@@ -45,11 +45,82 @@ body.term-black-di-forza {
 		}
 	}
 
+	.bm-concave {
+		padding: 8vw 5vw 10vw;
+		min-height: 500px;
+		background-image: url(https://saviniwheels.dimascio.design/wp-content/uploads/2019/05/bm-concave__bg-1.png);
+		background-repeat: no-repeat;
+		background-size: auto;
+		background-position: top 0% left -150%;
+
+		h2, h4, p {
+			margin: 0;
+		}
+
+		.concave-header {
+			width: 30%;
+
+			h2 {
+				text-transform: uppercase;
+				letter-spacing: 5px;
+				font-size: 40px;
+				text-align: right;
+				font-weight: 100;
+
+				span {
+					font-weight: 700;
+					color: #E6001E;
+				}
+			}
+
+			p {
+				letter-spacing: 22px;
+				text-align: right;
+				margin: 0;
+				font-size: 16px;
+				text-transform: uppercase;
+				line-height: 1px;
+			}
+		}
+
+		.concave-items {
+			width: 70%;
+		}
+	
+		.concave-item {
+			padding: 0 1rem;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			position: relative;
+
+			.caption {
+				position: absolute;
+				bottom: -55px;
+				text-transform: uppercase;
+
+				h4 {
+					font-weight: 700;
+
+					span {
+						color: #E6001E;
+					}
+				}
+
+				p {
+					font-weight: 100;
+					line-height: 10px;
+					font-size: 10px;
+				}
+			}
+		}
+	}
+
 	.bm-video {
 		height: 100%;
 		width: 100%;
 		display: flex;
-		margin: 5vw 0;
+		// margin: 5vw 0;
 
 		div {
 			height: 420px;
@@ -94,6 +165,32 @@ body.term-black-di-forza {
 
 		span {
 			color: #ed2327;
+		}
+	}
+
+	.bm-forged-header {
+		// display: flex;
+		// flex-direction: column;
+
+		// img {
+		// 	max-width: 340px;
+		// }
+
+		img {
+			border-bottom: 1px solid #fff;
+			padding: 0 0 10px;
+		}
+
+		h2 {
+			// border-top: 1px solid #fff;
+			// display: inline-block;
+			margin: 0;
+			letter-spacing: 10px;
+			font-weight: 100;
+			
+			span {
+				font-weight: 700;
+			}
 		}
 	}
 
