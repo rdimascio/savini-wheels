@@ -134,11 +134,15 @@ $content = ( ( get_the_content() > '' ) ? get_the_content() : ( ( $is_this_forge
 
 <?php else : 
 
-$finish = get_field( 'wheel_finish' ); ?>
+$finish = get_field( 'wheel_finish' ); 
 
-<p><strong>SHOWN IN:</strong> <?= get_the_title( $finish ) ?></p>
+if ( $finish ) : ?>
 
-<?php endif; ?>
+	<p><strong>SHOWN IN:</strong> <?= get_the_title( $finish ) ?></p>
+
+<?php endif; 
+
+endif; ?>
 
 <div class="actions">
 	<div class="customize">
