@@ -408,7 +408,8 @@ body.archive .vehicles-slider .slick-list{padding:0 0 3vw}
 body.archive .vehicles-slider .slick-prev{left:25px;z-index:9}
 body.archive .vehicles-slider .slick-next{right:25px;z-index:9}
 body.archive .vehicles-slider .slick-slide{margin:5px}
-body.archive .vehicle-slider--item{height:350px;background-repeat:no-repeat;background-size:cover;background-position:center;-webkit-box-shadow:0 15px 10px rgba(25,25,25,0.7);box-shadow:0 15px 10px rgba(25,25,25,0.7)}
+body.archive .vehicle-slider--item{height:350px;position:relative}
+body.archive .vehicle-slider--item__image{position:absolute;top:0;left:0;height:100%;width:100%;background-repeat:no-repeat;background-size:cover;background-position:center}
 body.archive .archive-header.slider-header{padding:5vw 0 0}
 body.term-sv-f .custom-logo{-webkit-filter:brightness(0) invert(1);filter:brightness(0) invert(1)}
 body.term-sv-f main{background-image:url(https://saviniwheels.dimascio.design/wp-content/uploads/2019/02/savini__sv-f-bg.png);background-repeat:no-repeat;background-size:contain;background-position:top}
@@ -576,7 +577,10 @@ body.single-wheel .vehicles-slider .slick-list,body.single-wheel .finish-slider 
 body.single-wheel .vehicles-slider .slick-prev,body.single-wheel .finish-slider .slick-prev{left:25px;z-index:9}
 body.single-wheel .vehicles-slider .slick-next,body.single-wheel .finish-slider .slick-next{right:25px;z-index:9}
 body.single-wheel .vehicles-slider .slick-slide,body.single-wheel .finish-slider .slick-slide{margin:5px}
-body.single-wheel .vehicle-slider--item{height:350px;background-repeat:no-repeat;background-size:cover;background-position:center}
+body.single-wheel .finish-slider--item{height:350px;position:relative}
+body.single-wheel .finish-slider--item__image{position:absolute;top:0;left:0;height:100%;width:100%;background-repeat:no-repeat;background-size:cover;background-position:center}
+body.single-wheel .vehicle-slider--item{height:350px;position:relative}
+body.single-wheel .vehicle-slider--item__image{position:absolute;top:0;left:0;height:100%;width:100%;background-repeat:no-repeat;background-size:cover;background-position:center}
 body.single-wheel .see-more{color:#fff;position:relative;text-decoration:none;text-transform:uppercase;font-size:12px;font-weight:100;padding:.5rem 2rem;background:red;border:2px solid red;border-radius:2px;-webkit-transition:background .5s,color .5s;transition:background .5s,color .5s}
 body.single-wheel.black-di-forza,body.single-wheel.savini-diamond{background:#000;color:#fff}
 body.single-wheel.black-di-forza .site-header,body.single-wheel.savini-diamond .site-header{background:white}
@@ -725,6 +729,9 @@ body.blog .sidebar-wrapper{display:none}
 }@media(max-width:767px){.for__container{padding:0 100px}
 .for__item{display:block;width:100%;margin-left:auto !important;margin-right:auto !important;margin-bottom:70px !important}
 .for__item--9,.for__item--8{margin-bottom:0 !important}
+}@media(max-width:760px){#footer .footer--wrapper .footer--info{padding:3rem 20px;-webkit-box-flex:0;-ms-flex:0 1 100%;flex:0 1 100%;margin:2rem 0 0}
+#footer .footer--wrapper .footer--menu{display:none}
+#footer .copyright--wrapper{text-align:center}
 }@media(max-width:666px){#images .image-gallery--wrapper .image-gallery .image-gallery--item{-ms-flex-preferred-size:100%;flex-basis:100%;margin:1rem}
 #videos .video-gallery--wrapper .video-gallery .video-gallery--item{-ms-flex-preferred-size:100%;flex-basis:100%;margin:1rem}
 }@media(max-width:642px){body.blog .post-grid .article-wrapper{grid-column:span 8 !important;grid-row:span 4 !important}

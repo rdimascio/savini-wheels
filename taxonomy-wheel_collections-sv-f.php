@@ -134,7 +134,9 @@ $class = get_queried_object()->slug . '_grid';
 				
 					<?php while ( $vehicle_loop->have_posts() ) : $vehicle_loop->the_post(); ?>
 
-						<div class="vehicle-slider--item" style="background-image:url(<?= the_post_thumbnail_url(); ?>)"></div>
+						<div class="vehicle-slider--item">
+							<div class="vehicle-slider--item__image" style="background-image:url(<?= the_post_thumbnail_url(); ?>)"></div>
+						</div>
 
 					<?php endwhile; ?>
 

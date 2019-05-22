@@ -50,8 +50,10 @@ foreach ( $vehicles as $vehicle ) :
 	$vehicle_wheel = get_field( 'vehicle_wheel', $vehicle->ID );
 
 	if ( $vehicle_wheel && $vehicle_wheel == $wheel_id ) : ?>
-
-		<div class="vehicle-slider--item" style="background-image:url(<?= get_the_post_thumbnail_url( $vehicle->ID ); ?>)"></div>
+	
+					<div class="vehicle-slider--item">
+						<div class="vehicle-slider--item__image" style="background-image:url(<?= get_the_post_thumbnail_url( $vehicle->ID ); ?>)"></div>
+					</div>
 
 	<?php endif;
 endforeach; wp_reset_postdata(); ?>
@@ -85,7 +87,9 @@ foreach ( $finishes as $finish ) :
 
 	if ( $finish_wheel && $finish_wheel == $wheel_id ) : ?>
 
-		<div class="finish-slider--item" style="background-image:url(<?= the_post_thumbnail_url(); ?>)"></div>
+						<div class="finish-slider--item">
+							<div class="finish-slider--item__image" style="background-image:url(<?= the_post_thumbnail_url(); ?>)"></div>
+						</div>
 
 	<?php endif;
 endforeach; wp_reset_postdata(); ?>

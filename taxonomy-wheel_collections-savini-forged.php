@@ -213,13 +213,17 @@ $class = get_queried_object()->slug . '_grid';
 
 						if ( $configurations && in_array( $config_id, $configurations ) ) : ?>
 
-								<div class="vehicle-slider--item" style="background-image:url(<?= get_the_post_thumbnail_url(); ?>)"></div>
+							<div class="vehicle-slider--item">	
+								<div class="vehicle-slider--item__image" style="background-image:url(<?= the_post_thumbnail_url(); ?>)"></div>
+							</div>
 
 						<?php endif;
 					
 					else : ?>
 							
-							<div class="vehicle-slider--item" style="background-image:url(<?= get_the_post_thumbnail_url(); ?>)"></div>
+							<div class="vehicle-slider--item">
+								<div class="vehicle-slider--item__image" style="background-image:url(<?= the_post_thumbnail_url(); ?>)"></div>
+							</div>
 
 					<?php endif;
 						

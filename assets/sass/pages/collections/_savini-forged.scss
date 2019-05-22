@@ -226,11 +226,20 @@ body.archive {
 
 	.vehicle-slider--item {
 		height: 350px;
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-position: center;
+		position: relative;
 
-		box-shadow: 0 15px 10px rgba(25, 25, 25, 0.7);
+		&__image {
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+		}
+
+		// box-shadow: 0 15px 10px rgba(25, 25, 25, 0.7);
 	}
 
 	.archive-header.slider-header {

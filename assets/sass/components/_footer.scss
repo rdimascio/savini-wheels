@@ -9,6 +9,12 @@
 			background: #3E3E3E;
 			padding: 2rem 4rem 2rem 8rem;
 
+			@media (max-width: 760px) {
+				padding: 3rem 20px;
+				flex: 0 1 100%;
+				margin: 2rem 0 0;
+			}
+
 			p, a {
 				color: #929292;
 				text-transform: uppercase;
@@ -32,6 +38,10 @@
 			display: flex;
 			justify-content: center;
 			align-items: center;
+
+			@media (max-width: 760px) {
+				display: none;
+			}
 
 			ul {
 				list-style: none;
@@ -80,5 +90,9 @@
 		letter-spacing: 2px;
 		font-size: 10px;
 		color: #BBB;
+
+		@media (max-width: 760px) {
+			text-align: center;
+		}
 	}
 }
