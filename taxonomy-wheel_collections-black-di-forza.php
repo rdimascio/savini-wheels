@@ -30,6 +30,7 @@ $class = get_queried_object()->slug . '_grid';
 
 				$forza_args = [
 					'post_type' => 'wheel',
+					'posts_per_page' => 5,
 					'tax_query' => [
 						[
 							'taxonomy' => 'wheel_collections',
