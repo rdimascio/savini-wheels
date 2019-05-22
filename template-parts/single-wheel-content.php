@@ -117,7 +117,6 @@ $content = ( ( get_the_content() > '' ) ? get_the_content() : ( ( $is_this_forge
 
 						$profile_config_abbrev = get_field( 'configuration_abbreviation', 'wheel_configurations_' . $profile_config_id );
 
-						foreach( $posts as $post ) :
 
 							if ( get_queried_object_id() !== $post->ID ) : ?>
 
@@ -125,9 +124,8 @@ $content = ( ( get_the_content() > '' ) ? get_the_content() : ( ( $is_this_forge
 
 							<?php endif;
 
-						endforeach; ?>
 
-					<?php endwhile; ?>
+					endwhile; ?>
 
 					</div>
 				</div>
