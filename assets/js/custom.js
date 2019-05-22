@@ -312,6 +312,20 @@ jQuery(function ($) {
 "use strict";
 
 jQuery(function ($) {
+  var banner;
+  $('.configuration--item').on('click', '.tooltip', function (e) {
+    e.preventDefault();
+    banner = $(e.target).closest('.configuration--item').find('.configuration--item__banner');
+    banner.css('display', 'flex');
+    banner.on('click', 'a[data-target="banner-close"]', function (e) {
+      e.preventDefault();
+      banner.fadeOut();
+    });
+  });
+});
+"use strict";
+
+jQuery(function ($) {
   var time = 2;
   var $bar,
       slick = $('.carousel-inner'),
@@ -406,20 +420,5 @@ jQuery(function ($) {
     scale: 1.05,
     perspective: 100,
     maxTilt: 5
-  });
-});
-"use strict";
-"use strict";
-
-jQuery(function ($) {
-  var banner;
-  $('.configuration--item').on('click', '.tooltip', function (e) {
-    e.preventDefault();
-    banner = $(e.target).closest('.configuration--item').find('.configuration--item__banner');
-    banner.css('display', 'flex');
-    banner.on('click', 'a[data-target="banner-close"]', function (e) {
-      e.preventDefault();
-      banner.fadeOut();
-    });
   });
 });

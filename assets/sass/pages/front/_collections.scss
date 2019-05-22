@@ -31,6 +31,23 @@
 		justify-content: center;
 		align-items: flex-start;
 
+		@media (max-width: 860px) {
+			flex: 1 1 100%;
+			align-items: center;
+		}
+
+		@media (max-width: 560px) {
+			flex-direction: column;
+		}
+
+		&:nth(2) {
+			flex-direction: column-reverse !important;
+		}
+
+		&:nth(4) {
+			flex-direction: column-reverse !important;
+		}
+
 		.collection-content {
 			display: flex;
 			flex-direction: column;

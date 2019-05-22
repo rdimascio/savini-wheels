@@ -23,6 +23,10 @@
 	.configurations--gallery {
 		padding: 2.3vw 5px 8.9vw 5px;
 
+		@media (max-width: 720px) {
+			display: block;
+		}
+
 
 		.configurations--main {
 			flex: 1;
@@ -38,10 +42,15 @@
 				align-items: center;
 				flex-direction: row;
 				justify-content: center;
+				text-align: center;
 				padding: 1rem;
 				cursor: pointer;
 				background: rgba(40, 40, 40, 0.7);
 				transition: background 1s;
+
+				@media (max-width: 1024px) {
+					flex-direction: column;
+				}
 
 				&:hover {
 					background: rgba(40, 40, 40, 0.9);
@@ -50,6 +59,10 @@
 				.configuration--item__image {
 					width: 100%;
 					max-height: 150px;
+
+					@media (max-width: 1024px) {
+						max-width: 150px;
+					}
 				}
 
 				.configuration--item__title {
@@ -58,6 +71,12 @@
 
 				.configuration--item__content {
 					padding-left: 15px;
+
+					@media (max-width: 1024px) {
+						padding-left: 0;
+						text-align: center;
+						margin: 15px 0 0;
+					}
 				}
 
 				.configuration--item__description {
@@ -79,6 +98,10 @@
 			width: 60%;
 			display: flex;
 			flex-wrap: wrap;
+
+			@media (max-width: 720px) {
+				width: 100%;
+			}
 
 			.configuration--item {
 				flex: 1 0 30%;

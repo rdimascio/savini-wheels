@@ -17,7 +17,12 @@
 
 	.social--wrapper {
 		padding: 3rem;
-    margin: 2rem 0;
+		margin: 2rem 0;
+		
+		@media (max-width: 770px) {
+			padding: 0;
+			flex-direction: column
+		}
 
 		.social--column {
 
@@ -31,6 +36,10 @@
 
 			&.blog--column {
 				flex: 0 1 40%;
+
+				@media (max-width: 770px) {
+					margin: 3rem;
+				}
 			}
 			
 			.social--title {
