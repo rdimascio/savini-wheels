@@ -17,8 +17,55 @@ body.single-wheel {
 
 	.wheel-content {
 
+		@media (max-width: 1024px) {
+			display: block;
+		}
+
 		section {
 			width: 50%;
+	
+			&.image {
+
+				@media (max-width: 1024px) {
+					width: 100%;
+				}
+			}
+
+			&.info {
+
+				@media (max-width: 1024px) {
+					margin: auto;
+					padding: 4rem 0 0;
+				}
+
+				@media (max-width: 879px) {
+					width: 100%;
+					padding: 4rem;
+				}
+
+				.title-row {
+
+					@media (max-width: 879px) {
+						display: block;
+					}
+
+					.entry-title {
+
+						@media (max-width: 879px) {
+							display: block;
+							text-align: center;
+						}
+					}
+
+					.configuration-logo {
+
+						@media (max-width: 879px) {
+							text-align: center;
+							padding: 1rem 0;
+						}
+					}
+				}
+			}
 		}
 
 		.entry-header {
