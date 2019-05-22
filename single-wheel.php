@@ -55,7 +55,7 @@ $vehicles = new WP_Query( $vehicle_args );
 			$vehicles->the_post(); ?>
 	
 					<div class="vehicle-slider--item">
-						<div class="vehicle-slider--item__image" style="background-image:url(<?= get_the_post_thumbnail_url( $vehicle->ID ); ?>)"></div>
+						<div class="vehicle-slider--item__image" style="background-image:url(<?= get_the_post_thumbnail_url(); ?>)"></div>
 					</div>
 
 		<?php endwhile; endif;  wp_reset_postdata(); ?>
