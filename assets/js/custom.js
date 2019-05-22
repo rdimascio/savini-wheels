@@ -203,7 +203,7 @@ jQuery(function ($) {
     }
   });
   var siteNav = $('#site-navigation-wrapper');
-  $('#main-menu').click(function (e) {
+  $('#mobile-menu').click(function (e) {
     e.preventDefault();
     siteNav.fadeIn();
   });

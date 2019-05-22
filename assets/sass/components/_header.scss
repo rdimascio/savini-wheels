@@ -25,7 +25,7 @@
 
 .siteNavigation {
 	display: flex;
-	align-items: center;
+
 }
 
 .header-menu {
@@ -33,6 +33,12 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	padding-right: 2rem;
+	display: none;
+
+	@media (min-width: 1024px) {
+		display: block;
+	}
 
 	ul {
 		list-style: none;
@@ -58,6 +64,25 @@
 	}
 }
 
+.open-popup-link {
+	padding-right: 2rem;
+	display: flex;
+	align-items: center;
+
+	@media (min-width: 1024px) {
+		padding-right: 0;
+	}
+}
+
+#mobile-menu {
+	outline: none;
+	display: block;
+
+	@media (min-width: 1024px) {
+		display: none;
+	}
+}
+
 .box-shadow-menu {
   position: relative;
 	padding: .5rem 1rem;
@@ -68,6 +93,7 @@
   content: "";
   position: absolute;
 	left: 0;
+	top: 6px;
 	font-size: 35px;
   width: 1em;
   height: 0.15em;
@@ -79,7 +105,7 @@
 
 #site-navigation-wrapper {
 	position: fixed;
-	right: 0;
+	right: 50%;
 	top: 0;
 	bottom: 0;
 	left: 0;

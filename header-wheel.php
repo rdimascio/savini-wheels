@@ -52,7 +52,7 @@ $collection = get_the_terms( $object_id, 'wheel_collections' );
 					<a href="#tuv-popup" class="open-popup-link">
 						<img src="https://saviniwheels.dimascio.design/wp-content/uploads/2019/05/tuv.jpg" alt="Tuv">
 					</a>
-					<!-- <a id="main-menu" class="box-shadow-menu" href="#" data-no-instant></a> -->
+					<a id="mobile-menu" class="box-shadow-menu" href="#" data-no-instant></a>
 				</div>
 		</div><!-- .site-branding -->
 		<div class="slider-progress">
