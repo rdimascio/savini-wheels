@@ -82,19 +82,17 @@ $finish_args = array(
 		)
 	)
 );
-$finishes = get_posts( $finish_args );
+$finishes = new WP_Query( $finish_args );
 
-foreach ( $finishes as $finish ) :
-	$finish_wheel = get_field( 'finish_wheel', $finish->ID );
-
-	if ( $finish_wheel && $finish_wheel == $wheel_id ) : ?>
+	if ( $finishes->have_posts() ) : 
+		while ( $finishes->have_posts() ) : 
+			$finishes->the_post()?>
 
 						<div class="finish-slider--item">
-							<div class="finish-slider--item__image" style="background-image:url(<?= get_the_post_thumbnail_url( $finish->ID ); ?>)"></div>
+							<div class="finish-slider--item__image" style="background-image:url(<?= get_the_post_thumbnail_url(); ?>)"></div>
 						</div>
 
-	<?php endif;
-endforeach; wp_reset_postdata(); ?>
+		<?php endwhile; endif; wp_reset_postdata(); ?>
 
 					</div>
 					<a class="see-more" href="/finishes?wheels=<?= get_the_title( $wheel_id ); ?>">See More</a>
