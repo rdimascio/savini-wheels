@@ -52,7 +52,7 @@ $class = get_queried_object()->slug . '_grid';
 					</a>
 					<div class="configuration--item__banner" style="display:none;">
 						<a class="close" href="#" data-target="banner-close" data-no-instant>x Close</a>
-						<img src="https://saviniwheels.dimascio.design/wp-content/uploads/2019/05/SAVINI-site-PERFORMANCE-config-banner-1.jpg" alt="">
+						<img src="<?= $banner ?>" alt="">
 					</div>
 				</div>
 
