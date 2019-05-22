@@ -341,8 +341,10 @@ body.single-wheel {
 			background: #000;
 		}
 
-		.back a {
-			color: #fff;
+		.wheel-content section.info .actions {
+			.back a {
+				color: #fff !important;
+			}
 		}
 
 		#footer .footer--wrapper .footer--menu ul .menu-item a {
