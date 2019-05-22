@@ -392,7 +392,7 @@ body.archive .grid .wheel .new{position:absolute;bottom:66px;font-size:10px;left
 body.archive .grid .wheel .entry-title{margin:0}
 body.archive .grid .wheel .entry-title a{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start;text-decoration:none}
 body.archive .grid .wheel .entry-title .char1,body.archive .grid .wheel .entry-title .char2{color:red;font-size:42px}
-body.archive .grid .wheel .entry-title .char3,body.archive .grid .wheel .entry-title .char4,body.archive .grid .wheel .entry-title .char5{color:#333;font-weight:100;margin-top:6px}
+body.archive .grid .wheel .entry-title .char3,body.archive .grid .wheel .entry-title .char4,body.archive .grid .wheel .entry-title .char5,body.archive .grid .wheel .entry-title .char6,body.archive .grid .wheel .entry-title .char7,body.archive .grid .wheel .entry-title .char8,body.archive .grid .wheel .entry-title .char9,body.archive .grid .wheel .entry-title .char10{color:#333;font-weight:100;margin-top:6px}
 body.archive .configurations.grid{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;padding:20px 0 0}
 body.archive .configurations.grid .configuration--item{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-flex:0;-ms-flex:0 1 100px;flex:0 1 100px;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;text-align:center;padding:10px;position:relative}
 body.archive .configurations.grid .configuration--item__link{text-decoration:none;color:#777}
