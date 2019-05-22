@@ -6,7 +6,7 @@ jQuery( function( $ ) {
 		e.preventDefault();
 
 		banner = $( e.target ).closest( '.configuration--item' ).find( '.configuration--item__banner' );
-		banner.fadeIn();
+		banner.css( 'display', 'flex' );
 
 		banner.on( 'click', 'a[data-target="banner-close"]', function( e ) {
 			e.preventDefault();

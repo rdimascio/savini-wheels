@@ -55,6 +55,22 @@ body.archive {
 			align-items: center;
 			position: relative;
 
+			@media (max-width: 1240px) {
+				flex: 1 1 25%;
+			}
+
+			@media (max-width: 1024px) {
+				flex: 1 1 33%;
+			}
+
+			@media (max-width: 830px) {
+				flex: 1 1 50%;
+			}
+
+			@media (max-width: 500px) {
+				flex: 1 1 100%;
+			}
+
 			.config-logo {
 				position: absolute;
 				left: 10px;
@@ -133,6 +149,8 @@ body.archive {
 				z-index: 99;
 				background: rgba(25,25,25,0.98);
 				overflow: hidden;
+				align-items: center;
+				justify-content: center;
 
 				img {
 					height: 80%;
