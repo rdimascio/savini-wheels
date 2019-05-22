@@ -17,13 +17,6 @@ $class = get_queried_object()->slug . '_grid';
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 
-		<!-- <header class="archive-header text-center">
-
-			<h2><//?= single_term_title(); ?> | <span>Configurations</span></h2>
-			<p><//?= get_field( 'collection_description', 'wheel_collections_' . get_queried_object()->term_id ); ?></p>
-
-		</header> -->
-
 		<div class="configurations grid flex justify-center align-center">
 
 			<?php
@@ -47,24 +40,45 @@ $class = get_queried_object()->slug . '_grid';
 				$title = $configuration->name;
 				$abbreviation = get_field( 'configuration_abbreviation', $object );
 				$image = get_field( 'configuration_image', $object );
+				$banner = get_field( 'configuration_banner', $object );
 
 			?>
 
-				<a class="configuration--item" href="<?= home_url() . '/wheel-collections/savini-forged?config=' . $configuration->slug ?>">
-					<img class="configuration--item__image" src="<?= $image ?>" />
-					<h4 class="configuration--item__title"><?= $abbreviation ?></h4>
-				</a>
+				<div class="configuration--item">
+					<a class="tooltip open-popup-link" href="#" data-no-instant>?</a>
+					<a class="configuration--item__link" href="<?= home_url() . '/wheel-collections/savini-forged?config=' . $configuration->slug ?>">
+						<img class="configuration--item__image" src="<?= $image ?>" />
+						<h4 class="configuration--item__title"><?= $abbreviation ?></h4>
+					</a>
+					<div class="configuration--item__banner" style="display:none;">
+						<a class="close" href="#" data-target="banner-close" data-no-instant>x Close</a>
+						<img src="https://saviniwheels.dimascio.design/wp-content/uploads/2019/05/SAVINI-site-PERFORMANCE-config-banner-1.jpg" alt="">
+					</div>
+				</div>
 
 			<?php endforeach; ?>
-
 		</div>
 
-		<!-- <header class="archive-header text-center">
+		<?php if ( isset( $_GET['config'] ) ) : 
+		
+		$this_config = get_term_by( 'slug', $_GET['config'], 'wheel_configurations' );
+		$this_config_description = $this_config->description;
+		
+		?>
 
-			<h2><//?= single_term_title(); ?></h2>
-			<p><//?= get_field( 'collection_description', 'wheel_collections_' . $id ); ?></p>
+		<header class="archive-header text-center">
+			<h2><?= single_term_title(); ?> | <span><?= $this_config->name ?></span></h2>
+			<p><?= $this_config_description ?></p>
+		</header>
 
-		</header> -->
+		<?php else : ?>
+
+		<header class="archive-header text-center">
+			<h2><?= single_term_title(); ?></h2>
+			<p><?= get_field( 'collection_description', 'wheel_collections_' . $id ); ?></p>
+		</header>
+
+		<?php endif; ?>
 
 		<div class="<?= $class ?> grid flex justify-center align-center">
 

@@ -51,8 +51,11 @@
 					<div class="header-menu">
 						<?php wp_nav_menu( array( 'theme_location' => 'menu-1' ) ); ?>
 					</div>
-					<a href="#tuv-popup" class="open-popup-link">
+					<a href="#tuv-popup" class="open-popup-link tuv light">
 						<img src="https://saviniwheels.dimascio.design/wp-content/uploads/2019/05/tuv.jpg" alt="Tuv">
+					</a>
+					<a href="#tuv-popup" class="open-popup-link tuv dark">
+						<img src="https://saviniwheels.dimascio.design/wp-content/uploads/2019/05/tuv-dark.jpg" alt="Tuv">
 					</a>
 					<a id="mobile-menu" class="box-shadow-menu" href="#" data-no-instant></a>
 				</div>

@@ -375,19 +375,28 @@ body.archive.tax-wheel_collections .see-more{color:#fff;position:relative;text-d
 body.archive{margin-top:85px}
 body.archive .custom-logo{-webkit-filter:brightness(0) invert(1);filter:brightness(0) invert(1)}
 body.archive .site-header{background:black}
+body.archive .site-header .header-menu ul li a{color:#fff}
+body.archive .site-header .tuv.light{display:none}
 body.archive .site-header .box-shadow-menu::before{background:#fff;-webkit-box-shadow:0 .25em 0 0 #fff,0 .5em 0 0 #fff;box-shadow:0 .25em 0 0 #fff,0 .5em 0 0 #fff}
 body.archive .archive-header{padding:5vw;text-transform:uppercase}
 body.archive .archive-header h2{letter-spacing:3px;font-weight:400}
 body.archive .archive-header p{font-size:12px;padding:0 5vw}
 body.archive .archive-header span{color:red}
 body.archive .grid{padding:0 5vw;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap}
-body.archive .grid .wheel{padding:1rem;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-flex:0;-ms-flex:0 1 20%;flex:0 1 20%;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
+body.archive .grid .wheel{padding:1rem;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-flex:0;-ms-flex:0 1 20%;flex:0 1 20%;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;position:relative}
+body.archive .grid .wheel .config-logo{position:absolute;left:10px;bottom:110px;z-index:9}
+body.archive .grid .wheel .new{position:absolute;bottom:66px;font-size:10px;left:82px}
 body.archive .grid .wheel .entry-title{margin:0}
 body.archive .grid .wheel .entry-title a{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start;text-decoration:none}
 body.archive .grid .wheel .entry-title .char1,body.archive .grid .wheel .entry-title .char2{color:red;font-size:42px}
 body.archive .grid .wheel .entry-title .char3,body.archive .grid .wheel .entry-title .char4,body.archive .grid .wheel .entry-title .char5{color:#333;font-weight:100;margin-top:6px}
 body.archive .configurations.grid{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;padding:20px 0 0}
-body.archive .configurations.grid .configuration--item{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-flex:0;-ms-flex:0 1 100px;flex:0 1 100px;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;text-align:center;padding:10px;text-decoration:none;color:#777}
+body.archive .configurations.grid .configuration--item{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-flex:0;-ms-flex:0 1 100px;flex:0 1 100px;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;text-align:center;padding:10px;position:relative}
+body.archive .configurations.grid .configuration--item__link{text-decoration:none;color:#777}
+body.archive .configurations.grid .configuration--item .tooltip{position:absolute;top:0;right:0;text-decoration:none;font-size:12px;background:#9e9e9e;color:#fff;border-radius:60px;padding:1px 6px}
+body.archive .configurations.grid .configuration--item__banner{position:fixed;right:0;top:0;bottom:0;left:0;z-index:99;background:rgba(25,25,25,0.98);overflow:hidden}
+body.archive .configurations.grid .configuration--item__banner img{height:80%;width:80% !important}
+body.archive .configurations.grid .configuration--item__banner .close{position:absolute;top:2rem;right:2rem;cursor:pointer;color:#fff;text-decoration:none}
 body.archive .configurations.grid .configuration--item img{width:80px}
 body.archive .configurations.grid .configuration--item .configuration--item__title{text-transform:uppercase;letter-spacing:2px;font-weight:100;font-size:10px}
 body.archive .info{padding:5vw 8vw}
@@ -445,7 +454,9 @@ body.term-sv-f .sv-f__slider-cta{color:#fff;position:relative;text-decoration:no
 body.term-sv-f .sv-f__slider-cta:hover{background:transparent;border:2px solid red;color:red}
 body.term-savini-diamond .site-header{background:white}
 body.term-savini-diamond .site-header .custom-logo{-webkit-filter:brightness(0);filter:brightness(0)}
+body.term-savini-diamond .site-header .header-menu ul li a{color:#333}
 body.term-savini-diamond .site-header .box-shadow-menu:before{background:#111;-webkit-box-shadow:0 .25em 0 0 #111,0 .5em 0 0 #111;box-shadow:0 .25em 0 0 #111,0 .5em 0 0 #111}
+body.term-savini-diamond .site-header .tuv.dark{display:none}
 body.term-savini-diamond .site,body.term-savini-diamond main{background:black}
 body.term-savini-diamond .archive-header{color:#9a9a9a;font-style:italic}
 body.term-savini-diamond .archive-header p{font-size:14px;letter-spacing:2px}

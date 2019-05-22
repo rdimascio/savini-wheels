@@ -7,9 +7,17 @@ body.term-savini-diamond {
 			filter: brightness(0);
 		}
 
+		.header-menu ul li a {
+			color: #333;
+		}
+
 		.box-shadow-menu:before {
 			background: #111;
 			box-shadow: 0 0.25em 0 0 #111, 0 0.5em 0 0 #111;
+		}
+
+		.tuv.dark {
+			display: none;
 		}
 	}
 
