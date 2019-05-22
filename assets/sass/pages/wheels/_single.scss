@@ -223,6 +223,19 @@ body.single-wheel {
 		}
 	}
 
+	&.sv-f {
+		.wheel-content .entry-header h1 {
+			.char3 {
+				font-size: 38px;
+			}
+
+			.char4,
+			.char5 {
+				font-size: 42px;
+			}
+		}
+	}
+
 	&.black-di-forza {
 		.wheel-content .entry-header h1 {
 			.char3,

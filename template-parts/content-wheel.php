@@ -11,7 +11,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<?php wp_starter_theme_post_thumbnail(); ?>
+	<a href="<?= the_permalink(); ?>"><?php the_post_thumbnail( 'full', array( 'class' => 'wheel-tilt', 'data-tilt' => '' ) ); ?></a>
 
 	<header class="entry-header">
 		<?php

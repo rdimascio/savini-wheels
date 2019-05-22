@@ -560,6 +560,8 @@ body.single-wheel.black-di-forza .site-header .box-shadow-menu:before,body.singl
 body.single-wheel.black-di-forza main,body.single-wheel.savini-diamond main{background:#000}
 body.single-wheel.black-di-forza #footer .footer--wrapper .footer--menu ul .menu-item a,body.single-wheel.savini-diamond #footer .footer--wrapper .footer--menu ul .menu-item a{color:#fff}
 body.single-wheel.savini-diamond .wheel-content .entry-header h1 .char1,body.single-wheel.savini-diamond .wheel-content .entry-header h1 .char2,body.single-wheel.savini-diamond .wheel-content .entry-header h1 .char3,body.single-wheel.savini-diamond .wheel-content .entry-header h1 .char4,body.single-wheel.savini-diamond .wheel-content .entry-header h1 .char5{color:#fff !important;font-size:42px;font-style:italic}
+body.single-wheel.sv-f .wheel-content .entry-header h1 .char3{font-size:38px}
+body.single-wheel.sv-f .wheel-content .entry-header h1 .char4,body.single-wheel.sv-f .wheel-content .entry-header h1 .char5{font-size:42px}
 body.single-wheel.black-di-forza .wheel-content .entry-header h1 .char3,body.single-wheel.black-di-forza .wheel-content .entry-header h1 .char4,body.single-wheel.black-di-forza .wheel-content .entry-header h1 .char5{color:#fff !important;font-size:42px}
 body.blog{background:#000;color:#fff;margin-top:85px}
 body.blog #main{background:#000}

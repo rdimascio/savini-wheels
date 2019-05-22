@@ -29,6 +29,8 @@ $sizes = get_field( 'available_sizes' );
 $widths = get_field( 'wheel_widths' );
 $construction = get_field( 'wheel_construction' );
 
+$content = ( ( get_the_content() > '' ) ? get_the_content() : ( ( $is_this_forged ) ? term_description( $config_id ) : term_description( $collection[0]->term_id ) ) );
+
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -36,7 +38,7 @@ $construction = get_field( 'wheel_construction' );
 	<div class="wheel-wrapper">
 		<div class="wheel-content flex justify-center align-start">
 			<section class="image flex align-center justify-center">
-				<?php wp_starter_theme_post_thumbnail(); ?>
+				<?php the_post_thumbnail( 'full', array( 'class' => 'wheel-tilt', 'data-tilt' => '' ) ); ?>
 			</section>
 
 			<section class="info flex column align-center justify-between p-r-5">
@@ -50,7 +52,7 @@ $construction = get_field( 'wheel_construction' );
 					</div>
 				</div>
 				<div class="content">
-					<?= the_content(); ?>
+					<?= $content ?>
 				</div>
 				<div class="available">
 					<p><strong>Available:</strong></p>
