@@ -714,7 +714,7 @@ function collection_archive_order ( $query ) {
 	}
 
 	$query->set( 'post_type', 'wheel' );                 
-	$query->set( 'posts_per_page', '10' );  
+	// $query->set( 'posts_per_page', '10' );  
 	$query->set( 'orderby', 'menu_order' );
 	$query->set( 'post_parent', 0 );
 	$query->set( 'order', 'ASC' );
