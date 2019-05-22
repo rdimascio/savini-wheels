@@ -138,7 +138,7 @@ $content = ( ( get_the_content() > '' ) ? get_the_content() : ( ( $is_this_forge
 
 $finish = get_field( 'wheel_finish' ); ?>
 
-<p><strong>SHOWN IN:</strong> <?= $finish; ?></p>
+<p><strong>SHOWN IN:</strong> <?= get_the_title( $finish ) ?></p>
 
 <?php endif; ?>
 			</section>
