@@ -138,7 +138,7 @@ add_action( 'widgets_init', 'savini_widgets_init' );
 function savini_menus() {
   register_nav_menus(
     array(
-      'footer' => __( 'Footer Menu' )
+			'footer' => __( 'Footer Menu' )
     )
   );
 }

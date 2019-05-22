@@ -47,7 +47,7 @@ $collection = get_the_terms( $object_id, 'wheel_collections' );
 
 				<div class="siteNavigation">
 					<div class="header-menu">
-						<?php wp_nav_menu( array( 'theme_location' => 'main-1' ) ); ?>
+						<?php wp_nav_menu( array( 'theme_location' => 'menu-1' ) ); ?>
 					</div>
 					<a href="#tuv-popup" class="open-popup-link">
 						<img src="https://saviniwheels.dimascio.design/wp-content/uploads/2019/05/tuv.jpg" alt="Tuv">
