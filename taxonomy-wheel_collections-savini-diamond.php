@@ -26,24 +26,30 @@ $class = get_queried_object()->slug . '_grid';
 
 		<div class="<?= $class ?> grid flex justify-center align-center">
 
-			<?php if ( have_posts() ) : 
-				
-				$count = 0;
+			<?php 
+			
+			$diamond_args = [
+				'post_type' => 'wheel',
+				'posts_per_page' => 6,
+				'tax_query' => [
+					[
+						'taxonomy' => 'wheel_collections',
+						'terms' => 'savini-diamond',
+						'field' => 'slug',
+						'include_children' => false
+					]
+				]
+			];
+			$diamond_query = new WP_Query( $diamond_args );
 
-				?>
+			if ( $diamond_query->have_posts() ) : ?>
 
 				<?php
 				/* Start the Loop */
-				while ( have_posts() ) :
-					the_post();
-
-					if ( $count <= 6 ) :
+				while ( $diamond_query->have_posts() ) :
+					$diamond_query->the_post();
 
 						get_template_part( 'template-parts/content', get_post_type() );
-
-					endif;
-
-					$count++;
 
 				endwhile;
 
