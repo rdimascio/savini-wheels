@@ -134,7 +134,7 @@ $content = ( ( get_the_content() > '' ) ? get_the_content() : ( ( $is_this_forge
 
 <?php else : 
 
-$finish = get_field( 'wheel_finish' ); 
+$finish = get_field( 'wheel_finish' );
 
 if ( $finish ) : ?>
 

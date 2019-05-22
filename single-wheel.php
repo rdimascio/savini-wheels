@@ -44,19 +44,21 @@ $vehicle_args = array(
 		)
 	)
 );
-$vehicles = get_posts( $vehicle_args );
+$vehicles = new WP_Query( $vehicle_args );
 
-foreach ( $vehicles as $vehicle ) :
-	$vehicle_wheel = get_field( 'vehicle_wheel', $vehicle->ID );
+// foreach ( $vehicles as $vehicle ) :
+// 	$vehicle_wheel = get_field( 'vehicle_wheel', $vehicle->ID );
 
-	if ( $vehicle_wheel && $vehicle_wheel == $wheel_id ) : ?>
+	if ( $vehicles->have_posts() ) : 
+	
+		while ( $vehicles->have_posts() ) : 
+			$vehicles->the_post(); ?>
 	
 					<div class="vehicle-slider--item">
 						<div class="vehicle-slider--item__image" style="background-image:url(<?= get_the_post_thumbnail_url( $vehicle->ID ); ?>)"></div>
 					</div>
 
-	<?php endif;
-endforeach; wp_reset_postdata(); ?>
+		<?php endwhile; endif;  wp_reset_postdata(); ?>
 
 				</div>
 				<a class="see-more" href="/vehicles?wheels=<?= get_the_title( $wheel_id ); ?>">See More</a>
