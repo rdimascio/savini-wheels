@@ -31,6 +31,7 @@ $class = get_queried_object()->slug . '_grid';
 			$diamond_args = [
 				'post_type' => 'wheel',
 				'posts_per_page' => 6,
+				'post__not_in' => array(347),
 				'tax_query' => [
 					[
 						'taxonomy' => 'wheel_collections',
