@@ -141,6 +141,17 @@ $finish = get_field( 'wheel_finish' ); ?>
 <p><strong>SHOWN IN:</strong> <?= get_the_title( $finish ) ?></p>
 
 <?php endif; ?>
+
+<div class="actions">
+	<div class="customize">
+		<span>
+			<a href="">Customize this wheel</a>
+		</span>
+	</div>
+	<div class="back">
+		<a href="<?= get_term_link( $collection[0]->term_id, 'wheel_collections' ); ?>">Back to wheel collection</a>
+	</div>
+</div>
 			</section>
 		</div>
 	</div>

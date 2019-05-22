@@ -557,15 +557,22 @@ body.single-wheel .site-header .tuv.light{display:none}
 body.single-wheel .site-header .box-shadow-menu::before{background:#fff;-webkit-box-shadow:0 .25em 0 0 #fff,0 .5em 0 0 #fff;box-shadow:0 .25em 0 0 #fff,0 .5em 0 0 #fff}
 body.single-wheel main{padding:4rem 0 0}
 body.single-wheel .wheel-content section{width:50%}
+body.single-wheel .wheel-content section.info .actions{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;margin:2rem 0 0}
+body.single-wheel .wheel-content section.info .actions a{text-decoration:none;text-transform:uppercase;font-weight:700;font-size:12px}
+body.single-wheel .wheel-content section.info .actions .back a{color:#000}
+body.single-wheel .wheel-content section.info .actions .customize{position:relative}
+body.single-wheel .wheel-content section.info .actions .customize:before{content:'';position:absolute;top:0;left:0;width:100%;height:100%;-webkit-transform:skew(-40deg);transform:skew(-40deg);background:red;z-index:1}
+body.single-wheel .wheel-content section.info .actions .customize span{z-index:9;position:relative;padding:4px 16px}
+body.single-wheel .wheel-content section.info .actions .customize a{color:#fff}
 body.single-wheel .wheel-content .entry-header{position:relative}
-body.single-wheel .wheel-content .entry-header .new{position:absolute;top:-8px;font-weight:400;font-size:12px}
+body.single-wheel .wheel-content .entry-header .new{position:absolute;top:-8px;font-weight:700;font-size:14px}
 body.single-wheel .wheel-content .entry-header h1{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start;margin:0}
 body.single-wheel .wheel-content .entry-header h1 .char1,body.single-wheel .wheel-content .entry-header h1 .char2{color:red;font-size:42px}
 body.single-wheel .wheel-content .entry-header h1 .char3,body.single-wheel .wheel-content .entry-header h1 .char4,body.single-wheel .wheel-content .entry-header h1 .char5{color:#333;font-weight:400}
 body.single-wheel .wheel-content .configuration-logo img{max-width:250px}
-body.single-wheel .wheel-content .available{text-transform:uppercase;font-size:12px;margin-bottom:1.5em}
+body.single-wheel .wheel-content .available{text-transform:uppercase;font-size:14px;margin-bottom:1.5em}
 body.single-wheel .wheel-content .available p{margin:0}
-body.single-wheel .wheel-content .profiles{font-size:12px}
+body.single-wheel .wheel-content .profiles{font-size:14px}
 body.single-wheel .wheel-content .profiles .title{margin:0}
 body.single-wheel .wheel-content .profiles .title strong{text-transform:uppercase;padding-right:6px}
 body.single-wheel .wheel-content .profiles .profile-row{margin-left:-6px;padding:6px 0}
