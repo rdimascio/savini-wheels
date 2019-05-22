@@ -3,6 +3,12 @@ body.blog {
 	color: #fff;
 	margin-top: 85px;
 
+	.site-header {
+		.tuv.dark {
+			display: none;
+		}
+	}
+
 	#main {
 		background: #000;
 	}

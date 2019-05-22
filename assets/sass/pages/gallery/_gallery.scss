@@ -24,8 +24,23 @@ body.archive.post-type-archive {
 		justify-content: center;
 		align-content: center;
 
+		@media (max-width: 948px) {
+			display: none;
+		}
+
+		.filter-group:first-of-type {
+
+			@media (max-width: 1040px) {
+				margin: 10px 0 0 0;
+			}
+		}
+
 		.filter-group:not(:first-of-type) {
 			margin: 0 0 0 60px;
+
+			@media (max-width: 1040px) {
+				margin: 10px 0 0 20px;
+			}
 		}
 
 		.filter-row {
@@ -80,6 +95,20 @@ body.archive.post-type-archive {
 	.gallery-wrapper {
 		flex: 0 1 33.333%;
 		padding: 2px;
+
+		@media (max-width: 1240px) {
+			flex: 0 1 50%;
+		}
+
+		@media (max-width: 780px) {
+			flex: 0 1 100%;
+		}
+	}
+
+	.grid {
+		@media (max-width: 948px) {
+			margin: 35px 0 0;
+		}
 	}
 
 	.gallery-item {
