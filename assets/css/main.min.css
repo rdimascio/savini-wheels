@@ -473,6 +473,7 @@ body.term-savini-diamond .grid .wheel .entry-title{margin:0;font-style:italic}
 body.term-savini-diamond .grid .wheel .entry-title a{color:#fff;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start;text-decoration:none}
 body.term-savini-diamond .grid .wheel .entry-title .char1,body.term-savini-diamond .grid .wheel .entry-title .char2,body.term-savini-diamond .grid .wheel .entry-title .char3,body.term-savini-diamond .grid .wheel .entry-title .char4{margin-top:0;color:#fff;font-size:24px;font-weight:100}
 body.term-savini-diamond .vehicle-slider--item{-webkit-box-shadow:none;box-shadow:none}
+body.term-savini-diamond #footer .footer--wrapper .footer--menu ul .menu-item a{color:#fff}
 body.term-black-di-forza{color:#fff}
 body.term-black-di-forza .site-header{background:white}
 body.term-black-di-forza .site-header .header-menu ul li a{color:#333}

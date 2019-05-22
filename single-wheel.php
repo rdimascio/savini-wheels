@@ -88,7 +88,7 @@ foreach ( $finishes as $finish ) :
 	if ( $finish_wheel && $finish_wheel == $wheel_id ) : ?>
 
 						<div class="finish-slider--item">
-							<div class="finish-slider--item__image" style="background-image:url(<?= the_post_thumbnail_url(); ?>)"></div>
+							<div class="finish-slider--item__image" style="background-image:url(<?= get_the_post_thumbnail_url( $finish->ID ); ?>)"></div>
 						</div>
 
 	<?php endif;
