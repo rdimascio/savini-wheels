@@ -1,9 +1,9 @@
 <div class="mission--wrapper">
-	<div class="mission--logo text-center" data-bottom-top="transform: translateZ(0) translateY(0%); opacity: 0;" data-top-bottom="transform: translateZ(0) translateY(-35%);" data--100-bottom="opacity:1;">
-		<h2 data-bottom-top="top: 0;" data-top-bottom="top: 0;" style="background-image: url(https://saviniwheels.dimascio.design/wp-content/uploads/2019/02/savini__white-logo.png)" alt="" class="for__title lined_title title js-appearing-content skrollable skrollable-between"></h2>
+	<div class="mission--logo text-center">
+		<h2 style="background-image: url(https://saviniwheels.dimascio.design/wp-content/uploads/2019/02/savini__white-logo.png)" class="for__title lined_title title js-appearing-content"></h2>
 	</div>
 
-	<div class="mission--content" data-bottom-top="transform: translateZ(0) translateY(0%); opacity: 0;" data-top-bottom="transform: translateZ(0) translateY(-35%);" data--100-bottom="opacity:1;">
+	<div class="mission--content">
 		<h4>Mission Statement</h4>
 		<p>SINCE 2003, WE’VE SET OUT TO PROVIDE A QUALITY PRODUCT THAT ALLOWS OUR CLIENTS TO EXPRESS THEIR PERSONALITIES THROUGH AUTOMOTIVE CULTURE. AS ENTHUSIAST OURSELVES, WE WANTED TO CREATE A PRODUCT LINE TO ACCOMMODATE INDIVIDUAL STYLE. SINCE WE’RE NOT ALL CUT FROM THE SAME CLOTH, WE WANTED TO EMBRACE OUR CLIENTS’ PERSONA THROUGH OUR PRODUCTS TO REFLECT THE SAME Type OF INDIVIDUALITY THAT CULMINATED INTO OUR “SAVINI FORGED” LINE. EVERY ORDER STARTS OUT AS A BLANK CANVAS, CUT FROM ONLY THE BEST QUALITY MATERIALS, AND INDIVIDUALIZED WITH YOUR IMAGINATION. WE WERE SO SUCCESSFUL WITH  THIS CONCEPT THAT WE DECIDED TO MAINSTREAM OUR IDEA BY CREATING OUT “BLACK di FORZA” LINE FOR THE IMPULSE ENTHUSIAST. WHAT STARTED AS A LOCAL SOUTHERN CALIFORNIA Manufacturer QUICKLY TURNED INTO A WORLD RENOWNED BRAND.</p>
 		<br>

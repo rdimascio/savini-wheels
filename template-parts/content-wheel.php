@@ -33,7 +33,7 @@ $new = get_field( 'wheel_new' );
 	<?php endif; ?>
 
 	<a href="<?= the_permalink(); ?>">
-		<?php the_post_thumbnail( 'full', array( 'class' => 'wheel-tilt', 'data-tilt' => '' ) ); ?>
+		<?php the_post_thumbnail( 'full' ); ?>
 	</a>
 
 	<?php if ( $is_this_forged && $new ) : ?>

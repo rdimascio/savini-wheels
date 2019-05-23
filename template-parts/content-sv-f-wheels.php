@@ -17,7 +17,7 @@
     <div class="wheel-gallery row">
         <?php foreach( $images as $image ): ?>
             <div class="gallery-image">
-                <a href="<?= the_permalink() ?>"><img src="<?= $image['sizes']['large']; ?>" class="wheel-tilt" alt="<?php echo $image['alt']; ?>" data-tilt /></a>
+                <a href="<?= the_permalink() ?>"><img src="<?= $image['sizes']['large']; ?>" alt="<?php echo $image['alt']; ?>" /></a>
                 <p><?= $image['caption']; ?></p>
 			</div>
         <?php endforeach; ?>

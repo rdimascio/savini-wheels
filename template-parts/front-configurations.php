@@ -1,5 +1,5 @@
-<div class="configurations--content text-center" data-bottom-top="transform: translateZ(0) translateY(0%); opacity: 0;" data-top-bottom="transform: translateZ(0) translateY(-35%);" data--100-bottom="opacity:1;">
-	<h2 data-bottom-top="top: 0;" data-top-bottom="top: 0;" class="for__title lined_title title js-appearing-content m-t-5"><span>configurations</span></h2>
+<div class="configurations--content text-center">
+	<h2 class="for__title lined_title title js-appearing-content m-t-5"><span>configurations</span></h2>
 	<p>Savini Wheels is excited to introduce our <b>all-new SV-F</b> collection, which utilizes advanced flow form technology. These wheels are our strongest and lightest wheels to date, thanks to a combination of enhanced engineering and state-of-the-art technology.</p>
 </div>
 

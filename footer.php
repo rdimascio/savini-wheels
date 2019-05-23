@@ -63,7 +63,7 @@
 
 <?php if ( is_front_page() ) : ?>
 
-	<div class="loading flex align-center justify-center">
+	<!-- <div class="loading flex align-center justify-center">
 			<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" class="lds-wheel" style="background: none;">
 					<g transform="rotate(314.814 50 50)">
 							<ellipse cx="50" cy="50" ng-attr-rx="40" ry="0.1" fill="none" ng-attr-stroke="#e0e0e0" ng-attr-stroke-width="8" transform="rotate(0 50 50)" rx="40" stroke="#e0e0e0" stroke-width="8"></ellipse>
@@ -74,7 +74,7 @@
 					<circle cx="50" cy="50" ng-attr-r="40" fill="none" ng-attr-stroke="#e0e0e0" ng-attr-stroke-width="8" r="40" stroke="#e0e0e0" stroke-width="8"></circle>
 					<circle cx="50" cy="50" ng-attr-r="10" ng-attr-fill="#e0e0e0" ng-attr-stroke="#e0e0e0" ng-attr-stroke-width="8" r="10" fill="#e0e0e0" stroke="#e0e0e0" stroke-width="8"></circle>
 			</svg>
-	</div>
+	</div> -->
 
 <?php endif; ?>
 

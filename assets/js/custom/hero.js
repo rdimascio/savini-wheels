@@ -1,26 +1,26 @@
 jQuery( function( $ ) {
 
-	const body = $( 'body' );
+	// const body = $( 'body' );
 
-	const loader = function() {
+	// const loader = function() {
 
-		// Let the loading animation run for 2 seconds
-		setTimeout( function() {
-			$( '.loading' ).addClass( 'loaded' );
-			body.removeClass( 'is--loading' );
-		}, 2000 );
+	// 	// Let the loading animation run for 2 seconds
+	// 	setTimeout( function() {
+	// 		$( '.loading' ).addClass( 'loaded' );
+	// 		body.removeClass( 'is--loading' );
+	// 	}, 2000 );
 
-		// Give enough time for the CSS transitions to take place
-		setTimeout( function() {
-			$( '.loading' ).css( 'display', 'none' );
-		}, 6000 );
-	};
+	// 	// Give enough time for the CSS transitions to take place
+	// 	setTimeout( function() {
+	// 		$( '.loading' ).css( 'display', 'none' );
+	// 	}, 6000 );
+	// };
 
-	if ( body.hasClass( 'home' ) ) {
+	// if ( body.hasClass( 'home' ) ) {
 
-		body.addClass( 'is--loading' );
+	// 	body.addClass( 'is--loading' );
 
-	}
+	// }
 
 	$( '#hero-carousel' ).on( 'init', function() {
 
@@ -37,7 +37,7 @@ jQuery( function( $ ) {
 
 		});
 
-		loader();
+		// loader();
 
 	});
 

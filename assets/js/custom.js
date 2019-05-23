@@ -235,24 +235,21 @@ jQuery(function ($) {
 "use strict";
 
 jQuery(function ($) {
-  var body = $('body');
-
-  var loader = function loader() {
-    // Let the loading animation run for 2 seconds
-    setTimeout(function () {
-      $('.loading').addClass('loaded');
-      body.removeClass('is--loading');
-    }, 2000); // Give enough time for the CSS transitions to take place
-
-    setTimeout(function () {
-      $('.loading').css('display', 'none');
-    }, 6000);
-  };
-
-  if (body.hasClass('home')) {
-    body.addClass('is--loading');
-  }
-
+  // const body = $( 'body' );
+  // const loader = function() {
+  // 	// Let the loading animation run for 2 seconds
+  // 	setTimeout( function() {
+  // 		$( '.loading' ).addClass( 'loaded' );
+  // 		body.removeClass( 'is--loading' );
+  // 	}, 2000 );
+  // 	// Give enough time for the CSS transitions to take place
+  // 	setTimeout( function() {
+  // 		$( '.loading' ).css( 'display', 'none' );
+  // 	}, 6000 );
+  // };
+  // if ( body.hasClass( 'home' ) ) {
+  // 	body.addClass( 'is--loading' );
+  // }
   $('#hero-carousel').on('init', function () {
     // Build the Slider Captions
     $('.slick-slide .item', this).each(function () {
@@ -263,8 +260,7 @@ jQuery(function ($) {
       if (slideTitle || slideCaption) {
         $(this).append('<div class="slider-caption"><div class="slider-content"><h4>' + slideTitle + '.</h4><p>' + slideCaption + '</p><a href="/' + slideLink + '">Learn More</a></div></div>');
       }
-    });
-    loader();
+    }); // loader();
   });
 });
 "use strict";
@@ -397,28 +393,27 @@ jQuery(function ($) {
     startProgressbar();
   }
 });
+// jQuery( function( $ ) {
+// 	$( '.tilt' ).tilt({
+// 		glare: true,
+// 		maxGlare: .15,
+// 		scale: 1.05,
+// 		perspective: 100,
+// 		maxTilt: 5
+// 	});
+// 	$( '.wheel-tilt' ).tilt({
+// 		glare: true,
+// 		maxGlare: .5,
+// 		scale: 1.05,
+// 		perspective: 100,
+// 		maxTilt: 5
+// 	});
+// 	$( '.transparent-tilt' ).tilt({
+// 		glare: true,
+// 		maxGlare: .15,
+// 		scale: 1.05,
+// 		perspective: 100,
+// 		maxTilt: 5
+// 	});
+// });
 "use strict";
-
-jQuery(function ($) {
-  $('.tilt').tilt({
-    glare: true,
-    maxGlare: .15,
-    scale: 1.05,
-    perspective: 100,
-    maxTilt: 5
-  });
-  $('.wheel-tilt').tilt({
-    glare: true,
-    maxGlare: .5,
-    scale: 1.05,
-    perspective: 100,
-    maxTilt: 5
-  });
-  $('.transparent-tilt').tilt({
-    glare: true,
-    maxGlare: .15,
-    scale: 1.05,
-    perspective: 100,
-    maxTilt: 5
-  });
-});

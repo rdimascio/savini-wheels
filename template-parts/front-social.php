@@ -32,7 +32,7 @@
 		<h2 data-bottom-top="top: 0;" data-top-bottom="top: 0;" class="for__title lined_title title js-appearing-content"><span>Blog</span></h2>
 	</div>
 
-		<div class="social--content blog js-appearing-content" data-bottom-top="transform: translateZ(0) translateY(0%); opacity: 0;" data-top-bottom="transform: translateZ(0) translateY(-20%);" data--100-bottom="opacity:1;">
+		<div class="social--content blog js-appearing-content">
 			<?php if ( have_posts() ) : while( have_posts() ) : the_post(); ?>
 				<?php get_template_part( 'template-parts/front', 'blog-post' ); ?>
 			<?php endwhile; else :
