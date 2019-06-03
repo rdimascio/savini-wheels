@@ -365,7 +365,7 @@ body.archive .grid .wheel .entry-title{margin:0}
 body.archive .grid .wheel .entry-title a{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start;text-decoration:none}
 body.archive .grid .wheel .entry-title .char1,body.archive .grid .wheel .entry-title .char2{color:red;font-size:42px}
 body.archive .grid .wheel .entry-title .char3,body.archive .grid .wheel .entry-title .char4,body.archive .grid .wheel .entry-title .char5,body.archive .grid .wheel .entry-title .char6,body.archive .grid .wheel .entry-title .char7,body.archive .grid .wheel .entry-title .char8,body.archive .grid .wheel .entry-title .char9,body.archive .grid .wheel .entry-title .char10{color:#333;font-weight:100;margin-top:6px}
-body.archive .configurations.grid{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;padding:20px 5vw 0}
+body.archive .configurations.grid{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;padding:20px 5vw 2vw}
 body.archive .configurations.grid .configuration--item{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-flex:0;-ms-flex:0 1 25%;flex:0 1 25%;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;text-align:center;padding:10px;position:relative}
 body.archive .configurations.grid .configuration--item.active .configuration--item__title{background:red}
 body.archive .configurations.grid .configuration--item.active .configuration--item__link{color:#fff}
@@ -380,7 +380,7 @@ body.archive .info .info-column{-webkit-box-flex:0;-ms-flex:0 0 33%;flex:0 0 33%
 body.archive .info .info-column .info-inner-column{-webkit-box-flex:0;-ms-flex:0 0 50%;flex:0 0 50%}
 body.archive .info .info-column.image-column{-webkit-box-flex:1;-ms-flex:1 0 33%;flex:1 0 33%}
 body.archive .info img{border-radius:5px}
-body.archive .image-slider--item{height:100vh;background-size:cover;background-position:center;background-repeat:no-repeat}
+body.archive .image-slider--item{height:100vh;background-size:contain;background-position:center;background-repeat:no-repeat}
 body.archive .vehicles-slider .slick-list{padding:0 0 3vw}
 body.archive .vehicles-slider .slick-prev{left:25px;z-index:9}
 body.archive .vehicles-slider .slick-next{right:25px;z-index:9}

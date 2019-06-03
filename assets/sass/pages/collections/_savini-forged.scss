@@ -111,7 +111,7 @@ body.archive {
 	.configurations.grid {
 		display: flex;
 		flex-wrap: wrap;
-		padding: 20px 5vw 0;
+		padding: 20px 5vw 2vw;
 
 		.configuration--item {
 			display: flex;
@@ -210,7 +210,7 @@ body.archive {
 
 	.image-slider--item {
 		height: 100vh;
-		background-size: cover;
+		background-size: contain;
 		background-position: center;
 		background-repeat: no-repeat;
 	}
