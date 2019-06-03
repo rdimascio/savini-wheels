@@ -378,6 +378,7 @@ body.archive .configurations.grid .configuration--item .configuration--item__tit
 body.archive .info{padding:5vw 8vw}
 body.archive .info .info-column{-webkit-box-flex:0;-ms-flex:0 0 33%;flex:0 0 33%}
 body.archive .info .info-column .info-inner-column{-webkit-box-flex:0;-ms-flex:0 0 50%;flex:0 0 50%}
+body.archive .info .info-column .info-inner-column p{font-size:8px;word-spacing:5px;color:#ccc;text-transform:uppercase}
 body.archive .info .info-column.image-column{-webkit-box-flex:1;-ms-flex:1 0 33%;flex:1 0 33%}
 body.archive .info img{border-radius:5px}
 body.archive .image-slider--item{height:100vh;background-size:contain;background-position:center;background-repeat:no-repeat}

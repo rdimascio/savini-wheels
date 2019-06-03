@@ -13,7 +13,7 @@ $configurations = get_terms( array(
 	'meta_query' => array(
 		array(
 			 'key'       => 'wheel_collection',
-			 'value'     => 14,
+			 'value'     => 2,
 			 'compare'   => '='
 		)
 	)

@@ -196,6 +196,13 @@ body.archive {
 
 			.info-inner-column {
 				flex: 0 0 50%;
+
+				p {
+					font-size: 8px;
+					word-spacing: 5px;
+					color: #ccc;
+					text-transform: uppercase;
+				}
 			}
 
 			&.image-column {
