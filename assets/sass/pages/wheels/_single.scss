@@ -204,6 +204,22 @@ body.single-wheel {
 				}
 			}
 		}
+
+		.wheel-gallery {
+			display: flex;
+
+			.gallery-image {
+				flex: 0 1 20%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+
+				img {
+					width: 100px;
+					cursor: pointer;
+				}
+			}
+		}
 	}
 
 	.single-header {

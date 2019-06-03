@@ -137,11 +137,11 @@ $class = get_queried_object()->slug . '_grid';
 			</div>
 		<?php endif; wp_reset_postdata(); ?>
 
-		<div id="bmVideo">
+		<!-- <div id="bmVideo">
 			<a class="bm-video" href="https://www.youtube.com/watch?v=jGzD-r6dQeg" data-src="https://www.youtube.com/watch?v=jGzD-r6dQeg">
 				<div style="background-image: url(https://saviniwheels.dimascio.design/wp-content/uploads/2019/02/savini__latest-videos-sv-wheels.png)" class=""></div>
 			</a>
-		</div>
+		</div> -->
 
 		<header class="archive-header bm-forged-header text-center">
 			<img src="<?= get_field( 'collection_logo', 'wheel_collections_' . get_queried_object()->term_id ); ?>" />
@@ -186,6 +186,22 @@ $class = get_queried_object()->slug . '_grid';
 				get_template_part( 'template-parts/content', 'none' );
 
 			endif; wp_reset_postdata(); ?>
+		</div>
+
+		<div class="info row justify-start">
+				<div class="info-column row p-l-1 p-r-1">
+					<div class="info-inner-column">
+						<img src="https://saviniwheels.dimascio.design/wp-content/uploads/2019/02/steplip.png" alt="">
+						<p>The SL (Step Lip Concave) configuration utilizes a center disk that is 1" smaller in diameter to reduce weight, 
+							unsprung mass, and improve return on inertia. The configuration also features a unique concave spoke profile and a signature undercut for improved aerodynamics.</p>
+					</div>
+					<div class="info-inner-column">
+						<img src="https://saviniwheels.dimascio.design/wp-content/uploads/2019/02/savini__wheel_collections-half-wheel.png" alt="">
+					</div>
+				</div>
+				<div class="info-column image-column p-l-1 p-r-1">
+					<img src="https://saviniwheels.dimascio.design/wp-content/uploads/2019/06/Layer-71.png" alt="">
+				</div>
 		</div>
 
 		<?php

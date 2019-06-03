@@ -38,7 +38,7 @@ $class = get_queried_object()->slug . '_grid';
 					* If you want to override this in a child theme, then include a file
 					* called content-___.php (where ___ is the Post Type name) and that will be used instead.
 					*/
-					get_template_part( 'template-parts/content', 'sv-f-wheels' );
+					get_template_part( 'template-parts/content', 'wheel' );
 
 				endwhile;
 
@@ -101,7 +101,7 @@ $class = get_queried_object()->slug . '_grid';
 					<h2>Mono Form Technology</h2>
 					<p>Precision engineered</p>
 
-					<img src="https://saviniwheels.dimascio.design/wp-content/uploads/2019/02/savini__sv-f-info_image.png" alt="">
+					<!-- <img src="https://saviniwheels.dimascio.design/wp-content/uploads/2019/02/savini__sv-f-info_image.png" alt=""> -->
 				</div>
 				<div class="column"></div>
 			</div>

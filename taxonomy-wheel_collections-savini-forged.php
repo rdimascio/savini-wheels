@@ -12,73 +12,18 @@ get_header();
 $id = get_queried_object()->term_id;
 $class = get_queried_object()->slug . '_grid';
 
+$this_config = ( isset( $_GET['config'] ) ) ? get_term_by( 'slug', $_GET['config'], 'wheel_configurations' ) : get_term_by( 'slug', 'step-lip-concave', 'wheel_configurations' );
+$this_config_description = $this_config->description;
+
 ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 
-		<div class="configurations grid flex justify-center align-center">
-
-			<?php
-
-			$configurations = get_terms( array(
-				'taxonomy' => 'wheel_configurations',
-				'hide_empty' => false,
-				'meta_query' => array(
-					array(
-						'key'       => 'wheel_collection',
-						'value'     => get_queried_object()->term_id,
-						'compare'   => '='
-					)
-				)
-			));
-
-			foreach ( $configurations as $configuration ) :
-
-				$config_id = $configuration->term_id;
-				$object = $taxonomy . '_' . $config_id;
-				$title = $configuration->name;
-				$abbreviation = get_field( 'configuration_abbreviation', $object );
-				$image = get_field( 'configuration_image', $object );
-				$banner = get_field( 'configuration_banner', $object );
-
-			?>
-
-				<div class="configuration--item">
-					<a class="tooltip open-popup-link" href="#" data-no-instant>?</a>
-					<a class="configuration--item__link" href="<?= home_url() . '/wheel-collections/savini-forged?config=' . $configuration->slug ?>">
-						<img class="configuration--item__image" src="<?= $image ?>" />
-						<h4 class="configuration--item__title"><?= $abbreviation ?></h4>
-					</a>
-					<div class="configuration--item__banner" style="display:none;">
-						<a class="close" href="#" data-target="banner-close" data-no-instant>x Close</a>
-						<img src="<?= $banner ?>" alt="">
-					</div>
-				</div>
-
-			<?php endforeach; ?>
-		</div>
-
-		<?php if ( isset( $_GET['config'] ) ) : 
-		
-		$this_config = get_term_by( 'slug', $_GET['config'], 'wheel_configurations' );
-		$this_config_description = $this_config->description;
-		
-		?>
-
-		<header class="archive-header text-center">
-			<h2><?= single_term_title(); ?> | <span><?= $this_config->name ?></span></h2>
-			<p><?= $this_config_description ?></p>
-		</header>
-
-		<?php else : ?>
-
 		<header class="archive-header text-center">
 			<h2><?= single_term_title(); ?></h2>
-			<p><?= get_field( 'collection_description', 'wheel_collections_' . $id ); ?></p>
+			<p><?= get_queried_object()->description; ?></p>
 		</header>
-
-		<?php endif; ?>
 
 		<div class="<?= $class ?> grid flex justify-center align-center">
 
@@ -154,34 +99,57 @@ $class = get_queried_object()->slug . '_grid';
 
 		</div>
 
-		<!-- <div class="info row justify-between">
-				<div class="info-column row p-l-1 p-r-1">
-					<div class="info-inner-column">
-						<img src="https://saviniwheels.dimascio.design/wp-content/uploads/2019/02/steplip.png" alt="">
-						<p>The SL (Step Lip Concave) configuration utilizes a center disk that is 1" smaller in diameter to reduce weight, 
-							unsprung mass, and improve return on inertia. The configuration also features a unique concave spoke profile and a signature undercut for improved aerodynamics.</p>
-					</div>
-					<div class="info-inner-column">
-						<img src="https://saviniwheels.dimascio.design/wp-content/uploads/2019/02/savini__wheel_collections-half-wheel.png" alt="">
-					</div>
+		<header class="archive-header text-center">
+			<h2><?= single_term_title(); ?> | <span>Configurations</h2>
+			<p><?= $this_config_description ?></p>
+		</header>
+
+		<div class="configurations grid flex justify-center align-center">
+			<?php
+			$configurations = get_terms( array(
+				'taxonomy' => 'wheel_configurations',
+				'hide_empty' => false,
+				'meta_query' => array(
+					array(
+						'key'       => 'wheel_collection',
+						'value'     => get_queried_object()->term_id,
+						'compare'   => '='
+					)
+				)
+			));
+
+			foreach ( $configurations as $configuration ) :
+				$config_id = $configuration->term_id;
+				$object = $taxonomy . '_' . $config_id;
+				$title = $configuration->name;
+				$image = get_field( 'configuration_image', $object );
+			?>
+
+				<div class="configuration--item<?= ( $this_config->term_id == $config_id ) ? ' active' : null ?>">
+					<a class="configuration--item__link" href="<?= home_url() . '/wheel-collections/savini-forged?config=' . $configuration->slug ?>">
+						<img class="configuration--item__image" src="<?= $image ?>" />
+						<h4 class="configuration--item__title"><?= $title ?></h4>
+					</a>
 				</div>
-				<div class="info-column p-l-1 p-r-1">
-					<img src="https://saviniwheels.dimascio.design/wp-content/uploads/2019/02/savini__wheel_collections-wheel-1.png" alt="">
-				</div>
-				<div class="info-column p-l-1 p-r-1">
-					<img src="https://saviniwheels.dimascio.design/wp-content/uploads/2019/02/savini__wheel_collections-wheel-2.png" alt="">
-				</div>
+
+			<?php endforeach; ?>
 		</div>
 
 		<div class="image-slider">
-			<div class="image-slider--item" style="background-image:url(https://saviniwheels.dimascio.design/wp-content/uploads/2019/02/savini__wheel_collections-wheel-image.png)"></div>
-			<div class="image-slider--item" style="background-image:url(https://saviniwheels.dimascio.design/wp-content/uploads/2019/02/savini__wheel_collections-wheel-image.png)"></div>
-			<div class="image-slider--item" style="background-image:url(https://saviniwheels.dimascio.design/wp-content/uploads/2019/02/savini__wheel_collections-wheel-image.png)"></div>
-			<div class="image-slider--item" style="background-image:url(https://saviniwheels.dimascio.design/wp-content/uploads/2019/02/savini__wheel_collections-wheel-image.png)"></div>
-		</div> -->
+			<div class="image-slider--item" style="background-image:url(<?= get_field( 'configuration_banner', $this_config ); ?>)"></div>
+
+			<?php foreach ( $configurations as $configuration ) : 
+				$config_id = $configuration->term_id;
+				$object = 'wheel_configurations_' . $config_id;
+				$banner = get_field( 'configuration_banner', $object );
+
+				if ( $this_config->term_id != $config_id ) : ?>
+					<div class="image-slider--item" style="background-image:url(<?= $banner; ?>)"></div>
+				<?php endif;
+			endforeach; ?>
+		</div>
 
 		<?php
-
 		$forged_vehicle_args = array(
 			'post_type' => 'vehicle',
 			'post_status' => 'publish',

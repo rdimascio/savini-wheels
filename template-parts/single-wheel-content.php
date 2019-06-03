@@ -37,7 +37,7 @@ $content = ( ( get_the_content() > '' ) ? get_the_content() : ( ( $is_this_forge
 
 	<div class="wheel-wrapper">
 		<div class="wheel-content flex justify-center align-start">
-			<section class="image flex align-center justify-center">
+			<section class="image main-image flex align-center justify-center">
 				<?php the_post_thumbnail( 'full' ); ?>
 			</section>
 
@@ -86,6 +86,18 @@ $content = ( ( get_the_content() > '' ) ? get_the_content() : ( ( $is_this_forge
 						<?= $construction; ?>
 					</p>
 				</div>
+
+				<?php $images = get_field( 'wheel_gallery' ); 
+	
+				if( $images ): ?>
+					<div class="wheel-gallery">
+							<?php foreach( $images as $image ): ?>
+									<div class="gallery-image">
+											<img src="<?= $image['sizes']['large']; ?>" alt="<?php echo $image['alt']; ?>" />
+									</div>
+							<?php endforeach; ?>
+					</div>
+				<?php endif; ?>
 
 <?php if ( $is_this_forged ) : 
 				

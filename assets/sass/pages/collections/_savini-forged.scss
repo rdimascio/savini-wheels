@@ -56,19 +56,19 @@ body.archive {
 			position: relative;
 
 			@media (max-width: 1240px) {
-				flex: 1 1 25%;
+				flex: 0 1 25%;
 			}
 
 			@media (max-width: 1024px) {
-				flex: 1 1 33%;
+				flex: 0 1 33%;
 			}
 
 			@media (max-width: 830px) {
-				flex: 1 1 50%;
+				flex: 0 1 50%;
 			}
 
 			@media (max-width: 500px) {
-				flex: 1 1 100%;
+				flex: 0 1 100%;
 			}
 
 			.config-logo {
@@ -111,11 +111,11 @@ body.archive {
 	.configurations.grid {
 		display: flex;
 		flex-wrap: wrap;
-		padding: 20px 0 0;
+		padding: 20px 5vw 0;
 
 		.configuration--item {
 			display: flex;
-			flex: 0 1 100px;
+			flex: 0 1 25%;
 			flex-direction: column;
 			justify-content: center;
 			align-items: center;
@@ -123,9 +123,19 @@ body.archive {
 			padding: 10px;
 			position: relative;
 
+			&.active {
+				.configuration--item__title {
+					background: red;
+				}
+
+				.configuration--item__link {
+					color: #fff;
+				}
+			}
+
 			&__link {
 				text-decoration: none;
-				color: #777;
+				color: #333;
 			}
 
 			.tooltip {
@@ -167,15 +177,13 @@ body.archive {
 				}
 			}
 
-			img { 
-				width: 80px;
-			}
-
 			.configuration--item__title {
 				text-transform: uppercase;
 				letter-spacing: 2px;
 				font-weight: 100;
-				font-size: 10px;
+				font-size: 12px;
+				display: inline-block;
+				padding: 2px 6px;
 			}
 		}
 	}
@@ -188,6 +196,10 @@ body.archive {
 
 			.info-inner-column {
 				flex: 0 0 50%;
+			}
+
+			&.image-column {
+				flex: 1 0 33%;
 			}
 		}
 
