@@ -19,6 +19,8 @@ jQuery( function( $ ) {
 			success: function( data ) {
 				if ( data ) {
 
+					button.text( 'Load More' );
+
 					if ( 'blog_load_more' === action ) {
 						$( '#main' ).find( '.article-wrapper:last-of-type' ).after( data );
 					} else {
