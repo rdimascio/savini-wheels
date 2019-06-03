@@ -1,0 +1,120 @@
+#gallery {
+	text-align: center;
+	padding: 4em 2em;
+
+	h2 {
+		color: #333;
+
+		&:before, &:after {
+			background-color: #333;
+		}
+	}
+
+	.gallery-wrapper {
+		flex: 0 1 33.333%;
+		padding: 10px 5px;
+
+		&:hover {
+
+			.gallery-item {
+				filter: none;
+			}
+
+			.content {
+				background: red;
+				color: #fff;
+			}
+		}
+
+		@media (max-width: 1240px) {
+			flex: 0 1 50%;
+		}
+
+		@media (max-width: 780px) {
+			flex: 0 1 100%;
+		}
+	}
+
+	.grid {
+		display: flex;
+		flex-wrap: wrap;
+		padding: 2em 0;
+
+		@media (max-width: 948px) {
+			margin: 35px 0 0;
+		}
+	}
+
+	.gallery-item {
+		height: 350px;
+		background-position: center;
+		background-size: cover;
+		position: relative;
+
+		.overlay {
+			display: none;
+			background: rgba( 0, 0, 0, 0.65 );
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+
+			justify-content: center;
+			align-content: center;
+			flex-direction: column;
+			text-align: center;
+		}
+
+		.link {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	.content {
+		text-transform: uppercase;
+		padding: 12px 0;
+
+		h4 {
+			margin: 0;
+			font-weight: 700;
+			line-height: 22px;
+		}
+	}
+
+	.see-more-wrapper {
+		margin: 3rem 0;
+    padding: 0 5vw;
+	}
+
+	.see-more {
+		margin: auto;
+		max-width: 220px;
+		height: 45px;
+		background-color: #ff0000;
+		color: #fff;
+		border-radius: 2px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		font-size: 14px;
+		font-size: 0.875rem;
+		font-weight: 400;
+		letter-spacing: 1px;
+		cursor: pointer;
+		text-transform: uppercase;
+		text-decoration: none;
+		padding: 10px 0;
+		transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, color 0.3s ease-in-out;  
+
+		&:hover {
+			background-color: #ff0000;
+			color: #fff;
+		}
+	}
+}

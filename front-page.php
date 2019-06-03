@@ -29,8 +29,8 @@ get_header();
         <?php get_template_part( 'template-parts/front', 'configurations' ); ?>
     </section>
 
-    <section id="images" class="w-100 img-bg">
-        <?php get_template_part( 'template-parts/front', 'images' ); ?>
+    <section id="gallery" class="w-100 bg-white">
+        <?php get_template_part( 'template-parts/front', 'gallery' ); ?>
     </section>
 
     <section id="videos" class="w-100 bg-white">
