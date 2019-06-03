@@ -38,7 +38,7 @@ $content = ( ( get_the_content() > '' ) ? get_the_content() : ( ( $is_this_forge
 	<div class="wheel-wrapper">
 		<div class="wheel-content flex justify-center align-start">
 			<section class="image main-image flex align-center justify-center">
-				<?php the_post_thumbnail( 'full' ); ?>
+				<img src="<?php the_post_thumbnail_url(); ?>" />
 			</section>
 
 			<section class="info flex column align-center justify-between p-r-5">
