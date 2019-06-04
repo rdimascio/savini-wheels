@@ -1,6 +1,6 @@
 <div class="mission--wrapper">
 	<div class="mission--logo text-center">
-		<h2 style="background-image: url(https://saviniwheels.dimascio.design/wp-content/uploads/2019/02/savini__white-logo.png)" class="for__title lined_title title js-appearing-content"></h2>
+		<h2 style="background-image: url(<?= home_url(); ?>/wp-content/uploads/2019/06/savini__white-logo.png)" class="for__title lined_title title js-appearing-content"></h2>
 	</div>
 
 	<div class="mission--content">

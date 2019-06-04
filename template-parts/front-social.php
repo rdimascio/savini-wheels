@@ -9,16 +9,16 @@
 		<div class="social--content social-feed">
 			<div class="social--content__gallery">
 				<div class="social--content__gallery-item js-appearing-content">
-					<img src="https://saviniwheels.dimascio.design/wp-content/uploads/2019/02/savini__social-feed-huracan.png" alt="">
+					<img src="<?= home_url(); ?>/wp-content/uploads/2019/06/savini__social-feed-huracan.png" alt="">
 				</div>
 				<div class="social--content__gallery-item js-appearing-content">
-					<img src="https://saviniwheels.dimascio.design/wp-content/uploads/2019/02/savini__social-feed-karma.png" alt="">
+					<img src="<?= home_url(); ?>/wp-content/uploads/2019/06/savini__social-feed-karma.png" alt="">
 				</div>
 				<div class="social--content__gallery-item js-appearing-content">
-					<img src="https://saviniwheels.dimascio.design/wp-content/uploads/2019/02/savini__social-feed-ferrari.png" alt="">
+					<img src="<?= home_url(); ?>/wp-content/uploads/2019/06/savini__social-feed-ferrari.png" alt="">
 				</div>
 				<div class="social--content__gallery-item js-appearing-content">
-					<img src="https://saviniwheels.dimascio.design/wp-content/uploads/2019/02/savini__social-feed-aventador.png" alt="">
+					<img src="<?= home_url(); ?>/wp-content/uploads/2019/06/savini__social-feed-aventador.png" alt="">
 				</div>
 			</div>
 		</div>
