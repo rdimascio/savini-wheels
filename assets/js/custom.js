@@ -321,6 +321,19 @@ jQuery(function ($) {
 "use strict";
 
 jQuery(function ($) {
+  function changeTheMainImage(event) {
+    event.preventDefault();
+    var mainImage = $('.main-image img').attr('src'),
+        altImage = $(this).find('img').attr('src');
+    $('.main-image img').attr('src', altImage);
+    $(this).find('img').attr('src', mainImage);
+  }
+
+  $('body.single').on('click', '.gallery-image', changeTheMainImage);
+});
+"use strict";
+
+jQuery(function ($) {
   var time = 2;
   var $bar,
       slick = $('.carousel-inner'),
@@ -416,16 +429,3 @@ jQuery(function ($) {
 // 	});
 // });
 "use strict";
-"use strict";
-
-jQuery(function ($) {
-  function changeTheMainImage(event) {
-    event.preventDefault();
-    var mainImage = $('.main-image img').attr('src'),
-        altImage = $(this).find('img').attr('src');
-    $('.main-image img').attr('src', altImage);
-    $(this).find('img').attr('src', mainImage);
-  }
-
-  $('body.single').on('click', '.gallery-image', changeTheMainImage);
-});
