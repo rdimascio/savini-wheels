@@ -11,7 +11,7 @@
 			$video_count = 1;
 			foreach ( $videos as $video ) :
 
-			$video_image = $video['field_5d087f7ae7049'];
+			$video_image = $video['field_5d088aca7882b'];
 			$video_image = wp_get_attachment_image_src( $video_image, 'full' );
 
 			switch ( $video_count ) :
@@ -44,7 +44,7 @@
 			endswitch;
 			?>
 
-			<a class="video" href="<?= $video['field_5d087a69b63c0'] ?>" data-src="<?= $video['field_5d087a69b63c0'] ?>"><div style="background-image: url(<?= $video_image[0]; ?>)" data-bottom-top="transform: translateZ(0) translateY(<?= $bottom_top_translate; ?>%); opacity: 0;" data-top-bottom="transform: translateZ(0) translateY(<?= $top_bottom_translate; ?>%);" data--100-bottom="opacity:1;" class="for__item for__item--<?= $video_count; ?> greyscale js-appearing-content"></div></a>
+			<a class="video" href="<?= $video['field_5d08709b7882a'] ?>" data-src="<?= $video['field_5d08709b7882a'] ?>"><div style="background-image: url(<?= $video_image[0]; ?>)" data-bottom-top="transform: translateZ(0) translateY(<?= $bottom_top_translate; ?>%); opacity: 0;" data-top-bottom="transform: translateZ(0) translateY(<?= $top_bottom_translate; ?>%);" data--100-bottom="opacity:1;" class="for__item for__item--<?= $video_count; ?> greyscale js-appearing-content"></div></a>
 
 		<?php
 			$video_count++;
