@@ -346,6 +346,7 @@ body.home .site-header .tuv.dark{display:none}
 #mission .mission--content p{font-weight:100;font-size:12px;line-height:24px;letter-spacing:1px;word-spacing:3px}
 #mission .lined_title:before,#mission .lined_title:after{width:5.7em}
 body.archive.tax-wheel_collections .vehicles-slider__wrapper{text-align:center}
+body.archive.tax-wheel_collections #see-more{margin:3rem 0 1rem;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
 body.archive.tax-wheel_collections .see-more{color:#fff;position:relative;text-decoration:none;text-transform:uppercase;font-size:12px;font-weight:100;padding:.5rem 2rem;background:red;border:2px solid red;border-radius:2px;-webkit-transition:background .5s,color .5s;transition:background .5s,color .5s}
 body.archive{margin-top:85px}
 body.archive .custom-logo{-webkit-filter:brightness(0) invert(1);filter:brightness(0) invert(1)}

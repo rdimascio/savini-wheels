@@ -1,14 +1,54 @@
+<?php $videos = get_field( 'homepage_videos', 'option', false ); 
+
+// var_export( $videos[0]['field_5d087a69b63c0'] );
+?>
+
 <section class="for">
 	<h2 data-bottom-top="top: 0;" data-top-bottom="top: 0;" class="for__title lined_title title js-appearing-content">Latest <span>Videos</span></h2>
 	<div class="for__container" id="videoGallery">
-		<a class="video" href="https://www.youtube.com/watch?v=HEoeBIL8I6I" data-src="https://www.youtube.com/watch?v=jGzD-r6dQeg"><div style="background-image: url(<?= home_url(); ?>/wp-content/uploads/2019/06/savini__latest-videos-karma.png)" data-bottom-top="transform: translateZ(0) translateY(0%); opacity: 0;" data-top-bottom="transform: translateZ(0) translateY(-35%);" data--100-bottom="opacity:1;" class="for__item for__item--1 greyscale js-appearing-content"></div></a>
-		<a class="video" href="https://www.youtube.com/watch?v=jGzD-r6dQeg" data-src="https://www.youtube.com/watch?v=jGzD-r6dQeg"><div style="background-image: url(<?= home_url(); ?>/wp-content/uploads/2019/06/savini__latest-videos-gtr.png)" data-bottom-top="transform: translateZ(0) translateY(-30%); opacity: 0;" data-top-bottom="transform: translateZ(0) translateY(-0%);" data--100-bottom="opacity:1;" class="for__item for__item--2 greyscale js-appearing-content"></div></a>
-		<a class="video" href="https://www.youtube.com/watch?v=jGzD-r6dQeg" data-src="https://www.youtube.com/watch?v=jGzD-r6dQeg"><div style="background-image: url(<?= home_url(); ?>/wp-content/uploads/2019/06/savini__latest-videos-lambo.png)" data-bottom-top="transform: translateZ(0) translateY(0%); opacity: 0;" data-top-bottom="transform: translateZ(0) translateY(-35%);" data--100-bottom="opacity:1;" class="for__item for__item--3 greyscale js-appearing-content"></div></a>
-		<a class="video" href="https://www.youtube.com/watch?v=jGzD-r6dQeg" data-src="https://www.youtube.com/watch?v=jGzD-r6dQeg"><div style="background-image: url(<?= home_url(); ?>/wp-content/uploads/2019/06/savini__latest-videos-ferrari.png)" data-bottom-top="transform: translateZ(0) translateY(5%); opacity: 0;" data-top-bottom="transform: translateZ(0) translateY(-35%);" data--100-bottom="opacity:1;" class="for__item for__item--4 greyscale js-appearing-content"></div></a>
-		<a class="video" href="https://www.youtube.com/watch?v=jGzD-r6dQeg" data-src="https://www.youtube.com/watch?v=jGzD-r6dQeg"><div style="background-image: url(<?= home_url(); ?>/wp-content/uploads/2019/06/savini__latest-videos-nsx.png)" data-bottom-top="transform: translateZ(0) translateY(-25%); opacity: 0;" data-top-bottom="transform: translateZ(0) translateY(5%);" data--100-bottom="opacity:1;" class="for__item for__item--5 greyscale js-appearing-content"></div></a>
-		<a class="video" href="https://www.youtube.com/watch?v=jGzD-r6dQeg" data-src="https://www.youtube.com/watch?v=jGzD-r6dQeg"><div style="background-image: url(<?= home_url(); ?>/wp-content/uploads/2019/06/savini__latest-videos-sv-wheels.png)" data-bottom-top="transform: translateZ(0) translateY(5%); opacity: 0;" data-top-bottom="transform: translateZ(0) translateY(-35%);" data--100-bottom="opacity:1;" class="for__item for__item--6 greyscale js-appearing-content"></div></a>
-		<a class="video" href="https://www.youtube.com/watch?v=jGzD-r6dQeg" data-src="https://www.youtube.com/watch?v=jGzD-r6dQeg"><div style="background-image: url(<?= home_url(); ?>/wp-content/uploads/2019/06/savini__latest-videos-sv-wheels.png)" data-bottom-top="transform: translateZ(0) translateY(10%); opacity: 0;" data-top-bottom="transform: translateZ(0) translateY(-35%);" data--100-bottom="opacity:1;" class="for__item for__item--7 greyscale js-appearing-content"></div></a>
-		<a class="video" href="https://www.youtube.com/watch?v=jGzD-r6dQeg" data-src="https://www.youtube.com/watch?v=jGzD-r6dQeg"><div style="background-image: url(<?= home_url(); ?>/wp-content/uploads/2019/06/savini__latest-videos-sv-wheels.png)" data-bottom-top="transform: translateZ(0) translateY(-20%); opacity: 0;" data-top-bottom="transform: translateZ(0) translateY(10%);" data--100-bottom="opacity:1;" class="for__item for__item--8 greyscale js-appearing-content"></div></a>
+
+		<?php 
+			$video_count = 1;
+			foreach ( $videos as $video ) :
+
+			$video_image = $video['field_5d087f7ae7049'];
+			$video_image = wp_get_attachment_image_src( $video_image, 'full' );
+
+			switch ( $video_count ) :
+				case 1:
+				case 3:
+					$bottom_top_translate = '0';
+					$top_bottom_translate = '-35';
+					break;
+				case 2:
+					$bottom_top_translate = '-30';
+					$top_bottom_translate = '-0';
+					break;
+				case 4:
+				case 6:
+					$bottom_top_translate = '5';
+					$top_bottom_translate = '-35';
+					break;
+				case 5:
+					$bottom_top_translate = '-25';
+					$top_bottom_translate = '5';
+					break;
+				case 7:
+					$bottom_top_translate = '10';
+					$top_bottom_translate = '-35';
+					break;
+				case 8:
+					$bottom_top_translate = '-20';
+					$top_bottom_translate = '10';
+					break;
+			endswitch;
+			?>
+
+			<a class="video" href="<?= $video['field_5d087a69b63c0'] ?>" data-src="<?= $video['field_5d087a69b63c0'] ?>"><div style="background-image: url(<?= $video_image[0]; ?>)" data-bottom-top="transform: translateZ(0) translateY(<?= $bottom_top_translate; ?>%); opacity: 0;" data-top-bottom="transform: translateZ(0) translateY(<?= $top_bottom_translate; ?>%);" data--100-bottom="opacity:1;" class="for__item for__item--<?= $video_count; ?> greyscale js-appearing-content"></div></a>
+
+		<?php
+			$video_count++;
+			endforeach; ?>
 		<div class="for__item for__item--9"></div>
 		<div class="for__overlay"></div>
 	</div>

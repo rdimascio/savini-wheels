@@ -887,7 +887,6 @@ add_action( 'pre_get_posts', 'vehicle_gallery_filters' );
 
 
 function finish_gallery_filters($query) {
-
 	if ( is_admin() || ! $query->is_main_query() || ! is_post_type_archive( 'finish' ) ){
 		return;
 	}
@@ -943,8 +942,51 @@ function finish_gallery_filters($query) {
 add_action( 'pre_get_posts', 'finish_gallery_filters' );
 
 
+function wheel_gallery_filters($query) {
+	if ( is_admin() || ! $query->is_main_query() || ! is_post_type_archive( 'wheel' ) ){
+		return;
+	}
+
+	$meta_query = array();
+	$tax_query = array();
+
+	$collection = get_query_var( 'collection' );
+
+	if( !empty( $collection ) ){
+		$tax_query[] = array(
+			'taxonomy' => 'wheel_collections',
+			'terms' => $collection,
+			'field' => 'slug',
+			'operator' => 'IN'
+		);
+	}
+
+	$configutation = get_query_var( 'config' );
+
+	if( !empty( $configutation ) ){
+		$tax_query[] = array(
+			'taxonomy' => 'wheel_configurations',
+			'terms' => $configutation,
+			'field' => 'slug',
+			'operator' => 'IN'
+		);
+	}
+
+	if ( count( $tax_query ) > 1 ) {
+		$tax_query['relation'] = 'AND';
+		$query->set( 'tax_query', $tax_query );
+	}
+
+	if ( count( $tax_query ) > 0 ) {
+		$query->set( 'tax_query', $tax_query );
+	}
+
+	$query->set( 'posts_per_page', -1 );
+}
+add_action( 'pre_get_posts', 'wheel_gallery_filters' );
+
+
 function load_more_scripts() {
- 
 	global $wp_query; 
  
 	wp_register_script( 'loadmore', get_stylesheet_directory_uri() . '/assets/js/loadmore.js', array('jquery') );
@@ -963,7 +1005,6 @@ add_action( 'wp_enqueue_scripts', 'load_more_scripts' );
 
 
 function loadmore_vehicle_ajax_handler() {
- 
 	// prepare our arguments for the query
 	$args = json_decode( stripslashes( $_POST['query'] ), true );
 	$args['paged'] = $_POST['page'] + 1; // we need next page to be loaded
@@ -990,7 +1031,6 @@ add_action('wp_ajax_nopriv_vehicle_load_more', 'loadmore_vehicle_ajax_handler');
 
 
 function loadmore_finish_ajax_handler() {
- 
 	// prepare our arguments for the query
 	$args = json_decode( stripslashes( $_POST['query'] ), true );
 	$args['paged'] = $_POST['page'] + 1; // we need next page to be loaded
@@ -1017,7 +1057,6 @@ add_action('wp_ajax_nopriv_finish_load_more', 'loadmore_finish_ajax_handler');
 
 
 function loadmore_blog_ajax_handler() {
-
 	$args = json_decode( stripslashes( $_POST['query'] ), true );
 	$args['paged'] = $_POST['page'] + 1;
 	$args['post_status'] = 'publish';

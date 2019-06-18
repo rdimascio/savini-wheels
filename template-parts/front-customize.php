@@ -7,13 +7,13 @@
 
 	<div class="customize--content__row row justify-between align-center">
 
-		<div class="customize--content__column column__wheel align-center">
+		<div class="customize--content__column column__wheel align-center text-left">
 			<img src="<?= home_url(); ?>/wp-content/uploads/2019/06/byow.png" alt="">
 			<h1 class="customize--content__column-title text-right"><span>Build</span> Your Wheel</h1>
 		</div>
 
 
-		<div class="customize--content__column column__car align-center">
+		<div class="customize--content__column column__car align-center text-right">
 			<img src="<?= home_url(); ?>/wp-content/uploads/2019/06/byoc.png" alt="">
 			<h1 class="customize--content__column-title text-left"><span>Build</span> Your Car</h1>
 		</div>

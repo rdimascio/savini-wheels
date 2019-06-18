@@ -89,14 +89,18 @@ $this_config_description = $this_config->description;
 					*/
 					get_template_part( 'template-parts/content', get_post_type() );
 
-				endwhile;
+				endwhile; ?>
 
-			else :
+			<?php else :
 
 				get_template_part( 'template-parts/content', 'none' );
 
 			endif; wp_reset_postdata(); ?>
 
+		</div>
+
+		<div id="see-more">
+			<a class="see-more" href="/wheels?collection=<?= get_queried_object()->slug; ?>">View All</a>
 		</div>
 
 		<header class="archive-header text-center">

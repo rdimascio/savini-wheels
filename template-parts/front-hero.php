@@ -1,6 +1,9 @@
 <div class="carousel-wrapper" id="hero-carousel">
 		<div class="carousel-inner">
-				<div class="item" style="background-image: url(<?= home_url(); ?>/wp-content/uploads/2019/06/r8.jpg)" data-title="Catch me if you can" data-caption="ButlerTire Audi R8" data-link="audi-r8"></div>
-				<div class="item" style="background-image: url(<?= home_url(); ?>/wp-content/uploads/2019/06/lambo.jpg)" data-title="Catch me if you can" data-caption="ButlerTire Audi R8" data-link="audi-r8"></div>
+				<?php while ( has_sub_field( 'homepage_slider', 'option' ) ) : ?>
+				
+					<div class="item" style="background-image: url(<?= the_sub_field( 'homepage_slider_background' ); ?>)" data-title="<?= the_sub_field( 'homepage_slider_title' ); ?>" data-caption="<?= the_sub_field( 'homepage_slider_caption' ); ?>" data-link="<?= get_permalink( the_sub_field( 'homepage_slider_link' ) ); ?>"></div>
+
+				<?php endwhile; ?>
 		</div>
 </div>
