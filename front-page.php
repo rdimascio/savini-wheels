@@ -21,15 +21,15 @@ get_header();
         <?php get_template_part( 'template-parts/front', 'hero' ); ?>
     </section>
 
-    <section id="collections" class="w-100 bg-white text-center">
+    <section id="collections" class="w-100 text-center" style="background: <?= get_field( 'homepage_wheel_collections_background_color', 'option' ); ?>">
         <?php get_template_part( 'template-parts/front', 'collections' ); ?>
     </section>
 
-    <section id="configurations" class="w-100 bg-gradient">
+    <section id="configurations" class="w-100 bg-gradient" style="background: linear-gradient(to left top, <?= get_field( 'homepage_configurations_background_color_1', 'option' ); ?> 0, <?= ( $color_2 = get_field( 'homepage_configurations_background_color_2', 'option' ) ) ? $color_2 : $color_1; ?> 50%, <?= get_field( 'homepage_configurations_background_color_1', 'option' ); ?> 100%)">
         <?php get_template_part( 'template-parts/front', 'configurations' ); ?>
     </section>
 
-    <section id="gallery" class="w-100 bg-white">
+    <section id="gallery" class="w-100" style="background: <?= get_field( 'homepage_vehicle_galley_background_color', 'option' ); ?>">
         <?php get_template_part( 'template-parts/front', 'gallery' ); ?>
     </section>
 
@@ -37,15 +37,15 @@ get_header();
         <?php get_template_part( 'template-parts/front', 'videos' ); ?>
     </section>
 
-    <section id="social" class="w-100 img-bg">
+    <section id="social" class="w-100" style="background-image: url(<?= get_field( 'homepage_social_background', 'option' ); ?>)">
         <?php get_template_part( 'template-parts/front', 'social' ); ?>
     </section>
 
-    <section id="customize" class="w-100 bg-white">
+    <section id="customize" class="w-100">
         <?php get_template_part( 'template-parts/front', 'customize' ); ?>
     </section>
 
-    <section id="mission" class="w-100 img-bg">
+    <section id="mission" class="w-100" style="background-image: url(<?= get_field( 'homepage_mission_section_background', 'option' ); ?>)">
         <?php get_template_part( 'template-parts/front', 'mission' ); ?>
     </section>
 

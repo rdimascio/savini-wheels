@@ -229,7 +229,6 @@ body.home .site-header .tuv.dark{display:none}
 .collection-container .collection-item .collection-content .collection-link:hover .collection-title{background:red;color:#fff;-webkit-transition:background 1s;transition:background 1s}
 .collection-container .collection-item .collection-content .collection-title{font-size:16px;padding-top:2px;border-bottom:2px solid red;-webkit-transition:background .3s;transition:background .3s}
 .collection-container .collection-item .collection-content .collection-description{text-align:left;font-size:10px;line-height:16px;width:calc(100% + 8px)}
-#configurations{background:-webkit-gradient(linear,right bottom,left top,from(#4a4a4a),color-stop(50%,#e0e0e0),to(#4a4a4a)),-webkit-gradient(linear,left top,left bottom,from(black),to(black));background:linear-gradient(to left top,#4a4a4a 0,#e0e0e0 50%,#4a4a4a 100%),linear-gradient(black,black)}
 #configurations .configurations--content .lined_title:before,#configurations .configurations--content .lined_title:after{height:2px;width:100%;max-width:250px}
 #configurations .configurations--content p{text-transform:uppercase;padding:0 11vw;color:#fff;font-size:12px}
 #configurations .configurations--gallery{padding:2.3vw 5px 8.9vw 5px}
@@ -299,7 +298,7 @@ body.home .site-header .tuv.dark{display:none}
 .for__img{position:absolute;left:0;right:0;top:50%;-webkit-transform:translateY(-50%);transform:translateY(-50%);margin:auto;width:85%;background-color:#1a1a1e}
 .for__img::before{content:"";display:block;padding-bottom:64.5%}
 .greyscale{-moz-filter:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0'/></filter></svg>#grayscale");-o-filter:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0'/></filter></svg>#grayscale");-webkit-filter:grayscale(100%);filter:gray;filter:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0'/></filter></svg>#grayscale")}
-#social{position:relative;background-color:#e0e0e0;background-image:url(https://saviniwheels.dimascio.design/wp-content/uploads/2019/02/savini__social-bg-og.jpg);background-position:center;background-repeat:no-repeat;background-size:cover;background-attachment:fixed}
+#social{position:relative;background-color:#e0e0e0;background-position:center;background-repeat:no-repeat;background-size:cover;background-attachment:fixed}
 #social::before{content:'';position:absolute;height:100%;width:100%;background:-webkit-gradient(linear,left top,right top,from(rgba(255,255,255,0.6)),color-stop(30%,#e0e0e0),color-stop(70%,#e0e0e0),to(rgba(255,255,255,0.6)));background:linear-gradient(to right,rgba(255,255,255,0.6) 0,#e0e0e0 30%,#e0e0e0 70%,rgba(255,255,255,0.6) 100%)}
 #social .social--wrapper{padding:3rem;margin:2rem 0}
 #social .social--wrapper .social--column{-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;position:relative}
@@ -333,7 +332,7 @@ body.home .site-header .tuv.dark{display:none}
 #customize .customize--content__column.column__car h1{text-align:left;margin-left:auto;right:0}
 #customize .customize--content__column.column__wheel{padding-right:1rem}
 #customize .customize--content__column.column__wheel h1{text-align:right;margin-right:auto;left:0}
-#mission{background-image:url(https://saviniwheels.dimascio.design/wp-content/uploads/2019/02/savini__mission-bg-x2.png);background-position:center;background-repeat:no-repeat;background-size:cover;background-attachment:fixed;position:relative}
+#mission{background-position:center;background-repeat:no-repeat;background-size:cover;background-attachment:fixed;position:relative}
 #mission::before{content:'';position:absolute;height:100%;width:100%;background:rgba(25,25,25,0.9)}
 #mission .mission--wrapper{padding:6rem 8rem}
 #mission .mission--logo{position:relative}

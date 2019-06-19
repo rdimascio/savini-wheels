@@ -1,10 +1,9 @@
-<?php $videos = get_field( 'homepage_videos', 'option', false ); 
+<?php $videos = get_field( 'homepage_videos', 'option', false ); ?>
 
-// var_export( $videos[0]['field_5d087a69b63c0'] );
-?>
+<section class="for" style="background-color: <?= get_field( 'homepage_video_section_background-color', 'option' ); ?>">
+	<h2 data-bottom-top="top: 0;" data-top-bottom="top: 0;" class="for__title lined_title title js-appearing-content"><span><?= get_field( 'homepage_video_section_title', 'option' ); ?></span></h2>
+	<p><?= get_field( 'homepage_video_section_caption', 'option' ); ?></p>
 
-<section class="for">
-	<h2 data-bottom-top="top: 0;" data-top-bottom="top: 0;" class="for__title lined_title title js-appearing-content">Latest <span>Videos</span></h2>
 	<div class="for__container" id="videoGallery">
 
 		<?php 
@@ -54,6 +53,6 @@
 	</div>
 
 	<div class="video-gallery--view_more text-center m-t-3 m-b-3">
-		<a href="https://youtube.com/user/SaviniWheels" id="launchVideoGallery">More Videos</a>
+		<a href="https://youtube.com/user/SaviniWheels" id="launchVideoGallery"><?= get_field( 'homepage_video_section_background_button', 'option' ); ?></a>
 	</div>
 </section>

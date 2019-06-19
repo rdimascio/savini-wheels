@@ -24,7 +24,7 @@
 		</div>
 
 		<div class="social--view_more text-center m-t-3">
-			<a href="https://www.instagram.com/saviniwheels/">See More</a>
+			<a href="https://www.instagram.com/saviniwheels/"><?= get_field( 'homepage_social_feed_button', 'option' ); ?></a>
 		</div>
 	</div>
 	<div class="social--column blog--column column">

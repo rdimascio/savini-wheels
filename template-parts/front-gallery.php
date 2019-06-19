@@ -1,4 +1,5 @@
-<h2 data-bottom-top="top: 0;" data-top-bottom="top: 0;" class="for__title lined_title title"><span>Vehicle</span> Gallery</h2>
+<h2 data-bottom-top="top: 0;" data-top-bottom="top: 0;" class="for__title lined_title title"><span><?= get_field( 'homepage_vehicle_gallery_title', 'option' ); ?></span></h2>
+<p><?= get_field( 'homepage_vehicle_gallery_caption', 'option' ); ?></p>
 
 <?php $vehicle_gallery_args = array(
 	'post_type' => 'vehicle',
@@ -36,5 +37,5 @@ endif;
 </div>
 
 <div class="see-more-wrapper">
-	<a href="/vehicles" class="see-more">See More Projects</a>
+	<a href="/vehicles" class="see-more"><?= get_field( 'homepage_vehicle_gallery_button', 'option' ); ?></a>
 </div>

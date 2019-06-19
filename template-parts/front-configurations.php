@@ -1,6 +1,6 @@
 <div class="configurations--content text-center">
-	<h2 class="for__title lined_title title js-appearing-content m-t-5"><span>configurations</span></h2>
-	<p>Savini Wheels is excited to introduce our <b>all-new SV-F</b> collection, which utilizes advanced flow form technology. These wheels are our strongest and lightest wheels to date, thanks to a combination of enhanced engineering and state-of-the-art technology.</p>
+	<h2 class="for__title lined_title title js-appearing-content m-t-5"><span><?= get_field( 'homepage_configurations_section_title', 'option' ) ?></span></h2>
+	<p><?= get_field( 'homepage_configurations_section_caption', 'option' ) ?></p>
 </div>
 
 <?php
