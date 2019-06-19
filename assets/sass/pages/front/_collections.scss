@@ -40,12 +40,10 @@
 			flex-direction: column;
 		}
 
-		&:nth-child(2) {
-			flex-direction: column-reverse !important;
-		}
-
-		&:nth-child(4) {
-			flex-direction: column-reverse !important;
+		&:nth-child(even) {
+			@media (max-width: 560px) {
+				flex-direction: column-reverse !important;
+			}
 		}
 
 		.collection-content {
