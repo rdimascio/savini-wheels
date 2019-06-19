@@ -40,7 +40,8 @@
 			flex-direction: column;
 		}
 
-		&:nth-child(even) {
+		&__2,
+		&__4 {
 			@media (max-width: 560px) {
 				flex-direction: column-reverse !important;
 			}

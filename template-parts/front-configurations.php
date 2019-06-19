@@ -1,6 +1,6 @@
 <div class="configurations--content text-center">
-	<h2 class="for__title lined_title title js-appearing-content m-t-5"><span><?= get_field( 'homepage_configurations_section_title', 'option' ) ?></span></h2>
-	<p><?= get_field( 'homepage_configurations_section_caption', 'option' ) ?></p>
+	<h2 class="for__title lined_title title js-appearing-content m-t-5"><span><?= get_field( 'homepage_configurations_title', 'option' ) ?></span></h2>
+	<p><?= get_field( 'homepage_configurations_caption', 'option' ) ?></p>
 </div>
 
 <?php
