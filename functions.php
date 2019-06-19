@@ -1113,4 +1113,29 @@ if( function_exists('acf_add_options_page') ) {
 		'parent_slug'	=> 'theme-general-settings',
 	));
 
+	acf_add_options_sub_page(array(
+		'page_title' 	=> 'Collections Settings',
+		'menu_title'	=> 'Collections',
+		'menu_slug' 	=> 'collection-general-settings',
+		'parent_slug'	=> 'theme-general-settings',
+	));
+
+	acf_add_options_sub_page(array(
+		'page_title' 	=> 'Black di Forza Settings',
+		'menu_title'	=> 'Black di Forza',
+		'parent_slug'	=> 'collection-general-settings',
+	));
+
+	acf_add_options_sub_page(array(
+		'page_title' 	=> 'Savini Diamond Settings',
+		'menu_title'	=> 'Savini Diamond',
+		'parent_slug'	=> 'collection-general-settings',
+	));
+
+	acf_add_options_sub_page(array(
+		'page_title' 	=> 'SV-F Settings',
+		'menu_title'	=> 'SV-F',
+		'parent_slug'	=> 'collection-general-settings',
+	));
+
 }
