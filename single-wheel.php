@@ -39,8 +39,8 @@ $vehicle_args = array(
 	'meta_query' => array(
 		array(
 			'key' => 'vehicle_wheel',
-			'value_num' => $wheel_id,
-			'compare' => '='
+			'value_num' => '"' . $wheel_id . '"',
+			'compare' => 'LIKE'
 		)
 	)
 );
@@ -77,8 +77,8 @@ $finish_args = array(
 	'meta_query' => array(
 		array(
 			'key' => 'finish_wheel',
-			'value_num' => $wheel_id,
-			'compare' => '='
+			'value_num' => '"' . $wheel_id .'"',
+			'compare' => 'LIKE'
 		)
 	)
 );
