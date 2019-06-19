@@ -40,11 +40,11 @@
 			flex-direction: column;
 		}
 
-		&:nth(2) {
+		&:nth-child(2) {
 			flex-direction: column-reverse !important;
 		}
 
-		&:nth(4) {
+		&:nth-child(4) {
 			flex-direction: column-reverse !important;
 		}
 
