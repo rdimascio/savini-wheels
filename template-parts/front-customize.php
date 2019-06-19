@@ -10,12 +10,14 @@
 		<div class="customize--content__column column__wheel align-center text-left">
 			<img src="<?= get_field( 'homepage_customization_build_your_wheel_image', 'option' ); ?>" alt="">
 			<h1 class="customize--content__column-title text-right"><span>Build</span> Your Wheel</h1>
+			<a class="customize--content__column-link" href="/wheel-builder"></a>
 		</div>
 
 
 		<div class="customize--content__column column__car align-center text-right">
 			<img src="<?= get_field( 'homepage_customization_build_your_car_image', 'option' ); ?>" alt="">
 			<h1 class="customize--content__column-title text-left"><span>Build</span> Your Car</h1>
+			<a class="customize--content__column-link" href="/vehicle-builder"></a>
 		</div>
 
 	</div>
