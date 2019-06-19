@@ -40,7 +40,7 @@ $vehicle_args = array(
 		array(
 			'key' => 'vehicle_wheel',
 			'value_num' => $wheel_id,
-			'compare' => 'IN'
+			'compare' => '='
 		)
 	)
 );
@@ -78,7 +78,7 @@ $finish_args = array(
 		array(
 			'key' => 'finish_wheel',
 			'value_num' => $wheel_id,
-			'compare' => 'IN'
+			'compare' => '='
 		)
 	)
 );
