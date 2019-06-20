@@ -7,7 +7,7 @@
  * @package WP_Starter_Theme
  */
 
-get_header();
+( get_field( 'savini_forged_header', 'option' ) ) ? get_header( 'dark' ) : get_header();
 
 $id = get_queried_object()->term_id;
 $class = get_queried_object()->slug . '_grid';
@@ -18,7 +18,7 @@ $this_config_description = $this_config->description;
 ?>
 
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+		<main id="main" class="site-main <?= ( get_field( 'savini_forged_background_color', 'option' ) ) ? 'dark' : 'light' ?>"<?= ( get_field( 'savini_diamond_background_image', 'option' ) ) ? 'style="background-image: url(' . get_field( 'savini_diamond_background_image', 'option' ) . ')"' : null; ?>>
 
 		<header class="archive-header text-center">
 			<h2><?= single_term_title(); ?></h2>
@@ -210,4 +210,4 @@ $this_config_description = $this_config->description;
 	</div><!-- #primary -->
 
 <?php
-get_footer();
+( get_field( 'savini_forged_footer', 'option' ) ) ? get_footer( 'dark' ) : get_footer();

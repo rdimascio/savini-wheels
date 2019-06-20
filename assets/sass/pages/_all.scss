@@ -3,7 +3,13 @@ body {
 }
 
 main {
-	background: #FFFFFF;
+	&.light {
+		background: #FFFFFF;
+	}
+
+	&.dark {
+		background: #000000;
+	}
 }
 
 /*--------------------------------------------------------------

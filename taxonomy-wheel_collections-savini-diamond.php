@@ -7,7 +7,7 @@
  * @package WP_Starter_Theme
  */
 
-get_header();
+( get_field( 'savini_diamond_header_color', 'option' ) ) ? get_header( 'dark' ) : get_header();
 
 $id = get_queried_object()->term_id;
 $class = get_queried_object()->slug . '_grid';
@@ -15,9 +15,9 @@ $class = get_queried_object()->slug . '_grid';
 ?>
 
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+		<main id="main" class="site-main<?= ( get_field( 'savini_diamond_background_color', 'option' ) ) ? 'dark' : 'light'; ?>">
 
-		<header class="archive-header text-center">
+		<header class="archive-header text-center" style="background-image: url(<?= get_field( 'savini_diamond_background_image', 'option' ); ?>)">
 
 			<img src="<?= get_field( 'collection_logo', 'wheel_collections_' . $id ); ?>" />
 			<p><?= get_field( 'collection_description', 'wheel_collections_' . $id ); ?></p>
@@ -103,4 +103,4 @@ $class = get_queried_object()->slug . '_grid';
 	</div><!-- #primary -->
 
 <?php
-get_footer();
+( get_field( 'savini_diamond_footer_color', 'option' ) ) ? get_footer( 'dark' ) : get_footer();

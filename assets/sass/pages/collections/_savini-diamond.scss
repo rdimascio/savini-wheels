@@ -29,10 +29,6 @@ body.term-savini-diamond {
 		}
 	}
 
-	.site, main {
-		background: rgba(0,0,0,1);
-	}
-
 	.archive-header {
 		color: #9a9a9a;
 		font-style: italic;
@@ -43,7 +39,7 @@ body.term-savini-diamond {
 		}
 
 		&:not(.slider-header) {
-			background-image: url(https://saviniwheels.dimascio.design/wp-content/uploads/2019/05/savini__savini-diamond-bg.png);
+			// background-image: url(https://saviniwheels.dimascio.design/wp-content/uploads/2019/05/savini__savini-diamond-bg.png);
 			background-position: top right;
 			background-repeat: no-repeat;
 			background-size: contain;
@@ -81,10 +77,6 @@ body.term-savini-diamond {
 
 	.vehicle-slider--item {
 		box-shadow: none;
-	}
-
-	#footer .footer--wrapper .footer--menu ul .menu-item a {
-		color: #fff;
 	}
 
 }

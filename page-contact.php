@@ -12,10 +12,10 @@
  * @package WP_Starter_Theme
  */
 
-get_header( 'dark' );
+( get_field( 'contact_page_header_color', 'option' ) ) ? get_header( 'dark' ) : get_header();
 ?>
 
-	<div id="primary" class="content-area contact">
+	<div id="primary" class="content-area contact" style="background-image: url(<?= get_field( 'contact_page_background', 'option' ); ?>)">
 		<main id="main" class="site-main">
 
 		<?php
@@ -31,4 +31,4 @@ get_header( 'dark' );
 	</div><!-- #primary -->
 
 <?php
-get_footer();
+( get_field( 'contact_page_footer_color', 'option' ) ) ? get_footer( 'dark' ) : get_footer();

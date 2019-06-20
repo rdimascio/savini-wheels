@@ -7,7 +7,7 @@
  * @package WP_Starter_Theme
  */
 
-get_header();
+( get_field( 'sv_f_header', 'option' ) ) ? get_header( 'dark' ) : get_header();
 
 $id = get_queried_object()->term_id;
 $class = get_queried_object()->slug . '_grid';
@@ -15,7 +15,7 @@ $class = get_queried_object()->slug . '_grid';
 ?>
 
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+		<main id="main" class="site-main <?= ( get_field( 'sv_f_background_color', 'option' ) ) ? 'dark' : 'light' ?>" style="background-image: url(<?= get_field( 'sv_f_background_image', 'option' ); ?>)">
 
 		<header class="archive-header text-center">
 
@@ -150,4 +150,4 @@ $class = get_queried_object()->slug . '_grid';
 	</div><!-- #primary -->
 
 <?php
-get_footer();
+( get_field( 'sv_f_footer', 'option' ) ) ? get_footer( 'dark' ) : get_footer();

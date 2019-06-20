@@ -7,7 +7,7 @@
  * @package WP_Starter_Theme
  */
 
-get_header();
+( get_field( 'black_di_forza_header_color', 'option' ) ) ? get_header( 'dark' ) : get_header();
 
 $id = get_queried_object()->term_id;
 $class = get_queried_object()->slug . '_grid';
@@ -15,7 +15,7 @@ $class = get_queried_object()->slug . '_grid';
 ?>
 
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+		<main id="main" class="site-main <?= ( get_field( 'black_di_forza_background_color', 'option' ) ) ? 'dark' : 'light' ?>">
 
 		<header class="archive-header text-center">
 
@@ -65,7 +65,7 @@ $class = get_queried_object()->slug . '_grid';
 			endif; wp_reset_postdata(); ?>
 		</div>
 
-		<div class="bm-concave flex align-center justify-center">
+		<div class="bm-concave flex align-center justify-center" style="background-image: url(<?= get_field( 'black_di_forza_background_image', 'option' ) ?>)">
 			<header class="concave-header text-center">
 					<h2><span>BM</span>Concave</h2>
 					<p>Profile</p>
@@ -73,7 +73,7 @@ $class = get_queried_object()->slug . '_grid';
 
 			<div class="concave-items flex align-center justify-center">
 				<div class="concave-item">
-					<img src="https://saviniwheels.dimascio.design/wp-content/uploads/2019/05/bm-concave-front-1.png" alt="">
+					<img src="<?= get_field( 'black_di_forza_front_profile', 'option' ) ?>" alt="">
 					<div class="caption">
 						<h4>Front</h4>
 						<p>Profile</p>
@@ -81,7 +81,7 @@ $class = get_queried_object()->slug . '_grid';
 				</div>
 
 				<div class="concave-item">
-					<img src="https://saviniwheels.dimascio.design/wp-content/uploads/2019/05/bm-concave-rear-1.png" alt="">
+					<img src="<?= get_field( 'black_di_forza_front_profile', 'option' ) ?>" alt="">
 					<div class="caption">
 						<h4>Rear Concave</h4>
 						<p>Profile</p>
@@ -89,7 +89,7 @@ $class = get_queried_object()->slug . '_grid';
 				</div>
 
 				<div class="concave-item">
-					<img src="https://saviniwheels.dimascio.design/wp-content/uploads/2019/05/bm-concave-rear_super-1.png" alt="">
+					<img src="<?= get_field( 'black_di_forza_front_profile', 'option' ) ?>" alt="">
 					<div class="caption">
 						<h4>Rear<span>Super</span>Concave</h4>
 						<p>Profile</p>
@@ -191,16 +191,15 @@ $class = get_queried_object()->slug . '_grid';
 		<div class="info row justify-start">
 				<div class="info-column row p-l-1 p-r-1">
 					<div class="info-inner-column">
-						<img src="https://saviniwheels.dimascio.design/wp-content/uploads/2019/02/steplip.png" alt="">
-						<p>The SL (Step Lip Concave) configuration utilizes a center disk that is 1" smaller in diameter to reduce weight, 
-							unsprung mass, and improve return on inertia. The configuration also features a unique concave spoke profile and a signature undercut for improved aerodynamics.</p>
+						<img src="<?= get_field( 'black_di_forza_configuration_logo', 'option' ) ?>" alt="">
+						<p><?= get_field( 'black_di_forza_configuration_description', 'option' ) ?></p>
 					</div>
 					<div class="info-inner-column">
-						<img src="https://saviniwheels.dimascio.design/wp-content/uploads/2019/02/savini__wheel_collections-half-wheel.png" alt="">
+						<img src="<?= get_field( 'black_di_forza_configuration_image', 'option' ) ?>" alt="">
 					</div>
 				</div>
 				<div class="info-column image-column p-l-1 p-r-1">
-					<img src="https://saviniwheels.dimascio.design/wp-content/uploads/2019/06/Layer-71.png" alt="">
+					<img src="<?= get_field( 'black_di_forza_configuration_background', 'option' ) ?>" alt="">
 				</div>
 		</div>
 
@@ -246,4 +245,4 @@ $class = get_queried_object()->slug . '_grid';
 	</div><!-- #primary -->
 
 <?php
-get_footer();
+( get_field( 'black_di_forza_footer_color', 'option' ) ) ? get_footer( 'dark' ) : get_footer();
