@@ -15,7 +15,7 @@ $class = get_queried_object()->slug . '_grid';
 ?>
 
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main<?= ( get_field( 'savini_diamond_background_color', 'option' ) ) ? 'dark' : 'light'; ?>">
+		<main id="main" class="site-main <?= ( get_field( 'savini_diamond_background_color', 'option' ) ) ? 'dark' : 'light'; ?>">
 
 		<header class="archive-header text-center" style="background-image: url(<?= get_field( 'savini_diamond_background_image', 'option' ); ?>)">
 
