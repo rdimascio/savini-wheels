@@ -326,7 +326,7 @@ jQuery(function ($) {
     var mainImage = $('.main-image img').attr('src'),
         altImage = $(this).find('img').attr('src'),
         mainImageFinish = $('.main-image img').attr('alt'),
-        altImageFinish = $('.main-image img').attr('alt');
+        altImageFinish = $(this).find('img').attr('alt');
     $('.main-image img').attr('src', altImage);
     $(this).find('img').attr('src', mainImage);
     $('.main-image img').attr('alt', altImageFinish);
