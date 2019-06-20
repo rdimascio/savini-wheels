@@ -20,9 +20,9 @@
 
 			<div class="contact-form__info">
 				<p><strong>Address:</strong> <a href="https://www.google.com/maps/place/<?= urlencode( get_field( 'address', 'option' ) ) ?>,+<?= get_field( 'city', 'option' ) ?>,+<?= get_field( 'state', 'option' ) ?>+<?= get_field( 'zip', 'option' ) ?>"><?= get_field( 'address', 'option' ); ?>, <?= get_field( 'city', 'option' ); ?> <?= get_field( 'state', 'option' ); ?>, <?= get_field( 'zip', 'option' ); ?></a></p>
-				<p><strong>Toll Free:</strong> <a href="tel:866-779-4646"><?= get_field( 'phone_number', 'option' ) ?></a></p>
-				<p><strong>Phone:</strong> <a href="tel:866-779-4646"><?= get_field( 'phone_number', 'option' ) ?></a></p>
-				<p><strong>Fax:</strong> <a href="tel:714-632-0630"><?= get_field( 'fax', 'option' ) ?></a></p>
+				<p><strong>Toll Free:</strong> <a href="tel:<?= get_field( 'phone_number', 'option' ) ?>"><?= get_field( 'phone_number', 'option' ) ?></a></p>
+				<p><strong>Phone:</strong> <a href="tel:<?= get_field( 'phone_number', 'option' ) ?>"><?= get_field( 'phone_number', 'option' ) ?></a></p>
+				<p><strong>Fax:</strong> <a href="tel:<?= get_field( 'fax_number', 'option' ) ?>"><?= get_field( 'fax_number', 'option' ) ?></a></p>
 				<p><strong>Email:</strong> <a href="mailto:<?= get_field( 'contact_email', 'option' ) ?>"><?= get_field( 'contact_email', 'option' ) ?></a></p>
 			</div>
 
