@@ -150,7 +150,7 @@ $finish = get_field( 'wheel_finish' );
 
 if ( $finish ) : ?>
 
-	<p><strong>SHOWN IN:</strong> <?= get_the_title( $finish ) ?></p>
+	<div class="shown-in"><strong>SHOWN IN:</strong> <p><?= get_the_title( $finish ) ?></p></div>
 
 <?php endif; 
 

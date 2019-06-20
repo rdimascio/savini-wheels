@@ -60,8 +60,7 @@ body.single-wheel {
 					.entry-title {
 
 						@media (max-width: 879px) {
-							display: block;
-							text-align: center;
+							display: inline-block;
 						}
 					}
 
@@ -121,6 +120,10 @@ body.single-wheel {
 
 		.entry-header {
 			position: relative;
+
+			@media (max-width: 879px) {
+				text-align: center;
+			}
 
 			.new {
 				position: absolute;

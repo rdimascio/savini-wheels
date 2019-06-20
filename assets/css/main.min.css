@@ -729,8 +729,9 @@ body.archive.post-type-archive .filters{display:none}
 body.archive.post-type-archive .grid{margin:35px 0 0}
 }@media(max-width:879px){body.single-wheel .wheel-content section.info{width:100%;padding:4rem}
 body.single-wheel .wheel-content section.info .title-row{display:block}
-body.single-wheel .wheel-content section.info .title-row .entry-title{display:block;text-align:center}
+body.single-wheel .wheel-content section.info .title-row .entry-title{display:inline-block}
 body.single-wheel .wheel-content section.info .title-row .configuration-logo{text-align:center;padding:1rem 0}
+body.single-wheel .wheel-content .entry-header{text-align:center}
 }@media(max-width:860px){.collection-container .collection-item{-webkit-box-flex:1;-ms-flex:1 1 100%;flex:1 1 100%;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
 }@media(max-width:830px){body.archive .grid .wheel{-webkit-box-flex:0;-ms-flex:0 1 50%;flex:0 1 50%}
 }@media(max-width:819px){body.blog .post-grid{width:100%}

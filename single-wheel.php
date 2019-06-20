@@ -39,7 +39,7 @@ $vehicle_args = array(
 	'meta_query' => array(
 		array(
 			'key' => 'vehicle_wheel',
-			'value_num' => '"' . $wheel_id . '"',
+			'value' => $wheel_id,
 			'compare' => 'LIKE'
 		)
 	)
@@ -66,7 +66,7 @@ $vehicles = new WP_Query( $vehicle_args );
 
 			<div class="finish-slider__wrapper">
 					<header class="single-header slider-header text-center">
-						<h2><span><?= get_the_title( $parent_wheel_id ) ?></span> Custom Finish Gallery</h2>
+						<h2><span><?= get_the_title( $wheel_id ) ?></span> Custom Finish Gallery</h2>
 					</header>
 					
 					<div class="finish-slider">
@@ -77,7 +77,7 @@ $finish_args = array(
 	'meta_query' => array(
 		array(
 			'key' => 'finish_wheel',
-			'value_num' => '"' . $wheel_id .'"',
+			'value' => $wheel_id,
 			'compare' => 'LIKE'
 		)
 	)
