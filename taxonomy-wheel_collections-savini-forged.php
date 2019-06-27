@@ -18,7 +18,7 @@ $this_config_description = $this_config->description;
 ?>
 
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main <?= ( get_field( 'savini_forged_background_color', 'option' ) ) ? 'dark' : 'light' ?>"<?= ( get_field( 'savini_diamond_background_image', 'option' ) ) ? 'style="background-image: url(' . get_field( 'savini_diamond_background_image', 'option' ) . ')"' : null; ?>>
+		<main id="main" class="site-main <?= ( get_field( 'savini_forged_background_color', 'option' ) ) ? 'dark' : 'light' ?>"<?= ( get_field( 'savini_forged_background_image', 'option' ) ) ? 'style="background-image: url(' . get_field( 'savini_forged_background_image', 'option' ) . ')"' : null; ?>>
 
 		<header class="archive-header text-center">
 			<h2><?= single_term_title(); ?></h2>
