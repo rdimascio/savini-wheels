@@ -29,10 +29,11 @@ jQuery( function( $ ) {
 
 			var slideTitle = $( this ).data( 'title' );
 			var slideCaption = $( this ).data( 'caption' );
+			var slideCaptionPosition = $( this ).data( 'caption-position' );
 			var slideLink = $( this ).data( 'link' );
 
 			if ( slideTitle || slideCaption ) {
-				$( this ).append( '<div class="slider-caption"><div class="slider-content"><h4>' + slideTitle + '.</h4><p>' + slideCaption + '</p><a href="/' + slideLink + '">Learn More</a></div></div>' );
+				$( this ).append( `<div class="slider-caption ${slideCaptionPosition}"><div class="slider-content"><h4>${slideTitle}.</h4><p>${slideCaption}</p><a href="/${slideLink}">Learn More</a></div></div>` );
 			}
 
 		});

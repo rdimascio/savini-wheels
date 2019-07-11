@@ -255,10 +255,11 @@ jQuery(function ($) {
     $('.slick-slide .item', this).each(function () {
       var slideTitle = $(this).data('title');
       var slideCaption = $(this).data('caption');
+      var slideCaptionPosition = $(this).data('caption-position');
       var slideLink = $(this).data('link');
 
       if (slideTitle || slideCaption) {
-        $(this).append('<div class="slider-caption"><div class="slider-content"><h4>' + slideTitle + '.</h4><p>' + slideCaption + '</p><a href="/' + slideLink + '">Learn More</a></div></div>');
+        $(this).append("<div class=\"slider-caption ".concat(slideCaptionPosition, "\"><div class=\"slider-content\"><h4>").concat(slideTitle, ".</h4><p>").concat(slideCaption, "</p><a href=\"/").concat(slideLink, "\">Learn More</a></div></div>"));
       }
     }); // loader();
   });
@@ -275,6 +276,11 @@ jQuery(function ($) {
   $('#wheelGallery').lightGallery({
     mode: 'lg-fade',
     cssEasing: 'cubic-bezier(0.25, 0, 0.25, 1)'
+  });
+  $('#finishGallery').lightGallery({
+    mode: 'lg-fade',
+    cssEasing: 'cubic-bezier(0.25, 0, 0.25, 1)',
+    selector: '.finish-slider--item'
   }); // Launch Photo Gallery on button click
 
   $('#launchImageGallery').on('click', function (e) {

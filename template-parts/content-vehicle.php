@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying posts
+ * Template part for displaying page content in page.php
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
@@ -9,14 +9,32 @@
 
 ?>
 
-<div class="gallery-wrapper">
-	<div class="gallery-item" data-vehicle-id="<?php the_ID(); ?>" style="background-image:url(<?= get_the_post_thumbnail_url(); ?>)">
-		<div class="overlay">
-			<div class="content">
-				<h4><?= the_title(); ?></h4>
-				<p class="see-more">See More</p>
-			</div>
-		</div>
-		<a href="<?= get_the_permalink(); ?>" class="link"></a>
-	</div>
-</div>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<header class="entry-header">
+		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+	</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		<?php the_content(); ?>
+	</div><!-- .entry-content -->
+
+    <div class="gallery-content">
+        <div class="gallery-grid">
+            <?php
+            $gallery_images = get_field( 'vehicle_gallery' );
+
+            if ( $gallery_images ) :
+
+                foreach ( $gallery_images as $image ) : ?>
+
+                    <div class="gallery-image-wrapper">
+                        <img src="<?= $image['sizes']['large']; ?>" alt="<?= $image['alt']; ?>">
+                    </div>
+
+                <?php endforeach;
+
+            endif;
+            ?>
+        </div>
+    </div>
+</article><!-- #post-<?php the_ID(); ?> -->

@@ -69,7 +69,7 @@ $vehicles = new WP_Query( $vehicle_args );
 						<h2><span><?= get_the_title( $wheel_id ) ?></span> Custom Finish Gallery</h2>
 					</header>
 					
-					<div class="finish-slider">
+					<div class="finish-slider" id="finishGallery">
 
 <?php
 $finish_args = array(
@@ -88,9 +88,9 @@ $finishes = new WP_Query( $finish_args );
 		while ( $finishes->have_posts() ) : 
 			$finishes->the_post()?>
 
-						<div class="finish-slider--item">
-							<div class="finish-slider--item__image" style="background-image:url(<?= get_the_post_thumbnail_url(); ?>)"></div>
-						</div>
+						<a class="finish-slider--item">
+							<div class="finish-slider--item__image" data-src="<?= get_the_post_thumbnail_url(); ?>" style="background-image:url(<?= get_the_post_thumbnail_url(); ?>)"></div>
+						</a>
 
 		<?php endwhile; endif; wp_reset_postdata(); ?>
 
