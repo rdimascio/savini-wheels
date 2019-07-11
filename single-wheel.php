@@ -54,9 +54,9 @@ $vehicles = new WP_Query( $vehicle_args );
 		while ( $vehicles->have_posts() ) : 
 			$vehicles->the_post(); ?>
 	
-					<div class="vehicle-slider--item">
+					<a class="vehicle-slider--item" href="<?= the_permalink(); ?>">
 						<div class="vehicle-slider--item__image" style="background-image:url(<?= get_the_post_thumbnail_url(); ?>)"></div>
-					</div>
+					</a>
 
 		<?php endwhile; endif;  wp_reset_postdata(); ?>
 
@@ -66,7 +66,7 @@ $vehicles = new WP_Query( $vehicle_args );
 
 			<div class="finish-slider__wrapper">
 					<header class="single-header slider-header text-center">
-						<h2><span><?= get_the_title( $wheel_id ) ?></span> Custom Finish Gallery</h2>
+						<h2><span><?= get_the_title( $wheel_id ); ?></span> Custom Finish Gallery</h2>
 					</header>
 					
 					<div class="finish-slider" id="finishGallery">
