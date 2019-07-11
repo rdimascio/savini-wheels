@@ -88,7 +88,7 @@ $finishes = new WP_Query( $finish_args );
 		while ( $finishes->have_posts() ) : 
 			$finishes->the_post()?>
 
-						<a class="finish-slider--item">
+						<a class="finish-slider--item" href="<?= get_the_post_thumbnail_url(); ?>">
 							<div class="finish-slider--item__image" data-src="<?= get_the_post_thumbnail_url(); ?>" style="background-image:url(<?= get_the_post_thumbnail_url(); ?>)"></div>
 						</a>
 
