@@ -144,7 +144,7 @@ $content = ( ( get_the_content() > '' ) ? get_the_content() : ( ( $is_this_forge
 				
 				<?php endif; wp_reset_postdata(); ?>
 
-<?php else : 
+<?php endif; 
 
 $finish = get_field( 'wheel_finish' );
 
@@ -152,14 +152,12 @@ if ( $finish ) : ?>
 
 	<div class="shown-in"><strong>SHOWN IN:</strong> <p><?= get_the_title( $finish ) ?></p></div>
 
-<?php endif; 
-
-endif; ?>
+<?php endif; ?>
 
 <div class="actions">
 	<div class="customize">
 		<span>
-			<a href="">Customize this wheel</a>
+			<a href="/wheel-builder">Customize this wheel</a>
 		</span>
 	</div>
 	<div class="back">
