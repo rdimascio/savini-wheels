@@ -21,5 +21,65 @@ body.single-post {
 		@media (max-width: 819px) {
 			display: none;
         }
+
+        .widget-title {
+			font-size: 14px;
+			font-weight: 400;
+			color: #ccc;
+			padding-bottom: 16px;
+			letter-spacing: 2px;
+			border-bottom: 1px solid #525252;
+		}
+
+		form {
+			padding-top: 16px;
+			display: flex;
+
+			label {
+				flex: 1;
+			}
+
+			.search-field {
+				background: #000;
+				border: 1px solid #525252;
+				padding: 5px 8px;
+				width: 100%;
+				border-radius: 3px 0 0 3px;
+			}
+	
+			input[type="submit"] {
+				border: 1px solid;
+				border-color: #525252;
+				border-radius: 0 3px 3px 0;
+				background: #525252;
+				color: #fff;
+				font-size: 14px;
+				line-height: 1;
+				padding: .6em 1em .4em;
+			}
+		}
+
+		.widget_archive {
+
+			ul {
+				margin: 0;
+				list-style: none;
+				padding-inline-start: 0;
+				padding-top: 16px;
+
+				a {
+					text-decoration: none;
+					color: #ccc;
+				}
+			}
+		}
+
+		.custom-html-widget {
+			padding-top: 16px;
+		}
+
+		section:not(:first-of-type) {
+			padding-top: 16px;
+		}
     }
 }
