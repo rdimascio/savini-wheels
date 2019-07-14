@@ -3,7 +3,34 @@ body.single-vehicle {
     color: #fff;
     margin-top: 85px;
 
+    .article {
+        padding: 0 2rem;
+    }
+
     .entry-header {
         text-align: center;
+        border-bottom: 1px solid #fff;
     }
+
+    .entry-content {
+        padding: 0 2rem;
+    }
+
+    .gallery {
+
+        &-content {
+            padding: 0 2rem;
+        }
+        
+        &-grid {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        &-image-wrapper {
+            flex: 1 0 100%;
+        }
+    }
+
 }
