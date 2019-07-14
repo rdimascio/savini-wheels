@@ -116,6 +116,7 @@ body.archive.post-type-archive {
 		background-position: center;
 		background-size: cover;
 		position: relative;
+		cursor: pointer;
 
 		.overlay {
 			display: none;
@@ -130,10 +131,6 @@ body.archive.post-type-archive {
 			align-content: center;
 			flex-direction: column;
 			text-align: center;
-		}
-
-		&__link {
-			
 		}
 
 		.content {
