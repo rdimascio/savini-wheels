@@ -19,8 +19,13 @@ get_header();
 
 			<div class="post-wrapper flex">
 
-				<?php get_template_part( 'template-parts/content', 'post' );
-				get_sidebar(); ?>
+				<div class="post-container">
+					<?php get_template_part( 'template-parts/content', 'post' ); ?>
+				</div>
+				
+				<div class="sidebar-wrapper">
+					<?php get_sidebar(); ?>
+				</div>
 
 			</div>
 
