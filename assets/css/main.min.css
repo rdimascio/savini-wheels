@@ -630,7 +630,7 @@ body.blog .sidebar-wrapper .widget-title{font-size:14px;font-weight:400;color:#c
 body.blog .sidebar-wrapper form{padding-top:16px;display:-webkit-box;display:-ms-flexbox;display:flex}
 body.blog .sidebar-wrapper form label{-webkit-box-flex:1;-ms-flex:1;flex:1}
 body.blog .sidebar-wrapper form .search-field{background:#000;border:1px solid #525252;padding:5px 8px;width:100%;border-radius:3px 0 0 3px}
-body.blog .sidebar-wrapper form input[type="submit"]{border:1px solid;border-color:#525252;border-radius:0 3px 3px 0;background:#525252;color:#fff;font-size:14px;line-height:1;padding:.6em 1em .4em}
+body.blog .sidebar-wrapper form input[type="submit"]{border:1px solid;border-color:#525252;border-radius:0 3px 3px 0;background:#525252;color:#fff;font-size:14px;line-height:1;padding:.6em 1em .6em;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
 body.blog .sidebar-wrapper .widget_archive ul{margin:0;list-style:none;-webkit-padding-start:0;padding-inline-start:0;padding-top:16px}
 body.blog .sidebar-wrapper .widget_archive ul a{text-decoration:none;color:#ccc}
 body.blog .sidebar-wrapper .custom-html-widget{padding-top:16px}
@@ -639,13 +639,13 @@ body.single-post{margin-top:85px}
 body.single-post .site-header .tuv.dark{display:none}
 body.single-post .post-container{padding:10px 10px 10px 40px;width:75%;height:100%}
 body.single-post .sidebar-wrapper{width:25%;height:100%;padding:10px 40px 10px 10px}
-body.single-post .sidebar-wrapper .widget-title{font-size:14px;font-weight:400;color:#ccc;padding-bottom:16px;letter-spacing:2px;border-bottom:1px solid #525252}
+body.single-post .sidebar-wrapper .widget-title{font-size:14px;font-weight:400;padding-bottom:16px;letter-spacing:2px;border-bottom:1px solid #525252}
 body.single-post .sidebar-wrapper form{padding-top:16px;display:-webkit-box;display:-ms-flexbox;display:flex}
 body.single-post .sidebar-wrapper form label{-webkit-box-flex:1;-ms-flex:1;flex:1}
-body.single-post .sidebar-wrapper form .search-field{background:#000;border:1px solid #525252;padding:5px 8px;width:100%;border-radius:3px 0 0 3px}
-body.single-post .sidebar-wrapper form input[type="submit"]{border:1px solid;border-color:#525252;border-radius:0 3px 3px 0;background:#525252;color:#fff;font-size:14px;line-height:1;padding:.6em 1em .4em}
+body.single-post .sidebar-wrapper form .search-field{background:#f1f1f1;border:1px solid #525252;padding:5px 8px;width:100%;border-radius:3px 0 0 3px}
+body.single-post .sidebar-wrapper form input[type="submit"]{border:1px solid;border-color:#525252;border-radius:0 3px 3px 0;background:#525252;color:#fff;font-size:14px;line-height:1;padding:.6em 1em .6em;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
 body.single-post .sidebar-wrapper .widget_archive ul{margin:0;list-style:none;-webkit-padding-start:0;padding-inline-start:0;padding-top:16px}
-body.single-post .sidebar-wrapper .widget_archive ul a{text-decoration:none;color:#ccc}
+body.single-post .sidebar-wrapper .widget_archive ul a{text-decoration:none;color:#909090;font-size:12px}
 body.single-post .sidebar-wrapper .custom-html-widget{padding-top:16px}
 body.single-post .sidebar-wrapper section:not(:first-of-type){padding-top:16px}
 #builder_wheelCarousel .item{max-width:90% !important}

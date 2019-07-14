@@ -242,7 +242,10 @@ body.blog {
 				color: #fff;
 				font-size: 14px;
 				line-height: 1;
-				padding: .6em 1em .4em;
+                padding: .6em 1em .6em;
+                justify-content: center;
+                display: flex;
+                align-items: center;
 			}
 		}
 

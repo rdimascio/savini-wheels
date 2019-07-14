@@ -25,7 +25,6 @@ body.single-post {
         .widget-title {
 			font-size: 14px;
 			font-weight: 400;
-			color: #ccc;
 			padding-bottom: 16px;
 			letter-spacing: 2px;
 			border-bottom: 1px solid #525252;
@@ -40,7 +39,7 @@ body.single-post {
 			}
 
 			.search-field {
-				background: #000;
+				background: #f1f1f1;
 				border: 1px solid #525252;
 				padding: 5px 8px;
 				width: 100%;
@@ -55,7 +54,10 @@ body.single-post {
 				color: #fff;
 				font-size: 14px;
 				line-height: 1;
-				padding: .6em 1em .4em;
+                padding: .6em 1em .6em;
+                justify-content: center;
+                display: flex;
+                align-items: center;
 			}
 		}
 
@@ -69,7 +71,8 @@ body.single-post {
 
 				a {
 					text-decoration: none;
-					color: #ccc;
+                    color: #909090;
+                    font-size: 12px;
 				}
 			}
 		}
