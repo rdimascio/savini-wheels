@@ -3,7 +3,7 @@ body.single-vehicle {
     color: #fff;
     margin-top: 85px;
 
-    .article {
+    article {
         padding: 0 2rem;
     }
 
@@ -30,6 +30,10 @@ body.single-vehicle {
 
         &-image-wrapper {
             flex: 1 0 100%;
+
+            image {
+                width: 100%;
+            }
         }
     }
 
