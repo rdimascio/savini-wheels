@@ -14,12 +14,16 @@ body.single-vehicle {
 
     .entry-content {
         padding: 0 2rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: 100;
+        color: #ababab;
     }
 
     .gallery {
 
         &-content {
-            padding: 0 2rem;
+            padding: 2rem;
         }
         
         &-grid {
@@ -30,6 +34,7 @@ body.single-vehicle {
 
         &-image-wrapper {
             flex: 1 0 100%;
+            padding: 5px 0;
 
             img {
                 width: 100%;

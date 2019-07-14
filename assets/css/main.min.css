@@ -596,10 +596,10 @@ body.single-wheel.black-di-forza .wheel-content .entry-header h1 .char3,body.sin
 body.single-vehicle{background:#000;color:#fff;margin-top:85px}
 body.single-vehicle article{padding:0 2rem}
 body.single-vehicle .entry-header{text-align:center;border-bottom:1px solid #fff}
-body.single-vehicle .entry-content{padding:0 2rem}
-body.single-vehicle .gallery-content{padding:0 2rem}
+body.single-vehicle .entry-content{padding:0 2rem;text-transform:uppercase;letter-spacing:2px;font-weight:100;color:#ababab}
+body.single-vehicle .gallery-content{padding:2rem}
 body.single-vehicle .gallery-grid{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}
-body.single-vehicle .gallery-image-wrapper{-webkit-box-flex:1;-ms-flex:1 0 100%;flex:1 0 100%}
+body.single-vehicle .gallery-image-wrapper{-webkit-box-flex:1;-ms-flex:1 0 100%;flex:1 0 100%;padding:5px 0}
 body.single-vehicle .gallery-image-wrapper img{width:100%}
 body.blog{background:#000;color:#fff;margin-top:85px}
 body.blog .site-header .tuv.dark{display:none}
