@@ -5,6 +5,7 @@
 	background-size: cover;
 	background-attachment: fixed;
 	position: relative;
+	overflow: hidden;
 
 	&::before {
 		content: '';
@@ -16,6 +17,10 @@
 
 	.mission--wrapper {
 		padding: 6rem 8rem;
+
+		@media (min-width: 756px) {
+			padding: 6rem 2rem;	
+		}
 	}
 
 	.mission--logo {
@@ -24,7 +29,8 @@
 		h2 {
 			height: 200px;
 			background-position: center;
-			width: 500px;
+			width: 100%;
+			max-width: 500px;
 			background-repeat: no-repeat;
 			background-size: contain;
 		}

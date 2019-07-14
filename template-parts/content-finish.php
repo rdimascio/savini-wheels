@@ -10,13 +10,14 @@
 ?>
 
 <div class="gallery-wrapper">
-	<div class="gallery-item" data-finish-id="<?php the_ID(); ?>" style="background-image:url(<?= get_the_post_thumbnail_url(); ?>)">
-		<div class="overlay">
-			<div class="content">
-				<h4><?= the_title(); ?></h4>
-				<p class="see-more">See More</p>
+	<a href="<?= get_the_post_thumbnail_url(); ?>" class="gallery-item__link"></a>
+		<div class="gallery-item" data-finish-id="<?php the_ID(); ?>" data-src="<?= get_the_post_thumbnail_url(); ?>" style="background-image:url(<?= get_the_post_thumbnail_url(); ?>)">
+			<div class="overlay">
+				<div class="content">
+					<h4><?= the_title(); ?></h4>
+					<p class="see-more">See More</p>
+				</div>
 			</div>
 		</div>
-		<a href="<?= get_the_permalink(); ?>" class="link"></a>
-	</div>
+	</a>
 </div>

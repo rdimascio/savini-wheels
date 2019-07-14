@@ -3,6 +3,10 @@ body.single-vehicle {
     color: #fff;
     margin-top: 85px;
 
+    .site-header .tuv.dark {
+        display: none;
+    }
+
     article {
         padding: 0 2rem;
     }

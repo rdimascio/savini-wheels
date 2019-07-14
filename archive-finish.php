@@ -83,7 +83,7 @@ get_header();
 
 		<?php if ( have_posts() ) : ?>
 
-			<div class="finish-grid grid flex justify-start align-center">
+			<div class="finish-grid grid flex justify-start align-center" id="finishGrid">
 
 				<?php
 				/* Start the Loop */

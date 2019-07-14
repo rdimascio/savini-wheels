@@ -282,6 +282,12 @@ jQuery(function ($) {
     cssEasing: 'cubic-bezier(0.25, 0, 0.25, 1)',
     selector: '.finish-slider--item__image',
     thumbnail: false
+  });
+  $('#finishGrid').lightGallery({
+    mode: 'lg-fade',
+    cssEasing: 'cubic-bezier(0.25, 0, 0.25, 1)',
+    selector: '.gallery-item',
+    thumbnail: true
   }); // Launch Photo Gallery on button click
 
   $('#launchImageGallery').on('click', function (e) {

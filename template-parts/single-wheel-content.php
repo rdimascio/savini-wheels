@@ -97,7 +97,15 @@ $content = ( ( get_the_content() > '' ) ? get_the_content() : ( ( $is_this_forge
 									</div>
 							<?php endforeach; ?>
 					</div>
-				<?php endif; ?>
+				<?php endif;
+
+$finish = get_field( 'wheel_finish' );
+
+if ( $finish ) : ?>
+
+	<div class="shown-in"><strong>SHOWN IN:</strong> <p><?= get_the_title( $finish ) ?></p></div>
+
+<?php endif; ?>
 
 <?php if ( $is_this_forged ) : 
 				
@@ -144,15 +152,7 @@ $content = ( ( get_the_content() > '' ) ? get_the_content() : ( ( $is_this_forge
 				
 				<?php endif; wp_reset_postdata(); ?>
 
-<?php endif; 
-
-$finish = get_field( 'wheel_finish' );
-
-if ( $finish ) : ?>
-
-	<div class="shown-in"><strong>SHOWN IN:</strong> <p><?= get_the_title( $finish ) ?></p></div>
-
-<?php endif; ?>
+<?php endif;  ?>
 
 <div class="actions">
 	<div class="customize">
