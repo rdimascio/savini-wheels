@@ -15,16 +15,20 @@ get_header();
 
 		<?php
 		while ( have_posts() ) :
-			the_post();
+			the_post(); ?>
 
-			get_template_part( 'template-parts/content', 'post' );
+			<div class="post-wrapper flex">
 
-		endwhile; // End of the loop.
+				<?php get_template_part( 'template-parts/content', 'post' );
+				get_sidebar(); ?>
+
+			</div>
+
+		<?php endwhile; // End of the loop.
 		?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
 <?php
-get_sidebar();
 get_footer();

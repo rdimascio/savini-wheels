@@ -1,0 +1,25 @@
+body.single-post {
+    margin-top: 85px;
+
+    .site-header {
+		.tuv.dark {
+			display: none;
+		}
+    }
+    
+    .post-container {
+		padding: 10px 10px 10px 40px;
+		width: 75%;
+        height: 100%;
+    }
+
+    .sidebar-wrapper {
+		width: 25%;
+		height: 100%;
+		padding: 10px 40px 10px 10px;
+		
+		@media (max-width: 819px) {
+			display: none;
+        }
+    }
+}
