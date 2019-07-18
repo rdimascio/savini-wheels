@@ -83,4 +83,19 @@ $collection = get_the_terms( $object_id, 'wheel_collections' );
 		</div>
 	</div>
 
+	<div id="tuv-popup-container" class="flex justify-center align-center" style="display:none">
+		<div class="tuv-popup-wrapper">
+			<a class="close white text uppercase" data-target="tuv-popup-close" href="#" data-no-instant>&times; Close</a>
+			<div class="tuv-popup-content">
+				<div class="tuv-popup-image">
+					<img src="http://savininew.wpengine.com/wp-content/uploads/2019/07/tuv-color.jpg" alt="">
+				</div>
+				<div class="tuv-popup-text">
+					<h1>What is TUV Verification?</h1>
+					<p>TUV® Verified Quality Management System is a prestigious engineering status in the aftermarket wheel industry. Each set of Savini Wheels meets this quality verification.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<div id="content" class="site-content">

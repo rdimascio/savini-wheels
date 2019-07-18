@@ -730,7 +730,7 @@ function blog_archive_order ( $query ) {
 		return;
 	}
 
-	$query->set( 'order', 'DESC' );
+	$query->set( 'order', 'ASC' );
 	$query->set( 'posts_per_page', '9' );
 
 

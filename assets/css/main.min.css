@@ -105,6 +105,10 @@ table{margin:0 0 1.5em;width:100%}
 #mobile-menu{outline:0;display:block}
 .box-shadow-menu{position:relative;padding:.5rem 1rem;cursor:pointer}
 .box-shadow-menu:before{cursor:pointer;content:"";position:absolute;left:0;top:6px;font-size:35px;width:1em;height:.15em;background:#111;-webkit-box-shadow:0 .25em 0 0 #111,0 .5em 0 0 #111;box-shadow:0 .25em 0 0 #111,0 .5em 0 0 #111}
+#tuv-popup-container{position:fixed;right:0;top:0;bottom:0;left:0;z-index:99;background:rgba(25,25,25,0.2);overflow:hidden}
+#tuv-popup-container .tuv-popup-wrapper{background:#fff;padding:2rem}
+#tuv-popup-container .tuv-popup-content{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
+#tuv-popup-container .close{position:absolute;top:2rem;right:2rem;cursor:pointer;color:#fff;text-decoration:none}
 #site-navigation-wrapper{position:fixed;right:0;top:0;bottom:0;left:0;z-index:99;background:rgba(25,25,25,0.98);overflow:hidden}
 #site-navigation-wrapper #site-navigation ul{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;text-align:center}
 #site-navigation-wrapper #site-navigation ul li{text-transform:uppercase;padding:1rem;letter-spacing:3px;font-weight:700}
@@ -595,6 +599,8 @@ body.single-wheel.savini-diamond .wheel-content .entry-header h1 .char1,body.sin
 body.single-wheel.sv-f .wheel-content .entry-header h1 .char3{font-size:38px}
 body.single-wheel.sv-f .wheel-content .entry-header h1 .char4,body.single-wheel.sv-f .wheel-content .entry-header h1 .char5{font-size:42px}
 body.single-wheel.black-di-forza .wheel-content .entry-header h1 .char3,body.single-wheel.black-di-forza .wheel-content .entry-header h1 .char4,body.single-wheel.black-di-forza .wheel-content .entry-header h1 .char5{color:#fff !important;font-size:42px}
+.wheel-builder{margin-top:85px}
+.tuv.dark{display:none}
 body.single-vehicle{background:#000;color:#fff;margin-top:85px}
 body.single-vehicle .site-header .tuv.dark{display:none}
 body.single-vehicle article{padding:0 2rem}

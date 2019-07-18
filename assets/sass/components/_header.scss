@@ -103,6 +103,37 @@
     0 0.5em 0 0 #111;
 }
 
+#tuv-popup-container {
+	position: fixed;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 99;
+	background: rgba(25,25,25,0.2);
+	overflow: hidden;
+
+	.tuv-popup-wrapper {
+		background: #fff;
+		padding: 2rem;
+	}
+
+	.tuv-popup-content {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.close {
+		position: absolute;
+    	top: 2rem;
+		right: 2rem;
+		cursor: pointer;
+		color: #fff;
+		text-decoration: none;
+	}
+}
+
 #site-navigation-wrapper {
 	position: fixed;
 	right: 0;
@@ -155,7 +186,7 @@
 
 	.close {
 		position: absolute;
-    top: 2rem;
+    	top: 2rem;
 		right: 2rem;
 		cursor: pointer;
 		color: #fff;

@@ -12,10 +12,9 @@
  * @package WP_Starter_Theme
  */
 
-get_header();
-?>
+get_header(); ?>
 
-	<div id="primary" class="content-area">
+	<div id="primary" class="content-area wheel-builder">
 		<main id="main" class="site-main">
 
 		<div id="builder_wrapper"></div>

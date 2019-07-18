@@ -42,4 +42,16 @@ jQuery( function( $ ) {
 		siteNav.fadeOut();
 	});
 
+	const tuvPopup = $( '#tuv-popup-container' );
+
+	$( '#tuv-popup' ).click( function( e ) {
+		e.preventDefault();
+		tuvPopup.fadeIn();
+	});
+
+	tuvPopup.find( 'a[data-target="tuv-popup-close"]' ).click( function( e ) {
+		e.preventDefault();
+		tuvPopup.fadeOut();
+	});
+
 });
