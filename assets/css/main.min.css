@@ -788,6 +788,7 @@ body.archive.post-type-archive .gallery-wrapper{-webkit-box-flex:0;-ms-flex:0 1 
 #footer .copyright--wrapper{text-align:center}
 }@media(max-width:720px){#configurations .configurations--gallery{display:block}
 #configurations .configurations--gallery .configurations--options{width:100%}
+}@media(max-width:700px){#tuv-popup-container .tuv-popup-content{-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}
 }@media(max-width:666px){#videos .video-gallery--wrapper .video-gallery .video-gallery--item{-ms-flex-preferred-size:100%;flex-basis:100%;margin:1rem}
 }@media(max-width:642px){body.blog .post-grid .article-wrapper{grid-column:span 8 !important;grid-row:span 4 !important}
 }@media(max-width:600px){.slider-caption{width:100%;height:40%}
