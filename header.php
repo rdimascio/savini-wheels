@@ -87,7 +87,7 @@
 
 	<div id="tuv-popup-container" class="flex justify-center align-center" style="display:none">
 		<div class="tuv-popup-wrapper">
-			<a class="close white text uppercase" data-target="tuv-popup-close" href="#" data-no-instant>&times; Close</a>
+			<a class="close white text uppercase" data-target="tuv-popup-close" href="#" data-no-instant>&times;</a>
 			<div class="tuv-popup-content">
 				<div class="tuv-popup-image">
 					<img src="http://savininew.wpengine.com/wp-content/uploads/2019/07/tuv-color.jpg" alt="">
