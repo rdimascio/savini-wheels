@@ -81,7 +81,7 @@ $class = get_queried_object()->slug . '_grid';
 				</div>
 
 				<div class="concave-item">
-					<img src="<?= get_field( 'black_di_forza_front_profile', 'option' ) ?>" alt="">
+					<img src="<?= get_field( 'black_di_forza_rear_concave_profile', 'option' ) ?>" alt="">
 					<div class="caption">
 						<h4>Rear Concave</h4>
 						<p>Profile</p>
@@ -89,7 +89,7 @@ $class = get_queried_object()->slug . '_grid';
 				</div>
 
 				<div class="concave-item">
-					<img src="<?= get_field( 'black_di_forza_front_profile', 'option' ) ?>" alt="">
+					<img src="<?= get_field( 'black_di_forza_rear_super_concave_profile', 'option' ) ?>" alt="">
 					<div class="caption">
 						<h4>Rear<span>Super</span>Concave</h4>
 						<p>Profile</p>
@@ -120,7 +120,7 @@ $class = get_queried_object()->slug . '_grid';
 		if ( $vehicle_loop->have_posts() ) : ?>
 
 			<div class="vehicles-slider__wrapper">
-				<header class="archive-header slider-header text-center"><h2><span>BM Forged</span> Vehicles Gallery</h2></header>
+				<header class="archive-header slider-header text-center"><h2><span>BM</span> Vehicles Gallery</h2></header>
 
 				<div class="vehicles-slider">
 
@@ -223,7 +223,7 @@ $class = get_queried_object()->slug . '_grid';
 		if ( $forged_vehicle_loop->have_posts() ) : ?>
 
 			<div class="vehicles-slider__wrapper">
-				<header class="archive-header slider-header text-center"><h2><span>BM</span> Vehicles Gallery</h2></header>
+				<header class="archive-header slider-header text-center"><h2><span>BM Forged</span> Vehicles Gallery</h2></header>
 
 				<div class="vehicles-slider">
 
