@@ -13,9 +13,9 @@
 
 	</div><!-- #content -->
 
-	<footer id="footer" class="dark p-t-3">
+	<footer id="footer" class="dark">
 
-		<div class="footer--wrapper w-100 p-t-3 p-b-3">
+		<div class="footer--wrapper w-100 p-t-5 p-b-3">
 
 			<div class="footer--info text-center">
 				<?php

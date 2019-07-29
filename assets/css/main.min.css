@@ -500,7 +500,7 @@ body.term-black-di-forza .bm-forged-header img{border-bottom:1px solid #fff;padd
 body.term-black-di-forza .bm-forged-header h2{margin:0;letter-spacing:10px;font-weight:100}
 body.term-black-di-forza .bm-forged-header h2 span{font-weight:700}
 body.term-black-di-forza .vehicles-slider__wrapper{margin-top:-2.5rem}
-body.term-black-di-forza .vehicles-slider__wrapper .slider-header{padding:0}
+body.term-black-di-forza .vehicles-slider__wrapper .slider-header h2{padding:0}
 body.term-black-di-forza .vehicle-slider--item{-webkit-box-shadow:none;box-shadow:none}
 body.dark .custom-logo{-webkit-filter:brightness(0) invert(1);filter:brightness(0) invert(1)}
 body.dark .site-header{background:black}
