@@ -1,4 +1,6 @@
 body.term-savini-diamond {
+	color: #fff;
+	background: #000;
 
 	.site-header {
 		background: rgba(255,255,255,1);
@@ -51,7 +53,7 @@ body.term-savini-diamond {
 			flex: 0 1 33%;
 
 			.entry-header {
-				margin-top: -4rem;
+				margin-top: -1rem;
 			}
 
 			.entry-title {
@@ -65,7 +67,7 @@ body.term-savini-diamond {
 					text-decoration: none;
 				}
 
-				.char1, .char2, .char3, .char4 {
+				.char1, .char2, .char3, .char4, .char5, .char6 {
 					margin-top: 0;
 					color: #fff;
 					font-size: 24px;

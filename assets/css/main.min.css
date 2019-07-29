@@ -448,6 +448,7 @@ body.term-sv-f .sv-f-slider .slick-next{right:25px;z-index:9}
 body.term-sv-f .sv-f-slider .sv-f-slider--item{height:650px;background-repeat:no-repeat;background-size:cover;background-position:center}
 body.term-sv-f .sv-f__slider-cta{color:#fff;position:relative;text-decoration:none;text-transform:uppercase;font-size:12px;font-weight:100;padding:1rem 2rem;background:red;border-radius:2px;border:2px solid red;-webkit-transition:background .5s,color .5s;transition:background .5s,color .5s;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;width:20%;margin:auto}
 body.term-sv-f .sv-f__slider-cta:hover{background:transparent;border:2px solid red;color:red}
+body.term-savini-diamond{color:#fff;background:#000}
 body.term-savini-diamond .site-header{background:white}
 body.term-savini-diamond .site-header .custom-logo{-webkit-filter:brightness(0);filter:brightness(0)}
 body.term-savini-diamond .site-header .tuv.dark{display:none}
@@ -459,12 +460,12 @@ body.term-savini-diamond .archive-header{color:#9a9a9a;font-style:italic}
 body.term-savini-diamond .archive-header p{font-size:14px;letter-spacing:2px}
 body.term-savini-diamond .archive-header:not(.slider-header){background-position:top right;background-repeat:no-repeat;background-size:contain}
 body.term-savini-diamond .grid .wheel{-webkit-box-flex:0;-ms-flex:0 1 33%;flex:0 1 33%}
-body.term-savini-diamond .grid .wheel .entry-header{margin-top:-4rem}
+body.term-savini-diamond .grid .wheel .entry-header{margin-top:-1rem}
 body.term-savini-diamond .grid .wheel .entry-title{margin:0;font-style:italic}
 body.term-savini-diamond .grid .wheel .entry-title a{color:#fff;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start;text-decoration:none}
-body.term-savini-diamond .grid .wheel .entry-title .char1,body.term-savini-diamond .grid .wheel .entry-title .char2,body.term-savini-diamond .grid .wheel .entry-title .char3,body.term-savini-diamond .grid .wheel .entry-title .char4{margin-top:0;color:#fff;font-size:24px;font-weight:100}
+body.term-savini-diamond .grid .wheel .entry-title .char1,body.term-savini-diamond .grid .wheel .entry-title .char2,body.term-savini-diamond .grid .wheel .entry-title .char3,body.term-savini-diamond .grid .wheel .entry-title .char4,body.term-savini-diamond .grid .wheel .entry-title .char5,body.term-savini-diamond .grid .wheel .entry-title .char6{margin-top:0;color:#fff;font-size:24px;font-weight:100}
 body.term-savini-diamond .vehicle-slider--item{-webkit-box-shadow:none;box-shadow:none}
-body.term-black-di-forza{color:#fff}
+body.term-black-di-forza{color:#fff;background:#000}
 body.term-black-di-forza .site-header{background:white}
 body.term-black-di-forza .site-header .header-menu ul li a{color:#333}
 body.term-black-di-forza .site-header .tuv.dark{display:none}
@@ -500,7 +501,8 @@ body.term-black-di-forza .bm-forged-header img{border-bottom:1px solid #fff;padd
 body.term-black-di-forza .bm-forged-header h2{margin:0;letter-spacing:10px;font-weight:100}
 body.term-black-di-forza .bm-forged-header h2 span{font-weight:700}
 body.term-black-di-forza .vehicles-slider__wrapper{margin-top:-2.5rem}
-body.term-black-di-forza .vehicles-slider__wrapper .slider-header h2{padding:0}
+body.term-black-di-forza .vehicles-slider__wrapper .slider-header{padding:0}
+body.term-black-di-forza .vehicles-slider__wrapper .slider-header h2{margin:0}
 body.term-black-di-forza .vehicle-slider--item{-webkit-box-shadow:none;box-shadow:none}
 body.dark .custom-logo{-webkit-filter:brightness(0) invert(1);filter:brightness(0) invert(1)}
 body.dark .site-header{background:black}
@@ -606,6 +608,8 @@ body.single-wheel.savini-diamond .wheel-content .entry-header h1 .char1,body.sin
 body.single-wheel.sv-f .wheel-content .entry-header h1 .char3{font-size:38px}
 body.single-wheel.sv-f .wheel-content .entry-header h1 .char4,body.single-wheel.sv-f .wheel-content .entry-header h1 .char5{font-size:42px}
 body.single-wheel.black-di-forza .wheel-content .entry-header h1 .char3,body.single-wheel.black-di-forza .wheel-content .entry-header h1 .char4,body.single-wheel.black-di-forza .wheel-content .entry-header h1 .char5{color:#fff !important;font-size:42px}
+body.post-type-archive-wheel .grid .wheel .entry-title .char1,body.post-type-archive-wheel .grid .wheel .entry-title .char2{color:#404040 !important;font-size:2em !important}
+body.post-type-archive-wheel .grid .wheel .entry-title .char3,body.post-type-archive-wheel .grid .wheel .entry-title .char4,body.post-type-archive-wheel .grid .wheel .entry-title .char5{color:#404040 !important;font-weight:700 !important;margin-top:0 !important}
 .wheel-builder{margin-top:85px}
 .tuv.dark{display:none}
 body.single-vehicle{background:#000;color:#fff;margin-top:85px}
