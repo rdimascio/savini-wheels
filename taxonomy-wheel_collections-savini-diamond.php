@@ -62,6 +62,10 @@ $class = get_queried_object()->slug . '_grid';
 
 		</div>
 
+		<div id="see-more">
+			<a class="see-more" href="/wheels?collection=<?= get_queried_object()->slug; ?>">View All</a>
+		</div>
+
 		<?php
 
 		$vehicle_args = array(

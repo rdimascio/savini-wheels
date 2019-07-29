@@ -3,14 +3,22 @@
 	&.dark {
 		background: #000;
 
-		.footer--wrapper .footer--menu ul .menu-item a {
-			color: #FFF;
+		.footer--wrapper {
+			border-top: 1px solid #fff !important;
+			border-bottom: 1px solid #fff !important;
+
+			.footer--menu ul .menu-item a {
+				color: #FFF;
+			}
 		}
 	}
 	
 	.footer--wrapper {
 		display: flex;
 		align-items: center;
+
+		border-top: 1px solid #000;
+		border-bottom: 1px solid #000;
 
 		.footer--info {
 			flex: 0 1 40%;

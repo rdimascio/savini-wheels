@@ -125,8 +125,9 @@ table{margin:0 0 1.5em;width:100%}
 #site-navigation-wrapper #primary-menu{height:100%}
 #site-navigation-wrapper #primary-menu ul li a{color:#fff;text-transform:uppercase}
 #footer.dark{background:#000}
+#footer.dark .footer--wrapper{border-top:1px solid #fff !important;border-bottom:1px solid #fff !important}
 #footer.dark .footer--wrapper .footer--menu ul .menu-item a{color:#FFF}
-#footer .footer--wrapper{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
+#footer .footer--wrapper{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;border-top:1px solid #000;border-bottom:1px solid #000}
 #footer .footer--wrapper .footer--info{-webkit-box-flex:0;-ms-flex:0 1 40%;flex:0 1 40%;background:#3e3e3e;padding:2rem 4rem 2rem 8rem}
 #footer .footer--wrapper .footer--info p,#footer .footer--wrapper .footer--info a{color:#929292;text-transform:uppercase;font-size:10px;letter-spacing:3px;font-weight:100}
 #footer .footer--wrapper .footer--info a{text-decoration:none}
@@ -475,7 +476,7 @@ body.term-black-di-forza .grid .wheel .entry-title{margin:0}
 body.term-black-di-forza .grid .wheel .entry-title a{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start;text-decoration:none}
 body.term-black-di-forza .grid .wheel .entry-title .char1,body.term-black-di-forza .grid .wheel .entry-title .char2{color:#ed2327;font-size:24px;margin-top:6px}
 body.term-black-di-forza .grid .wheel .entry-title .char3,body.term-black-di-forza .grid .wheel .entry-title .char4,body.term-black-di-forza .grid .wheel .entry-title .char5{color:#fff;font-weight:100}
-body.term-black-di-forza .bm-concave{padding:8vw 5vw 10vw;min-height:500px;background-image:url(https://saviniwheels.dimascio.design/wp-content/uploads/2019/05/bm-concave__bg-1.png);background-repeat:no-repeat;background-size:auto;background-position:top 0 left -380px}
+body.term-black-di-forza .bm-concave{padding:10vw 5vw 20vw;min-height:500px;background-image:url(https://saviniwheels.dimascio.design/wp-content/uploads/2019/05/bm-concave__bg-1.png);background-repeat:no-repeat;background-size:auto;background-position:top 0 left -380px}
 body.term-black-di-forza .bm-concave h2,body.term-black-di-forza .bm-concave h4,body.term-black-di-forza .bm-concave p{margin:0}
 body.term-black-di-forza .bm-concave .concave-header{width:30%}
 body.term-black-di-forza .bm-concave .concave-header h2{text-transform:uppercase;letter-spacing:5px;font-size:40px;text-align:right;font-weight:100}
@@ -498,6 +499,8 @@ body.term-black-di-forza .archive-header span{color:#ed2327}
 body.term-black-di-forza .bm-forged-header img{border-bottom:1px solid #fff;padding:0 0 10px}
 body.term-black-di-forza .bm-forged-header h2{margin:0;letter-spacing:10px;font-weight:100}
 body.term-black-di-forza .bm-forged-header h2 span{font-weight:700}
+body.term-black-di-forza .vehicles-slider__wrapper{margin-top:-2.5rem}
+body.term-black-di-forza .vehicles-slider__wrapper .slider-header{padding:0}
 body.term-black-di-forza .vehicle-slider--item{-webkit-box-shadow:none;box-shadow:none}
 body.dark .custom-logo{-webkit-filter:brightness(0) invert(1);filter:brightness(0) invert(1)}
 body.dark .site-header{background:black}
