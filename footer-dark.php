@@ -13,7 +13,7 @@
 
 	</div><!-- #content -->
 
-	<footer id="footer" class="dark p-t-2">
+	<footer id="footer" class="dark p-t-5">
 
 		<div class="footer--wrapper w-100 p-t-3 p-b-3">
 

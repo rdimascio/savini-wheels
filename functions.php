@@ -1018,8 +1018,7 @@ function loadmore_vehicle_ajax_handler() {
 		// run the loop
 		while( have_posts() ): the_post();
  
-			get_template_part( 'template-parts/content', 'vehicle' );
- 
+			get_template_part( 'template-parts/content', 'vehicle-gallery' );
  
 		endwhile;
  
@@ -1045,7 +1044,6 @@ function loadmore_finish_ajax_handler() {
 		while( have_posts() ): the_post();
  
 			get_template_part( 'template-parts/content', 'finish' );
- 
  
 		endwhile;
  

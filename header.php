@@ -53,10 +53,10 @@
 						<?php wp_nav_menu( array( 'theme_location' => 'menu-1' ) ); ?>
 					</div>
 					<a href="#" id="tuv-popup" class="open-popup-link tuv light">
-						<img src="https://saviniwheels.dimascio.design/wp-content/uploads/2019/05/tuv.jpg" alt="Tuv">
+						<img src="http://savininew.wpengine.com/wp-content/uploads/2019/08/tuv.jpg" alt="Tuv">
 					</a>
 					<a href="#" id="tuv-popup" class="open-popup-link tuv dark">
-						<img src="https://saviniwheels.dimascio.design/wp-content/uploads/2019/05/tuv-dark.jpg" alt="Tuv">
+						<img src="http://savininew.wpengine.com/wp-content/uploads/2019/08/tuv-dark.jpg" alt="Tuv">
 					</a>
 					<a id="mobile-menu" class="box-shadow-menu" href="#" data-no-instant></a>
 				</div>
