@@ -10,7 +10,7 @@
 ?>
 
 <div class="gallery-wrapper">
-	<a href="<?= get_the_post_thumbnail_url(); ?>" class="gallery-item__link"></a>
+	<a href="<?= get_the_post_thumbnail_url(); ?>" class="gallery-item__link">
 		<div class="gallery-item" data-finish-id="<?php the_ID(); ?>" data-src="<?= get_the_post_thumbnail_url(); ?>" style="background-image:url(<?= get_the_post_thumbnail_url(); ?>)">
 			<div class="overlay">
 				<div class="content">
