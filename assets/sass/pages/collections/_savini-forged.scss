@@ -1,6 +1,18 @@
 body.archive {
 	margin-top: 85px;
 
+	&.term-savini-forged {
+		.tuv {
+			&.light {
+				display: none;
+			}
+
+			&.dark {
+				display: flex !important;
+			}
+		}
+	}
+
 	.custom-logo {
 		filter: brightness(0) invert(1);
 	}
@@ -10,16 +22,6 @@ body.archive {
 
 		.header-menu ul li a {
 			color: #fff;
-		}
-
-		.tuv {
-			&.light {
-				display: none;
-			}
-
-			&.dark {
-				display: flex !important;
-			}
 		}
 
 		.box-shadow-menu::before {

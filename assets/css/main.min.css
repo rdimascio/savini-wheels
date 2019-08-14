@@ -363,11 +363,11 @@ body.archive.tax-wheel_collections .vehicles-slider__wrapper{text-align:center}
 body.archive.tax-wheel_collections #see-more{margin:3rem 0 1rem;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
 body.archive.tax-wheel_collections .see-more{color:#fff;position:relative;text-decoration:none;text-transform:uppercase;font-size:12px;font-weight:100;padding:.5rem 2rem;background:red;border:2px solid red;border-radius:2px;-webkit-transition:background .5s,color .5s;transition:background .5s,color .5s}
 body.archive{margin-top:85px}
+body.archive.term-savini-forged .tuv.light{display:none}
+body.archive.term-savini-forged .tuv.dark{display:-webkit-box !important;display:-ms-flexbox !important;display:flex !important}
 body.archive .custom-logo{-webkit-filter:brightness(0) invert(1);filter:brightness(0) invert(1)}
 body.archive .site-header{background:black}
 body.archive .site-header .header-menu ul li a{color:#fff}
-body.archive .site-header .tuv.light{display:none}
-body.archive .site-header .tuv.dark{display:-webkit-box !important;display:-ms-flexbox !important;display:flex !important}
 body.archive .site-header .box-shadow-menu::before{background:#fff;-webkit-box-shadow:0 .25em 0 0 #fff,0 .5em 0 0 #fff;box-shadow:0 .25em 0 0 #fff,0 .5em 0 0 #fff}
 body.archive .archive-header{padding:5vw;text-transform:uppercase}
 body.archive .archive-header h2{letter-spacing:3px;font-weight:400}
