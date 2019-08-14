@@ -608,13 +608,13 @@ body.single-wheel.black-di-forza .site-header .box-shadow-menu:before,body.singl
 body.single-wheel.black-di-forza main,body.single-wheel.savini-diamond main{background:#000}
 body.single-wheel.black-di-forza .wheel-content section.info .actions .back a,body.single-wheel.savini-diamond .wheel-content section.info .actions .back a{color:#fff !important}
 body.single-wheel.black-di-forza #footer .footer--wrapper .footer--menu ul .menu-item a,body.single-wheel.savini-diamond #footer .footer--wrapper .footer--menu ul .menu-item a{color:#fff}
-body.single-wheel.savini-diamond .tuv.light{display:none}
-body.single-wheel.savini-diamond .tuv.dark{display:-webkit-box !important;display:-ms-flexbox !important;display:flex !important}
 body.single-wheel.savini-diamond .wheel-content .entry-header h1 .char1,body.single-wheel.savini-diamond .wheel-content .entry-header h1 .char2,body.single-wheel.savini-diamond .wheel-content .entry-header h1 .char3,body.single-wheel.savini-diamond .wheel-content .entry-header h1 .char4,body.single-wheel.savini-diamond .wheel-content .entry-header h1 .char5{color:#fff !important;font-size:42px;font-style:italic}
 body.single-wheel.sv-f .tuv.light{display:none}
 body.single-wheel.sv-f .tuv.dark{display:-webkit-box !important;display:-ms-flexbox !important;display:flex !important}
 body.single-wheel.sv-f .wheel-content .entry-header h1 .char3{font-size:38px}
 body.single-wheel.sv-f .wheel-content .entry-header h1 .char4,body.single-wheel.sv-f .wheel-content .entry-header h1 .char5{font-size:42px}
+body.single-wheel.savini-forged .tuv.light{display:none}
+body.single-wheel.savini-forged .tuv.dark{display:-webkit-box !important;display:-ms-flexbox !important;display:flex !important}
 body.single-wheel.black-di-forza .wheel-content .entry-header h1 .char3,body.single-wheel.black-di-forza .wheel-content .entry-header h1 .char4,body.single-wheel.black-di-forza .wheel-content .entry-header h1 .char5{color:#fff !important;font-size:42px}
 body.post-type-archive-wheel .grid .wheel .entry-title .char1,body.post-type-archive-wheel .grid .wheel .entry-title .char2{color:#404040 !important;font-size:32px !important}
 body.post-type-archive-wheel .grid .wheel .entry-title .char3,body.post-type-archive-wheel .grid .wheel .entry-title .char4,body.post-type-archive-wheel .grid .wheel .entry-title .char5,body.post-type-archive-wheel .grid .wheel .entry-title .char6,body.post-type-archive-wheel .grid .wheel .entry-title .char7,body.post-type-archive-wheel .grid .wheel .entry-title .char8,body.post-type-archive-wheel .grid .wheel .entry-title .char9,body.post-type-archive-wheel .grid .wheel .entry-title .char10{color:#404040 !important;font-weight:700 !important;margin-top:0 !important}
