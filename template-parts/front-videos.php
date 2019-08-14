@@ -43,7 +43,7 @@
 			endswitch;
 			?>
 
-			<a class="video" href="<?= $video['field_5d08709b7882a'] ?>" data-src="<?= $video['field_5d08709b7882a'] ?>"><div style="background-image: url(<?= $video_image[0]; ?>)" data-bottom-top="transform: translateZ(0) translateY(<?= $bottom_top_translate; ?>%); opacity: 0;" data-top-bottom="transform: translateZ(0) translateY(<?= $top_bottom_translate; ?>%);" data--100-bottom="opacity:1;" class="for__item for__item--<?= $video_count; ?> greyscale js-appearing-content"></div></a>
+			<a class="video" href="<?= $video['field_5d08709b7882a'] ?>" data-src="<?= $video['field_5d08709b7882a'] ?>"><div style="background-image: url(<?= $video_image[0]; ?>)" data-bottom-top="transform: translateZ(0) translateY(<?= $bottom_top_translate; ?>%); opacity: 0;" data-top-bottom="transform: translateZ(0) translateY(<?= $top_bottom_translate; ?>%);" data--100-bottom="opacity:1;" class="for__item for__item--<?= $video_count; ?> js-appearing-content"></div></a>
 
 		<?php
 			$video_count++;
