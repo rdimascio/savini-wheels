@@ -44,7 +44,7 @@ jQuery( function( $ ) {
 
 	const tuvPopup = $( '#tuv-popup-container' );
 
-	$( '#tuv-popup' ).click( function( e ) {
+	$( '.open-popup-link.tuv' ).click( function( e ) {
 		e.preventDefault();
 		tuvPopup.fadeIn();
 	});

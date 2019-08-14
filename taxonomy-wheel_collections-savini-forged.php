@@ -185,9 +185,9 @@ $this_config_description = $this_config->description;
 
 						if ( $configurations && in_array( $config_id, $configurations ) ) : ?>
 
-							<div class="vehicle-slider--item">	
+							<a class="vehicle-slider--item" href="<?= the_permalink(); ?>>">	
 								<div class="vehicle-slider--item__image" style="background-image:url(<?= the_post_thumbnail_url(); ?>)"></div>
-							</div>
+							</a>
 
 						<?php endif;
 					
