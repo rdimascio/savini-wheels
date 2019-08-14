@@ -12,8 +12,14 @@ body.archive {
 			color: #fff;
 		}
 
-		.tuv.light {
-			display: none;
+		.tuv {
+			&.light {
+				display: none;
+			}
+
+			&.dark {
+				display: flex !important;
+			}
 		}
 
 		.box-shadow-menu::before {

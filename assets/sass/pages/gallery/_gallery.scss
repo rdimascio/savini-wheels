@@ -3,13 +3,26 @@
 
 body.archive.post-type-archive {
 
+	&-vehicle,
+	&-finish {
+		.tuv {
+			&.light {
+				display: none;
+			}
+
+			&.dark {
+				display: flex !important;
+			}
+		}
+	}
+
 	.custom-logo {
 		filter: brightness(0) invert(1);
 	}
 
 	.page-header {
 		margin: 3rem 3rem 0;
-    text-align: center;
+    	text-align: center;
 		text-transform: uppercase;
 		border-bottom: 1px solid;
 
@@ -162,7 +175,7 @@ body.archive.post-type-archive {
 
 	.load-more-wrapper {
 		margin: 3rem 0;
-    padding: 0 5vw;
+    	padding: 0 5vw;
 	}
 
 	.load-more{

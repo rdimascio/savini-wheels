@@ -382,6 +382,17 @@ body.single-wheel {
 	}
 
 	&.savini-diamond {
+
+		.tuv {
+			&.light {
+				display: none;
+			}
+
+			&.dark {
+				display: flex !important;
+			}
+		}
+
 		.wheel-content .entry-header h1 {
 			.char1,
 			.char2,
@@ -396,6 +407,17 @@ body.single-wheel {
 	}
 
 	&.sv-f {
+
+		.tuv {
+			&.light {
+				display: none;
+			}
+
+			&.dark {
+				display: flex !important;
+			}
+		}
+
 		.wheel-content .entry-header h1 {
 			.char3 {
 				font-size: 38px;

@@ -4,6 +4,16 @@ body.term-sv-f {
 		filter: brightness(0) invert(1);
 	}
 
+	.tuv {
+		&.light {
+			display: none;
+		}
+
+		&.dark {
+			display: flex !important;
+		}
+	}
+
 	main {
 		// background-image: url(https://saviniwheels.dimascio.design/wp-content/uploads/2019/02/savini__sv-f-bg.png);
 		background-repeat: no-repeat;
