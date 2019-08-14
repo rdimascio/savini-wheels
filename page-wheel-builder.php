@@ -25,7 +25,7 @@ get_header(); ?>
 <?php get_footer(); ?>
 
 <!--- Script must be called after jQuery on your website --->
-<script src="//www.iconfigurators.com/wb/v3/wb-loader.cfm?id=9"></script>
+<script src="//www.iconfigurators.app/wb/v3/wb-loader.cfm?id=9"></script>
 <script>
 	if (jQuery("#builder_wrapper")[0])
 			jQuery( ".entry-cont" ).css("display","block")

@@ -66,9 +66,9 @@ $content = ( ( get_the_content() > '' ) ? get_the_content() : ( ( $is_this_forge
 								foreach ( $sizes as $size ) :
 									
 									if (--$count <= 0) :
-										echo $size . '"';
+										echo $size;
 									else :
-										echo $size . '", ';
+										echo $size . ', ';
 									endif;
 
 								endforeach;
@@ -77,10 +77,12 @@ $content = ( ( get_the_content() > '' ) ? get_the_content() : ( ( $is_this_forge
 						endif;
 						?>
 					</p>
+				<?php if ( $collection_name !== 'black-di-forza' && $collection_name !== 'sv-f' ) : ?>
 					<p>
 						<strong>Widths:</strong>
 						<?= $widths; ?>
 					</p>
+				<?php endif; ?>
 					<p>
 						<strong>Construction:</strong>
 						<?= $construction; ?>

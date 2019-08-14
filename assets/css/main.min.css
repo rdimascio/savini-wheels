@@ -285,8 +285,6 @@ body.home .site-header .tuv.dark{display:none}
 #videos .video-gallery--wrapper .video-gallery--title h4 span{font-weight:700}
 #videos .video-gallery--wrapper .video-gallery{position:relative;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;max-width:560px;margin:auto}
 #videos .video-gallery--wrapper .video-gallery .video-gallery--item{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-flex:1;-ms-flex:1;flex:1;-ms-flex-preferred-size:45%;flex-basis:45%;margin:5px;text-decoration:none;color:#111;text-transform:uppercase}
-#videos .video-gallery--wrapper .video-gallery .video-gallery--item:hover img{-webkit-filter:grayscale(0);filter:grayscale(0)}
-#videos .video-gallery--wrapper .video-gallery .video-gallery--item img{-webkit-filter:grey;filter:grey;-webkit-filter:grayscale(100%);filter:grayscale(100%)}
 #videos .video-gallery--wrapper .video-gallery .video-gallery--item h6{margin:0}
 .for{margin:-40px 0;position:relative;overflow:hidden;padding-top:114px;padding-bottom:40px;background-color:#1a1a1e;text-align:center}
 .for__title{color:white}

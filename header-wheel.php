@@ -20,6 +20,7 @@ $collection = get_the_terms( $object_id, 'wheel_collections' );
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 	<link rel="stylesheet" href="https://use.typekit.net/wlf5qml.css">
+	<link rel="stylesheet" href="https://use.typekit.net/lyo4rqi.css">
 
 	<?php wp_head(); ?>
 </head>
@@ -51,10 +52,10 @@ $collection = get_the_terms( $object_id, 'wheel_collections' );
 						<?php wp_nav_menu( array( 'theme_location' => 'menu-1' ) ); ?>
 					</div>
 					<a href="#" id="tuv-popup" class="open-popup-link tuv light">
-						<img src="https://saviniwheels.dimascio.design/wp-content/uploads/2019/05/tuv.jpg" alt="Tuv">
+						<img src="<?= home_url(); ?>/wp-content/uploads/2019/08/tuv.jpg" alt="Tuv">
 					</a>
 					<a href="#" id="tuv-popup" class="open-popup-link tuv dark">
-						<img src="https://saviniwheels.dimascio.design/wp-content/uploads/2019/05/tuv-dark.jpg" alt="Tuv">
+						<img src="<?= home_url(); ?>/wp-content/uploads/2019/08/tuv-dark.jpg" alt="Tuv">
 					</a>
 					<a id="mobile-menu" class="box-shadow-menu" href="#" data-no-instant></a>
 				</div>

@@ -41,7 +41,6 @@ $configurations = get_terms( array(
 				$logo = get_field( 'configuration_logo', $object );
 				$image = get_field( 'configuration_image', $object );
 				$bg_image = get_field( 'configuration_bg__image', $object );
-				$availability = get_field( 'configuration_availability', $object );
 
 		?>
 
@@ -51,12 +50,6 @@ $configurations = get_terms( array(
 				<div class="configuration--item__content">
 					<img class="configuration--item__logo" src="<?= $logo ?>" />
 					<p class="configuration--item__description"><?= $description ?></p>
-					<p class="configuration--item__availability">
-						Available in 
-						<?php foreach ($availability as $item) : ?>
-								<?= $item ?>
-						<?php endforeach; ?>
-					</p>
 				</div>
 			</div>
 

@@ -10,7 +10,7 @@
 ?>
 
 <div class="gallery-wrapper">
-	<div class="gallery-item greyscale" data-vehicle-id="<?php the_ID(); ?>" style="background-image:url(<?= get_the_post_thumbnail_url(); ?>)">
+	<div class="gallery-item" data-vehicle-id="<?php the_ID(); ?>" style="background-image:url(<?= get_the_post_thumbnail_url(); ?>)">
 		<div class="overlay">
 		</div>
 		<a href="<?= get_the_permalink(); ?>" class="link"></a>

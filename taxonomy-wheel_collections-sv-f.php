@@ -53,7 +53,7 @@ $class = get_queried_object()->slug . '_grid';
 		<header class="info--header">
 
 			<div class="row">
-				<img src="https://saviniwheels.dimascio.design/wp-content/uploads/2019/02/savini__sv-f-mft-copy.png" alt="">
+				<img src="<?= home_url(); ?>/wp-content/uploads/2019/08/savini__sv-f-mft-copy.png" alt="">
 				<h4>Mono Form Technology</h4>
 			</div>
 
@@ -63,28 +63,28 @@ $class = get_queried_object()->slug . '_grid';
 
 		<div class="info row justify-between">
 				<div class="info-column text-center p-l-1 p-r-1">
-				<div class="image" style="background-image:url(https://saviniwheels.dimascio.design/wp-content/uploads/2019/02/savini__info-step_1.png)"></div>
+				<div class="image" style="background-image:url(<?= home_url(); ?>/wp-content/uploads/2019/08/savini__info-step_1.png)"></div>
 					<h2>Step 1</h2>
 					<p>The process starts using a casting specially made for Flow Forming Technology that’s placed onto a steel rim that’s then prepped for molding.</p>
 				</div>
 				<div class="info-column text-center p-l-1 p-r-1">
-					<div class="image" style="background-image:url(https://saviniwheels.dimascio.design/wp-content/uploads/2019/02/savini__info-step_2.png)"></div>
+					<div class="image" style="background-image:url(<?= home_url(); ?>/wp-content/uploads/2019/08/savini__info-step_2.png)"></div>
 					<h2>Step 2</h2>
 					<p>Extensive heat and pressure is applied using three individual rollers to shape the aluminum to the wheel mold.</p>
 				</div>
 				<div class="info-column text-center p-l-1 p-r-1">
-				<div class="image" style="background-image:url(https://saviniwheels.dimascio.design/wp-content/uploads/2019/02/savini__info-step_3.png)"></div>
+				<div class="image" style="background-image:url(<?= home_url(); ?>/wp-content/uploads/2019/08/savini__info-step_3.png)"></div>
 					<h2>Step 3</h2>
 					<p>The individually shaped rollers fortify the barrel to the specified width and density, allowing for a stronger wheel using less material.</p>
 				</div>
 				<div class="info-column text-center p-l-1 p-r-1">
-				<div class="image" style="background-image:url(https://saviniwheels.dimascio.design/wp-content/uploads/2019/02/savini__info-step_4.png)"></div>
+				<div class="image" style="background-image:url(<?= home_url(); ?>/wp-content/uploads/2019/08/savini__info-step_4.png)"></div>
 					<h2>Step 4</h2>
 					<p>The molecular compound of the aluminum significantly hardens in a streamline direction, resulting in a tolerant and considerably lighter wheel.</p>
 				</div>
 		</div>
 
-		<div class="image-cover" style="background-image:url(https://saviniwheels.dimascio.design/wp-content/uploads/2019/02/savini__sv-f-info_bg.png)">
+		<div class="image-cover" style="background-image:url(<?= home_url(); ?>/wp-content/uploads/2019/08/savini__sv-f-info_bg.png)">
 			<div class="row align-center">
 				<div class="column justify-center">
 					<h1>Precision Engineered</h1>
@@ -100,8 +100,6 @@ $class = get_queried_object()->slug . '_grid';
 
 					<h2>Mono Form Technology</h2>
 					<p>Precision engineered</p>
-
-					<!-- <img src="https://saviniwheels.dimascio.design/wp-content/uploads/2019/02/savini__sv-f-info_image.png" alt=""> -->
 				</div>
 				<div class="column"></div>
 			</div>
