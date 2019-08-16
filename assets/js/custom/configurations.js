@@ -14,6 +14,7 @@ jQuery( function( $ ) {
 
 		let index = $( this ).index();
 		let currentActiveItem = mainContainer.find( '.active' );
+		let newBackgroundImage = $( this ).data( 'bg' );
 
 		currentActiveItem
 			.removeClass( 'active' )
@@ -31,7 +32,8 @@ jQuery( function( $ ) {
 			.appendTo( mainContainer );
 
 		mainContainer
-			.addClass( 'change' );
+			.addClass( 'change' )
+			.css( 'background-image', 'url(' + newBackgroundImage + ')' );
 
 		setTimeout( function() {
 			mainContainer

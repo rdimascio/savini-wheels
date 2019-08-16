@@ -145,6 +145,7 @@ jQuery(function ($) {
     e.preventDefault();
     var index = $(this).index();
     var currentActiveItem = mainContainer.find('.active');
+    var newBackgroundImage = $(this).data('bg');
     currentActiveItem.removeClass('active').detach();
 
     if (0 === index) {
@@ -154,7 +155,7 @@ jQuery(function ($) {
     }
 
     $(this).addClass('active').detach().appendTo(mainContainer);
-    mainContainer.addClass('change');
+    mainContainer.addClass('change').css('background-image', 'url(' + newBackgroundImage + ')');
     setTimeout(function () {
       mainContainer.removeClass('change');
     }, 2000);
