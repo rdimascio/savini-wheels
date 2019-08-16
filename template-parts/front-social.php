@@ -4,24 +4,7 @@
 		<h2 data-bottom-top="top: 0;" data-top-bottom="top: 0;" class="for__title lined_title title js-appearing-content"><span>Social</span> Feed</h2>
 	</div>
 
-		<?//= do_shortcode('[instagram-feed num=4 cols=2]') ?>
-
-		<div class="social--content social-feed">
-			<div class="social--content__gallery">
-				<div class="social--content__gallery-item js-appearing-content">
-					<img src="<?= home_url(); ?>/wp-content/uploads/2019/06/savini__social-feed-huracan.png" alt="">
-				</div>
-				<div class="social--content__gallery-item js-appearing-content">
-					<img src="<?= home_url(); ?>/wp-content/uploads/2019/06/savini__social-feed-karma.png" alt="">
-				</div>
-				<div class="social--content__gallery-item js-appearing-content">
-					<img src="<?= home_url(); ?>/wp-content/uploads/2019/06/savini__social-feed-ferrari.png" alt="">
-				</div>
-				<div class="social--content__gallery-item js-appearing-content">
-					<img src="<?= home_url(); ?>/wp-content/uploads/2019/06/savini__social-feed-aventador.png" alt="">
-				</div>
-			</div>
-		</div>
+		<?= do_shortcode('[instagram-feed num=4 cols=2]') ?>
 
 		<div class="social--view_more text-center m-t-3">
 			<a href="https://www.instagram.com/saviniwheels/"><?= get_field( 'homepage_social_feed_button', 'option' ); ?></a>
