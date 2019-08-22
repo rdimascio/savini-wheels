@@ -88,6 +88,11 @@ body.single-wheel {
 					justify-content: space-between;
 					margin: 2rem 0 0;
 
+					@media (max-width: 520px) {
+						flex-direction: column;
+						text-align: center;
+					}
+
 					a {
 						text-decoration: none;
 						text-transform: uppercase;

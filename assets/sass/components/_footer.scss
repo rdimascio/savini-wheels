@@ -20,6 +20,11 @@
 		border-top: 1px solid #000;
 		border-bottom: 1px solid #000;
 
+		@media (max-width: 760px) {
+			border-top: 0;
+			border-bottom: 0;
+		}
+
 		.footer--info {
 			flex: 0 1 40%;
 			background: #3E3E3E;
