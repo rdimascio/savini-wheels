@@ -51,9 +51,10 @@ details{display:block}
 summary{display:list-item}
 template{display:none}
 [hidden]{display:none}
-body,button,input,select,optgroup,textarea{color:#404040;font-family:sans-serif;font-size:16px;font-size:1rem;line-height:1.5}
+body,button,input,select,optgroup,textarea{color:#404040;font-family:"aktiv-grotesk";font-size:16px;font-size:1rem;line-height:1.5}
 h1,h2,h3,h4,h5,h6{clear:both}
-p{margin-bottom:1.5em}
+p{font-family:"aktiv-grotesk";font-weight:400;margin-bottom:1.5em}
+h1,h2,h3,h4,h5,h6{font-family:"aktiv-grotesk";font-weight:700}
 dfn,cite,em,i{font-style:italic}
 blockquote{margin:0 1.5em}
 address{margin:0 0 1.5em}
@@ -250,7 +251,7 @@ body.home .site-header .tuv.dark{display:none}
 #configurations .configurations--content .lined_title:before,#configurations .configurations--content .lined_title:after{height:2px;width:100%;max-width:250px}
 #configurations .configurations--content p{text-transform:uppercase;padding:0 11vw;color:#fff;font-size:12px}
 #configurations .configurations--gallery{padding:2.3vw 5px 8.9vw 5px}
-#configurations .configurations--gallery .configurations--main{-webkit-box-flex:1;-ms-flex:1;flex:1;margin:5px;background-size:cover}
+#configurations .configurations--gallery .configurations--main{-webkit-box-flex:1;-ms-flex:1;flex:1;margin:5px;background-size:cover;height:600px}
 #configurations .configurations--gallery .configurations--main.change{-webkit-animation:fadein 2s linear 1 normal forwards;animation:fadein 2s linear 1 normal forwards}
 #configurations .configurations--gallery .configurations--main .configuration--item{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;text-align:center;padding:1rem;cursor:pointer;background:rgba(40,40,40,0.7);-webkit-transition:background 1s;transition:background 1s}
 #configurations .configurations--gallery .configurations--main .configuration--item:hover{background:rgba(40,40,40,0.9)}
@@ -451,6 +452,8 @@ body.term-sv-f .sv-f-slider .sv-f-slider--item{height:650px;background-repeat:no
 body.term-sv-f .sv-f__slider-cta{color:#fff;position:relative;text-decoration:none;text-transform:uppercase;font-size:12px;font-weight:100;padding:1rem 2rem;background:red;border-radius:2px;border:2px solid red;-webkit-transition:background .5s,color .5s;transition:background .5s,color .5s;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;width:20%;margin:auto}
 body.term-sv-f .sv-f__slider-cta:hover{background:transparent;border:2px solid red;color:red}
 body.term-savini-diamond{color:#fff;background:#000}
+body.term-savini-diamond p{font-family:'garamond-premier-pro';font-weight:400;font-style:italic}
+body.term-savini-diamond h1,body.term-savini-diamond h2,body.term-savini-diamond h3,body.term-savini-diamond h4,body.term-savini-diamond h5,body.term-savini-diamond h6{font-family:'garamond-premier-pro';font-weight:700;font-style:italic}
 body.term-savini-diamond .site-header{background:white}
 body.term-savini-diamond .site-header .custom-logo{-webkit-filter:brightness(0);filter:brightness(0)}
 body.term-savini-diamond .site-header .tuv.dark{display:none}
@@ -835,6 +838,7 @@ body.single-wheel .wheel-content section.info .actions{-webkit-box-orient:vertic
 .for__item{margin-bottom:9rem !important}
 body.archive .grid .wheel{-webkit-box-flex:0;-ms-flex:0 1 100%;flex:0 1 100%}
 }@media(max-width:400px){.site-header .site-branding .custom-logo{max-width:150px}
+}@media(max-width:378px){#configurations .configurations--gallery .configurations--options .configuration--item{-webkit-box-flex:1;-ms-flex:1 0 33%;flex:1 0 33%}
 }@-webkit-keyframes rotating{from{-webkit-transform:rotate(0);transform:rotate(0)}
 to{-webkit-transform:rotate(360deg);transform:rotate(360deg)}
 }@keyframes rotating{from{-webkit-transform:rotate(0);transform:rotate(0)}
