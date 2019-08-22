@@ -2,6 +2,18 @@ body.term-savini-diamond {
 	color: #fff;
 	background: #000;
 
+	p {
+		font-family: 'garamond-premier-pro';
+		font-weight: 400;
+		font-style: italic;
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		font-family: 'garamond-premier-pro';
+		font-weight: 700;
+		font-style: italic;
+	}
+
 	.site-header {
 		background: rgba(255,255,255,1);
 
