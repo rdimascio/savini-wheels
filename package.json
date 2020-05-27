@@ -48,6 +48,6 @@
     "translate": "gulp translate"
   },
   "dependencies": {
-    "lazysizes": "^4.1.8"
+    "lazysizes": "^5.2.2"
   }
 }
